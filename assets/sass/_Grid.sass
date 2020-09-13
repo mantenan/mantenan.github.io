@@ -1,0 +1,492 @@
+
+// Grid
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// .container is main centered wrapper with a max width of 112.0rem (1120px)
+.container
+	margin: 0 auto
+	max-width: 112.0rem
+	padding: 0 2.0rem
+	position: relative
+	width: 100%
+
+// Using flexbox for the grid, inspired by Philip Walton:
+// http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+// By default each .column within a .row will evenly take up
+// available width, and the height of each .column with take
+// up the height of the tallest .column in the same .row
+.row
+	display: flex
+	flex-direction: column
+	padding: 0
+	width: 100%
+
+	&-responsive
+		flex-wrap: wrap
+
+	&.row-no-padding
+		padding: 0
+
+		&> .column
+			padding: 0
+
+	&.row-wrap
+		flex-wrap: wrap
+
+	// Vertically Align Columns
+	// .row-* vertically aligns every .col in the .row
+	&.row-top
+		align-items: flex-start
+
+	&.row-bottom
+		align-items: flex-end
+
+	&.row-center
+		align-items: center
+
+	&.row-stretch
+		align-items: stretch
+
+	&.row-baseline
+		align-items: baseline
+
+	.column
+		display: block
+		// IE 11 required specifying the flex-basis otherwise it breaks mobile
+		flex: 1 1 auto
+		margin-left: 0
+		max-width: 100%
+		width: 100%
+
+		// Column Offsets
+		&.column-offset-10
+			margin-left: 10%
+
+		&.column-offset-20
+			margin-left: 20%
+
+		&.column-offset-25
+			margin-left: 25%
+
+		&.column-offset-33,
+		&.column-offset-34
+			margin-left: 33.3333%
+
+		&.column-offset-50
+			margin-left: 50%
+
+		&.column-offset-66,
+		&.column-offset-67
+			margin-left: 66.6666%
+
+		&.column-offset-75
+			margin-left: 75%
+
+		&.column-offset-80
+			margin-left: 80%
+
+		&.column-offset-90
+			margin-left: 90%
+
+		// Explicit Column Percent Sizes
+		// By default each grid column will evenly distribute
+		// across the grid. However, you can specify individual
+		// columns to take up a certain size of the available area
+		&.column-10
+			flex: 0 0 10%
+			max-width: 10%
+
+		&.column-20
+			flex: 0 0 20%
+			max-width: 20%
+
+		&.column-25
+			flex: 0 0 25%
+			max-width: 25%
+
+		&.column-33,
+		&.column-34
+			flex: 0 0 33.3333%
+			max-width: 33.3333%
+
+		&.column-40
+			flex: 0 0 40%
+			max-width: 40%
+
+		&.column-50
+			flex: 0 0 50%
+			max-width: 50%
+
+		&.column-60
+			flex: 0 0 60%
+			max-width: 60%
+
+		&.column-66,
+		&.column-67
+			flex: 0 0 66.6666%
+			max-width: 66.6666%
+
+		&.column-75
+			flex: 0 0 75%
+			max-width: 75%
+
+		&.column-80
+			flex: 0 0 80%
+			max-width: 80%
+
+		&.column-90
+			flex: 0 0 90%
+			max-width: 90%
+
+		&.column-100
+			flex: 0 0 100%
+			max-width: 100%
+
+		// .column-* vertically aligns an individual .column
+		.column-top
+			align-self: flex-start
+
+		.column-bottom
+			align-self: flex-end
+
+		.column-center
+			align-self: center
+
+// Larger than mobile screen
+@media (min-width: 40.0rem) // Safari desktop has a bug using `rem`, but Safari mobile works
+	.row
+		flex-direction: row
+		margin-left: -1.0rem
+		width: calc(100% + 2.0rem)
+
+		.column
+			margin-bottom: inherit
+			padding: 0 1.0rem
+
+@media (min-width: $min-sm)
+	.row
+		.column
+			&.column-sm-offset-10
+				margin-left: 10%
+
+			&.column-sm-offset-20
+				margin-left: 20%
+
+			&.column-sm-offset-25
+				margin-left: 25%
+
+			&.column-sm-offset-33,
+			&.column-sm-offset-34
+				margin-left: 33.3333%
+
+			&.column-sm-offset-50
+				margin-left: 50%
+
+			&.column-sm-offset-66,
+			&.column-sm-offset-67
+				margin-left: 66.6666%
+
+			&.column-sm-offset-75
+				margin-left: 75%
+
+			&.column-sm-offset-80
+				margin-left: 80%
+
+			&.column-sm-offset-90
+				margin-left: 90%
+
+			&.column-sm-10
+				flex: 0 0 10%
+				max-width: 10%
+
+			&.column-sm-20
+				flex: 0 0 20%
+				max-width: 20%
+
+			&.column-sm-25
+				flex: 0 0 25%
+				max-width: 25%
+
+			&.column-sm-33,
+			&.column-sm-34
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
+
+			&.column-sm-40
+				flex: 0 0 40%
+				max-width: 40%
+
+			&.column-sm-50
+				flex: 0 0 50%
+				max-width: 50%
+
+			&.column-sm-60
+				flex: 0 0 60%
+				max-width: 60%
+
+			&.column-sm-66,
+			&.column-sm-67
+				flex: 0 0 66.6666%
+				max-width: 66.6666%
+
+			&.column-sm-75
+				flex: 0 0 75%
+				max-width: 75%
+
+			&.column-sm-80
+				flex: 0 0 80%
+				max-width: 80%
+
+			&.column-sm-90
+				flex: 0 0 90%
+				max-width: 90%
+
+			&.column-sm-100
+				flex: 0 0 100%
+				max-width: 100%
+
+@media (min-width: $min-md)
+	.row
+		.column
+			&.column-md-offset-10
+				margin-left: 10%
+
+			&.column-md-offset-20
+				margin-left: 20%
+
+			&.column-md-offset-25
+				margin-left: 25%
+
+			&.column-md-offset-33,
+			&.column-md-offset-34
+				margin-left: 33.3333%
+
+			&.column-md-offset-50
+				margin-left: 50%
+
+			&.column-md-offset-66,
+			&.column-md-offset-67
+				margin-left: 66.6666%
+
+			&.column-md-offset-75
+				margin-left: 75%
+
+			&.column-md-offset-80
+				margin-left: 80%
+
+			&.column-md-offset-90
+				margin-left: 90%
+
+			&.column-md-10
+				flex: 0 0 10%
+				max-width: 10%
+
+			&.column-md-20
+				flex: 0 0 20%
+				max-width: 20%
+
+			&.column-md-25
+				flex: 0 0 25%
+				max-width: 25%
+
+			&.column-md-33,
+			&.column-md-34
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
+
+			&.column-md-40
+				flex: 0 0 40%
+				max-width: 40%
+
+			&.column-md-50
+				flex: 0 0 50%
+				max-width: 50%
+
+			&.column-md-60
+				flex: 0 0 60%
+				max-width: 60%
+
+			&.column-md-66,
+			&.column-md-67
+				flex: 0 0 66.6666%
+				max-width: 66.6666%
+
+			&.column-md-75
+				flex: 0 0 75%
+				max-width: 75%
+
+			&.column-md-80
+				flex: 0 0 80%
+				max-width: 80%
+
+			&.column-md-90
+				flex: 0 0 90%
+				max-width: 90%
+
+			&.column-md-100
+				flex: 0 0 100%
+				max-width: 100%
+
+@media (min-width: $min-lg)
+	.row
+		.column
+			&.column-lg-offset-10
+				margin-left: 10%
+
+			&.column-lg-offset-20
+				margin-left: 20%
+
+			&.column-lg-offset-25
+				margin-left: 25%
+
+			&.column-lg-offset-33,
+			&.column-lg-offset-34
+				margin-left: 33.3333%
+
+			&.column-lg-offset-50
+				margin-left: 50%
+
+			&.column-lg-offset-66,
+			&.column-lg-offset-67
+				margin-left: 66.6666%
+
+			&.column-lg-offset-75
+				margin-left: 75%
+
+			&.column-lg-offset-80
+				margin-left: 80%
+
+			&.column-lg-offset-90
+				margin-left: 90%
+
+			&.column-lg-10
+				flex: 0 0 10%
+				max-width: 10%
+
+			&.column-lg-20
+				flex: 0 0 20%
+				max-width: 20%
+
+			&.column-lg-25
+				flex: 0 0 25%
+				max-width: 25%
+
+			&.column-lg-33,
+			&.column-lg-34
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
+
+			&.column-lg-40
+				flex: 0 0 40%
+				max-width: 40%
+
+			&.column-lg-50
+				flex: 0 0 50%
+				max-width: 50%
+
+			&.column-lg-60
+				flex: 0 0 60%
+				max-width: 60%
+
+			&.column-lg-66,
+			&.column-lg-67
+				flex: 0 0 66.6666%
+				max-width: 66.6666%
+
+			&.column-lg-75
+				flex: 0 0 75%
+				max-width: 75%
+
+			&.column-lg-80
+				flex: 0 0 80%
+				max-width: 80%
+
+			&.column-lg-90
+				flex: 0 0 90%
+				max-width: 90%
+
+			&.column-lg-100
+				flex: 0 0 100%
+				max-width: 100%
+
+@media (min-width: $min-xl)
+	.row
+		.column
+			&.column-xl-offset-10
+				margin-left: 10%
+
+			&.column-xl-offset-20
+				margin-left: 20%
+
+			&.column-xl-offset-25
+				margin-left: 25%
+
+			&.column-xl-offset-33,
+			&.column-xl-offset-34
+				margin-left: 33.3333%
+
+			&.column-xl-offset-50
+				margin-left: 50%
+
+			&.column-xl-offset-66,
+			&.column-xl-offset-67
+				margin-left: 66.6666%
+
+			&.column-xl-offset-75
+				margin-left: 75%
+
+			&.column-xl-offset-80
+				margin-left: 80%
+
+			&.column-xl-offset-90
+				margin-left: 90%
+
+			&.column-xl-10
+				flex: 0 0 10%
+				max-width: 10%
+
+			&.column-xl-20
+				flex: 0 0 20%
+				max-width: 20%
+
+			&.column-xl-25
+				flex: 0 0 25%
+				max-width: 25%
+
+			&.column-xl-33,
+			&.column-xl-34
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
+
+			&.column-xl-40
+				flex: 0 0 40%
+				max-width: 40%
+
+			&.column-xl-50
+				flex: 0 0 50%
+				max-width: 50%
+
+			&.column-xl-60
+				flex: 0 0 60%
+				max-width: 60%
+
+			&.column-xl-66,
+			&.column-xl-67
+				flex: 0 0 66.6666%
+				max-width: 66.6666%
+
+			&.column-xl-75
+				flex: 0 0 75%
+				max-width: 75%
+
+			&.column-xl-80
+				flex: 0 0 80%
+				max-width: 80%
+
+			&.column-xl-90
+				flex: 0 0 90%
+				max-width: 90%
+
+			&.column-xl-100
+				flex: 0 0 100%
+				max-width: 100%

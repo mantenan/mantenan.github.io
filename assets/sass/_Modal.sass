@@ -1,0 +1,77 @@
+
+// Modal
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.modal
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	overflow: auto
+	background-color: rgba(0,0,0,.5)
+	z-index: 99
+	opacity: 0
+	visibility: hidden
+	-webkit-transition: all .25s ease
+			transition: all .25s ease
+
+	&.open
+		opacity: 1
+		visibility: visible
+		-webkit-transition: all .25s ease
+				transition: all .25s ease
+
+		.modal-content
+			-webkit-transform: scale(1)
+					transform: scale(1)
+			-webkit-transition: all .25s ease
+					transition: all .25s ease
+
+	&-dialog
+		display: -webkit-box
+		display: -ms-flexbox
+		display: flex
+		-webkit-box-orient: vertical
+		-webkit-box-direction: normal
+		-ms-flex-direction: column
+		flex-direction: column
+		position: relative
+		height: 100%
+
+	&-content
+		width: 100%
+		margin: auto
+		padding: 1.5rem
+		z-index: 1
+		-webkit-transform: scale(.75)
+				transform: scale(.75)
+		-webkit-transition: all .25s ease
+				transition: all .25s ease
+
+	&-close
+		width: 12px
+		height: 12px
+		border-radius: 50%
+		background: $color-red
+		position: absolute
+		right: .85rem + 1.5rem
+		top: .85rem + 1.5rem
+		cursor: pointer
+		-webkit-transition: all .25s ease
+				transition: all .25s ease
+
+		&:hover,
+		&:focus
+			background: $color-quaternary
+			-webkit-transition: all .25s ease
+					transition: all .25s ease
+
+@media (min-width: $min-sm)
+	.modal
+		&-content
+			width: 550px
+
+		&-close
+			right: .85rem + 3rem
+			top: .85rem + 3rem
