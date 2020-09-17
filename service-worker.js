@@ -9,6 +9,8 @@ const assets = [
 	"/assets/icon/icon-32x32.png",
 	"/assets/icon/icon-72x72.png",
 	"/assets/icon/icon-128x128.png",
+	"/assets/icon/icon-144x144.png",
+	"/assets/icon/icon-152x152.png",
 	"/assets/icon/icon-192x192.png",
 	"/assets/icon/icon-256x256.png",
 	"/assets/icon/icon-512x512.png",
