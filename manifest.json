@@ -1,0 +1,21 @@
+{
+	"name": "Mantenan",
+	"short_name": "Mantenan",
+	"description": "Undangan pernikahan online berbasis website yang dapat diakses di perangkat apapun dan dimanapun Anda berada.",
+	"lang": "id-ID",
+	"dir": "ltr",
+	"theme_color": "#FFFFFF",
+	"start_url": ".",
+	"background_color": "#444444",
+	"display": "standalone",
+	"orientation": "portrait-primary",
+	"icons": [{
+		"src": "assets/icon/icon-72x72.png",
+		"sizes": "72x72",
+		"type": "image/png"
+	}, {
+		"src": "assets/icon/icon-512x512.png",
+		"sizes": "512x512",
+		"type": "image/png"
+	}]
+}
