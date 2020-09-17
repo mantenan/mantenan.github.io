@@ -239,7 +239,7 @@
 		</div>
 	</section>
 
-	<section id="theme" class="anchor">
+	<!-- <section id="theme" class="anchor">
 		<div class="container">
 			<div class="row">
 				<div class="column text-center">
@@ -280,7 +280,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="price" class="anchor">
 		<div class="container">
@@ -785,17 +785,17 @@
 	</div>
 </footer>
 
-<script src="serviceWorker.js"></script>
 <script>
 	if ("serviceWorker" in navigator) {
 		window.addEventListener("load", function() {
 			navigator.serviceWorker
-			.register("/serviceWorker.js")
+			.register("/service-worker.js")
 			.then(res => console.log("service worker registered"))
 			.catch(err => console.log("service worker not registered", err))
 		})
 	}
 </script>
+<script src="service-worker.js"></script>
 
 </body>
 </html>
