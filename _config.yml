@@ -1,9 +1,6 @@
 ---
+layout: default
 permalink: /404.html
 ---
-
----
-title-heading: false
----
-
-# This is my custom heading
+# 404
+Page not found!
