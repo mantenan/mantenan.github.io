@@ -253,7 +253,7 @@
 				</div>
 
 				<div class="column column-md-50 column-lg-25 my-3 filter category-1">
-					<!-- <img class="thumbnail" src="assets/img/theme/dalem-1.jpg">
+					<!-- <img class="thumbnail" src="assets/img/theme/dalem-1.jpg" alt="Tema Dalem">
 					<div class="d-flex align-items-start justify-content-between mt-2">
 						<span class="pt-1 mt-2 mr-3">Dalem #1</span>
 						<a class="button" target="_blank" href="#">Lihat</a>
@@ -261,7 +261,7 @@
 				</div>
 
 				<div class="column column-md-50 column-lg-25 my-3 filter category-2">
-					<!-- <img class="thumbnail" src="assets/img/theme/panggih-1.jpg">
+					<!-- <img class="thumbnail" src="assets/img/theme/panggih-1.jpg" alt="Tema Panggih">
 					<div class="d-flex align-items-start justify-content-between mt-2">
 						<span class="pt-1 mt-2 mr-3">Panggih #1</span>
 						<a class="button" target="_blank" href="#">Lihat</a>
@@ -269,7 +269,7 @@
 				</div>
 
 				<div class="column column-md-50 column-lg-25 my-3 filter category-3">
-					<!-- <img class="thumbnail" src="assets/img/theme/anteng-1.jpg">
+					<!-- <img class="thumbnail" src="assets/img/theme/anteng-1.jpg" alt="Tema Anteng">
 					<div class="d-flex align-items-start justify-content-between mt-2">
 						<span class="pt-1 mt-2 mr-3">Anteng #1</span>
 						<a class="button" target="_blank" href="#">Lihat</a>
@@ -492,21 +492,21 @@
 					<form spellcheck="false" method="POST" action="https://formspree.io/xaypgygb">
 						<div class="row row-responsive">
 							<div class="column my-3">
-								<label>Nama <span class="color-red">*</span></label>
-								<input type="text" name="Nama" required placeholder="Nama lengkap...">
+								<label for="name">Nama <span class="color-red">*</span></label>
+								<input id="name" type="text" name="Nama" required placeholder="Nama lengkap...">
 							</div>
 							<div class="column column-md-50 my-3">
-								<label>Nomor HP / WA <span class="color-red">*</span></label>
-								<input type="text" name="Ponsel" required placeholder="Nomor telepon seluler...">
+								<label for="phone">Nomor HP / WA <span class="color-red">*</span></label>
+								<input id="phone" type="text" name="Ponsel" required placeholder="Nomor telepon seluler...">
 							</div>
 							<div class="column column-md-50 my-3">
-								<label>Email</label>
-								<input type="email" name="Email" placeholder="Alamat email...">
+								<label for="email">Email</label>
+								<input id="email" type="email" name="Email" placeholder="Alamat email...">
 							</div>
 
 							<div class="column my-3">
-								<label>Paket <span class="color-red">*</span></label>
-								<select name="Paket" required>
+								<label for="package">Paket <span class="color-red">*</span></label>
+								<select id="package" name="Paket" required>
 									<option selected value>Pilih Paket...</option>
 									<option value="Anteng">Anteng</option>
 									<option value="Rakyat">Rakyat</option>
@@ -517,8 +517,8 @@
 							</div>
 
 							<div class="column column-md-50 my-3 kategori d-none">
-								<label>Kategori Tema <span class="color-red">*</span></label>
-								<select name="Kategori Tema" required disabled>
+								<label for="category">Kategori Tema <span class="color-red">*</span></label>
+								<select id="category" name="Kategori Tema" required disabled>
 									<option selected value>Pilih Kategori Tema...</option>
 									<option disabled value="Dalem">Dalem</option>
 									<option disabled value="Panggih">Panggih</option>
@@ -526,8 +526,8 @@
 								</select>
 							</div>
 							<div class="column column-md-50 my-3 tema d-none">
-								<label>Tema <span class="color-red">*</span></label>
-								<select name="Tema" required disabled>
+								<label for="theme1">Tema <span class="color-red">*</span></label>
+								<select id="theme1" name="Tema" required disabled>
 									<option selected value>Pilih Tema...</option>
 									<option class="d-none theme-1" value="Tema 1">Tema 1</option>
 									<option class="d-none theme-1" value="Tema 2">Tema 2</option>
@@ -536,8 +536,8 @@
 								</select>
 							</div>
 							<div class="column my-3 tema-statis">
-								<label>Tema <span class="color-red">*</span></label>
-								<select name="Tema Statis" required>
+								<label for="theme2">Tema <span class="color-red">*</span></label>
+								<select id="theme2" name="Tema Statis" required>
 									<option selected value>Pilih Tema...</option>
 									<option class="theme-static" value="Tema 1">Tema 1</option>
 									<option class="theme-static" value="Tema 2">Tema 2</option>
@@ -547,104 +547,104 @@
 							</div>
 
 							<div class="column my-3 catatan">
-								<label>Catatan</label>
-								<textarea rows="5" name="Catatan" placeholder="Catatan terkait pemesanan..."></textarea>
+								<label for="note">Catatan</label>
+								<textarea id="note" rows="5" name="Catatan" placeholder="Catatan terkait pemesanan..."></textarea>
 							</div>
 
 							<div class="column my-3 pria d-none">
-								<label>Mempelai Pria <span class="color-red">*</span></label>
+								<label for="men">Mempelai Pria <span class="color-red">*</span></label>
 								<div class="row row-responsive">
 									<div class="column column-md-50">
-										<input type="text" name="Nama Pria" required placeholder="Nama Mempelai Pria..." disabled>
+										<input id="men" type="text" name="Nama Pria" required placeholder="Nama Mempelai Pria..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3 mt-md-0">
-										<input type="text" name="Panggilan Pria" required placeholder="Nama Panggilan Pria..." disabled>
+										<input id="men" type="text" name="Panggilan Pria" required placeholder="Nama Panggilan Pria..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Orang Tua Pria" required placeholder="Nama Orang Tua Pria..." disabled>
+										<input id="men" type="text" name="Orang Tua Pria" required placeholder="Nama Orang Tua Pria..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Alamat Pria" required placeholder="Alamat Pria..." disabled>
+										<input id="men" type="text" name="Alamat Pria" required placeholder="Alamat Pria..." disabled>
 									</div>
 								</div>
 							</div>
 							<div class="column my-3 wanita d-none">
-								<label>Mempelai Wanita <span class="color-red">*</span></label>
+								<label for="women">Mempelai Wanita <span class="color-red">*</span></label>
 								<div class="row row-responsive">
 									<div class="column column-md-50">
-										<input type="text" name="Nama Wanita" required placeholder="Nama Mempelai Wanita..." disabled>
+										<input id="women" type="text" name="Nama Wanita" required placeholder="Nama Mempelai Wanita..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3 mt-md-0">
-										<input type="text" name="Panggilan Wanita" required placeholder="Nama Panggilan Wanita..." disabled>
+										<input id="women" type="text" name="Panggilan Wanita" required placeholder="Nama Panggilan Wanita..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Orang Tua Wanita" required placeholder="Nama Orang Tua Wanita..." disabled>
+										<input id="women" type="text" name="Orang Tua Wanita" required placeholder="Nama Orang Tua Wanita..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Alamat Wanita" required placeholder="Alamat Wanita..." disabled>
+										<input id="women" type="text" name="Alamat Wanita" required placeholder="Alamat Wanita..." disabled>
 									</div>
 								</div>
 							</div>
 							<div class="column my-3 akad d-none">
-								<label>Akad Nikah <span class="color-red">*</span></label>
+								<label for="event">Akad Nikah <span class="color-red">*</span></label>
 								<div class="row row-responsive">
 									<div class="column column-md-50">
-										<input type="text" name="Nama Akad" required placeholder="Nama Akad..." disabled value="Akad Nikah">
+										<input id="event" type="text" name="Nama Akad" required placeholder="Nama Akad..." disabled value="Akad Nikah">
 									</div>
 									<div class="column column-md-50 mt-3 mt-md-0">
-										<input type="text" name="Tanggal Akad" required placeholder="Tanggal Akad..." disabled>
+										<input id="event" type="text" name="Tanggal Akad" required placeholder="Tanggal Akad..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Jam Akad" required placeholder="Jam Akad..." disabled>
+										<input id="event" type="text" name="Jam Akad" required placeholder="Jam Akad..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Alamat Akad" required placeholder="Alamat Akad..." disabled>
+										<input id="event" type="text" name="Alamat Akad" required placeholder="Alamat Akad..." disabled>
 									</div>
 								</div>
 							</div>
 							<div class="column my-3 acara-1 d-none">
-								<label>Acara <span class="d-none">1 </span><span class="color-red">*</span></label>
+								<label for="event1">Acara <span class="d-none">1 </span><span class="color-red">*</span></label>
 								<div class="row row-responsive">
 									<div class="column column-md-50">
-										<input type="text" name="Domain Acara 1" required placeholder="Domain, contoh: dewi-roni" disabled>
+										<input id="event1" type="text" name="Domain Acara 1" required placeholder="Domain, contoh: dewi-roni" disabled>
 									</div>
 									<div class="column column-md-50 mt-3 mt-md-0">
-										<input type="text" name="Nama Acara 1" required placeholder="Nama Acara..." disabled>
+										<input id="event1" type="text" name="Nama Acara 1" required placeholder="Nama Acara..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Tanggal Acara 1" required placeholder="Tanggal Acara..." disabled>
+										<input id="event1" type="text" name="Tanggal Acara 1" required placeholder="Tanggal Acara..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Jam Acara 1" required placeholder="Jam Acara..." disabled>
+										<input id="event1" type="text" name="Jam Acara 1" required placeholder="Jam Acara..." disabled>
 									</div>
 									<div class="column mt-3">
-										<input type="text" name="Alamat Acara 1" required placeholder="Alamat Acara..." disabled>
+										<input id="event1" type="text" name="Alamat Acara 1" required placeholder="Alamat Acara..." disabled>
 									</div>
 									<div class="column mt-3">
-										<input type="text" name="Peta Acara 1" required placeholder="Google Maps, contoh: https://goo.gl/maps/WpBBBG6QJJY8ddZ5A" disabled>
+										<input id="event1" type="text" name="Peta Acara 1" required placeholder="Google Maps, contoh: https://goo.gl/maps/WpBBBG6QJJY8ddZ5A" disabled>
 									</div>
 								</div>
 							</div>
 							<div class="column my-3 acara-2 d-none">
-								<label>Acara 2 <span class="color-red">*</span></label>
+								<label for="event2">Acara 2 <span class="color-red">*</span></label>
 								<div class="row row-responsive">
 									<div class="column column-md-50">
-										<input type="text" name="Domain Acara 2" required placeholder="Domain, contoh: roni-dewi" disabled>
+										<input id="event2" type="text" name="Domain Acara 2" required placeholder="Domain, contoh: roni-dewi" disabled>
 									</div>
 									<div class="column column-md-50 mt-3 mt-md-0">
-										<input type="text" name="Nama Acara 2" required placeholder="Nama Acara..." disabled>
+										<input id="event2" type="text" name="Nama Acara 2" required placeholder="Nama Acara..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Tanggal Acara 2" required placeholder="Tanggal Acara..." disabled>
+										<input id="event2" type="text" name="Tanggal Acara 2" required placeholder="Tanggal Acara..." disabled>
 									</div>
 									<div class="column column-md-50 mt-3">
-										<input type="text" name="Jam Acara 2" required placeholder="Jam Acara..." disabled>
+										<input id="event2" type="text" name="Jam Acara 2" required placeholder="Jam Acara..." disabled>
 									</div>
 									<div class="column mt-3">
-										<input type="text" name="Alamat Acara 2" required placeholder="Alamat Acara..." disabled>
+										<input id="event2" type="text" name="Alamat Acara 2" required placeholder="Alamat Acara..." disabled>
 									</div>
 									<div class="column mt-3">
-										<input type="text" name="Peta Acara 2" required placeholder="Google Maps, contoh: https://goo.gl/maps/WpBBBG6QJJY8ddZ5A" disabled>
+										<input id="event2" type="text" name="Peta Acara 2" required placeholder="Google Maps, contoh: https://goo.gl/maps/WpBBBG6QJJY8ddZ5A" disabled>
 									</div>
 								</div>
 							</div>
@@ -652,8 +652,8 @@
 							<div class="column my-3">
 								<div class="d-md-flex justify-content-between">
 									<div class="d-flex my-2 py-1">
-										<input type="checkbox" name="Persetujuan" value="Saya menyetujui syarat dan ketentuan Mantenan" id="orderConfirm" class="agreement" required>
-										<label class="mb-0 ml-2 mr-3 cursor-pointer" for="orderConfirm">Anda menyetujui <a>Syarat dan Ketentuan</a> Mantenan</label>
+										<input id="agreement" type="checkbox" name="Persetujuan" class="agreement" value="Saya menyetujui syarat dan ketentuan Mantenan" required>
+										<label for="agreement" class="mb-0 ml-2 mr-3 cursor-pointer">Anda menyetujui <a>Syarat dan Ketentuan</a> Mantenan</label>
 									</div>
 									<button type="submit" class="mt-4 mt-md-0 mb-0">Kirim</button>
 								</div>
@@ -782,11 +782,21 @@
 	</div>
 </footer>
 
-<noscript>
+<section>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;600;700&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap">
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker
+				.register('service-worker.js')
+				.then(res => console.log('service worker registered'))
+				.catch(err => console.log('service worker not registered', err))
+			})
+		}
+	</script>
 	<script src="service-worker.js"></script>
-</noscript>
+</section>
 
 </body>
 </html>
