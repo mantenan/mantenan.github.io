@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-	<meta charset="UTF-8">
 	<title>Mantenan</title>
 	<meta name="description" content="Undangan pernikahan online berbasis website yang dapat diakses di perangkat apapun dan dimanapun Anda berada.">
 	<meta name="google" content="notranslate">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
 	<!-- Open Graph -->
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Mantenan">
@@ -38,9 +38,6 @@
 	<meta name="apple-mobile-web-app-status-bar" content="#FFFFFF">
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="theme-color" content="#FFFFFF">
-	<!-- Font -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;600;700&display=swap">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap">
 	<!-- Main -->
 	<link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
 	<script type="text/javascript" src="assets/js/main.min.js"></script>
@@ -354,7 +351,7 @@
 								<li>Aktif 3 Bulan</li>
 								<li>Detail 1 Acara</li>
 								<li>Navigasi Lokasi</li>
-								<li>Galeri (7 Foto)</li>
+								<li>Galeri (10 Foto)</li>
 								<li>Hitung Mundur</li>
 								<li>Nama Tamu</li>
 								<li>Musik Tema</li>
@@ -653,12 +650,12 @@
 							</div>
 
 							<div class="column my-3">
-								<div class="d-flex justify-content-between">
+								<div class="d-md-flex justify-content-between">
 									<div class="d-flex my-2 py-1">
 										<input type="checkbox" name="Persetujuan" value="Saya menyetujui syarat dan ketentuan Mantenan" id="orderConfirm" class="agreement" required>
 										<label class="mb-0 ml-2 mr-3 cursor-pointer" for="orderConfirm">Anda menyetujui <a>Syarat dan Ketentuan</a> Mantenan</label>
 									</div>
-									<button type="submit" class="mb-0">Kirim</button>
+									<button type="submit" class="mt-4 mt-md-0 mb-0">Kirim</button>
 								</div>
 							</div>
 						</div>
@@ -785,17 +782,11 @@
 	</div>
 </footer>
 
-<script>
-	if ("serviceWorker" in navigator) {
-		window.addEventListener("load", function() {
-			navigator.serviceWorker
-			.register("/service-worker.js")
-			.then(res => console.log("service worker registered"))
-			.catch(err => console.log("service worker not registered", err))
-		})
-	}
-</script>
-<script src="service-worker.js"></script>
+<noscript>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;600;700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap">
+	<script src="service-worker.js"></script>
+</noscript>
 
 </body>
 </html>
