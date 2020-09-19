@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<title>Mantenan</title>
+	<meta name="description" content="Undangan pernikahan online berbasis website yang dapat diakses di perangkat apapun dan dimanapun Anda berada.">
+	<meta name="google" content="notranslate">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<!-- Redirect -->
+	<script type="text/javascript">
+		var host = window.location.href
+		if (window.location.host == host && window.location.protocol != 'https:') {
+			window.location.protocol = 'https:'
+		}
+	</script>
+	<!-- Open Graph -->
+	<meta property="og:title" content="Mantenan">
+	<meta property="og:description" content="Undangan pernikahan online berbasis website yang dapat diakses di perangkat apapun dan dimanapun Anda berada.">
+	<meta property="og:image" content="assets/img/open-graph-protocol.jpg">
+	<meta property="og:locale" content="id_ID">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Mantenan">
+	<meta property="og:url" content="https://maumantenan.com/order">
+	<!-- Canonical -->
+	<link rel="canonical" href="https://maumantenan.com/order">
+	<!-- Favicon -->
+	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/icon/favicon.ico">
+	<!-- Manifest -->
+	<link rel="manifest" href="manifest.json">
+	<!-- Android -->
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/icon/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon-32x32.png">
+	<!-- iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="Mantenan">
+	<link rel="apple-touch-icon" href="assets/icon/icon-72x72.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-96x96.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-128x128.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-144x144.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-152x152.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-192x192.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-384x384.png">
+	<link rel="apple-touch-icon" href="assets/icon/icon-512x512.png">
+	<!-- Windows -->
+	<meta name="msapplication-TileImage" content="assets/icon/icon-512x512.png">
+	<!-- Status Bar -->
+	<meta name="apple-mobile-web-app-status-bar" content="#FFFFFF">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="theme-color" content="#FFFFFF">
+	<!-- Main -->
+	<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css">
+	<style type="text/css">.anchor{margin-bottom:15px}</style>
+	<script type="text/javascript" src="assets/js/order.min.js"></script>
+</head>
+
+<body>
+
+<header>
+	<nav id="navbar" class="scroll">
+		<div class="container">
+			<a class="d-flex align-items-center" href="javascript:history.back()">
+				<svg viewBox="0 0 24 24" width="17" height="17">
+					<path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+				</svg>
+				<span class="ml-2">Kembali</span>
+			</a>
+		</div>
+	</nav>
+</header>
+
+<main>
+	<section id="order" class="anchor">
+		<div class="container">
+			<div class="row">
+				<div class="column text-center">
+					<h2 class="font-theme font-weight-normal">Tertarik untuk memesan<span class="color-primary ml-2">?</span></h2>
+					<p>Silakan lengkapi formulir dibawah ini untuk melakukan pemesanan</p>
+				</div>
+			</div>
+			<div class="row row-responsive mt-3">
+				<div class="column">
+					<form spellcheck="false" method="POST" action="https://formspree.io/xaypgygb">
+						<div class="row row-responsive">
+							<div class="column my-3">
+								<label for="name">Nama <span class="color-red">*</span></label>
+								<input id="name" type="text" name="Nama" required placeholder="Nama lengkap...">
+							</div>
+							<div class="column column-md-50 my-3">
+								<label for="phone">Nomor HP / WA <span class="color-red">*</span></label>
+								<input id="phone" type="text" name="Ponsel" required placeholder="Nomor telepon seluler...">
+							</div>
+							<div class="column column-md-50 my-3">
+								<label for="email">Email</label>
+								<input id="email" type="email" name="Email" placeholder="Alamat email...">
+							</div>
+
+							<div class="column my-3">
+								<label for="package">Paket <span class="color-red">*</span></label>
+								<select id="package" name="Paket" required>
+									<option selected value>Pilih Paket...</option>
+									<option value="Anteng">Anteng</option>
+									<option value="Rakyat">Rakyat</option>
+									<option value="Abdi">Abdi</option>
+									<option value="Patih">Patih</option>
+									<option value="Sultan">Sultan</option>
+								</select>
+							</div>
+
+							<div class="column column-md-50 my-3 kategori d-none">
+								<label for="category">Kategori Tema <span class="color-red">*</span></label>
+								<select id="category" name="Kategori Tema" required disabled>
+									<option selected value>Pilih Kategori Tema...</option>
+									<option disabled value="Dalem">Dalem</option>
+									<option disabled value="Panggih">Panggih</option>
+									<option disabled value="Custom">Custom</option>
+								</select>
+							</div>
+							<div class="column column-md-50 my-3 tema d-none">
+								<label for="theme1">Tema <span class="color-red">*</span></label>
+								<select id="theme1" name="Tema" required disabled>
+									<option selected value>Pilih Tema...</option>
+									<option class="d-none theme-1" value="Tema 1">Tema 1</option>
+									<option class="d-none theme-1" value="Tema 2">Tema 2</option>
+									<option class="d-none theme-2" value="Tema 3">Tema 3</option>
+									<option class="d-none theme-2" value="Tema 4">Tema 4</option>
+								</select>
+							</div>
+							<div class="column my-3 tema-statis">
+								<label for="theme2">Tema <span class="color-red">*</span></label>
+								<select id="theme2" name="Tema Statis" required>
+									<option selected value>Pilih Tema...</option>
+									<option class="theme-static" value="Tema 1">Tema 1</option>
+									<option class="theme-static" value="Tema 2">Tema 2</option>
+									<option class="theme-static" value="Tema 3">Tema 3</option>
+									<option class="theme-static" value="Tema 4">Tema 4</option>
+								</select>
+							</div>
+
+							<div class="column my-3 catatan">
+								<label for="note">Catatan</label>
+								<textarea id="note" rows="5" name="Catatan" placeholder="Catatan terkait pemesanan..."></textarea>
+							</div>
+
+							<div class="column my-3 pria d-none">
+								<label for="men">Mempelai Pria <span class="color-red">*</span></label>
+								<div class="row row-responsive">
+									<div class="column column-md-50">
+										<input id="men" type="text" name="Nama Pria" required placeholder="Nama Mempelai Pria..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3 mt-md-0">
+										<input type="text" name="Panggilan Pria" required placeholder="Nama Panggilan Pria..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Orang Tua Pria" required placeholder="Nama Orang Tua Pria..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Alamat Pria" required placeholder="Alamat Pria..." disabled>
+									</div>
+								</div>
+							</div>
+							<div class="column my-3 wanita d-none">
+								<label for="women">Mempelai Wanita <span class="color-red">*</span></label>
+								<div class="row row-responsive">
+									<div class="column column-md-50">
+										<input id="women" type="text" name="Nama Wanita" required placeholder="Nama Mempelai Wanita..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3 mt-md-0">
+										<input type="text" name="Panggilan Wanita" required placeholder="Nama Panggilan Wanita..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Orang Tua Wanita" required placeholder="Nama Orang Tua Wanita..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Alamat Wanita" required placeholder="Alamat Wanita..." disabled>
+									</div>
+								</div>
+							</div>
+							<div class="column my-3 akad d-none">
+								<label for="event">Akad Nikah <span class="color-red">*</span></label>
+								<div class="row row-responsive">
+									<div class="column column-md-50">
+										<input id="event" type="text" name="Nama Akad" required placeholder="Nama Akad..." disabled value="Akad Nikah">
+									</div>
+									<div class="column column-md-50 mt-3 mt-md-0">
+										<input type="text" name="Tanggal Akad" required placeholder="Tanggal Akad..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Jam Akad" required placeholder="Jam Akad..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Alamat Akad" required placeholder="Alamat Akad..." disabled>
+									</div>
+								</div>
+							</div>
+							<div class="column my-3 acara-1 d-none">
+								<label for="event1">Acara <span class="d-none">1 </span><span class="color-red">*</span></label>
+								<div class="row row-responsive">
+									<div class="column column-md-50">
+										<input id="event1" type="text" name="Domain Acara 1" required placeholder="Domain, contoh: dewi-roni" disabled>
+									</div>
+									<div class="column column-md-50 mt-3 mt-md-0">
+										<input type="text" name="Nama Acara 1" required placeholder="Nama Acara..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Tanggal Acara 1" required placeholder="Tanggal Acara..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Jam Acara 1" required placeholder="Jam Acara..." disabled>
+									</div>
+									<div class="column mt-3">
+										<input type="text" name="Alamat Acara 1" required placeholder="Alamat Acara..." disabled>
+									</div>
+									<div class="column mt-3">
+										<input type="text" name="Peta Acara 1" required placeholder="Google Maps, contoh: https://goo.gl/maps/WpBBBG6QJJY8ddZ5A" disabled>
+									</div>
+								</div>
+							</div>
+							<div class="column my-3 acara-2 d-none">
+								<label for="event2">Acara 2 <span class="color-red">*</span></label>
+								<div class="row row-responsive">
+									<div class="column column-md-50">
+										<input id="event2" type="text" name="Domain Acara 2" required placeholder="Domain, contoh: roni-dewi" disabled>
+									</div>
+									<div class="column column-md-50 mt-3 mt-md-0">
+										<input type="text" name="Nama Acara 2" required placeholder="Nama Acara..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Tanggal Acara 2" required placeholder="Tanggal Acara..." disabled>
+									</div>
+									<div class="column column-md-50 mt-3">
+										<input type="text" name="Jam Acara 2" required placeholder="Jam Acara..." disabled>
+									</div>
+									<div class="column mt-3">
+										<input type="text" name="Alamat Acara 2" required placeholder="Alamat Acara..." disabled>
+									</div>
+									<div class="column mt-3">
+										<input type="text" name="Peta Acara 2" required placeholder="Google Maps, contoh: https://goo.gl/maps/WpBBBG6QJJY8ddZ5A" disabled>
+									</div>
+								</div>
+							</div>
+
+							<div class="column my-3">
+								<div class="d-md-flex justify-content-between">
+									<div class="d-flex my-2 py-1">
+										<input id="agreement" type="checkbox" name="Persetujuan" class="agreement" value="Saya menyetujui syarat dan ketentuan Mantenan" required>
+										<label for="agreement" class="mb-0 ml-2 mr-3 cursor-pointer">Anda menyetujui <span class="color-primary">Syarat dan Ketentuan</span> Mantenan</label>
+									</div>
+									<button type="submit" class="mt-4 mt-md-0 mb-0">Kirim</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="modal">
+		<div class="modal" id="term">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-close" title="Tutup"></div>
+					<div class="card">
+						<div class="card-body">
+							<div class="gradient"></div>
+							<div class="term">
+								<h5>SYARAT DAN KETENTUAN</h5>
+								<p><a href="https://maumantenan.com">Mantenan</a> adalah penyedia layanan pembuatan undangan digital, meliputi website dan statis. Segala aktivitas yang berkaitan secara langsung dengan situs ini akan sepenuhnya diatur oleh syarat dan ketentuan dibawah ini.</p>
+								<p>Kontak resmi yang dapat dihubungi adalah email <a href="mailto:maumantenan@gmail.com">maumantenan@gmail.com</a> dan nomor WhatsApp <a href="https://api.whatsapp.com/send?phone=6287838610808">0878 3861 0808</a>.</p>
+								<p>Perubahan terhadap syarat dan ketentuan dapat dilakukan sewaktu-waktu. Pelanggan harus mengikuti setiap perubahan yang merupakan bagian dari perjanjian dan terikat oleh persyaratan sesuai dengan perubahan yang ada tanpa terkecuali.</p>
+								<ol>
+									<li>Untuk melakukan pemesanan, pelanggan harus mengisi formulir pemesanan dan menyetujui syarat dan ketentuan yang berlaku.</li>
+									<li>Bukti tagihan akan dikirimkan melalui kontak yang berikan oleh pelanggan maksimal 1 x 24 jam setelah pelanggan melakukan pemesanan.</li>
+									<li>Pembayaran dilakukan maksimal 2 x 24 jam setelah menerima bukti tagihan. Jika pembayaran belum dilakukan dan sudah melebihi batas waktu yang ditentukan, maka pemesanan dianggap batal.</li>
+									<li>Pembayaran sesuai dengan nominal yang tertera dan dikirimkan ke nomor rekening yang ada di bukti tagihan. Kami tidak bertanggungjawab apabila pembayaran dikirimkan selain ke nomor rekening yang tertera di bukti tagihan.</li>
+									<li>Pelanggan harus mengirimkan bukti pembayaran yang telah dilakukan ke kontak resmi kami berupa foto struk atau <i>screenshot</i> bukti transfer dari aplikasi perbankan yang menampilkan secara jelas identitas pengirim dan nominal yang ditransfer.</li>
+									<li>Pembayaran yang telah terkonfirmasi dilakukan akan mendapatkan bukti konfirmasi pembayaran yang dikirimkan melalui kontak yang berikan oleh pelanggan.</li>
+									<li>Bukti konfirmasi pembayaran harap disimpan dengan baik sehingga dapat dipergunakan apabila dibutuhkan kembali.</li>
+									<li>Pelanggan memiliki hak untuk mengganti paket pemesanan maksimal 1 x 24 jam setelah menerima bukti konfirmasi pembayaran dengan cara menghubungi kontak resmi kami.</li>
+									<li>Pelanggan akan menerima instruksi tata cara untuk mengirimkan file lampiran (foto / video / musik) setelah menerima bukti konfirmasi pembayaran.</li>
+									<li>Pelanggan memiliki hak untuk melakukan revisi konten maksimal 3 kali maksimal 2 x 24 jam setelah menerima bukti konfirmasi pembayaran, dan revisi desain maksimal 3 kali selama proses pengerjaan.</li>
+									<li>Revisi dapat disampaikan melalui kontak resmi kami.</li>
+									<li>Pelanggan dapat membatalkan pemesanan maksimal 1 x 24 jam setelah menerima bukti konfirmasi pembayaran dengan cara menghubungi kontak resmi kami.</li>
+									<li>Pembayaran untuk pemesanan yang telah dibatalkan akan dikembalikan kepada pelanggan sebesar 50% dari total pembayaran yang telah dilakukan dalam waktu 3 x 24 jam.</li>
+									<li>Pengerjaan akan dilakukan setelah pembayaran terkonfirmasi.</li>
+									<li>Proses pengerjaan maksimal 7 x 24 jam terhitung setelah pembayaran terkonfirmasi.</li>
+									<li>Pemesanan yang telah selesai dikerjakan akan dikirimkan melalui kontak yang berikan oleh pelanggan.</li>
+								</ol>
+								<br>
+								<h5>KRITIK DAN SARAN</h5>
+								<p>Perkembangan dan peningkatan pelayanan kami tidak terlepas dari saran dan kritik dari pelanggan. Jika ingin menyampaikan saran atau kritik, silakan menguhubungi melalui kontak resmi kami.</p>
+							</div>
+							<div class="text-right mt-4">
+								<button type="button" class="button button-outline mb-0 disagree">Tidak Setuju</button>
+								<button type="button" class="button button-primary mb-0 agree">Setuju</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+</body>
+</html>
