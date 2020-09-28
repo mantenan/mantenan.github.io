@@ -11,18 +11,12 @@
 	<meta charset="UTF-8">
 	<!-- Secure -->
 	<script>
-		var host = window.location.href
-		if (window.location.host == host && window.location.protocol != 'https:') {
-			window.location.protocol = 'https:'
-		}
+		var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'};
 	</script>
 	<!-- Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-178530227-1');
+		window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1');
 	</script>
 	<!-- Open Graph -->
 	<meta property="og:title" content="Fitur - Mantenan">
