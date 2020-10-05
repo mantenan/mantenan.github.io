@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+	<meta charset="UTF-8">
 	<title>Mantenan</title>
+	<meta name="title" content="Mantenan">
 	<meta name="description" content="Undangan pernikahan online berbasis website yang dapat diakses di perangkat apapun dan dimanapun Anda berada.">
 	<meta name="google" content="notranslate">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
 	<meta name="keywords" content="undangan, pernikahan, online, website, digital, manten, mantenan, maumantenan, menikah, wedding, invitation">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta charset="UTF-8">
 	<!-- Secure -->
 	<script>
-		var host = window.location.href
-		if (window.location.host == host && window.location.protocol != 'https:') {
-			window.location.protocol = 'https:'
-		}
+		var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'};
 	</script>
 	<!-- Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-178530227-1');
+		window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1');
 	</script>
 	<!-- Open Graph -->
 	<meta property="og:title" content="Mantenan">
@@ -268,7 +263,7 @@
 					<p>Tersedia dua kategori tema, yakni Tema Dalem dan Tema Panggih</p>
 				</div>
 			</div>
-			<div class="row row-responsive mt-4">
+			<div class="row row-responsive justify-content-center mt-4">
 				<div class="column text-center mb-3" id="theme-filter">
 					<button type="button" class="button-outline button-filter category-1 active">Dalem</button>
 					<button type="button" class="button-outline button-filter category-2">Panggih</button>
@@ -277,28 +272,70 @@
 				</div>
 
 				<div class="column column-md-50 column-lg-25 my-3 filter category-1">
-					<!-- <img class="thumbnail" src="assets/img/theme/dalem-1.jpg" alt="Tema Dalem">
+					<img class="thumbnail" src="themes/dlm-1/assets/img/preview.jpg" alt="Tema Dalem #DLM-1">
 					<div class="d-flex align-items-start justify-content-between mt-2">
-						<span class="pt-1 mt-2 mr-3">Dalem #1</span>
-						<a class="button" target="_blank" href="#">Lihat</a>
-					</div> -->
+						<span class="pt-1 mt-2 mr-3">#DLM-1</span>
+						<a class="button" href="/demo" onclick="sessionStorage.setItem('Kategori','Dalem');sessionStorage.setItem('Tema','#DLM-1')">Lihat</a>
+					</div>
 				</div>
+				<!-- <div class="column column-md-50 column-lg-25 my-3 filter category-1">
+					<img class="thumbnail" src="themes/dlm-2/assets/img/preview.jpg" alt="Tema Dalem #DLM-2">
+					<div class="d-flex align-items-start justify-content-between mt-2">
+						<span class="pt-1 mt-2 mr-3">#DLM-2</span>
+						<a class="button" href="/demo" onclick="sessionStorage.setItem('Kategori','Dalem');sessionStorage.setItem('Tema','#DLM-2')">Lihat</a>
+					</div>
+				</div>
+				<div class="column column-md-50 column-lg-25 my-3 filter category-1">
+					<img class="thumbnail" src="themes/dlm-3/assets/img/preview.jpg" alt="Tema Dalem #DLM-3">
+					<div class="d-flex align-items-start justify-content-between mt-2">
+						<span class="pt-1 mt-2 mr-3">#DLM-3</span>
+						<a class="button" href="/demo" onclick="sessionStorage.setItem('Kategori','Dalem');sessionStorage.setItem('Tema','#DLM-3')">Lihat</a>
+					</div>
+				</div> -->
 
 				<div class="column column-md-50 column-lg-25 my-3 filter category-2">
-					<!-- <img class="thumbnail" src="assets/img/theme/panggih-1.jpg" alt="Tema Panggih">
+					<img class="thumbnail" src="themes/pgh-1/assets/img/preview.jpg" alt="Tema Panggih #PGH-1">
 					<div class="d-flex align-items-start justify-content-between mt-2">
-						<span class="pt-1 mt-2 mr-3">Panggih #1</span>
-						<a class="button" target="_blank" href="#">Lihat</a>
-					</div> -->
+						<span class="pt-1 mt-2 mr-3">#PGH-1</span>
+						<a class="button" href="/demo" onclick="sessionStorage.setItem('Kategori','Panggih');sessionStorage.setItem('Tema','#PGH-1')">Lihat</a>
+					</div>
 				</div>
+				<!-- <div class="column column-md-50 column-lg-25 my-3 filter category-2">
+					<img class="thumbnail" src="themes/pgh-2/assets/img/preview.jpg" alt="Tema Panggih #PGH-2">
+					<div class="d-flex align-items-start justify-content-between mt-2">
+						<span class="pt-1 mt-2 mr-3">#PGH-2</span>
+						<a class="button" href="/demo" onclick="sessionStorage.setItem('Kategori','Panggih');sessionStorage.setItem('Tema','#PGH-2')">Lihat</a>
+					</div>
+				</div>
+				<div class="column column-md-50 column-lg-25 my-3 filter category-2">
+					<img class="thumbnail" src="themes/pgh-3/assets/img/preview.jpg" alt="Tema Panggih #PGH-3">
+					<div class="d-flex align-items-start justify-content-between mt-2">
+						<span class="pt-1 mt-2 mr-3">#PGH-3</span>
+						<a class="button" href="/demo" onclick="sessionStorage.setItem('Kategori','Panggih');sessionStorage.setItem('Tema','#PGH-3')">Lihat</a>
+					</div>
+				</div> -->
 
-				<div class="column column-md-50 column-lg-25 my-3 filter category-3">
-					<!-- <img class="thumbnail" src="assets/img/theme/anteng-1.jpg" alt="Tema Anteng">
+				<!-- <div class="column column-md-50 column-lg-25 my-3 filter category-3">
+					<img class="thumbnail" src="themes/ant-1/assets/img/preview.jpg" alt="Tema Anteng #ANT-1">
 					<div class="d-flex align-items-start justify-content-between mt-2">
-						<span class="pt-1 mt-2 mr-3">Anteng #1</span>
-						<a class="button" target="_blank" href="#">Lihat</a>
-					</div> -->
+						<span class="pt-1 mt-2 mr-3">#ANT-1</span>
+						<a class="button" href="/demo" onclick="sessionStorage.setItem('Kategori','Anteng');sessionStorage.setItem('Tema','#ANT-1')">Lihat</a>
+					</div>
 				</div>
+				<div class="column column-md-50 column-lg-25 my-3 filter category-3">
+					<img class="thumbnail" src="themes/ant-2/assets/img/preview.jpg" alt="Tema Anteng #ANT-2">
+					<div class="d-flex align-items-start justify-content-between mt-2">
+						<span class="pt-1 mt-2 mr-3">#ANT-2</span>
+						<a class="button" href="/demo" onclick="sessionStorage.setItem('Kategori','Anteng');sessionStorage.setItem('Tema','#ANT-2')">Lihat</a>
+					</div>
+				</div>
+				<div class="column column-md-50 column-lg-25 my-3 filter category-3">
+					<img class="thumbnail" src="themes/ant-3/assets/img/preview.jpg" alt="Tema Anteng #ANT-3">
+					<div class="d-flex align-items-start justify-content-between mt-2">
+						<span class="pt-1 mt-2 mr-3">#ANT-3</span>
+						<a class="button" href="/demo" onclick="sessionStorage.setItem('Kategori','Anteng');sessionStorage.setItem('Tema','#ANT-3')">Lihat</a>
+					</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
@@ -337,7 +374,6 @@
 								<li>Hitung Mundur</li>
 								<li>Nama Tamu</li>
 								<li><strike class="opacity-3">Musik Tema</strike></li>
-								<!-- <li><strike class="opacity-3">Ucapan</strike></li> -->
 								<li><strike class="opacity-3">Kata Sandi</strike></li>
 								<li><strike class="opacity-3">Video Teaser</strike></li>
 								<li><strike class="opacity-3">Kisah Cinta</strike></li>
@@ -374,12 +410,11 @@
 								<li>Tema Panggih</li>
 								<li>Aktif 3 Bulan</li>
 								<li>Detail 1 Acara</li>
-								<li>Navigasi Lokasi</li>
+								<li>Navigasi Lokasi + QR Code</li>
 								<li>Galeri (10 Foto)</li>
 								<li>Hitung Mundur</li>
 								<li>Nama Tamu</li>
 								<li>Musik Tema</li>
-								<!-- <li>Ucapan</li> -->
 								<li><strike class="opacity-3">Kata Sandi</strike></li>
 								<li><strike class="opacity-3">Video Teaser</strike></li>
 								<li><strike class="opacity-3">Kisah Cinta</strike></li>
@@ -417,8 +452,7 @@
 								<li>Galeri (15 Foto)</li>
 								<li>Hitung Mundur</li>
 								<li>Nama Tamu</li>
-								<li>Musik Tema</li>
-								<!-- <li>Ucapan</li> -->
+								<li>Musik Bebas</li>
 								<li>Kata Sandi</li>
 								<li>Video Teaser</li>
 								<li><strike class="opacity-3">Kisah Cinta</strike></li>
@@ -456,8 +490,7 @@
 								<li>Galeri (25 Foto)</li>
 								<li>Hitung Mundur</li>
 								<li>Nama Tamu</li>
-								<li>Musik Sesuai Keinginan</li>
-								<!-- <li>Ucapan</li> -->
+								<li>Musik Bebas</li>
 								<li>Kata Sandi</li>
 								<li>Video Teaser</li>
 								<li>Kisah Cinta</li>
