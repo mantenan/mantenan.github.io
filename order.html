@@ -11,14 +11,10 @@
 	<meta name="keywords" content="undangan, pernikahan, online, website, digital, manten, mantenan, maumantenan, menikah, wedding, invitation">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Secure -->
-	<script>
-		var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'};
-	</script>
+	<script>var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'}</script>
 	<!-- Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1');
-	</script>
+	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')</script>
 	<!-- Open Graph -->
 	<meta property="og:title" content="Pemesanan - Mantenan">
 	<meta property="og:description" content="Fitur dan harga yang ditawarkan Mantenan menarik bukan? Buruan pesan sekarang...">
@@ -59,7 +55,6 @@
 	<meta name="theme-color" content="#FFFFFF">
 	<!-- Main -->
 	<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css">
-	<style type="text/css">.anchor{margin-bottom:15px}</style>
 	<script type="text/javascript" src="assets/js/order.min.js"></script>
 </head>
 
@@ -68,18 +63,30 @@
 <header>
 	<nav id="navbar" class="scroll">
 		<div class="container">
-			<a class="d-flex align-items-center" href="javascript:history.back()">
+			<a class="brand" href="/">
+				<img src="assets/img/logo-mantenan.png" alt="Mantenan">
+			</a>
+			<a class="d-flex align-items-center back" href="javascript:history.back()">
 				<svg viewBox="0 0 24 24" width="17" height="17">
-					<path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+					<path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
 				</svg>
 				<span class="ml-2">Kembali</span>
 			</a>
 		</div>
 	</nav>
+	<script type="text/javascript">
+		if ( sessionStorage.getItem('Brand') != null ) {
+			var brand = document.querySelector('.brand')
+			brand.parentNode.removeChild(brand)
+		} else {
+			var back = document.querySelector('.back')
+			back.parentNode.removeChild(back)
+		}
+	</script>
 </header>
 
 <main>
-	<section id="order" class="anchor">
+	<section id="order" class="anchor mb-4">
 		<div class="container">
 			<div class="row">
 				<div class="column text-center">
