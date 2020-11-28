@@ -20,24 +20,21 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="https://maumantenan.com/assets/icon/favicon.ico">
 	<meta name="theme-color" content="#FFFFFF">
-	<!-- Preload -->
-	<style id="preCSS" type="text/css">
-		* {
-			opacity: 0;
-			overflow: hidden;
-		}
-	</style>
-	<script id="preJS" type="text/javascript">
-		var checkExist = setInterval(function() {
-			if ( document.querySelectorAll('#style link').length > 0 ) {
-				clearInterval(checkExist);
-				var preCSS = document.querySelector('#preCSS');
-				var preJS = document.querySelector('#preJS');
-				preCSS.parentNode.removeChild(preCSS);
-				preJS.parentNode.removeChild(preJS);
-			};
-		}, 1000);
-	</script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<!-- Animate On Scroll -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	<!-- Countdown -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.plugin.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js"></script>
+	<!-- Main -->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.min.css"/>
+	<script type="text/javascript" src="assets/js/main.min.js"></script>
 </head>
 
 <body class="overflow-hidden">
@@ -329,36 +326,6 @@
 			</div>
 		</div>
 	</div>
-</section>
-
-<section id="style">
-	<noscript id="deferred-style">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-		<link rel="stylesheet" type="text/css" href="assets/css/main.min.css"/>
-	</noscript>
-</section>
-
-<section id="script">
-	<script>
-		var loadDeferredStyles = function() {
-			var addStylesNode = document.getElementById("deferred-style");
-			var replacement = document.getElementById("style");
-			var location = document.getElementById("script");
-			replacement.innerHTML = addStylesNode.textContent;
-			document.body.insertBefore(replacement, location);
-		};
-		var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-		if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0) });
-		else window.addEventListener('load', loadDeferredStyles);
-	</script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.plugin.min.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js"></script>
-	<script defer type="text/javascript" src="assets/js/main.min.js"></script>
 </section>
 
 </body>
