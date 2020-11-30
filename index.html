@@ -54,8 +54,9 @@
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="theme-color" content="#FFFFFF">
 	<!-- Main -->
-	<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css">
-	<script defer type="text/javascript" src="assets/js/main.min.js"></script>
+	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
+	<script id="preJS" type="text/javascript">var checkExist=setInterval(function(){if(document.querySelectorAll("#style link").length>0){clearInterval(checkExist);var e=document.querySelector("#preCSS"),r=document.querySelector("#preJS");e.parentNode.removeChild(e),r.parentNode.removeChild(r)}},1e3)</script>
+	<script defer type="text/javascript" src="assets/js/main.js"></script>
 </head>
 
 <body>
@@ -347,6 +348,19 @@
 					<p>Tersedia empat paket dengan fitur dan harga yang berbeda</p>
 				</div>
 			</div>
+			<!-- <div class="row row-responsive my-4 pt-2">
+				<div class="column">
+					<div class="alert">
+						<div class="alert-icon">
+							<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+								<path d="M7,2V13H10V22L17,10H13L17,2H7Z"></path>
+							</svg>
+						</div>
+						<strong class="mx-3 pl-1">PROMO AKHIR TAHUN</strong>
+						<small class="mr-3">Diskon hingga <strong>33%</strong></small>
+					</div>
+				</div>
+			</div> -->
 			<div class="row row-responsive mt-4 pt-2">
 				<div class="column column-md-50 column-lg-25 mb-4 mt-md-5">
 					<div class="card text-center price">
@@ -355,12 +369,12 @@
 						</div>
 						<div class="card-body">
 							<p>Paket murah meriah</p>
-							<div class="title old">
+							<!-- <div class="title old">
 								<strike>Rp 150.000</strike>
-							</div>
+							</div> -->
 							<div class="title">
 								<small>Rp</small>
-								<span>100</span>
+								<span>150</span>
 								<small>000</small>
 							</div>
 							<ul class="list">
@@ -396,12 +410,12 @@
 						</div>
 						<div class="card-body">
 							<p>Paket minimalis</p>
-							<div class="title old">
+							<!-- <div class="title old">
 								<strike>Rp 300.000</strike>
-							</div>
+							</div> -->
 							<div class="title">
 								<small>Rp</small>
-								<span>250</span>
+								<span>300</span>
 								<small>000</small>
 							</div>
 							<ul class="list">
@@ -433,13 +447,13 @@
 							Patih
 						</div>
 						<div class="card-body">
-							<p>Paket standar</p>
-							<div class="title old">
+							<p>Paket lengkap</p>
+							<!-- <div class="title old">
 								<strike>Rp 500.000</strike>
-							</div>
+							</div> -->
 							<div class="title">
 								<small>Rp</small>
-								<span>425</span>
+								<span>500</span>
 								<small>000</small>
 							</div>
 							<ul class="list">
@@ -471,13 +485,13 @@
 							Sultan
 						</div>
 						<div class="card-body">
-							<p>Paket terlengkap</p>
-							<div class="title old">
+							<p>Paket mewah</p>
+							<!-- <div class="title old">
 								<strike>Rp 700.000</strike>
-							</div>
+							</div> -->
 							<div class="title">
 								<small>Rp</small>
-								<span>600</span>
+								<span>700</span>
 								<small>000</small>
 							</div>
 							<ul class="list">
@@ -518,9 +532,9 @@
 								<p class="my-4">
 									Kalian juga bisa memesan undangan statis dalam bentuk gambar, dan tentu saja harganya jauh lebih murah!
 								</p>
-								<div class="title old">
+								<!-- <div class="title old">
 									<strike>Rp 75.000</strike>
-								</div>
+								</div> -->
 								<div class="title">
 									<small>Rp</small>
 									<span>50</span>
@@ -706,6 +720,11 @@
 								</div>
 							</div>
 
+							<div class="column my-3 publish">
+								<label for="publish">Publikasi</label>
+								<input id="publish" type="text" name="Publikasi" required placeholder="Tanggal mulai dipublikasikan...">
+							</div>
+
 							<div class="column my-3">
 								<div class="d-md-flex justify-content-between">
 									<div class="d-flex my-2 py-1">
@@ -833,7 +852,25 @@
 	</div>
 </footer>
 
-<section>
+<section id="style">
+	<noscript id="deferred-style">
+		<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css">
+	</noscript>
+</section>
+
+<section id="script">
+	<script>
+		var loadDeferredStyles = function() {
+			var addStylesNode = document.getElementById("deferred-style");
+			var replacement = document.getElementById("style");
+			var location = document.getElementById("script");
+			replacement.innerHTML = addStylesNode.textContent;
+			document.body.insertBefore(replacement, location);
+		};
+		var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+		if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0) });
+		else window.addEventListener('load', loadDeferredStyles);
+	</script>
 	<script>
 		if ('serviceWorker' in navigator) {
 			window.addEventListener('load', function() {
