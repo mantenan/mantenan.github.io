@@ -7,6 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="UTF-8">
+	<!-- Cache -->
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
 	<!-- Redirect -->
 	<script type="text/javascript">var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'}</script>
 	<!-- Open Graph -->
@@ -15,14 +19,22 @@
 	<meta property="og:description" content="Undangan Pernikahan Nala & Yanuar">
 	<meta property="og:image" content="assets/img/preview.jpg">
 	<meta property="og:locale" content="id_ID">
-	<!-- Cache -->
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Expires" content="0">
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="https://maumantenan.com/assets/icon/favicon.ico">
 	<meta name="theme-color" content="#FFFFFF">
 	<!-- Script -->
+	<script type="text/javascript">
+		window.addEventListener('load', function(e) {
+			window.applicationCache.addEventListener('updateready', function(e) {
+				if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+					window.applicationCache.swapCache();
+					if (confirm('A new version of this site is available. Load it?')) {
+						window.location.reload();
+					}
+				}
+			}, false);
+		}, false);
+	</script>
 	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
 	<script id="preJS" type="text/javascript">var checkExist=setInterval(function(){if(document.querySelectorAll("#style style").length>0){clearInterval(checkExist);var e=document.querySelector("#preCSS"),r=document.querySelector("#preJS");e.parentNode.removeChild(e),r.parentNode.removeChild(r)}},1e3)</script>
 </head>
