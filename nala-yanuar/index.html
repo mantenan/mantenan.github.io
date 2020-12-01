@@ -7,6 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="UTF-8">
+	<!-- Cache -->
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
 	<!-- Redirect -->
 	<script type="text/javascript">var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'}</script>
 	<!-- Open Graph -->
@@ -15,23 +19,32 @@
 	<meta property="og:description" content="Undangan Resepsi Pernikahan Nala & Yanuar - Minggu, 17 Januari 2021 di Pemalang">
 	<meta property="og:image" content="assets/img/preview.jpg">
 	<meta property="og:locale" content="id_ID">
-	<!-- Cache -->
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Expires" content="0">
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="https://maumantenan.com/assets/icon/favicon.ico">
 	<meta name="theme-color" content="#FFFFFF">
 	<!-- Script -->
-	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
-	<script id="preJS" type="text/javascript">var checkExist=setInterval(function(){if(document.querySelectorAll("#style link").length>0){clearInterval(checkExist);var e=document.querySelector("#preCSS"),r=document.querySelector("#preJS");e.parentNode.removeChild(e),r.parentNode.removeChild(r)}},1e3)</script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.plugin.min.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js"></script>
-	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js"></script>
-	<script defer type="text/javascript" src="assets/js/main.min.js"></script>
+	<script type="text/javascript">
+		window.addEventListener('load', function(e) {
+			window.applicationCache.addEventListener('updateready', function(e) {
+				if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+					window.applicationCache.swapCache();
+					if (confirm('A new version of this site is available. Load it?')) {
+						window.location.reload();
+					}
+				}
+			}, false);
+		}, false);
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.plugin.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/main.min.css"/>
 </head>
 
 <body class="overflow-hidden">
@@ -182,7 +195,7 @@
 		</div>
 	</section>
 
-	<section id="foto">
+	<!-- <section id="foto">
 		<div class="decoration decoration-before position-absolute left right top"></div>
 		<div data-aos="fade-in">
 			<div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="5000">
@@ -206,7 +219,7 @@
 			</div>
 		</div>
 		<div class="decoration decoration-after position-absolute left right bottom"></div>
-	</section>
+	</section> -->
 
 	<section id="berbahagia">
 		<div class="container">
@@ -324,9 +337,9 @@
 								<div class="carousel-item active">
 									<div class="carousel-image mb-1" style="background-image:url(assets/img/main-1.webp)"></div>
 								</div>
-								<div class="carousel-item">
+								<!-- <div class="carousel-item">
 									<div class="carousel-image mb-1" style="background-image:url(assets/img/slide-1.webp)"></div>
-								</div>
+								</div> -->
 								<div class="carousel-item">
 									<div class="carousel-image mb-1" style="background-image:url(assets/img/slide-2.webp)"></div>
 								</div>
@@ -354,29 +367,6 @@
 			</div>
 		</div>
 	</div>
-</section>
-
-<section id="style">
-	<noscript id="deferred-style">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"/>
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
-		<link rel="stylesheet" type="text/css" href="assets/css/main.min.css"/>
-	</noscript>
-</section>
-
-<section id="script">
-	<script>
-		var loadDeferredStyles = function() {
-			var addStylesNode = document.getElementById("deferred-style");
-			var replacement = document.getElementById("style");
-			var location = document.getElementById("script");
-			replacement.innerHTML = addStylesNode.textContent;
-			document.body.insertBefore(replacement, location);
-		};
-		var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-		if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0) });
-		else window.addEventListener('load', loadDeferredStyles);
-	</script>
 </section>
 
 </body>
