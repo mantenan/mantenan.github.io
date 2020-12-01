@@ -10,11 +10,6 @@
 	<meta name="robots" content="index, follow">
 	<meta name="keywords" content="undangan, pernikahan, online, website, digital, manten, mantenan, maumantenan, menikah, wedding, invitation">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- Secure -->
-	<script>var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'}</script>
-	<!-- Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
-	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')</script>
 	<!-- Open Graph -->
 	<meta property="og:title" content="Paket dan Harga - Mantenan">
 	<meta property="og:description" content="Paket dan harga undangan Mantenan memiliki fitur yang berbeda-beda, pemilihan paket bisa disesuaikan dengan anggaran dana kalian.">
@@ -54,7 +49,8 @@
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="theme-color" content="#FFFFFF">
 	<!-- Main -->
-	<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css">
+	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
+	<script id="preJS" type="text/javascript">var checkExist=setInterval(function(){if(document.querySelectorAll("#style link").length>0){clearInterval(checkExist);var e=document.querySelector("#preCSS"),r=document.querySelector("#preJS");e.parentNode.removeChild(e),r.parentNode.removeChild(r)}},1e3)</script>
 </head>
 
 <body>
@@ -94,7 +90,7 @@
 					<p>Tersedia empat paket dengan fitur dan harga yang berbeda</p>
 				</div>
 			</div>
-			<!-- <div class="row row-responsive my-4 pt-2">
+			<div class="row row-responsive my-4 pt-2">
 				<div class="column">
 					<div class="alert">
 						<div class="alert-icon">
@@ -106,7 +102,7 @@
 						<small class="mr-3">Diskon hingga <strong>33%</strong></small>
 					</div>
 				</div>
-			</div> -->
+			</div>
 			<div class="row row-responsive mt-4 pt-2">
 				<div class="column column-md-50 column-lg-25 mb-4 mt-md-5">
 					<div class="card text-center price">
@@ -115,12 +111,12 @@
 						</div>
 						<div class="card-body">
 							<p>Paket murah meriah</p>
-							<!-- <div class="title old">
+							<div class="title old">
 								<strike>Rp 150.000</strike>
-							</div> -->
+							</div>
 							<div class="title">
 								<small>Rp</small>
-								<span>150</span>
+								<span>100</span>
 								<small>000</small>
 							</div>
 							<ul class="list">
@@ -151,12 +147,12 @@
 						</div>
 						<div class="card-body">
 							<p>Paket minimalis</p>
-							<!-- <div class="title old">
+							<div class="title old">
 								<strike>Rp 300.000</strike>
-							</div> -->
+							</div>
 							<div class="title">
 								<small>Rp</small>
-								<span>300</span>
+								<span>250</span>
 								<small>000</small>
 							</div>
 							<ul class="list">
@@ -184,12 +180,12 @@
 						</div>
 						<div class="card-body">
 							<p>Paket lengkap</p>
-							<!-- <div class="title old">
+							<div class="title old">
 								<strike>Rp 500.000</strike>
-							</div> -->
+							</div>
 							<div class="title">
 								<small>Rp</small>
-								<span>500</span>
+								<span>425</span>
 								<small>000</small>
 							</div>
 							<ul class="list">
@@ -217,12 +213,12 @@
 						</div>
 						<div class="card-body">
 							<p>Paket mewah</p>
-							<!-- <div class="title old">
+							<div class="title old">
 								<strike>Rp 700.000</strike>
-							</div> -->
+							</div>
 							<div class="title">
 								<small>Rp</small>
-								<span>700</span>
+								<span>600</span>
 								<small>000</small>
 							</div>
 							<ul class="list">
@@ -247,6 +243,32 @@
 		</div>
 	</section>
 </main>
+
+<section id="style">
+	<noscript id="deferred-style">
+		<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css">
+	</noscript>
+</section>
+
+<section id="script">
+	<script>
+		var loadDeferredStyles = function() {
+			var addStylesNode = document.getElementById("deferred-style");
+			var replacement = document.getElementById("style");
+			var location = document.getElementById("script");
+			replacement.innerHTML = addStylesNode.textContent;
+			document.body.insertBefore(replacement, location);
+		};
+		var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+		if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0) });
+		else window.addEventListener('load', loadDeferredStyles);
+	</script>
+	<!-- Secure -->
+	<!-- <script>var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'}</script> -->
+	<!-- Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
+	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')</script>
+</section>
 
 </body>
 </html>
