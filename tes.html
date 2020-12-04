@@ -734,6 +734,7 @@
 							<div class="column my-3">
 								<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 								<script>function onSubmit(token){document.getElementById("formOrder").submit()}</script>
+								<style>.grecaptcha-badge{visibility:hidden;opacity:0}</style>
 								<!-- <div class="g-recaptcha" data-sitekey="6LdE-fgZAAAAACOxWX9cHstH3sltn7YccN1zp6UB" data-callback="onSubmit" data-size="invisible"></div> -->
 								<!-- <div class="g-recaptcha" data-sitekey="6Ld4AfkZAAAAAPPYF4Str24HZOzl4jbe2jQbf9I9"></div> -->
 							</div>
@@ -744,7 +745,7 @@
 										<input id="agreement" type="checkbox" name="Persetujuan" class="agreement" value="Saya menyetujui syarat dan ketentuan Mantenan" required>
 										<label for="agreement" class="mb-0 ml-2 mr-3 cursor-pointer">Anda menyetujui <span class="color-primary">Syarat dan Ketentuan</span> Mantenan</label>
 									</div>
-									<button type="button" class="mt-4 mt-md-0 mb-0 g-recaptcha" data-sitekey="6LdE-fgZAAAAACOxWX9cHstH3sltn7YccN1zp6UB" data-callback="onSubmit">Kirim</button>
+									<button type="submit" class="mt-4 mt-md-0 mb-0 g-recaptcha" data-sitekey="6LdE-fgZAAAAACOxWX9cHstH3sltn7YccN1zp6UB" data-callback="onSubmit">Kirim</button>
 								</div>
 							</div>
 						</div>
