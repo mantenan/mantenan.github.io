@@ -30,6 +30,7 @@
 	<meta property="twitter:image" content="assets/img/open-graph-protocol.jpg">
 	<!-- Canonical -->
 	<link rel="canonical" href="https://maumantenan.com/price">
+	<link rel="amphtml" href="https://maumantenan.com/amp/price">
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/icon/favicon.ico">
 	<!-- Manifest -->
@@ -126,7 +127,11 @@
 								<span>100</span>
 								<small>000</small>
 							</div>
-							<ul class="list">
+							<div class="feature d-lg-none">
+								<div>9 Fitur</div>
+								<button type="button" class="button button-outline my-3 package-1" data-target="#package-1">Lihat</button>
+							</div>
+							<ul class="list" id="package-1">
 								<li>Sub Domain</li>
 								<li>Tema Dalem</li>
 								<li>Aktif 1 Bulan</li>
@@ -162,7 +167,11 @@
 								<span>250</span>
 								<small>000</small>
 							</div>
-							<ul class="list">
+							<div class="feature d-lg-none">
+								<div>9 Fitur</div>
+								<button type="button" class="button button-outline my-3 package-2" data-target="#package-2">Lihat</button>
+							</div>
+							<ul class="list" id="package-2">
 								<li>Sub Domain</li>
 								<li>Tema Panggih</li>
 								<li>Aktif 3 Bulan</li>
@@ -195,7 +204,11 @@
 								<span>425</span>
 								<small>000</small>
 							</div>
-							<ul class="list">
+							<div class="feature d-lg-none">
+								<div>11 Fitur</div>
+								<button type="button" class="button button-outline my-3 package-3" data-target="#package-3">Lihat</button>
+							</div>
+							<ul class="list" id="package-3">
 								<li>Sub Domain</li>
 								<li>Semua Tema</li>
 								<li>Aktif 6 Bulan</li>
@@ -228,7 +241,11 @@
 								<span>600</span>
 								<small>000</small>
 							</div>
-							<ul class="list">
+							<div class="feature d-lg-none">
+								<div>13 Fitur</div>
+								<button type="button" class="button button-outline my-3 package-4" data-target="#package-4">Lihat</button>
+							</div>
+							<ul class="list" id="package-4">
 								<li>Domain Sendiri</li>
 								<li>Tema Sesuai Keinginan</li>
 								<li>Aktif 12 Bulan</li>
@@ -258,7 +275,7 @@
 
 <section id="style">
 	<noscript id="deferred-style">
-		<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css?ver=1.0.0">
+		<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css?ver=1.0.1">
 	</noscript>
 </section>
 
@@ -277,6 +294,8 @@
 	</script>
 	<!-- Secure -->
 	<!-- <script>var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'}</script> -->
+	<!-- Main -->
+	<script defer type="text/javascript" src="assets/js/price.min.js?ver=1.0.0"></script>
 	<!-- Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
 	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')</script>
