@@ -30,6 +30,7 @@
 	<meta property="twitter:image" content="assets/img/open-graph-protocol.jpg">
 	<!-- Canonical -->
 	<link rel="canonical" href="https://maumantenan.com">
+	<link rel="amphtml" href="https://maumantenan.com/amp">
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/icon/favicon.ico">
 	<!-- Manifest -->
@@ -734,7 +735,8 @@
 							<div class="column my-3">
 								<label for="captcha">Verifikasi</label>
 								<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-								<div id="captcha" class="g-recaptcha" data-sitekey="6Ld4AfkZAAAAAPPYF4Str24HZOzl4jbe2jQbf9I9"></div>
+								<div id="captcha" class="g-recaptcha" data-sitekey="6Ld4AfkZAAAAAPPYF4Str24HZOzl4jbe2jQbf9I9" data-callback="verified"></div>
+								<script>function verified(){document.getElementById("submit").disabled=false}</script>
 							</div>
 
 							<div class="column my-3">
@@ -743,7 +745,7 @@
 										<input id="agreement" type="checkbox" name="Persetujuan" class="agreement" value="Saya menyetujui syarat dan ketentuan Mantenan" required>
 										<label for="agreement" class="mb-0 ml-2 mr-3 cursor-pointer">Anda menyetujui <span class="color-primary">Syarat dan Ketentuan</span> Mantenan</label>
 									</div>
-									<button type="submit" class="mt-4 mt-md-0 mb-0 a">Kirim</button>
+									<button type="submit" class="mt-4 mt-md-0 mb-0" id="submit" disabled>Kirim</button>
 								</div>
 							</div>
 						</div>

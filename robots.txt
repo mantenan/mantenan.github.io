@@ -4,6 +4,7 @@ User-agent: *
 
 Allow: /
 
+Disallow: /tes
 Disallow: /feature
 Disallow: /link
 Disallow: /order
