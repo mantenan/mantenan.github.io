@@ -64,8 +64,8 @@
 			document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
 		}
 
-		function removeCookie(cookieName,cookieValue) {
-			document.cookie = cookieName + "=" + cookieValue + "; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+		function removeCookie(cookieName) {
+			document.cookie = cookieName + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 		}
 
 		function accessCookie(cookieName) {
@@ -80,24 +80,26 @@
 		}
 
 		function checkCookie(cookieName) {
-			var cookieValue = accessCookie(cookieName);
-				daysToExpire = "1";
-			if (cookieValue!="") {
-				alert("Welcome Back " + cookieValue + "!!!");
+			var value = accessCookie(cookieName);
+			if (value!="") {
+				alert("Welcome Back " + value + "!!!");
 			} else {
-				if (cookieValue!="" && cookieValue!=null) {
+				var cookieValue = new Date().getTime();
+					daysToExpire = "1";
+				if (value!="" && value!=null) {
 					createCookie(cookieName, cookieValue, daysToExpire);
 				}
+				console.log("cookieValue:" + cookieValue)
 			}
-			console.log("cookieValue:" + cookieValue)
+			console.log("value:" + value)
 		}
 
 		checkCookie("visitor")
 
 		var x = accessCookie("visitor")
 			y = checkCookie("visitor")
-		console.log(x)
-		console.log(y)
+		console.log("akses:" + x)
+		console.log("cek:" + y)
 	</script>
 	<!-- Main -->
 	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
@@ -106,7 +108,7 @@
 
 <body>
 
-<button type="button" class="button" onclick="removeCookie('visitor',cookieValue)">Delete Cookie</button>
+<button type="button" class="button" onclick="removeCookie('visitor');console.log('akses:' + x);console.log('cek:' + y)">Delete Cookie</button>
 
 <main>
 	<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
