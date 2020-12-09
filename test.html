@@ -82,45 +82,23 @@
 			return ''
 		}
 
-		function getParams() {
-			var url = window.location.href
-				guest = url.split('?')
-			if ( url.indexOf('?') > -1 && url.indexOf('&') > -1 ) {
-				var content = guest[1].split('&')
-					name = content[0].split('+').join(' ')
-					address = content[1].split('+').join(' ')
-				sessionStorage.setItem('Name', name)
-				sessionStorage.setItem('Address', address)
-			} else if ( url.indexOf('?') > -1 ) {
-				var name = guest[1].split('+').join(' ')
-				sessionStorage.setItem('Name', name)
-			} else {
-				var date = new Date().getTime()
-				sessionStorage.setItem('Name', date)
-			}
-		}
-
 		function checkCookie() {
 			var value = accessCookie('Visitor')
 			if (value!='') {
 				alert('Welcome Back ' + value + '!!!')
 			} else {
 				var name = 'Visitor'
-					session = sessionStorage.getItem('Name')
-					value = (session === null) ? session : new Date().getTime()
+					value = new Date().getTime()
 					days = '1'
 				if (value!='' && value!=null) {
 					createCookie(name, value, days)
-					// sessionStorage.clear()
 				}
 			}
 		}
 
-		getParams()
-
 		checkCookie()
 
-		console.log('cek 3:' + z)
+		console.log('cek 1:' + z)
 	</script>
 	<!-- Main -->
 	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
@@ -129,7 +107,7 @@
 
 <body>
 
-	<button type="button" class="button" onclick="removeCookie('visitor');console.log('cek 4:' + z)">Delete Cookie</button>
+	<button type="button" class="button" onclick="removeCookie('visitor');console.log('cek 2:' + z)">Delete Cookie</button>
 
 	<main>
 		<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
