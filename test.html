@@ -98,8 +98,10 @@
 
 		var x = accessCookie("visitor")
 			y = checkCookie("visitor")
+			z = document.cookie
 		console.log("akses:" + x)
 		console.log("cek:" + y)
+		console.log("cek semua:" + z)
 	</script>
 	<!-- Main -->
 	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
@@ -108,7 +110,7 @@
 
 <body>
 
-<button type="button" class="button" onclick="removeCookie('visitor');console.log('akses:' + x);console.log('cek:' + y)">Delete Cookie</button>
+<button type="button" class="button" onclick="removeCookie('visitor');console.log('akses:' + x);console.log('cek:' + y);console.log('cek semua:' + z)">Delete Cookie</button>
 
 <main>
 	<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
