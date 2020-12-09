@@ -82,14 +82,14 @@
 		}
 
 		function checkCookie() {
-			var cookieValue = accessCookie("visitor");
-			if (cookieValue!="") {
-				alert("Welcome Back " + cookieValue + "!!!");
+			var value = accessCookie("visitor");
+			if (value!="") {
+				alert("Welcome Back " + value + "!!!");
 			} else {
 				var name = "visitor";
 					value = new Date().getTime();
 					days = "1";
-				if (cookieValue!="" && cookieValue!=null) {
+				if (value!="" && value!=null) {
 					createCookie(name, value, days);
 				}
 			}
