@@ -60,17 +60,17 @@
 	<script type="text/javascript">
 		var z = document.cookie;
 
-		function createCookie(cookieName,cookieValue,daysToExpire) {
+		function addCookie(cookieName,cookieValue,daysToExpire) {
 			var date = new Date()
 			date.setTime(date.getTime()+(daysToExpire*24*60*60*1000))
 			document.cookie = cookieName + '=' + cookieValue + '; expires=' + date.toGMTString()
-			console.log('[DETAIL]' + cookieName + ', ' + cookieValue + ', ' + daysToExpire)
-			console.log('[COOKIES]' + z)
+			console.log('[DETAIL COOKIES]' + cookieName + ', ' + cookieValue + ', ' + daysToExpire)
+			console.log('[CHECK COOKIES]' + z)
 		}
 
-		function removeCookie(cookieName) {
+		function clearCookie(cookieName) {
 			document.cookie = cookieName + '= ; expires = Thu, 01 Jan 1970 00:00:00 GMT'
-			console.log('[COOKIES]' + z)
+			console.log('[CLEAR COOKIES]')
 		}
 
 		function accessCookie(cookieName) {
@@ -94,14 +94,13 @@
 					value = new Date().getTime()
 					days = '1'
 				if (value!='' && value!=null) {
-					createCookie(name, value, days)
+					addCookie(name, value, days)
 				}
 			}
-			console.log('[COOKIES]' + z)
+			console.log('[CHECK COOKIES]' + z)
 		}
 
-		removeCookie('Visitor')
-		checkCookie()
+		clearCookie('Visitor')
 	</script>
 	<!-- Main -->
 	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
@@ -110,9 +109,9 @@
 
 <body>
 
-	<!-- <button type="button" class="button" onclick="removeCookie('visitor');console.log('cek 2:' + z)">Delete Cookie</button> -->
-
 	<main>
+		<button type="button" class="button" onclick="addCookie();console.log('[CHECK COOKIES]' + z)">Add Cookie</button>
+
 		<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
 			<div class="text-center p-4">
 				<svg viewBox="0 0 100 100" fill="#4f84a3" width="175" height="150" class="mx-3 mt-2 mb-4 pb-3">
