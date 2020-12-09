@@ -81,12 +81,12 @@
 			return "";
 		}
 
-		function checkCookie(cookieName) {
-			var cookieValue = accessCookie(cookieName);
+		function checkCookie() {
+			var cookieValue = accessCookie("visitor");
 			if (cookieValue!="") {
 				alert("Welcome Back " + cookieValue + "!!!");
 			} else {
-				var name = cookieName;
+				var name = "visitor";
 					value = new Date().getTime();
 					days = "1";
 				if (cookieValue!="" && cookieValue!=null) {
