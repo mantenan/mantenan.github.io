@@ -5,8 +5,4 @@ User-agent: *
 Allow: /
 
 Disallow: /test
-Disallow: /feature
 Disallow: /link
-Disallow: /order
-Disallow: /price
-Disallow: /preview
