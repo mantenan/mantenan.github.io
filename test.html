@@ -68,8 +68,8 @@
 			console.log('[CHECK COOKIES]' + z)
 		}
 
-		function clearCookie(cookieName) {
-			document.cookie = cookieName + '= ; expires = Thu, 01 Jan 1970 00:00:00 GMT'
+		function clearCookie() {
+			document.cookie = 'Visitor = ; expires = Thu, 01 Jan 1970 00:00:00 GMT'
 			console.log('[CLEAR COOKIES]')
 		}
 
@@ -99,10 +99,6 @@
 			}
 			console.log('[CHECK COOKIES]' + z)
 		}
-
-		clearCookie('Visitor')
-
-		addCookie()
 	</script>
 	<!-- Main -->
 	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
@@ -112,7 +108,12 @@
 <body>
 
 	<main>
-		<!-- <button type="button" class="button" onclick="addCookie()">Add Cookie</button> -->
+		<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
+			<div class="text-center p-4">
+				<button type="button" class="button" onclick="addCookie()">Tambah Cookie</button>
+				<button type="button" class="button" onclick="clearCookie()">Hapus Cookie</button>
+			</div>
+		</div>
 
 		<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
 			<div class="text-center p-4">
