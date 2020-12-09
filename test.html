@@ -58,8 +58,6 @@
 	<meta name="theme-color" content="#FFFFFF">
 	<!-- Cookies -->
 	<script type="text/javascript">
-		var z = document.cookie;
-
 		function addCookie(cookieName,cookieValue,daysToExpire) {
 			var date = new Date()
 			date.setTime(date.getTime()+(daysToExpire*24*60*60*1000))
@@ -76,16 +74,13 @@
 				}
 			}
 			return ''
-			console.log('Access Cookies :' + z)
 		}
 
 		function checkCookie() {
 			var value = accessCookie('Visitor')
 			if (value!='') {
-				console.log('Cookies :' + value)
-				console.log('All Cookies :' + z)
+				console.log('You access the latest update!')
 			} else {
-				console.log('No Cookies')
 				var name = 'Visitor'
 					value = new Date().getTime()
 					days = '1'
@@ -99,7 +94,10 @@
 			document.cookie = 'Visitor = ; expires = Thu, 01 Jan 1970 00:00:00 GMT'
 		}
 
-		checkCookie()
+		// clearCookie()
+		// checkCookie()
+
+		addCookie('Visitor', new Date().getTime(), '1')
 	</script>
 	<!-- Main -->
 	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
@@ -107,14 +105,6 @@
 </head>
 
 <body>
-	<div class="d-flex align-items-center justify-content-center">
-		<div class="text-center p-4">
-			<button type="button" class="button" onclick="accessCookie('Visitor')">Cek Cookie</button>
-			<button type="button" class="button" onclick="checkCookie()">Tambah Cookie</button>
-			<button type="button" class="button" onclick="clearCookie()">Hapus Cookie</button>
-		</div>
-	</div>
-
 	<main>
 		<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
 			<div class="text-center p-4">
