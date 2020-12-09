@@ -82,6 +82,7 @@
 		}
 
 		function checkCookie() {
+			console.log("cek 1:" + z)
 			var value = accessCookie("visitor");
 			if (value!="") {
 				alert("Welcome Back " + value + "!!!");
@@ -93,12 +94,12 @@
 					createCookie(name, value, days);
 				}
 			}
-			console.log("cek 1:" + z)
+			console.log("cek 2:" + z)
 		}
 
 		checkCookie("visitor")
 
-		console.log("cek 2:" + z)
+		console.log("cek 3:" + z)
 	</script>
 	<!-- Main -->
 	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
@@ -107,7 +108,7 @@
 
 <body>
 
-<button type="button" class="button" onclick="removeCookie('visitor');console.log('cek 3:' + z)">Delete Cookie</button>
+<button type="button" class="button" onclick="removeCookie('visitor');console.log('cek 4:' + z)">Delete Cookie</button>
 
 <main>
 	<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
