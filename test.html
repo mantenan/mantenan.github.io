@@ -61,45 +61,66 @@
 		var z = document.cookie;
 
 		function createCookie(cookieName,cookieValue,daysToExpire) {
-			var date = new Date();
-			date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
-			document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+			var date = new Date()
+			date.setTime(date.getTime()+(daysToExpire*24*60*60*1000))
+			document.cookie = cookieName + '=' + cookieValue + '; expires=' + date.toGMTString()
 		}
 
 		function removeCookie(cookieName) {
-			document.cookie = cookieName + "= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+			document.cookie = cookieName + '= ; expires = Thu, 01 Jan 1970 00:00:00 GMT'
 		}
 
 		function accessCookie(cookieName) {
-			var name = cookieName + "=";
-			var allCookieArray = document.cookie.split(';');
-			for(var i=0; i<allCookieArray.length; i++) {
-				var temp = allCookieArray[i].trim();
-				if (temp.indexOf(name)==0)
-					return temp.substring(name.length,temp.length);
+			var name = cookieName + '='
+				allCookieArray = document.cookie.split(';')
+			for (var i=0; i<allCookieArray.length; i++) {
+				var temp = allCookieArray[i].trim()
+				if (temp.indexOf(name)==0) {
+					return temp.substring(name.length,temp.length)
+				}
 			}
-			return "";
+			return ''
+		}
+
+		function getParams() {
+			var url = window.location.href
+				guest = url.split('?')
+			if ( url.indexOf('?') > -1 && url.indexOf('&') > -1 ) {
+				var content = guest[1].split('&')
+					name = content[0].split('+').join(' ')
+					address = content[1].split('+').join(' ')
+				sessionStorage.setItem('Name', name)
+				sessionStorage.setItem('Address', address)
+			} else if ( url.indexOf('?') > -1 ) {
+				var name = guest[1].split('+').join(' ')
+				sessionStorage.setItem('Name', name)
+			} else {
+				var date = new Date().getTime()
+				sessionStorage.setItem('Name', date)
+			}
 		}
 
 		function checkCookie() {
-			console.log("cek 1:" + z)
-			var value = accessCookie("visitor");
-			if (value!="") {
-				alert("Welcome Back " + value + "!!!");
+			var value = accessCookie('Visitor')
+			if (value!='') {
+				alert('Welcome Back ' + value + '!!!')
 			} else {
-				var name = "visitor";
-					value = new Date().getTime();
-					days = "1";
-				if (value!="" && value!=null) {
-					createCookie(name, value, days);
+				var name = 'Visitor'
+					session = sessionStorage.getItem('Name')
+					value = (session === null) ? session : new Date().getTime()
+					days = '1'
+				if (value!='' && value!=null) {
+					createCookie(name, value, days)
 				}
 			}
-			console.log("cek 2:" + z)
+			sessionStorage.clear()
 		}
 
-		checkCookie("visitor")
+		getParams()
 
-		console.log("cek 3:" + z)
+		checkCookie()
+
+		console.log('cek 3:' + z)
 	</script>
 	<!-- Main -->
 	<style id="preCSS" type="text/css">*{opacity:0!important;overflow:hidden!important}</style>
@@ -108,49 +129,49 @@
 
 <body>
 
-<button type="button" class="button" onclick="removeCookie('visitor');console.log('cek 4:' + z)">Delete Cookie</button>
+	<button type="button" class="button" onclick="removeCookie('visitor');console.log('cek 4:' + z)">Delete Cookie</button>
 
-<main>
-	<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
-		<div class="text-center p-4">
-			<svg viewBox="0 0 100 100" fill="#4f84a3" width="175" height="150" class="mx-3 mt-2 mb-4 pb-3">
-				<path d="M74.538,1.311c-0.463,0.529 -1.059,1.125 -1.456,1.721c-5.163,6.619 -9.862,13.436 -14.098,20.585c-6.09,10.259 -11.186,20.982 -16.349,31.639c-0.133,0.33 -0.199,0.728 -0.53,0.926c-0.198,-0.265 0.067,-0.529 0.133,-0.728c0.595,-2.184 1.324,-4.368 1.985,-6.487c2.913,-9.332 6.024,-18.665 8.208,-28.196c0.927,-4.303 1.787,-8.671 1.522,-13.106c-0.132,-2.846 -1.125,-5.229 -4.302,-6.288c-1.986,-0.728 -4.038,-0.927 -6.089,-0.463c-2.847,0.661 -5.23,2.051 -7.612,3.706c-4.832,3.508 -8.804,7.744 -12.51,12.312c-7.414,9.134 -13.238,19.062 -16.349,30.248c-1.192,4.038 -1.854,8.142 -1.39,12.378c0.397,3.376 2.449,5.361 5.891,5.758c1.125,0.133 2.184,0.133 3.309,0.067c0.331,-0.067 0.728,-0 0.795,-0.331c0.066,-0.464 -0.331,-0.53 -0.596,-0.662c-0.861,-0.397 -1.787,-0.133 -2.714,-0.199c-1.456,-0.066 -1.853,-0.331 -2.25,-1.588c-0.464,-1.324 -0.53,-2.648 -0.398,-3.972c0.199,-3.375 0.927,-6.685 1.986,-9.928c4.633,-14.827 13.37,-27.337 24.954,-38.126c2.78,-2.581 5.712,-4.353 7.722,-5.008c1.158,-0.377 2.276,-0.068 2.622,1.036c0.486,1.556 -0.073,4.335 -0.337,7.049c-0.729,6.221 -2.473,11.826 -4.26,17.916c-3.31,11.715 -7.348,23.232 -10.723,34.948c-2.913,10.193 -5.769,19.871 -7.092,30.395c-0.133,1.324 -0,1.721 1.323,2.25c0.729,0.265 2.67,0.837 3.464,0.837c1.39,-0.066 1.787,-0.265 2.118,-1.589c1.721,-6.089 3.707,-12.179 6.023,-18.136c4.766,-12.443 10.26,-24.556 15.952,-36.669c4.964,-10.59 10.326,-20.982 17.209,-30.646c1.721,-2.449 2.175,-3.043 4.293,-5.293c-0.264,0.86 -0.397,1.787 -0.529,2.647c-2.118,11.319 -5.161,20.162 -8.602,31.15c-3.178,10.061 -5.586,20.342 -8.566,30.736c-1.063,3.706 -1.918,7.077 -2.513,10.916c-0.133,1.059 1.533,2.822 2.526,3.219c2.78,0.993 4.39,0.03 5.515,-2.088c2.581,-4.435 4.832,-9.002 7.281,-13.503c3.375,-6.089 12.827,-27.095 17.46,-32.456c0.331,-0.331 0.596,-0.596 0.927,-0.993c0.198,0.53 0.066,0.927 -0,1.258c-1.589,9.465 -9.931,40.739 -10.401,44.08c-0.222,1.575 2.932,2.215 3.338,1.075c0.528,-1.479 10.041,-32.314 11.63,-39.066c0.86,-3.243 1.324,-6.552 1.39,-9.862c-0,-0.86 -0.132,-1.721 -0.861,-2.317c-1.456,-1.257 -4.037,-1.39 -5.626,-0.264c-1.588,1.125 -3.148,2.333 -4.17,3.905c-5.948,9.155 -14.151,26.499 -17.659,32.654c-0.264,0.397 -0.331,0.795 -0.794,1.059c0.132,-0.463 0.199,-0.86 0.265,-1.191c1.787,-6.156 3.508,-12.245 5.295,-18.335c4.038,-13.635 8.075,-27.204 10.061,-41.236c0.265,-1.853 0.596,-3.707 0.529,-5.56c-0.066,-0.993 -0.198,-1.986 -1.125,-2.648c-1.853,-1.257 -4.236,-1.125 -5.825,0.464Z"/>
-			</svg>
-			<p><a class="button button-secondary d-flex align-items-center justify-content-center" href="/">Buka Website</a></p>
-			<p><a class="button button-secondary d-flex align-items-center justify-content-center" href="/feature">Lihat Fitur</a></p>
-			<p><a class="button button-secondary d-flex align-items-center justify-content-center" href="/price">Daftar Harga</a></p>
-			<p><a class="button button-secondary d-flex align-items-center justify-content-center" href="/preview">Pratinjau Tema</a></p>
-			<p><a class="button button-success d-flex align-items-center justify-content-center" href="https://wa.me/6287838610808?text=Hello%20Mantenan...">Chat WA</a></p>
-			<p><a class="button d-flex align-items-center justify-content-center" href="/order">Pesan Sekarang</a></p>
+	<main>
+		<div class="vh-100 d-flex align-items-center justify-content-center" style="min-height:500px">
+			<div class="text-center p-4">
+				<svg viewBox="0 0 100 100" fill="#4f84a3" width="175" height="150" class="mx-3 mt-2 mb-4 pb-3">
+					<path d="M74.538,1.311c-0.463,0.529 -1.059,1.125 -1.456,1.721c-5.163,6.619 -9.862,13.436 -14.098,20.585c-6.09,10.259 -11.186,20.982 -16.349,31.639c-0.133,0.33 -0.199,0.728 -0.53,0.926c-0.198,-0.265 0.067,-0.529 0.133,-0.728c0.595,-2.184 1.324,-4.368 1.985,-6.487c2.913,-9.332 6.024,-18.665 8.208,-28.196c0.927,-4.303 1.787,-8.671 1.522,-13.106c-0.132,-2.846 -1.125,-5.229 -4.302,-6.288c-1.986,-0.728 -4.038,-0.927 -6.089,-0.463c-2.847,0.661 -5.23,2.051 -7.612,3.706c-4.832,3.508 -8.804,7.744 -12.51,12.312c-7.414,9.134 -13.238,19.062 -16.349,30.248c-1.192,4.038 -1.854,8.142 -1.39,12.378c0.397,3.376 2.449,5.361 5.891,5.758c1.125,0.133 2.184,0.133 3.309,0.067c0.331,-0.067 0.728,-0 0.795,-0.331c0.066,-0.464 -0.331,-0.53 -0.596,-0.662c-0.861,-0.397 -1.787,-0.133 -2.714,-0.199c-1.456,-0.066 -1.853,-0.331 -2.25,-1.588c-0.464,-1.324 -0.53,-2.648 -0.398,-3.972c0.199,-3.375 0.927,-6.685 1.986,-9.928c4.633,-14.827 13.37,-27.337 24.954,-38.126c2.78,-2.581 5.712,-4.353 7.722,-5.008c1.158,-0.377 2.276,-0.068 2.622,1.036c0.486,1.556 -0.073,4.335 -0.337,7.049c-0.729,6.221 -2.473,11.826 -4.26,17.916c-3.31,11.715 -7.348,23.232 -10.723,34.948c-2.913,10.193 -5.769,19.871 -7.092,30.395c-0.133,1.324 -0,1.721 1.323,2.25c0.729,0.265 2.67,0.837 3.464,0.837c1.39,-0.066 1.787,-0.265 2.118,-1.589c1.721,-6.089 3.707,-12.179 6.023,-18.136c4.766,-12.443 10.26,-24.556 15.952,-36.669c4.964,-10.59 10.326,-20.982 17.209,-30.646c1.721,-2.449 2.175,-3.043 4.293,-5.293c-0.264,0.86 -0.397,1.787 -0.529,2.647c-2.118,11.319 -5.161,20.162 -8.602,31.15c-3.178,10.061 -5.586,20.342 -8.566,30.736c-1.063,3.706 -1.918,7.077 -2.513,10.916c-0.133,1.059 1.533,2.822 2.526,3.219c2.78,0.993 4.39,0.03 5.515,-2.088c2.581,-4.435 4.832,-9.002 7.281,-13.503c3.375,-6.089 12.827,-27.095 17.46,-32.456c0.331,-0.331 0.596,-0.596 0.927,-0.993c0.198,0.53 0.066,0.927 -0,1.258c-1.589,9.465 -9.931,40.739 -10.401,44.08c-0.222,1.575 2.932,2.215 3.338,1.075c0.528,-1.479 10.041,-32.314 11.63,-39.066c0.86,-3.243 1.324,-6.552 1.39,-9.862c-0,-0.86 -0.132,-1.721 -0.861,-2.317c-1.456,-1.257 -4.037,-1.39 -5.626,-0.264c-1.588,1.125 -3.148,2.333 -4.17,3.905c-5.948,9.155 -14.151,26.499 -17.659,32.654c-0.264,0.397 -0.331,0.795 -0.794,1.059c0.132,-0.463 0.199,-0.86 0.265,-1.191c1.787,-6.156 3.508,-12.245 5.295,-18.335c4.038,-13.635 8.075,-27.204 10.061,-41.236c0.265,-1.853 0.596,-3.707 0.529,-5.56c-0.066,-0.993 -0.198,-1.986 -1.125,-2.648c-1.853,-1.257 -4.236,-1.125 -5.825,0.464Z"/>
+				</svg>
+				<p><a class="button button-secondary d-flex align-items-center justify-content-center" href="/">Buka Website</a></p>
+				<p><a class="button button-secondary d-flex align-items-center justify-content-center" href="/feature">Lihat Fitur</a></p>
+				<p><a class="button button-secondary d-flex align-items-center justify-content-center" href="/price">Daftar Harga</a></p>
+				<p><a class="button button-secondary d-flex align-items-center justify-content-center" href="/preview">Pratinjau Tema</a></p>
+				<p><a class="button button-success d-flex align-items-center justify-content-center" href="https://wa.me/6287838610808?text=Hello%20Mantenan...">Chat WA</a></p>
+				<p><a class="button d-flex align-items-center justify-content-center" href="/order">Pesan Sekarang</a></p>
+			</div>
 		</div>
-	</div>
-</main>
+	</main>
 
-<section id="style">
-	<noscript id="deferred-style">
-		<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css?ver=1.0.0">
-	</noscript>
-</section>
+	<section id="style">
+		<noscript id="deferred-style">
+			<link rel="stylesheet" type="text/css" media="all" href="assets/css/main.min.css?ver=1.0.0">
+		</noscript>
+	</section>
 
-<section id="script">
-	<script>
-		var loadDeferredStyles = function() {
-			var addStylesNode = document.getElementById("deferred-style");
-			var replacement = document.getElementById("style");
-			var location = document.getElementById("script");
-			replacement.innerHTML = addStylesNode.textContent;
-			document.body.insertBefore(replacement, location);
-		};
-		var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-		if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0) });
-		else window.addEventListener('load', loadDeferredStyles);
-	</script>
-	<!-- Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
-	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')</script>
-	<!-- Brand -->
-	<script defer type="text/javascript">sessionStorage.setItem('Brand','True')</script>
-</section>
+	<section id="script">
+		<script>
+			var loadDeferredStyles = function() {
+				var addStylesNode = document.getElementById("deferred-style");
+				var replacement = document.getElementById("style");
+				var location = document.getElementById("script");
+				replacement.innerHTML = addStylesNode.textContent;
+				document.body.insertBefore(replacement, location);
+			};
+			var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+			if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0) });
+			else window.addEventListener('load', loadDeferredStyles);
+		</script>
+		<!-- Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
+		<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')</script>
+		<!-- Brand -->
+		<script defer type="text/javascript">sessionStorage.setItem('Brand','True')</script>
+	</section>
 
 </body>
 </html>
