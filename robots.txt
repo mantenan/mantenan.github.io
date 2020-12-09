@@ -3,6 +3,14 @@ Sitemap: https://maumantenan.com/sitemap.xml
 User-agent: *
 
 Allow: /
+Allow: /feature
+Allow: /preview
+Allow: /price
+Allow: /order
+Allow: /amp/
+Allow: /amp/feature
+Allow: /amp/preview
+Allow: /amp/price
 
 Disallow: /test
 Disallow: /link
