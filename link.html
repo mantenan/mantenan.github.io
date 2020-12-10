@@ -99,8 +99,19 @@
 		else window.addEventListener('load', loadDeferredStyles);
 	</script>
 	<!-- Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
-	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var head = document.getElementsByTagName("head")[0]
+				gtag1 = document.createElement("script")
+				gtag1.type = "text/javascript"
+				gtag1.src = "https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"
+				gtag2 = document.createElement("script")
+				gtag2.type = "text/javascript"
+				gtag2.innerHTML = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')"
+			head.appendChild(gtag1)
+			head.appendChild(gtag2)
+		});
+	</script>
 	<!-- Brand -->
 	<script defer type="text/javascript">sessionStorage.setItem('Brand','True')</script>
 </section>

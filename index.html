@@ -901,10 +901,8 @@
 		if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0) });
 		else window.addEventListener('load', loadDeferredStyles);
 	</script>
-	<!-- Secure -->
-	<!-- <script>var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'}</script> -->
 	<!-- Analytics -->
-	<script type="text/javascript">
+	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			var head = document.getElementsByTagName("head")[0]
 				gtag1 = document.createElement("script")
@@ -947,6 +945,8 @@
 		}
 	</script>
 	<script src="service-worker.js"></script>
+	<!-- Secure -->
+	<!-- <script>var host = window.location.href; if (window.location.host == host && window.location.protocol != 'https:') {window.location.protocol = 'https:'}</script> -->
 </section>
 
 </body>
