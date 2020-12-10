@@ -266,7 +266,7 @@
 								<input id="publish" type="text" name="Publikasi" required placeholder="Tanggal mulai dipublikasikan...">
 							</div>
 
-							<div class="column my-3">
+							<div class="column my-3" id="recaptcha" style="display:none">
 								<label for="captcha">Verifikasi</label>
 								<div id="captcha" class="g-recaptcha" data-sitekey="6Ld4AfkZAAAAAPPYF4Str24HZOzl4jbe2jQbf9I9" data-callback="verified"></div>
 							</div>
@@ -356,8 +356,6 @@
 	<!-- Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"></script>
 	<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')</script>
-	<!-- Order -->
-	<script defer type="text/javascript" src="assets/js/order.min.js?ver=1.0.0"></script>
 	<!-- reCAPTCHA -->
 	<script>
 		function verified() {
@@ -370,9 +368,12 @@
 			script.src = "https://www.google.com/recaptcha/api.js"
 			head.appendChild(script)
 			document.getElementById("name").removeEventListener("focus", loading)
+			document.getElementById("recaptcha").removeAttribute("style")
 		};
 		document.getElementById("name").addEventListener("focus", loading, false)
 	</script>
+	<!-- Order -->
+	<script defer type="text/javascript" src="assets/js/order.min.js?ver=1.0.0"></script>
 </section>
 
 </body>
