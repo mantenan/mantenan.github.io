@@ -27,7 +27,7 @@ self.addEventListener("install", installEvent => {
 		caches.open(mantenan).then(cache => {
 			cache.addAll(assets)
 		})
-		)
+	)
 })
 
 self.addEventListener("fetch", fetchEvent => {
