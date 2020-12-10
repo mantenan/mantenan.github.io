@@ -364,7 +364,7 @@
 			document.getElementById("submit").disabled = false
 		}
 		function loading() {
-			var head = document.getElementsByTagName("head")
+			var head = document.getElementsByTagName("head")[0]
 			var script = document.createElement("script")
 			script.type = "text/javascript"
 			script.src = "https://www.google.com/recaptcha/api.js"
