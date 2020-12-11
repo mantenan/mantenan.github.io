@@ -948,7 +948,7 @@
 	<!-- Analytics -->
 	<script defer type="text/javascript">
 		document.addEventListener("DOMContentLoaded", function() {
-			var head = document.getElementsByTagName("head")[0]
+			var script = document.getElementById("script")
 				gtag1 = document.createElement("script")
 				gtag1.type = "text/javascript"
 				gtag1.src = "https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"
@@ -956,9 +956,9 @@
 				gtag2.type = "text/javascript"
 				gtag2.innerHTML = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')"
 			setTimeout(function() {
-				head.appendChild(gtag1)
-				head.appendChild(gtag2)
-			},1000)
+				script.appendChild(gtag1)
+				script.appendChild(gtag2)
+			},5000)
 		});
 	</script>
 	<!-- reCAPTCHA -->
