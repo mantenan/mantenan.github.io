@@ -68,7 +68,11 @@
 	<nav id="navbar" class="scroll">
 		<div class="container">
 			<a class="brand" href="/">
-				<img loading="lazy" src="assets/img/logo-mantenan.png" alt="Mantenan">
+				<picture>
+					<source type="image/webp" srcset="assets/img/logo-mantenan.webp 1x, assets/img/logo-mantenan.webp 2x">
+					<source type="image/png" srcset="assets/img/logo-mantenan.png 1x, assets/img/logo-mantenan.png 2x">
+					<img loading="lazy" src="assets/img/logo-mantenan.png" srcset="assets/img/logo-mantenan.png 1x, assets/img/logo-mantenan.png 2x" alt="Mantenan">
+				</picture>
 			</a>
 			<a class="d-flex align-items-center back" href="javascript:history.back()">
 				<svg viewBox="0 0 24 24" width="17" height="17">
@@ -235,17 +239,19 @@
 		else window.addEventListener('load', loadDeferredStyles);
 	</script>
 	<!-- Analytics -->
-	<script>
+	<script defer type="text/javascript">
 		document.addEventListener("DOMContentLoaded", function() {
-			var head = document.getElementsByTagName("head")[0]
+			var script = document.getElementById("script")
 				gtag1 = document.createElement("script")
 				gtag1.type = "text/javascript"
 				gtag1.src = "https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"
 				gtag2 = document.createElement("script")
 				gtag2.type = "text/javascript"
 				gtag2.innerHTML = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')"
-			head.appendChild(gtag1)
-			head.appendChild(gtag2)
+			setTimeout(function() {
+				script.appendChild(gtag1)
+				script.appendChild(gtag2)
+			},5000)
 		});
 	</script>
 </section>
