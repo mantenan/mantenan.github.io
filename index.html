@@ -946,9 +946,14 @@
 		else window.addEventListener('load', loadDeferredStyles);
 	</script>
 	<!-- Analytics -->
-	<script defer type="text/javascript" src="assets/js/gtag.js" async></script>
 	<script defer type="text/javascript">
-		window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')
+		document.addEventListener("DOMContentLoaded", function() {
+			var script = document.getElementById("script")
+				gtag = document.createElement("script")
+				gtag.type = "text/javascript"
+				gtag.src = "assets/js/gtag.js"
+			script.appendChild(gtag)
+		});
 	</script>
 	<!-- reCAPTCHA -->
 	<script defer type="text/javascript">
