@@ -83,7 +83,7 @@
 	})
 
 // Slick
-	$('.swipe').slick({
+	$('#website .swipe').slick({
 		dots: false,
 		arrows: true,
 		autoplay: false,
@@ -105,6 +105,20 @@
 			}
 		}]
 	})
+	$('#image .swipe').slick({
+		dots: false,
+		arrows: true,
+		autoplay: false,
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1
+			}
+		}]
+	})
 
 // Anchor
 	$('a[href^="#"]').on('click',function (e) {
@@ -115,5 +129,9 @@
 			'scrollTop': $target.offset().top - 100
 		},500)
 	})
+
+// Order
+	function order1() {}
+	function order2() {}
 
 // if ( window.matchMedia('(max-width: 767px)').matches ) {}

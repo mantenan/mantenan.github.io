@@ -131,7 +131,9 @@
 	.btn:active:focus,
 	.show>.btn-dark.dropdown-toggle:focus,
 	.btn-close:focus,
-	.page-link:focus {
+	.page-link:focus,
+	a.badge.focus,
+	a.badge:focus {
 		box-shadow: none !important;
 	}
 
@@ -155,9 +157,9 @@
 		cursor: pointer;
 	}
 
-	.form-control:focus {
-		border-color: var(--theme-2);
-	}
+	/*.form-control:focus {
+		border-color: var(--success);
+	}*/
 
 /* Color */
 	.bg-theme-1 {
@@ -618,6 +620,41 @@
 		transform: perspective(100vw) translateZ(0);
 	}
 
+/* Modal */
+	.modal:nth-of-type(even) {
+		z-index: 1052 !important;
+	}
+	.modal-backdrop.show:nth-of-type(even) {
+		z-index: 1051 !important;
+	}
+	.modal-lg,
+	.modal-xl {
+		max-width: 100%;
+	}
+	.modal-close small {
+		margin-top: 1px;
+	}
+	@media (min-width: 768px) {
+		.modal-lg {
+			max-width: calc(100% - 3.5rem);
+		}
+	}
+	@media (min-width: 1200px) {
+		.modal-xl {
+			max-width: 1140px;
+		}
+	}
+	@media (max-width: 767px) {
+		.modal-lg,
+		.modal-xl {
+			margin: 0;
+		}
+		.modal-lg .modal-content,
+		.modal-xl .modal-content {
+			border-radius: 0 !important;
+		}
+	}
+
 /* Navbar */
 	.navbar.scroll {
 		background-color: var(--white);
@@ -752,6 +789,9 @@
 		body {
 			background-position: right top;
 		}
+		.navbar:not(.scroll) .navbar-brand {
+			opacity: 0;
+		}
 		.navbar-light:not(.scroll) .navbar-nav .nav-link {
 			color: var(--white);
 			text-shadow: 2px 2px 5px rgb(0,0,0,.15)
@@ -785,4 +825,22 @@
 		-webkit-transition: all .25s ease;
 		   -moz-transition: all .25s ease;
 				transition: all .25s ease;
+	}
+
+	.popup .list > * {
+		position: relative;
+		padding-left: 22px;
+	}
+	.popup .list > *:before {
+		content: '';
+		width: 15px;
+		height: 15px;
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="green"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>');
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
 	}
