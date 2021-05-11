@@ -435,8 +435,10 @@
 	.w-60 {
 		width: 60%;
 	}
-	.w-80 {
-		width: 80%;
+	@media (min-width: 768px) {
+		.w-md-50 {
+			width: 50%;
+		}
 	}
 
 	.w-fit-content {
@@ -803,6 +805,15 @@
 		}
 	}
 
+	@media (max-width: 767px) {
+		#image .container.px-0.px-md-3 {
+			max-width: initial;
+		}
+	}
+
+	#contact h2 ~ p {
+		max-width: 450px;
+	}
 	#contact a:after {
 		content: '';
 		width: 40px;
