@@ -90,7 +90,6 @@
 		infinite: true,
 		centerMode: true,
   		centerPadding: '50px',
-		speed: 300,
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		responsive: [{
@@ -101,13 +100,14 @@
 		},{
 			breakpoint: 768,
 			settings: {
-				slidesToShow: 1
+				slidesToShow: 1,
+				arrows: false
 			}
 		}]
 	})
 	$('#image .swipe').slick({
 		dots: false,
-		arrows: true,
+		arrows: false,
 		autoplay: false,
 		infinite: true,
 		slidesToShow: 3,
@@ -115,6 +115,8 @@
 		responsive: [{
 			breakpoint: 768,
 			settings: {
+				centerMode: true,
+  				centerPadding: '50px',
 				slidesToShow: 1
 			}
 		}]
@@ -132,6 +134,21 @@
 	})
 
 // Order
+	$('[data-target="#order-1"],[data-target="#order-2"]').click(function() {
+		let id = $(this).data('target')
+			parent = $(this).prev().find('h3')
+			name = parent.html()
+			price = parent.next().html()
+		$(id).find(id + '-account-5').attr('value',name)
+		$(id).find(id + '-account-6').attr('value',price)
+	})
+
+	$('#orderCheck-1,#orderCheck-2').click(function() {
+		let checkbox = $(this)
+			button = checkbox.closest('.row').find('button')
+		button.prop('disabled', !button.prop('disabled'))
+	})
+
 	function order1() {}
 	function order2() {}
 
