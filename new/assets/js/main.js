@@ -136,11 +136,13 @@
 // Order
 	$('[data-target="#order-1"],[data-target="#order-2"]').click(function() {
 		let id = $(this).data('target')
-			parent = $(this).prev().find('h3')
-			name = parent.html()
-			price = parent.next().html()
-		$(id).find(id + '-account-5').attr('value',name)
-		$(id).find(id + '-account-6').attr('value',price)
+			parent = $(this).prev()
+			name = parent.find('h3').html()
+			price = parent.find('h3').next().html()
+			url = parent.find('a').attr('href')
+		$(id).find(id + '-account-3').attr('value',name)
+		$(id).find(id + '-account-4').attr('value',price)
+		$(id).find(id + '-account-5').attr('value',url)
 	})
 
 	$('#orderCheck-1,#orderCheck-2').click(function() {
@@ -149,7 +151,128 @@
 		button.prop('disabled', !button.prop('disabled'))
 	})
 
-	function order1() {}
-	function order2() {}
+	var phone = '6287838610808'
 
-// if ( window.matchMedia('(max-width: 767px)').matches ) {}
+		labelA1 = 'Nama Lengkap : '
+		labelA2 = 'Panggilan : '
+		labelA3 = 'Orang Tua : '
+		labelA4 = 'Alamat : '
+
+		labelB1 = 'Nama Lengkap : '
+		labelB2 = 'Panggilan : '
+		labelB3 = 'Orang Tua : '
+		labelB4 = 'Alamat : '
+
+		labelC2 = 'Tanggal : '
+		labelC3 = 'Jam : '
+		labelC4 = 'Alamat : '
+
+		labelD2 = 'Tanggal : '
+		labelD3 = 'Jam : '
+		labelD4 = 'Alamat : '
+		labelD5 = 'Google Maps : '
+
+		labelE1 = 'Tanggal publikasi undangan : '
+
+	function order1() {
+		let id = '#order-1'
+
+			section0 = id + '-account-'
+			O1 = 'Hai kak...' + '%0A%0A'
+			O2 = 'Perkenalkan saya *' + $(section0 + '1').val() + '* dari ' + $(section0 + '2').val() + ', ingin memesan undangan dari MauMantenan. '
+			O3 = 'Tema yang saya pilih adalah _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ') seharga ' + $(section0 + '4').val() + '.%0A%0A'
+			O4 = 'Berikut adalah rincian undangannya :' + '%0A'
+			detail0 = O1 + O2 + O3 + O4
+
+			sectionA = id + '-detail-'
+			A0 = '*Mempelai Pria*' + '%0A'
+			A1 = labelA1 + $(sectionA + 'A1').val() + '%0A'
+			A2 = labelA2 + $(sectionA + 'A2').val() + '%0A'
+			A3 = labelA3 + $(sectionA + 'A3').val() + '%0A'
+			A4 = labelA4 + $(sectionA + 'A4').val() + '%0A'
+			detail1 = A0 + A1 + A2 + A3 + A4
+
+			sectionB = id + '-detail-'
+			B0 = '*Mempelai Wanita*' + '%0A'
+			B1 = labelB1 + $(sectionB + 'B1').val() + '%0A'
+			B2 = labelB2 + $(sectionB + 'B2').val() + '%0A'
+			B3 = labelB3 + $(sectionB + 'B3').val() + '%0A'
+			B4 = labelB4 + $(sectionB + 'B4').val() + '%0A'
+			detail2 = B0 + B1 + B2 + B3 + B4
+
+			sectionC = id + '-detail-'
+			C1 = '*' + $(sectionC + 'C1').val() + '*' + '%0A'
+			C2 = labelC2 + $(sectionC + 'C2').val() + '%0A'
+			C3 = labelC3 + $(sectionC + 'C3').val() + '%0A'
+			C4 = labelC4 + $(sectionC + 'C4').val() + '%0A'
+			detail3 = C1 + C2 + C3 + C4
+
+			sectionD = id + '-detail-'
+			D1 = '*' + $(sectionD + 'D1').val() + '*' + '%0A'
+			D2 = labelD2 + $(sectionD + 'D2').val() + '%0A'
+			D3 = labelD3 + $(sectionD + 'D3').val() + '%0A'
+			D4 = labelD4 + $(sectionD + 'D4').val() + '%0A'
+			D5 = labelD5 + $(sectionD + 'D5').val() + '%0A'
+			detail4 = D1 + D2 + D3 + D4 + D5
+
+			sectionE = id + '-detail-'
+			E1 = labelE1 + $(sectionE + 'E1').val() + '%0A'
+			detail5 = E1
+
+			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari MauMantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
+
+			content = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A' + detail3 + '%0A' + detail4 + '%0A' + detail5 + '%0A' + detail6
+			content = content.split(' ').join('%20')
+			url = 'https://wa.me/' + phone + '?text=' + content
+
+		window.open(url,'_blank')
+	}
+	function order2() {
+		let id = '#order-2'
+
+			section0 = id + '-account-'
+			O1 = 'Hai kak...' + '%0A%0A'
+			O2 = 'Perkenalkan saya *' + $(section0 + '1').val() + '* dari ' + $(section0 + '2').val() + ', ingin memesan undangan dari MauMantenan. '
+			O3 = 'Tema yang saya pilih adalah _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ') seharga ' + $(section0 + '4').val() + '.%0A%0A'
+			O4 = 'Berikut adalah rincian undangannya :' + '%0A'
+			detail0 = O1 + O2 + O3 + O4
+
+			sectionA = id + '-detail-'
+			A0 = '*Mempelai Pria*' + '%0A'
+			A1 = labelA1 + $(sectionA + 'A1').val() + '%0A'
+			A2 = labelA2 + $(sectionA + 'A2').val() + '%0A'
+			A3 = labelA3 + $(sectionA + 'A3').val() + '%0A'
+			A4 = labelA4 + $(sectionA + 'A4').val() + '%0A'
+			detail1 = A0 + A1 + A2 + A3 + A4
+
+			sectionB = id + '-detail-'
+			B0 = '*Mempelai Wanita*' + '%0A'
+			B1 = labelB1 + $(sectionB + 'B1').val() + '%0A'
+			B2 = labelB2 + $(sectionB + 'B2').val() + '%0A'
+			B3 = labelB3 + $(sectionB + 'B3').val() + '%0A'
+			B4 = labelB4 + $(sectionB + 'B4').val() + '%0A'
+			detail2 = B0 + B1 + B2 + B3 + B4
+
+			sectionC = id + '-detail-'
+			C1 = '*' + $(sectionC + 'C1').val() + '*' + '%0A'
+			C2 = labelC2 + $(sectionC + 'C2').val() + '%0A'
+			C3 = labelC3 + $(sectionC + 'C3').val() + '%0A'
+			C4 = labelC4 + $(sectionC + 'C4').val() + '%0A'
+			detail3 = C1 + C2 + C3 + C4
+
+			sectionD = id + '-detail-'
+			D1 = '*' + $(sectionD + 'D1').val() + '*' + '%0A'
+			D2 = labelD2 + $(sectionD + 'D2').val() + '%0A'
+			D3 = labelD3 + $(sectionD + 'D3').val() + '%0A'
+			D4 = labelD4 + $(sectionD + 'D4').val() + '%0A'
+			D5 = labelD5 + $(sectionD + 'D5').val() + '%0A'
+			detail4 = D1 + D2 + D3 + D4 + D5
+
+			detail5 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari MauMantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
+
+			content = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A' + detail3 + '%0A' + detail4 + '%0A' + detail5
+			content = content.split(' ').join('%20')
+			url = 'https://wa.me/' + phone + '?text=' + content
+
+		window.open(url,'_blank')
+	}
