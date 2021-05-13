@@ -9,9 +9,11 @@
 	$(window).scroll(function() {
 		if ( $(document).scrollTop() > 25 ) {
 			$('.navbar').addClass('scroll')
+			$('.brand-inside').addClass('opacity-0')
 		}
 		else {
 			$('.navbar').removeClass('scroll')
+			$('.brand-inside').removeClass('opacity-0')
 		}
 	})
 
@@ -101,6 +103,7 @@
 			breakpoint: 768,
 			settings: {
 				slidesToShow: 1,
+				dots: true,
 				arrows: false
 			}
 		}]
@@ -115,11 +118,21 @@
 		responsive: [{
 			breakpoint: 768,
 			settings: {
+  				dots: true,
 				centerMode: true,
   				centerPadding: '50px',
 				slidesToShow: 1
 			}
 		}]
+	})
+	$('#testimonial .swipe').slick({
+		dots: true,
+		arrows: false,
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		slidesToShow: 1,
+		slidesToScroll: 1
 	})
 
 // Anchor
@@ -181,11 +194,12 @@
 		let id = '#order-1'
 
 			section0 = id + '-account-'
-			O1 = 'Hai kak...' + '%0A%0A'
-			O2 = 'Perkenalkan saya *' + $(section0 + '1').val() + '* dari ' + $(section0 + '2').val() + ', ingin memesan undangan dari MauMantenan. '
-			O3 = 'Tema yang saya pilih adalah _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ') seharga ' + $(section0 + '4').val() + '.%0A%0A'
-			O4 = 'Berikut adalah rincian undangannya :' + '%0A'
-			detail0 = O1 + O2 + O3 + O4
+			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
+			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '2').val() + ')' + '%0A'
+			O3 = 'Tema : _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ')' + '%0A'
+			O4 = 'Harga : ' + $(section0 + '4').val() + '%0A%0A'
+			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
+			detail0 = O1 + O2 + O3 + O4 + O5
 
 			sectionA = id + '-detail-'
 			A0 = '*Mempelai Pria*' + '%0A'
@@ -234,11 +248,12 @@
 		let id = '#order-2'
 
 			section0 = id + '-account-'
-			O1 = 'Hai kak...' + '%0A%0A'
-			O2 = 'Perkenalkan saya *' + $(section0 + '1').val() + '* dari ' + $(section0 + '2').val() + ', ingin memesan undangan dari MauMantenan. '
-			O3 = 'Tema yang saya pilih adalah _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ') seharga ' + $(section0 + '4').val() + '.%0A%0A'
-			O4 = 'Berikut adalah rincian undangannya :' + '%0A'
-			detail0 = O1 + O2 + O3 + O4
+			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
+			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '2').val() + ')' + '%0A'
+			O3 = 'Tema : _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ')' + '%0A'
+			O4 = 'Harga : ' + $(section0 + '4').val() + '%0A%0A'
+			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
+			detail0 = O1 + O2 + O3 + O4 + O5
 
 			sectionA = id + '-detail-'
 			A0 = '*Mempelai Pria*' + '%0A'

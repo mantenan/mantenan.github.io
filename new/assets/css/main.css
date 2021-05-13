@@ -7,6 +7,12 @@
 
 /* Font */
 	@font-face {
+		font-family: 'Bazar Medium';
+		font-style: normal;
+		font-weight: normal;
+		src: local('Bazar Medium'), url('../font/bazar/Bazar.woff') format('woff');
+	}
+	@font-face {
 		font-family: 'Oxygen';
 		font-style: normal;
 		font-weight: 400;
@@ -47,6 +53,8 @@
 		--theme-4: #842590;
 
 		--link: #d09f14;
+
+		--black: #000;
 	}
 
 	body {
@@ -182,7 +190,16 @@
 		color: var(--theme-3);
 	}
 
+	.text-black {
+		color: var(--black);
+	}
+
 /* Font */
+	.font-theme-1 {
+		font-family: 'Bazar Medium', sans-serif;
+		text-transform: uppercase;
+	}
+
 	.fs-1 {
 		font-size: calc(1.375rem + 1.5vw) !important;
 	}
@@ -655,6 +672,9 @@
 		.modal-xl .modal-content {
 			border-radius: 0 !important;
 		}
+		.modal-dialog-scrollable {
+			max-height: initial;
+		}
 	}
 
 /* Navbar */
@@ -805,6 +825,17 @@
 		}
 	}
 
+	.brand-inside {
+		-webkit-transition: all .25s ease;
+		   -moz-transition: all .25s ease;
+				transition: all .25s ease;
+	}
+
+	.font-theme-1 i {
+		font-style: normal;
+		margin-left: -3px;
+	}
+
 	@media (max-width: 767px) {
 		#image .container.px-0.px-md-3 {
 			max-width: initial;
@@ -854,4 +885,24 @@
 		top: 0;
 		bottom: 0;
 		margin: auto;
+	}
+
+	@media (min-width: 992px) {
+		.title-float {
+			position: absolute;
+			left: -300px;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			display: flex;
+			padding-bottom: 3rem;
+			z-index: 1;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		#testimonial .slick-slide img {
+			height: initial;
+			object-fit: cover;
+		}
 	}
