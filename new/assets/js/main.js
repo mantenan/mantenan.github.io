@@ -143,6 +143,9 @@
 		$(id).find(id + '-account-3').attr('value',name)
 		$(id).find(id + '-account-4').attr('value',price)
 		$(id).find(id + '-account-5').attr('value',url)
+		setTimeout(function() {
+			$('.modal.show').find(id + '-account-1').focus()
+		},500)
 	})
 
 	$('#orderCheck-1,#orderCheck-2').click(function() {
