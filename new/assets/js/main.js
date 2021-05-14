@@ -1,7 +1,7 @@
 /*
  * MauMantenan
  * https://maumantenan.com
- * Online Wedding Invitation
+ * Digital Wedding Invitation
  * Copyright (c) 2020-2021
  */
 
