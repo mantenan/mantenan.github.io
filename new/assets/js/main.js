@@ -244,6 +244,68 @@
 
 		window.open(url,'_blank')
 	}
+	function order1ext() {
+		let id = '#order-1-ext'
+
+			section0 = id + '-account-'
+			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
+			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '2').val() + ')' + '%0A'
+			O3 = 'Tema : _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ')' + '%0A'
+			O4 = 'Harga : ' + $(section0 + '4').val() + '%0A%0A'
+			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
+			detail0 = O1 + O2 + O3 + O4 + O5
+
+			sectionA = id + '-detail-'
+			A0 = '*Mempelai Pria*' + '%0A'
+			A1 = labelA1 + $(sectionA + 'A1').val() + '%0A'
+			A2 = labelA2 + $(sectionA + 'A2').val() + '%0A'
+			A3 = labelA3 + $(sectionA + 'A3').val() + '%0A'
+			A4 = labelA4 + $(sectionA + 'A4').val() + '%0A'
+			detail1 = A0 + A1 + A2 + A3 + A4
+
+			sectionB = id + '-detail-'
+			B0 = '*Mempelai Wanita*' + '%0A'
+			B1 = labelB1 + $(sectionB + 'B1').val() + '%0A'
+			B2 = labelB2 + $(sectionB + 'B2').val() + '%0A'
+			B3 = labelB3 + $(sectionB + 'B3').val() + '%0A'
+			B4 = labelB4 + $(sectionB + 'B4').val() + '%0A'
+			detail2 = B0 + B1 + B2 + B3 + B4
+
+			sectionC = id + '-detail-'
+			C1 = '*' + $(sectionC + 'C1').val() + '*' + '%0A'
+			C2 = labelC2 + $(sectionC + 'C2').val() + '%0A'
+			C3 = labelC3 + $(sectionC + 'C3').val() + '%0A'
+			C4 = labelC4 + $(sectionC + 'C4').val() + '%0A'
+			detail3 = C1 + C2 + C3 + C4
+
+			sectionD = id + '-detail-'
+			D1 = '*' + $(sectionD + 'D1').val() + '*' + '%0A'
+			D2 = labelD2 + $(sectionD + 'D2').val() + '%0A'
+			D3 = labelD3 + $(sectionD + 'D3').val() + '%0A'
+			D4 = labelD4 + $(sectionD + 'D4').val() + '%0A'
+			D5 = labelD5 + $(sectionD + 'D5').val() + '%0A'
+			detail4 = D1 + D2 + D3 + D4 + D5
+
+			sectionDD = id + '-detail-'
+			DD1 = '*' + $(sectionDD + 'DD1').val() + '*' + '%0A'
+			DD2 = labelD2 + $(sectionDD + 'DD2').val() + '%0A'
+			DD3 = labelD3 + $(sectionDD + 'DD3').val() + '%0A'
+			DD4 = labelD4 + $(sectionDD + 'DD4').val() + '%0A'
+			DD5 = labelD5 + $(sectionDD + 'DD5').val() + '%0A'
+			detail4a = DD1 + DD2 + DD3 + DD4 + DD5
+
+			sectionE = id + '-detail-'
+			E1 = labelE1 + $(sectionE + 'E1').val() + '%0A'
+			detail5 = E1
+
+			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari MauMantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
+
+			content = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A' + detail3 + '%0A' + detail4 + '%0A' + detail4a + '%0A' + detail5 + '%0A' + detail6
+			content = content.split(' ').join('%20')
+			url = 'https://wa.me/' + phone + '?text=' + content
+
+		window.open(url,'_blank')
+	}
 	function order2() {
 		let id = '#order-2'
 
