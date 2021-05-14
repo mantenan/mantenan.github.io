@@ -836,6 +836,12 @@
 		margin-left: -3px;
 	}
 
+	.badge-popular {
+		position: absolute;
+		margin-left: -21px;
+		margin-top: -15px;
+	}
+
 	@media (max-width: 767px) {
 		#image .container.px-0.px-md-3 {
 			max-width: initial;
