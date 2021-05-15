@@ -48,21 +48,21 @@
 		})
 	}
 
-	$('#carousel').each(function() {
-		let parent = $(this)
-			item = parent.find('.carousel-item')
+	// $('#carousel').each(function() {
+	// 	let parent = $(this)
+	// 		item = parent.find('.carousel-item')
 
-		item.each(function() {
-			let child = $(this)
-				carousel = child.closest('.carousel-inner').find('.carousel-item')
-				first = carousel.first()
-				last = carousel.last()
-				src = child.prev().find('img').attr('src')
+	// 	item.each(function() {
+	// 		let child = $(this)
+	// 			carousel = child.closest('.carousel-inner').find('.carousel-item')
+	// 			first = carousel.first()
+	// 			last = carousel.last()
+	// 			src = child.prev().find('img').attr('src')
 
-			child.css('background-image','url(' + src + ')')
-			first.css('background-image','url(' + last.find('img').attr('src') + ')')
-		})
-	})
+	// 		child.css('background-image','url(' + src + ')')
+	// 		first.css('background-image','url(' + last.find('img').attr('src') + ')')
+	// 	})
+	// })
 
 	carouselMain()
 
@@ -124,15 +124,6 @@
 				slidesToShow: 1
 			}
 		}]
-	})
-	$('#testimonial .swipe').slick({
-		dots: true,
-		arrows: false,
-		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 3000,
-		slidesToShow: 1,
-		slidesToScroll: 1
 	})
 
 // Anchor

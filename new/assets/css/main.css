@@ -911,13 +911,6 @@
 		}
 	}
 
-	@media (min-width: 1200px) {
-		#testimonial .slick-slide img {
-			height: initial;
-			object-fit: cover;
-		}
-	}
-
 	.payment img, .payment img:hover {
 		-webkit-transition: all .25s ease;
 		   -moz-transition: all .25s ease;
