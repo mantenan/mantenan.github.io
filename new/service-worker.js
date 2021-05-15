@@ -1,4 +1,4 @@
-const mantenan = "mantenan-v1"
+const mantenan = "maumantenan-v1"
 const assets = [
 	"/new/",
 	"/new/index.html",
