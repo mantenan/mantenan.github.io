@@ -724,6 +724,9 @@
 	}
 
 /* Slick */
+	.slick-dots {
+		z-index: 2;
+	}
 	.slick-arrow {
 		display: flex;
 		align-items: center;
@@ -911,5 +914,32 @@
 		#testimonial .slick-slide img {
 			height: initial;
 			object-fit: cover;
+		}
+	}
+
+	.payment img, .payment img:hover {
+		-webkit-transition: all .25s ease;
+		   -moz-transition: all .25s ease;
+				transition: all .25s ease;
+	}
+	.payment img:not(:hover) {
+		filter: grayscale(100%);
+		opacity: .5;
+	}
+	@media (max-width: 575px) {
+		.payment img {
+			height: 20px;
+		}
+		.payment img[alt="BNI"] {
+			width: 70px;
+		}
+		.payment img[alt="BRI"] {
+			width: 80px;
+		}
+		.payment img[alt="Mandiri"] {
+			width: 65px;
+		}
+		.payment img[alt="Ovo"] {
+			width: 60px;
 		}
 	}
