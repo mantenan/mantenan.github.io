@@ -147,15 +147,15 @@
 	})
 
 // Order
-	$('[data-target="#order-1"],[data-target="#order-2"]').click(function() {
+	$('[data-target="#order-1"],[data-target="#order-1-ext"],[data-target="#order-2"]').click(function() {
 		let id = $(this).data('target')
 			parent = $(this).prev()
 			name = parent.find('h3').html()
 			price = parent.find('h3').next().html()
 			url = parent.find('a').attr('href')
-		$(id).find(id + '-account-3').attr('value',name)
-		$(id).find(id + '-account-4').attr('value',price)
-		$(id).find(id + '-account-5').attr('value',url)
+		$(id).find(id + '-account-4').attr('value',name)
+		$(id).find(id + '-account-5').attr('value',price)
+		$(id).find(id + '-account-6').attr('value',url)
 		setTimeout(function() {
 			$('.modal.show').find(id + '-account-1').focus()
 		},500)
@@ -180,22 +180,22 @@
 		labelB4 = 'Alamat : '
 
 		labelC2 = 'Tanggal : '
-		labelC3 = 'Jam : '
-		labelC4 = 'Alamat : '
+		labelC3 = 'Waktu : '
+		labelC4 = 'Lokasi : '
 
 		labelD2 = 'Tanggal : '
-		labelD3 = 'Jam : '
-		labelD4 = 'Alamat : '
+		labelD3 = 'Waktu : '
+		labelD4 = 'Lokasi : '
 		labelD5 = 'Google Maps : '
 
-		labelE1 = 'Tanggal publikasi undangan : '
+		labelE1 = 'Tanggal publikasi : '
 
 	function order1() {
 		let id = '#order-1'
 
 			section0 = id + '-account-'
 			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
-			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '2').val() + ')' + '%0A'
+			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '3').val() + ') ' + $(section0 + '2').val() + '%0A'
 			O3 = 'Tema : _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ')' + '%0A'
 			O4 = 'Harga : ' + $(section0 + '4').val() + '%0A%0A'
 			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
@@ -205,17 +205,19 @@
 			A0 = '*Mempelai Pria*' + '%0A'
 			A1 = labelA1 + $(sectionA + 'A1').val() + '%0A'
 			A2 = labelA2 + $(sectionA + 'A2').val() + '%0A'
-			A3 = labelA3 + $(sectionA + 'A3').val() + '%0A'
-			A4 = labelA4 + $(sectionA + 'A4').val() + '%0A'
-			detail1 = A0 + A1 + A2 + A3 + A4
+			A3 = labelA3 + $(sectionA + 'A3').val() + ' - ' + $(sectionA + 'A4').val() + '%0A'
+			A4 = labelA4 + $(sectionA + 'A5').val() + '%0A'
+			A5 = $(sectionA + 'A7').val() + ' : ' + $(sectionA + 'A6').val() + '%0A'
+			detail1 = A0 + A1 + A2 + A3 + A4 + A5
 
 			sectionB = id + '-detail-'
 			B0 = '*Mempelai Wanita*' + '%0A'
 			B1 = labelB1 + $(sectionB + 'B1').val() + '%0A'
 			B2 = labelB2 + $(sectionB + 'B2').val() + '%0A'
-			B3 = labelB3 + $(sectionB + 'B3').val() + '%0A'
-			B4 = labelB4 + $(sectionB + 'B4').val() + '%0A'
-			detail2 = B0 + B1 + B2 + B3 + B4
+			B3 = labelB3 + $(sectionB + 'B3').val() + ' - ' + $(sectionB + 'B4').val() + '%0A'
+			B4 = labelB4 + $(sectionB + 'B5').val() + '%0A'
+			B5 = $(sectionB + 'B7').val() + ' : ' + $(sectionB + 'B6').val() + '%0A'
+			detail2 = B0 + B1 + B2 + B3 + B4 + B5
 
 			sectionC = id + '-detail-'
 			C1 = '*' + $(sectionC + 'C1').val() + '*' + '%0A'
@@ -236,7 +238,7 @@
 			E1 = labelE1 + $(sectionE + 'E1').val() + '%0A'
 			detail5 = E1
 
-			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari MauMantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
+			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
 
 			content = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A' + detail3 + '%0A' + detail4 + '%0A' + detail5 + '%0A' + detail6
 			content = content.split(' ').join('%20')
@@ -249,7 +251,7 @@
 
 			section0 = id + '-account-'
 			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
-			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '2').val() + ')' + '%0A'
+			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '3').val() + ') ' + $(section0 + '2').val() + '%0A'
 			O3 = 'Tema : _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ')' + '%0A'
 			O4 = 'Harga : ' + $(section0 + '4').val() + '%0A%0A'
 			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
@@ -298,7 +300,7 @@
 			E1 = labelE1 + $(sectionE + 'E1').val() + '%0A'
 			detail5 = E1
 
-			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari MauMantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
+			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
 
 			content = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A' + detail3 + '%0A' + detail4 + '%0A' + detail4a + '%0A' + detail5 + '%0A' + detail6
 			content = content.split(' ').join('%20')
@@ -311,7 +313,7 @@
 
 			section0 = id + '-account-'
 			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
-			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '2').val() + ')' + '%0A'
+			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '3').val() + ') ' + $(section0 + '2').val() + '%0A'
 			O3 = 'Tema : _*' + $(section0 + '3').val() + '*_ (' + $(section0 + '5').val() + ')' + '%0A'
 			O4 = 'Harga : ' + $(section0 + '4').val() + '%0A%0A'
 			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
@@ -348,7 +350,7 @@
 			D5 = labelD5 + $(sectionD + 'D5').val() + '%0A'
 			detail4 = D1 + D2 + D3 + D4 + D5
 
-			detail5 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari MauMantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
+			detail5 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
 
 			content = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A' + detail3 + '%0A' + detail4 + '%0A' + detail5
 			content = content.split(' ').join('%20')
