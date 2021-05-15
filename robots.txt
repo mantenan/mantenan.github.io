@@ -14,4 +14,3 @@ Allow: /amp/price
 
 Disallow: /test
 Disallow: /link
-Disallow: /new/
