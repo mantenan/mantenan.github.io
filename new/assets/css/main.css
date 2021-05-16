@@ -55,10 +55,12 @@
 		--link: #d09f14;
 
 		--black: #000;
+
+		--font-theme-1: 'Oxygen', sans-serif;
 	}
 
 	body {
-		font-family: 'Oxygen', sans-serif;
+		font-family: var(--font-theme-1);
 		font-size: .875rem;
 		color: rgba(0,0,0,.75);
 		font-weight: 400;
@@ -921,19 +923,39 @@
 		opacity: .5;
 	}
 	@media (max-width: 575px) {
-		.payment img {
-			height: 20px;
-		}
 		.payment img[alt="BNI"] {
 			width: 70px;
+			height: 20px;
 		}
 		.payment img[alt="BRI"] {
 			width: 80px;
+			height: 20px;
 		}
 		.payment img[alt="Mandiri"] {
-			width: 65px;
+			width: 86px;
+			height: 27px;
 		}
 		.payment img[alt="Ovo"] {
-			width: 60px;
+			width: 54px;
+			height: 18px;
 		}
+	}
+
+	.ui-timepicker-standard {
+		border-radius: .25rem;
+		border-color: #80bdff;
+		top: 37px !important;
+		left: 0px !important;
+		z-index: 99999 !important;
+	}
+	.ui-timepicker-standard a {
+		font-family: var(--font-theme-1);
+		font-size: .875rem;
+		border: none;
+	}
+	.ui-timepicker-standard a:hover,
+	.ui-timepicker-standard .ui-state-hover {
+		color: var(--blue);
+		background-color: var(--light);
+		border: none;
 	}
