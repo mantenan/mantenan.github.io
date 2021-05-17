@@ -132,8 +132,42 @@
 		}]
 	})
 
+	$('#preview .swipe').slick({
+		dots: false,
+		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	})
+	if ( window.matchMedia('(max-width: 767px)').matches ) {
+		$('#story .slick-slide:not(.slick-cloned)').each(function() {
+			let img = $(this).find('img')
+				width = img.width()
+				height = (width / 9) * 20
+			img.css('min-width',width)
+			img.css('min-height',height)
+		})
+		$('#feed .slick-slide:not(.slick-cloned)').each(function() {
+			let style = $('#story .slick-slide:not(.slick-cloned) img').attr('style')
+				split = style.split(' ')
+				split = split[1].split('px')
+				width = split[0] + 'px'
+			$(this).find('img').css('min-height',width)
+		})
+		$('#cover .slick-slide:not(.slick-cloned)').each(function() {
+			let style = $('#story .slick-slide:not(.slick-cloned) img').attr('style')
+				split = style.split(' ')
+				split = split[1].split('px')
+				width = (split[0] / 3) * 2
+				width = width + 'px'
+			$(this).find('img').css('min-height',width)
+		})
+	}
+
 // Anchor
-	$('a[href^="#"]').on('click',function (e) {
+	$('a[href^="#"]:not([data-toggle="pill"])').on('click',function (e) {
 		e.preventDefault()
 		var target = this.hash
 		$target = $(target)
@@ -144,25 +178,28 @@
 	})
 
 // Timepicker
-	$('.timepicker').timepicker({
-		timeFormat: 'HH:mm',
-		startHour: 6,
-		interval: 30
-	})
-	$('.timepicker').focus(function() {
-		let picker = $(this)
-			parent = $(this).closest('div')
-		$('.ui-timepicker-standard').clone().appendTo(parent)
-		picker.next().find('a').click(function(e) {
-			let selected = e.target.innerHTML
-			picker.val(selected)
+	let timepicker = $('.timepicker')
+	if ( timepicker.length > 0 ) {
+		timepicker.timepicker({
+			timeFormat: 'HH:mm',
+			startHour: 6,
+			interval: 30
 		})
-	}).blur(function() {
-		let picker = $(this)
-		setTimeout(function() {
-			picker.next().remove()
-		},100)
-	})
+		timepicker.focus(function() {
+			let picker = $(this)
+				parent = $(this).closest('div')
+			$('.ui-timepicker-standard').clone().appendTo(parent)
+			picker.next().find('a').click(function(e) {
+				let selected = e.target.innerHTML
+				picker.val(selected)
+			})
+		}).blur(function() {
+			let picker = $(this)
+			setTimeout(function() {
+				picker.next().remove()
+			},100)
+		})
+	}
 
 // Order
 	$('[data-target="#order-1"],[data-target="#order-1-ext"],[data-target="#order-2"]').click(function() {

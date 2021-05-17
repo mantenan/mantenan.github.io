@@ -173,6 +173,10 @@
 	}*/
 
 /* Color */
+	.bg-white-8 {
+		background-color: rgba(255,255,255,.8);
+	}
+
 	.bg-theme-1 {
 		background-color: var(--theme-1);
 	}
@@ -378,7 +382,7 @@
 
 /* Tab */
 	.nav-pills .nav-link {
-		background-color: rgba(255,255,255,.9);
+		background-color: rgba(255,255,255,.8);
 		position: relative;
 	}
 	.nav-pills .nav-link:after {
@@ -391,27 +395,28 @@
 		width: 0;
 		height: 0;
 		opacity: 0;
-		border-top: 0 solid var(--theme-1);
+		border-top: 0 solid var(--theme-2);
 		border-left: 7px solid transparent;
 		border-right: 7px solid transparent;
 		-webkit-transform: translateY(-7px);
-		-moz-transform: translateY(-7px);
-		transform: translateY(-7px);
+		   -moz-transform: translateY(-7px);
+				transform: translateY(-7px);
 		-webkit-transition: -webkit-transform .2s ease, opacity .4s ease;
-		-moz-transition: -moz-transform .2s ease, opacity .4s ease;
-		transition: transform .2s ease, opacity .4s ease;
+		   -moz-transition: -moz-transform .2s ease, opacity .4s ease;
+				transition: transform .2s ease, opacity .4s ease;
 	}
 	.nav-pills .nav-link.active,
 	.nav-pills .show>.nav-link {
-		background-color: var(--theme-1);
+		background: var(--theme-1);
+		background: linear-gradient(-15deg, var(--theme-2) 0%, var(--theme-1) 100%);
 	}
 	.nav-pills .nav-link.active:after,
 	.nav-pills .show>.nav-link:after {
 		opacity: 1;
 		border-top-width: 7px;
 		-webkit-transform: translateY(0);
-		-moz-transform: translateY(0);
-		transform: translateY(0);
+		   -moz-transform: translateY(0);
+				transform: translateY(0);
 	}
 	.tab-content .nav-pills .nav-link:after {
 		display: none;
@@ -643,12 +648,15 @@
 	}
 
 /* Modal */
-	.modal:nth-of-type(even),
-	.modal:nth-of-type(even) + .modal {
+	.modal:nth-of-type(odd),
+	.modal:nth-of-type(odd) + .modal {
 		z-index: 1052 !important;
 	}
-	.modal-backdrop.show:nth-of-type(even) {
+	.modal-backdrop.show:nth-of-type(odd) {
 		z-index: 1051 !important;
+	}
+	.modal-backdrop.show + .modal-backdrop.show {
+		opacity: 0 !important;
 	}
 	.modal-lg,
 	.modal-xl {
@@ -803,6 +811,30 @@
 		}
 	}
 
+/* Timepicker */
+	body > .ui-timepicker-container {
+		z-index: -1;
+		opacity: 0;
+	}
+	.ui-timepicker-standard {
+		border-radius: .25rem;
+		border-color: #80bdff;
+		top: 37px !important;
+		left: 0px !important;
+		z-index: 99999 !important;
+	}
+	.ui-timepicker-standard a {
+		font-family: var(--font-theme-1);
+		font-size: .875rem;
+		border: none;
+	}
+	.ui-timepicker-standard a:hover,
+	.ui-timepicker-standard .ui-state-hover {
+		color: var(--blue);
+		background-color: var(--light);
+		border: none;
+	}
+
 /* Variant */
 	body {
 		background-image: url('../img/background.png');
@@ -882,6 +914,42 @@
 				transition: all .25s ease;
 	}
 
+	#preview .swipe {
+		padding: 1.25rem;
+	}
+	#preview .slick-slide:not(.slick-active) {
+		filter: initial;
+	}
+	#preview .slick-arrow {
+		top: calc(50% + 88px);
+		width: 0;
+	}
+	#preview .slick-list {
+		border-radius: .35rem;
+		background-color: rgba(255,255,255,.8);
+		box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 5px 10px -2px rgba(0,0,0,.05);
+	}
+	#preview .slick-list:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		z-index: -1;
+		border: 6px solid var(--light);
+		border-top: 6px solid var(--theme-1);
+		animation: spin 2s linear infinite;
+	}
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+
 	.popup .list > * {
 		position: relative;
 		padding-left: 22px;
@@ -939,23 +1007,4 @@
 			width: 54px;
 			height: 18px;
 		}
-	}
-
-	.ui-timepicker-standard {
-		border-radius: .25rem;
-		border-color: #80bdff;
-		top: 37px !important;
-		left: 0px !important;
-		z-index: 99999 !important;
-	}
-	.ui-timepicker-standard a {
-		font-family: var(--font-theme-1);
-		font-size: .875rem;
-		border: none;
-	}
-	.ui-timepicker-standard a:hover,
-	.ui-timepicker-standard .ui-state-hover {
-		color: var(--blue);
-		background-color: var(--light);
-		border: none;
 	}
