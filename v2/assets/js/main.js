@@ -304,7 +304,7 @@
 			detail4 = D1 + D2 + D3 + D4 + D5
 
 			sectionE = id + '-detail-'
-			E1 = labelE1 + $(sectionE + 'E1').val() + '%0A'
+			E1 = labelE1 + $(sectionE + 'E1').val() + ' s.d. ' + $(sectionE + 'E1-end').val() + '%0A'
 			detail5 = E1
 
 			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
@@ -371,7 +371,7 @@
 			detail4a = DD1 + DD2 + DD3 + DD4 + DD5
 
 			sectionE = id + '-detail-'
-			E1 = labelE1 + $(sectionE + 'E1').val() + '%0A'
+			E1 = labelE1 + $(sectionE + 'E1').val() + ' s.d. ' + $(sectionE + 'E1-end').val() + '%0A'
 			detail5 = E1
 
 			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
