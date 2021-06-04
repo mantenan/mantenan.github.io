@@ -215,6 +215,37 @@
 		})
 	}
 
+// Datepicker
+	$('.datepicker').datepicker({
+		format: 'DD, d M yyyy',
+		language: 'id',
+		locale: 'id',
+		autoclose: true,
+		todayHighlight: true,
+		leftArrow: '',
+		rightArrow: '&raquo;'
+	}).on('show',function(e) {
+		$('.datepicker-dropdown > *:not(:first-child)').css('display','none')
+		$('.prev').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>')
+		$('.next').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>')
+    })
+	$('.datepicker-range').datepicker({
+		format: 'd M yyyy',
+		locale: 'id',
+		autoclose: true,
+		todayHighlight: true
+	}).on('show',function(e) {
+		$('.datepicker-dropdown > *:not(:first-child)').css('display','none')
+		$('.prev').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>')
+		$('.next').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>')
+    })
+	
+	$(document).on('DOMMouseScroll mousewheel scroll','.modal',function() {
+		$('input').blur()
+		$('.datepicker').datepicker('hide')
+		$('.datepicker-range').datepicker('hide')
+	})
+
 // Order
 	$('[data-target="#order-1"],[data-target="#order-1-ext"],[data-target="#order-2"]').click(function() {
 		let id = $(this).data('target')
@@ -234,6 +265,38 @@
 		let checkbox = $(this)
 			button = checkbox.closest('.row').find('button')
 		button.prop('disabled', !button.prop('disabled'))
+	})
+
+	const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
+		  monthInterval = 3
+
+	$('#order-1-detail-E1').on('change',function() {
+		let input = $(this)
+			current = input.val()
+		if (current) {
+			setTimeout(function() {
+				let set = new Date(current)
+				input.val([set.getDate(), monthNames[set.getMonth()], set.getFullYear()].join(' '))
+			},10)
+			let set = new Date(current)
+			set.setMonth(set.getMonth() + Number(monthInterval))
+			set.setDate(set.getDate() - Number(1))
+			$('#order-1-detail-E1-end').val([set.getDate(), monthNames[set.getMonth()], set.getFullYear()].join(' '))
+		}
+	})
+	$('#order-1-ext-detail-E1').on('change',function() {
+		let input = $(this)
+			current = input.val()
+		if (current) {
+			setTimeout(function() {
+				let set = new Date(current)
+				input.val([set.getDate(), monthNames[set.getMonth()], set.getFullYear()].join(' '))
+			},10)
+			let set = new Date(current)
+			set.setMonth(set.getMonth() + Number(monthInterval))
+			set.setDate(set.getDate() - Number(1))
+			$('#order-1-ext-detail-E1-end').val([set.getDate(), monthNames[set.getMonth()], set.getFullYear()].join(' '))
+		}
 	})
 
 	var phone = '6287838610808'
@@ -265,7 +328,8 @@
 			section0 = id + '-account-'
 			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
 			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '3').val() + ') ' + $(section0 + '2').val() + '%0A'
-			O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
+			// O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
+			O3 = 'Tema : ' + $(section0 + '4').val() + '%0A'
 			O4 = 'Harga : ' + $(section0 + '5').val() + '%0A%0A'
 			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
 			detail0 = O1 + O2 + O3 + O4 + O5
@@ -326,7 +390,8 @@
 			section0 = id + '-account-'
 			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
 			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '3').val() + ') ' + $(section0 + '2').val() + '%0A'
-			O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
+			// O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
+			O3 = 'Tema : ' + $(section0 + '4').val() + '%0A'
 			O4 = 'Harga : ' + $(section0 + '5').val() + '%0A%0A'
 			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
 			detail0 = O1 + O2 + O3 + O4 + O5
@@ -393,7 +458,8 @@
 			section0 = id + '-account-'
 			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
 			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '3').val() + ') ' + $(section0 + '2').val() + '%0A'
-			O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
+			// O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
+			O3 = 'Tema : ' + $(section0 + '4').val() + '%0A'
 			O4 = 'Harga : ' + $(section0 + '5').val() + '%0A%0A'
 			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
 			detail0 = O1 + O2 + O3 + O4 + O5

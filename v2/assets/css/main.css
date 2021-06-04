@@ -1004,6 +1004,56 @@
 		top: .75rem;
 	}
 
+	.datepicker.form-control {
+		padding: .375rem .75rem;
+	}
+	.datepicker-dropdown {
+		background-color: var(--white);
+		margin-left: -1px;
+	}
+	.datepicker td,
+	.datepicker th {
+		width: 100vw;
+		height: 40px;
+		max-width: 40px;
+	}
+	.datepicker table tr td.active.active,
+	.datepicker table tr td.active.disabled.active,
+	.datepicker table tr td.active.disabled:active,
+	.datepicker table tr td.active.disabled:hover.active,
+	.datepicker table tr td.active.disabled:hover:active,
+	.datepicker table tr td.active:active,
+	.datepicker table tr td.active:hover.active,
+	.datepicker table tr td.active:hover:active {
+		background: var(--primary);
+	}
+	.datepicker table tr td.today,
+	.datepicker table tr td.today.disabled,
+	.datepicker table tr td.today.disabled:hover,
+	.datepicker table tr td.today:hover,
+	.datepicker table tr td.today.active,
+	.datepicker table tr td.today.disabled,
+	.datepicker table tr td.today.disabled.active,
+	.datepicker table tr td.today.disabled.disabled,
+	.datepicker table tr td.today.disabled:active,
+	.datepicker table tr td.today.disabled:hover,
+	.datepicker table tr td.today.disabled:hover.active,
+	.datepicker table tr td.today.disabled:hover.disabled,
+	.datepicker table tr td.today.disabled:hover:active,
+	.datepicker table tr td.today.disabled:hover:hover,
+	.datepicker table tr td.today.disabled:hover[disabled],
+	.datepicker table tr td.today.disabled[disabled],
+	.datepicker table tr td.today:active,
+	.datepicker table tr td.today:hover,
+	.datepicker table tr td.today:hover.active,
+	.datepicker table tr td.today:hover.disabled,
+	.datepicker table tr td.today:hover:active,
+	.datepicker table tr td.today:hover:hover,
+	.datepicker table tr td.today:hover[disabled],
+	.datepicker table tr td.today[disabled] {
+		background: #ffe59a;
+	}
+
 	@media (min-width: 992px) {
 		.title-float {
 			position: absolute;
