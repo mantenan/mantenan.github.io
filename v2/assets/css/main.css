@@ -1098,3 +1098,19 @@
 	.tab-content .text-justify {
 		font-size: .8rem;
 	}
+
+	.bounce {
+		animation-name: bounce;
+		animation-duration: 3s;
+		transform-origin: bottom;
+		animation-iteration-count: infinite;
+	}
+	@keyframes bounce {
+		0%   { transform: translateY(0) scaleY(1) }
+		10%  { transform: translateY(-20px) scaleY(1.1) }
+		23%  { transform: translateY(0) scaleY(.83) }
+		26%  { transform: translateY(0) scaleY(.8) }
+		30%  { transform: translateY(0) scaleY(.9) }
+		35%  { transform: translateY(0) scaleY(1) }
+		100% { transform: translateY(0) }
+	}
