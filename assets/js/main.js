@@ -93,30 +93,30 @@
 	})
 
 // Slick
-	$('#website .swipe').slick({
-		dots: false,
-		arrows: true,
-		autoplay: false,
-		infinite: true,
-		centerMode: true,
-  		centerPadding: '50px',
-		slidesToShow: 5,
-		slidesToScroll: 1,
-		responsive: [{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 3
-			}
-		},{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1,
-				dots: true,
-				arrows: false
-			}
-		}]
-	})
-	$('#image .swipe').slick({
+	// $('#website .swipe').slick({
+	// 	dots: false,
+	// 	arrows: true,
+	// 	autoplay: false,
+	// 	infinite: true,
+	// 	centerMode: true,
+	// 	centerPadding: '50px',
+	// 	slidesToShow: 5,
+	// 	slidesToScroll: 1,
+	// 	responsive: [{
+	// 		breakpoint: 1200,
+	// 		settings: {
+	// 			slidesToShow: 3
+	// 		}
+	// 	},{
+	// 		breakpoint: 768,
+	// 		settings: {
+	// 			slidesToShow: 1,
+	// 			dots: true,
+	// 			arrows: false
+	// 		}
+	// 	}]
+	// })
+	$('#website .swipe, #image .swipe').slick({
 		dots: false,
 		arrows: false,
 		autoplay: false,
