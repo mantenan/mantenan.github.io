@@ -232,6 +232,7 @@
     })
 	$('.datepicker-range').datepicker({
 		format: 'd M yyyy',
+		language: 'id',
 		locale: 'id',
 		autoclose: true,
 		todayHighlight: true
