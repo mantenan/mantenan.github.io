@@ -206,12 +206,13 @@
 			picker.next().find('a').click(function(e) {
 				let selected = e.target.innerHTML
 				picker.val(selected)
+				timepicker.next().remove()
 			})
-		}).blur(function() {
-			let picker = $(this)
-			setTimeout(function() {
-				picker.next().remove()
-			},200)
+		//}).blur(function() {
+		//	let picker = $(this)
+		//	setTimeout(function() {
+		//		picker.next().remove()
+		//	},200)
 		})
 	}
 
