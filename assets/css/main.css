@@ -85,19 +85,6 @@
 		color: var(--theme-2);
 	}
 
-	.form-control::-webkit-input-placeholder {
-		color: rgba(0,0,0,.3);
-	}
-	.form-control::-moz-placeholder {
-		color: rgba(0,0,0,.3);
-	}
-	.form-control:-ms-input-placeholder {
-		color: rgba(0,0,0,.3);
-	}
-	.form-control:-moz-placeholder {
-		color: rgba(0,0,0,.3);
-	}
-
 /* Layout */
 	body {
 		display: flex;
@@ -321,6 +308,24 @@
 	}
 	.img-mw-3 {
 		max-width: 500px;
+	}
+
+/* Form */
+	.form-control::-webkit-input-placeholder {
+		color: rgba(0,0,0,.3);
+	}
+	.form-control::-moz-placeholder {
+		color: rgba(0,0,0,.3);
+	}
+	.form-control:-ms-input-placeholder {
+		color: rgba(0,0,0,.3);
+	}
+	.form-control:-moz-placeholder {
+		color: rgba(0,0,0,.3);
+	}
+
+	.form-control[readonly] {
+		background-color: var(--white);
 	}
 
 /* Button */
