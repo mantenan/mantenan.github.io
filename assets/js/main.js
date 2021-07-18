@@ -373,7 +373,7 @@
 			E1 = labelE1 + $(sectionE + 'E1').val() + ' s.d. ' + $(sectionE + 'E1-end').val() + '%0A'
 			detail5 = E1
 
-			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
+			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan.%0A%0ATerima kasih.'
 
 			content = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A' + detail3 + '%0A' + detail4 + '%0A' + detail5 + '%0A' + detail6
 			content = content.split(' ').join('%20')
@@ -441,7 +441,7 @@
 			E1 = labelE1 + $(sectionE + 'E1').val() + ' s.d. ' + $(sectionE + 'E1-end').val() + '%0A'
 			detail5 = E1
 
-			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
+			detail6 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan.%0A%0ATerima kasih.'
 
 			content = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A' + detail3 + '%0A' + detail4 + '%0A' + detail4a + '%0A' + detail5 + '%0A' + detail6
 			content = content.split(' ').join('%20')
@@ -497,7 +497,7 @@
 			D5 = labelD5 + $(sectionD + 'D5').val() + '%0A'
 			detail4 = D1 + D2 + D3 + D4 + D5
 
-			detail5 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan (https://maumantenan.com/syarat-ketentuan).%0A%0ATerima kasih.'
+			detail5 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan.%0A%0ATerima kasih.'
 
 			content = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A' + detail3 + '%0A' + detail4 + '%0A' + detail5
 			content = content.split(' ').join('%20')
