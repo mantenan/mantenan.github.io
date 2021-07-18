@@ -330,8 +330,8 @@
 			section0 = id + '-account-'
 			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
 			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '3').val() + ') ' + $(section0 + '2').val() + '%0A'
-			O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
-			// O3 = 'Tema : ' + $(section0 + '4').val() + '%0A'
+			// O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
+			O3 = 'Tema : ' + $(section0 + '4').val() + '%0A'
 			O4 = 'Harga : ' + $(section0 + '5').val() + '%0A%0A'
 			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
 			detail0 = O1 + O2 + O3 + O4 + O5
@@ -392,8 +392,8 @@
 			section0 = id + '-account-'
 			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
 			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '3').val() + ') ' + $(section0 + '2').val() + '%0A'
-			O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
-			// O3 = 'Tema : ' + $(section0 + '4').val() + '%0A'
+			// O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
+			O3 = 'Tema : ' + $(section0 + '4').val() + '%0A'
 			O4 = 'Harga : ' + $(section0 + '5').val() + '%0A%0A'
 			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
 			detail0 = O1 + O2 + O3 + O4 + O5
@@ -460,8 +460,8 @@
 			section0 = id + '-account-'
 			O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
 			O2 = 'Pemesan : *' + $(section0 + '1').val() + '* (' + $(section0 + '3').val() + ') ' + $(section0 + '2').val() + '%0A'
-			O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
-			// O3 = 'Tema : ' + $(section0 + '4').val() + '%0A'
+			// O3 = 'Tema : _*' + $(section0 + '4').val() + '*_ (' + $(section0 + '6').val() + ')' + '%0A'
+			O3 = 'Tema : ' + $(section0 + '4').val() + '%0A'
 			O4 = 'Harga : ' + $(section0 + '5').val() + '%0A%0A'
 			O5 = 'Berikut adalah rincian undangannya :' + '%0A'
 			detail0 = O1 + O2 + O3 + O4 + O5
