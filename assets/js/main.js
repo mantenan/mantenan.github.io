@@ -93,90 +93,93 @@
 	})
 
 // Slick
-	// $('#website .swipe').slick({
-	// 	dots: false,
-	// 	arrows: true,
-	// 	autoplay: false,
-	// 	infinite: true,
-	// 	centerMode: true,
-	// 	centerPadding: '50px',
-	// 	slidesToShow: 5,
-	// 	slidesToScroll: 1,
-	// 	responsive: [{
-	// 		breakpoint: 1200,
-	// 		settings: {
-	// 			slidesToShow: 3
-	// 		}
-	// 	},{
-	// 		breakpoint: 768,
-	// 		settings: {
-	// 			slidesToShow: 1,
-	// 			dots: true,
-	// 			arrows: false
-	// 		}
-	// 	}]
-	// })
-	$('#website .swipe, #image .swipe').slick({
-		dots: false,
-		arrows: false,
-		autoplay: false,
-		infinite: true,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		responsive: [{
-			breakpoint: 768,
-			settings: {
-  				dots: true,
-				centerMode: true,
-  				centerPadding: '50px',
-				slidesToShow: 1
+	let slick = $('.swipe')
+	if ( slick.length > 0 ) {
+		// $('#website .swipe').slick({
+		// 	dots: false,
+		// 	arrows: true,
+		// 	autoplay: false,
+		// 	infinite: true,
+		// 	centerMode: true,
+		// 	centerPadding: '50px',
+		// 	slidesToShow: 5,
+		// 	slidesToScroll: 1,
+		// 	responsive: [{
+		// 		breakpoint: 1200,
+		// 		settings: {
+		// 			slidesToShow: 3
+		// 		}
+		// 	},{
+		// 		breakpoint: 768,
+		// 		settings: {
+		// 			slidesToShow: 1,
+		// 			dots: true,
+		// 			arrows: false
+		// 		}
+		// 	}]
+		// })
+		$('#website .swipe, #image .swipe').slick({
+			dots: false,
+			arrows: false,
+			autoplay: false,
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			responsive: [{
+				breakpoint: 768,
+				settings: {
+					dots: true,
+					centerMode: true,
+					centerPadding: '50px',
+					slidesToShow: 1
+				}
+			}]
+		})
+
+		$('#preview .swipe').slick({
+			dots: false,
+			arrows: true,
+			autoplay: true,
+			autoplaySpeed: 3000,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		})
+		if ( window.matchMedia('(max-width: 767px)').matches ) {
+			$('#story .slick-slide:not(.slick-cloned)').each(function() {
+				let img = $(this).find('img')
+					width = img.width()
+					height = (width / 9) * 20
+				img.css('min-width',width)
+				img.css('min-height',height)
+			})
+			$('#feed .slick-slide:not(.slick-cloned)').each(function() {
+				let style = $('#story .slick-slide:not(.slick-cloned) img').attr('style')
+					split = style.split(' ')
+					split = split[1].split('px')
+					width = split[0] + 'px'
+				$(this).find('img').css('min-height',width)
+			})
+			$('#cover .slick-slide:not(.slick-cloned)').each(function() {
+				let style = $('#story .slick-slide:not(.slick-cloned) img').attr('style')
+					split = style.split(' ')
+					split = split[1].split('px')
+					width = (split[0] / 3) * 2
+					width = width + 'px'
+				$(this).find('img').css('min-height',width)
+			})
+		}
+
+		let ua = navigator.userAgent.toLowerCase()
+		if (ua.indexOf('safari') != -1) {
+			if (ua.indexOf('chrome') > -1) {
+				// console.log('This is Chrome')
+			} else {
+				// console.log('This is Safari')
+				let style = document.createElement('style')
+					style.innerHTML = '.slick-arrow:before { margin-top: -62px; } .slick-arrow:after { margin-top: -48px; } #preview .slick-arrow { top: calc(50% + 30px); }'
+				document.querySelector('head').appendChild(style)
 			}
-		}]
-	})
-
-	$('#preview .swipe').slick({
-		dots: false,
-		arrows: true,
-		autoplay: true,
-		autoplaySpeed: 3000,
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1
-	})
-	if ( window.matchMedia('(max-width: 767px)').matches ) {
-		$('#story .slick-slide:not(.slick-cloned)').each(function() {
-			let img = $(this).find('img')
-				width = img.width()
-				height = (width / 9) * 20
-			img.css('min-width',width)
-			img.css('min-height',height)
-		})
-		$('#feed .slick-slide:not(.slick-cloned)').each(function() {
-			let style = $('#story .slick-slide:not(.slick-cloned) img').attr('style')
-				split = style.split(' ')
-				split = split[1].split('px')
-				width = split[0] + 'px'
-			$(this).find('img').css('min-height',width)
-		})
-		$('#cover .slick-slide:not(.slick-cloned)').each(function() {
-			let style = $('#story .slick-slide:not(.slick-cloned) img').attr('style')
-				split = style.split(' ')
-				split = split[1].split('px')
-				width = (split[0] / 3) * 2
-				width = width + 'px'
-			$(this).find('img').css('min-height',width)
-		})
-	}
-
-	let ua = navigator.userAgent.toLowerCase()
-	if (ua.indexOf('safari') != -1) {
-		if (ua.indexOf('chrome') > -1) {
-			// console.log('This is Chrome')
-		} else {
-			// console.log('This is Safari')
-			let style = document.createElement('style')
-				style.innerHTML = '.slick-arrow:before { margin-top: -62px; } .slick-arrow:after { margin-top: -48px; } #preview .slick-arrow { top: calc(50% + 30px); }'
-			document.querySelector('head').appendChild(style)
 		}
 	}
 
@@ -217,36 +220,39 @@
 	}
 
 // Datepicker
-	$('.datepicker').datepicker({
-		format: 'DD, d M yyyy',
-		language: 'id',
-		locale: 'id',
-		autoclose: true,
-		todayHighlight: true,
-		leftArrow: '',
-		rightArrow: '&raquo;'
-	}).on('show',function(e) {
-		$('.datepicker-dropdown > *:not(:first-child)').css('display','none')
-		$('.prev').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>')
-		$('.next').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>')
-    })
-	$('.datepicker-range').datepicker({
-		format: 'd M yyyy',
-		language: 'id',
-		locale: 'id',
-		autoclose: true,
-		todayHighlight: true
-	}).on('show',function(e) {
-		$('.datepicker-dropdown > *:not(:first-child)').css('display','none')
-		$('.prev').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>')
-		$('.next').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>')
-    })
-	
-	$(document).on('DOMMouseScroll mousewheel scroll','.modal',function() {
-		$('input').blur()
-		$('.datepicker').datepicker('hide')
-		$('.datepicker-range').datepicker('hide')
-	})
+	let datepicker = $('.datepicker')
+	if ( datepicker.length > 0 ) {
+		$('.datepicker').datepicker({
+			format: 'DD, d M yyyy',
+			language: 'id',
+			locale: 'id',
+			autoclose: true,
+			todayHighlight: true,
+			leftArrow: '',
+			rightArrow: '&raquo;'
+		}).on('show',function(e) {
+			$('.datepicker-dropdown > *:not(:first-child)').css('display','none')
+			$('.prev').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>')
+			$('.next').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>')
+		})
+		$('.datepicker-range').datepicker({
+			format: 'd M yyyy',
+			language: 'id',
+			locale: 'id',
+			autoclose: true,
+			todayHighlight: true
+		}).on('show',function(e) {
+			$('.datepicker-dropdown > *:not(:first-child)').css('display','none')
+			$('.prev').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"></path></svg>')
+			$('.next').html('<svg viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path></svg>')
+		})
+
+		$(document).on('DOMMouseScroll mousewheel scroll','.modal',function() {
+			$('input').blur()
+			$('.datepicker').datepicker('hide')
+			$('.datepicker-range').datepicker('hide')
+		})
+	}
 
 // Order
 	$('[data-target="#order-1"],[data-target="#order-1-ext"],[data-target="#order-2"]').click(function() {
