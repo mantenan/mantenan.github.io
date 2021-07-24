@@ -807,6 +807,23 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js" integrity="sha512-+Cdr05lT+aP+PTW4988XKLMjoAf0o5P2nRDIHooD/NItysfsyCPPhZhK/C6s7ZpaVoMRtsvRNJLtYOTDANC5UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js" integrity="sha512-JGPwqm5Xp7v4gS86gleX0fDmJRX/abPSkIpAJ0vp4ZTC9uJ6MZdbGRX66yJ9rNZDe30EL8wRtDW42xCnnt9JXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="assets/js/main.min.js"></script>
+	
+	<!-- Analytics -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var script = document.querySelector("slot")
+				gtag1 = document.createElement("script")
+				gtag1.type = "text/javascript"
+				gtag1.src = "https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"
+				gtag2 = document.createElement("script")
+				gtag2.type = "text/javascript"
+				gtag2.innerHTML = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')"
+			setTimeout(function() {
+				script.appendChild(gtag1)
+				script.appendChild(gtag2)
+			},5000)
+		});
+	</script>
 </slot>
 
 </body>
