@@ -488,15 +488,10 @@
 				
 				// Hide publish date
 				let parent = $('#publish').closest('section')
-					input = parent.find('.form-control')
+					input = parent.find('.datepicker-range')
 				if ( themeName === 'Anteng' || themeName === 'Agem' || themeName === 'Amba' ) {
+					input.attr('disabled',true)
 					parent.slideUp()
-					setTimeout(function() {
-						input.attr('disabled',true)
-					},500)
-				} else {
-					parent.slideDown()
-					input.attr('disabled',false)
 				}
 			}
 
@@ -509,7 +504,7 @@
 				
 				// Hide publish date
 				let parent = $('#publish').closest('section')
-					input = parent.find('.form-control')
+					input = parent.find('.datepicker-range')
 				if ( themeName === 'Anteng' || themeName === 'Agem' || themeName === 'Amba' ) {
 					parent.slideUp()
 					setTimeout(function() {
@@ -642,45 +637,57 @@
 		// Submit
 			$(id).submit(function(e) {
 				e.preventDefault()
+
 				orderNow()
+
 				let ev = '#event-'
 					cs = ':checked'
 					ce = ':not(:checked)'
 					ds = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A'
 					de = detail6 + '%0A' + detail7
 					wa = 'https://wa.me/' + phone + '?text='
-				if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(ce) ) {
-					let content = ds + detail3 + '%0A' + de
-						content = content.split(' ').join('%20')
-					window.open(wa + content,'_blank')
-				} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
-					let content = ds + detail4 + '%0A' + de
-						content = content.split(' ').join('%20')
-					window.open(wa + content,'_blank')
-				} else if ( $(ev + '1').is(ce) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
-					let content = ds + detail5 + '%0A' + de
-						content = content.split(' ').join('%20')
-					window.open(wa + content,'_blank')
-				} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
-					let content = ds + detail3 + '%0A' + detail4 + '%0A' + de
-						content = content.split(' ').join('%20')
-					window.open(wa + content,'_blank')
-				} else if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
-					let content = ds + detail3 + '%0A' + detail5 + '%0A' + de
-						content = content.split(' ').join('%20')
-					window.open(wa + content,'_blank')
-				} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
-					let content = ds + detail4 + '%0A' + detail5 + '%0A' + de
-						content = content.split(' ').join('%20')
-					window.open(wa + content,'_blank')
-				} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
-					let content = ds + detail3 + '%0A' + detail4 + '%0A' + detail5 + '%0A' + de
-						content = content.split(' ').join('%20')
-					window.open(wa + content,'_blank')
+				
+				function orderInit() {
+					if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(ce) ) {
+						let content = ds + detail3 + '%0A' + de
+							content = content.split(' ').join('%20')
+						window.open(wa + content,'_blank')
+					} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
+						let content = ds + detail4 + '%0A' + de
+							content = content.split(' ').join('%20')
+						window.open(wa + content,'_blank')
+					} else if ( $(ev + '1').is(ce) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
+						let content = ds + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						window.open(wa + content,'_blank')
+					} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
+						let content = ds + detail3 + '%0A' + detail4 + '%0A' + de
+							content = content.split(' ').join('%20')
+						window.open(wa + content,'_blank')
+					} else if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
+						let content = ds + detail3 + '%0A' + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						window.open(wa + content,'_blank')
+					} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
+						let content = ds + detail4 + '%0A' + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						window.open(wa + content,'_blank')
+					} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
+						let content = ds + detail3 + '%0A' + detail4 + '%0A' + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						window.open(wa + content,'_blank')
+					} else {
+						let content = ds + de
+							content = content.split(' ').join('%20')
+						window.open(wa + content,'_blank')
+					}
+				}
+
+				if ( $('#publish').closest('section[style="display: none;"]').length > 0 ) {
+					let de = detail7
+					orderInit()
 				} else {
-					let content = ds + de
-						content = content.split(' ').join('%20')
-					window.open(wa + content,'_blank')
+					orderInit()
 				}
 			})
 	</script>
