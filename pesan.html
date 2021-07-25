@@ -485,6 +485,19 @@
 					themeprice = themeprice[0].price
 				$(account + '3').val(themeName).change()
 				$(account + '4').attr('value',themeprice)
+				
+				// Hide publish date
+				let parent = $('#publish').closest('section')
+					input = parent.find('.form-control')
+				if ( themeName === 'Anteng' || themeName === 'Agem' || themeName === 'Amba' ) {
+					parent.slideUp()
+					setTimeout(function() {
+						input.attr('disabled',true)
+					},500)
+				} else {
+					parent.slideDown()
+					input.attr('disabled',false)
+				}
 			}
 
 		// Theme selection
@@ -493,6 +506,19 @@
 					themeprice = themeList.filter(function(e) { return e.name === themeName })
 					themeprice = themeprice[0].price
 				$(account + '4').attr('value',themeprice)
+				
+				// Hide publish date
+				let parent = $('#publish').closest('section')
+					input = parent.find('.form-control')
+				if ( themeName === 'Anteng' || themeName === 'Agem' || themeName === 'Amba' ) {
+					parent.slideUp()
+					setTimeout(function() {
+						input.attr('disabled',true)
+					},500)
+				} else {
+					parent.slideDown()
+					input.attr('disabled',false)
+				}
 			})
 
 		// Event
