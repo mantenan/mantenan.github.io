@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<title>Pesan Undangan - Maumantenan</title>
+	<meta name="title" content="Pesan Undangan - Maumantenan">
+	<meta name="description" content="Formulir pemesanan undangan">
+	<meta name="keywords" content="undangan, pernikahan, online, website, digital, manten, mantenan, maumantenan, menikah, wedding, invitation">
+	<meta name="google" content="notranslate">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Pesan Undangan - Maumantenan">
+	<meta property="og:description" content="Formulir pemesanan undangan">
+	<meta property="og:image" content="assets/img/ogp.jpg">
+	<meta property="og:locale" content="id_ID">
+	<meta property="og:site_name" content="Maumantenan">
+	<meta property="og:url" content="https://maumantenan.com/">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Pesan Undangan - Maumantenan">
+	<meta name="twitter:description" content="Formulir pemesanan undangan">
+	<meta name="twitter:image" content="assets/img/ogp.jpg">
+	<meta name="twitter:site" content="Maumantenan">
+	<!-- Canonical -->
+	<link rel="canonical" href="https://maumantenan.com/pesan">
+	<link rel="amphtml" href="https://maumantenan.com/amp/pesan">
+	<!-- Favicon -->
+	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="assets/img/favicon.ico">
+	<!-- Android -->
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/icon/16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/32x32.png">
+	<!-- iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="Maumantenan">
+	<link rel="apple-touch-icon" href="assets/icon/72x72.png">
+	<link rel="apple-touch-icon" href="assets/icon/96x96.png">
+	<link rel="apple-touch-icon" href="assets/icon/128x128.png">
+	<link rel="apple-touch-icon" href="assets/icon/144x144.png">
+	<link rel="apple-touch-icon" href="assets/icon/152x152.png">
+	<link rel="apple-touch-icon" href="assets/icon/192x192.png">
+	<link rel="apple-touch-icon" href="assets/icon/384x384.png">
+	<link rel="apple-touch-icon" href="assets/icon/512x512.png">
+	<!-- Windows -->
+	<meta name="msapplication-TileImage" content="assets/icon/512x512.png">
+	<!-- Status Bar -->
+	<meta name="apple-mobile-web-app-status-bar" content="#fff">
+	<meta name="msapplication-TileColor" content="#fff">
+	<meta name="theme-color" content="#fff">
+	<!-- Preload -->
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.id.min.js" integrity="sha512-zHDWtKP91CHnvBDpPpfLo9UsuMa02/WgXDYcnFp5DFs8lQvhCe2tx56h2l7SqKs/+yQCx4W++hZ/ABg8t3KH/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" integrity="sha512-vZpXDvc3snY9J1W8GrnxqDr/+vP1nSTfk8apH1r0wQvOab6fkPhaeqAMlydW68MECAjRR05tu4SOJcwjZgPg5A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js" integrity="sha512-ux1VHIyaPxawuad8d1wr1i9l4mTwukRq5B3s8G3nEmdENnKF5wKfOV6MEUH0k/rNT4mFr/yL+ozoDiwhUQekTg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="style" href="assets/css/main.css">
+	<link rel="preload" as="script" href="assets/js/main.js">
+	<!-- Main -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" integrity="sha512-vZpXDvc3snY9J1W8GrnxqDr/+vP1nSTfk8apH1r0wQvOab6fkPhaeqAMlydW68MECAjRR05tu4SOJcwjZgPg5A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+<main>
+	<section id="home">
+		<h1 class="position-absolute index-n1 fs-7 invisible">
+			Formulir pemesanan Maumantenan
+		</h1>
+		<div class="container mt-n5 pt-3">
+			<div class="row">
+				<div class="col-md-10 col-lg-8 mx-auto">
+					<div class="d-none d-md-flex align-items-center">
+						<img loading="lazy" class="mr-1" width="60" height="60" src="assets/img/maumantenan-1.svg" alt="Logo">
+						<img loading="lazy" class="ml-2" width="278" height="25" src="assets/img/maumantenan-2.svg" alt="Maumantenan">
+					</div>
+					<div class="d-md-none d-flex align-items-center">
+						<img loading="lazy" class="mr-1" width="40" height="40" src="assets/img/maumantenan-1.svg" alt="Logo">
+						<img loading="lazy" class="ml-2" width="200" height="18" src="assets/img/maumantenan-2.svg" alt="Maumantenan">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="my-5 px-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-lg-8 mx-auto">
+					<h2 class="h2 text-black font-theme-1 mb-4">Formulir Pemesanan</h2>
+					<form spellcheck="false" autocomplete="off" id="order-1">
+						<h6 class="mb-3">
+							<span class="opacity-3">#1</span> Detail Pemesanan
+						</h6>
+
+						<div class="row">
+							<div class="col-sm-6 pr-sm-1 mb-3">
+								<label class="opacity-5 fs-7 mb-1" for="order-1-account-1" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Pemesan<span class="text-danger px-1">*</span></label>
+								<input type="text" name="order-1-account-1" id="order-1-account-1" class="form-control" required>
+							</div>
+							<div class="col-sm-6 pl-sm-1 mb-3">
+								<label class="opacity-5 fs-7 mb-1" for="order-1-account-2" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Email Pemesan<span class="text-danger px-1">*</span></label>
+								<input type="text" name="order-1-account-2" id="order-1-account-2" class="form-control">
+							</div>
+							<div class="col-sm-6 pr-sm-1 mb-3">
+								<label class="opacity-5 fs-7 mb-1" for="order-1-account-4" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Tema yang Dipilih<span class="text-danger px-1">*</span></label>
+								<select class="form-control custom-select" name="order-1-account-3" id="order-1-account-3" required>
+									<option value="" selected disabled>Pilih tema</option>
+									<option value="Enggal">Enggal</option>
+									<option value="Dalem">Dalem</option>
+									<option value="Panggih">Panggih</option>
+								</select>
+							</div>
+							<div class="col-sm-6 pl-sm-1 mb-3">
+								<label class="opacity-5 fs-7 mb-1" for="order-1-account-5">Harga</label>
+								<input type="text" name="order-1-account-4" id="order-1-account-4" class="form-control" disabled>
+							</div>
+						</div>
+
+						<br>
+
+						<h6 class="mb-3">
+							<span class="opacity-3">#2</span> Detail Undangan
+						</h6>
+
+						<section>
+							<div class="py-2 px-3 mb-3 rounded-2 fs-7 bg-theme-1 text-white title-checkbox">
+								<div class="custom-control custom-checkbox d-flex align-items-center">
+									<input type="checkbox" class="custom-control-input" id="bridegroom-1" checked disabled>
+									<label class="custom-control-label" for="bridegroom-1">Mempelai Wanita</label>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-sm-6 mb-3 pr-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-A1" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Lengkap Wanita<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-A1" id="order-1-detail-A1" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pl-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-A2" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Panggilan Wanita<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-A2" id="order-1-detail-A2" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pr-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-A3" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Ayah Wanita<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-A3" id="order-1-detail-A3" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pl-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-A4" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Ibu Wanita<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-A4" id="order-1-detail-A4" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pr-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-A5" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Alamat Wanita<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-A5" id="order-1-detail-A5" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pl-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-A6">Media Sosial Wanita</label>
+									<div class="d-flex">
+										<select class="custom-select w-fit-content mr-1" name="order-1-detail-A6-1" id="order-1-detail-A6-1">
+											<option value="Instagram">Instagram</option>
+											<option value="Tiktok">Tiktok</option>
+											<option value="Facebook">Facebook</option>
+											<option value="Twitter">Twitter</option>
+										</select>
+										<input type="text" name="order-1-detail-A6" id="order-1-detail-A6" class="form-control">
+									</div>
+								</div>
+							</div>
+
+							<div class="py-2 px-3 mb-3 rounded-2 fs-7 bg-theme-1 text-white title-checkbox">
+								<div class="custom-control custom-checkbox d-flex align-items-center">
+									<input type="checkbox" class="custom-control-input" id="bridegroom-2" checked disabled>
+									<label class="custom-control-label" for="bridegroom-2">Mempelai Pria</label>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-sm-6 mb-3 pr-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-B1" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Lengkap Pria<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-B1" id="order-1-detail-B1" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pl-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-B2" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Panggilan Pria<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-B2" id="order-1-detail-B2" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pr-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-B3" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Ayah Pria<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-B3" id="order-1-detail-B3" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pl-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-B4" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Ibu Pria<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-B4" id="order-1-detail-B4" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pr-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-B5" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Alamat Pria<span class="text-danger px-1">*</span></label>
+									<input type="text" name="order-1-detail-B5" id="order-1-detail-B5" class="form-control" required>
+								</div>
+								<div class="col-sm-6 mb-3 pl-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-B6">Media Sosial Pria</label>
+									<div class="d-flex">
+										<select class="custom-select w-fit-content mr-1" name="order-1-detail-B6-1" id="order-1-detail-B6-1">
+											<option value="Instagram">Instagram</option>
+											<option value="Tiktok">Tiktok</option>
+											<option value="Facebook">Facebook</option>
+											<option value="Twitter">Twitter</option>
+										</select>
+										<input type="text" name="order-1-detail-B6" id="order-1-detail-B6" class="form-control">
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="event">
+								<div class="py-2 px-3 mb-3 rounded-2 fs-7 bg-theme-1 text-white title-checkbox">
+									<div class="custom-control custom-checkbox d-flex align-items-center">
+										<input type="checkbox" class="custom-control-input event-title" id="event-1">
+										<label class="custom-control-label cursor-pointer w-100" for="event-1">Akad Nikah</label>
+									</div>
+								</div>
+								<div class="event-detail">
+									<div class="row mb-3">
+										<div class="col-sm-6 mb-3 pr-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-C1" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Acara<span class="text-danger px-1">*</span></label>
+											<input type="text" name="order-1-detail-C1" id="order-1-detail-C1" class="form-control" required value="Akad Nikah">
+										</div>
+										<div class="col-sm-6 mb-3 pl-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-C2" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Tanggal Acara<span class="text-danger px-1">*</span></label>
+											<input type="text" name="order-1-detail-C2" id="order-1-detail-C2" class="form-control datepicker" readonly required>
+										</div>
+										<div class="col-sm-6 mb-3 pr-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-C3" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Waktu Acara<span class="text-danger px-1">*</span></label>
+											<div class="d-flex">
+												<select class="custom-select w-fit-content ml-1 order-2" name="order-1-detail-C3-1" id="order-1-detail-C3-1">
+													<option value="WIB">WIB</option>
+													<option value="WITA">WITA</option>
+													<option value="WIT">WIT</option>
+												</select>
+												<div class="position-relative">
+													<input type="text" name="order-1-detail-C3" id="order-1-detail-C3" class="form-control timepicker" readonly required>
+												</div>
+												<span class="align-self-center mx-1">s.d.</span>
+												<div class="position-relative">
+													<input type="text" name="order-1-detail-C3-end" id="order-1-detail-C3-end" class="form-control timepicker" readonly required>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 mb-3 pl-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-C4" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Lokasi Acara<span class="text-danger px-1">*</span></label>
+											<input type="text" name="order-1-detail-C4" id="order-1-detail-C4" class="form-control" required>
+										</div>
+										<div class="col-12 mb-3">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-C5">Google Maps</label>
+											<input type="text" name="order-1-detail-C5" id="order-1-detail-C5" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="event">
+								<div class="py-2 px-3 mb-3 rounded-2 fs-7 bg-theme-1 text-white title-checkbox">
+									<div class="custom-control custom-checkbox d-flex align-items-center">
+										<input type="checkbox" class="custom-control-input event-title" id="event-2">
+										<label class="custom-control-label cursor-pointer w-100" for="event-2">Resepsi Pernikahan</label>
+									</div>
+								</div>
+								<div class="event-detail">
+									<div class="row mb-3">
+										<div class="col-sm-6 mb-3 pr-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-D1" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Acara<span class="text-danger px-1">*</span></label>
+											<input type="text" name="order-1-detail-D1" id="order-1-detail-D1" class="form-control" required value="Resepsi Pernikahan">
+										</div>
+										<div class="col-sm-6 mb-3 pl-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-D2" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Tanggal Acara<span class="text-danger px-1">*</span></label>
+											<input type="text" name="order-1-detail-D2" id="order-1-detail-D2" class="form-control datepicker" readonly required>
+										</div>
+										<div class="col-sm-6 mb-3 pr-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-D3" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Waktu Acara<span class="text-danger px-1">*</span></label>
+											<div class="d-flex">
+												<select class="custom-select w-fit-content ml-1 order-2" name="order-1-detail-D3-1" id="order-1-detail-D3-1">
+													<option value="WIB">WIB</option>
+													<option value="WITA">WITA</option>
+													<option value="WIT">WIT</option>
+												</select>
+												<div class="position-relative">
+													<input type="text" name="order-1-detail-D3" id="order-1-detail-D3" class="form-control timepicker" readonly required>
+												</div>
+												<span class="align-self-center mx-1">s.d.</span>
+												<div class="position-relative">
+													<input type="text" name="order-1-detail-D3-end" id="order-1-detail-D3-end" class="form-control timepicker" readonly required>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 mb-3 pl-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-D4" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Lokasi Acara<span class="text-danger px-1">*</span></label>
+											<input type="text" name="order-1-detail-D4" id="order-1-detail-D4" class="form-control" required>
+										</div>
+										<div class="col-12 mb-3">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-D5">Google Maps</label>
+											<input type="text" name="order-1-detail-D5" id="order-1-detail-D5" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="event">
+								<div class="py-2 px-3 mb-3 rounded-2 fs-7 bg-theme-1 text-white title-checkbox">
+									<div class="custom-control custom-checkbox d-flex align-items-center">
+										<input type="checkbox" class="custom-control-input event-title" id="event-3">
+										<label class="custom-control-label cursor-pointer w-100" for="event-3">Ngunduh Mantu</label>
+									</div>
+								</div>
+								<div class="event-detail">
+									<div class="row mb-3">
+										<div class="col-sm-6 mb-3 pr-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-E1" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Acara<span class="text-danger px-1">*</span></label>
+											<input type="text" name="order-1-detail-E1" id="order-1-detail-E1" class="form-control" required value="Ngunduh Mantu">
+										</div>
+										<div class="col-sm-6 mb-3 pl-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-E2" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Tanggal Acara<span class="text-danger px-1">*</span></label>
+											<input type="text" name="order-1-detail-E2" id="order-1-detail-E2" class="form-control datepicker" readonly required>
+										</div>
+										<div class="col-sm-6 mb-3 pr-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-E3" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Waktu Acara<span class="text-danger px-1">*</span></label>
+											<div class="d-flex">
+												<select class="custom-select w-fit-content ml-1 order-2" name="order-1-detail-E3-1" id="order-1-detail-E3-1">
+													<option value="WIB">WIB</option>
+													<option value="WITA">WITA</option>
+													<option value="WIT">WIT</option>
+												</select>
+												<div class="position-relative">
+													<input type="text" name="order-1-detail-E3" id="order-1-detail-E3" class="form-control timepicker" readonly required>
+												</div>
+												<span class="align-self-center mx-1">s.d.</span>
+												<div class="position-relative">
+													<input type="text" name="order-1-detail-E3-end" id="order-1-detail-E3-end" class="form-control timepicker" readonly required>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 mb-3 pl-sm-1">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-E4" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Lokasi Acara<span class="text-danger px-1">*</span></label>
+											<input type="text" name="order-1-detail-E4" id="order-1-detail-E4" class="form-control" required>
+										</div>
+										<div class="col-12 mb-3">
+											<label class="opacity-5 fs-7 mb-1" for="order-1-detail-E5">Google Maps</label>
+											<input type="text" name="order-1-detail-E5" id="order-1-detail-E5" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="py-2 px-3 mb-3 rounded-2 fs-7 bg-theme-1 text-white title-checkbox">
+								<div class="custom-control custom-checkbox d-flex align-items-center">
+									<input type="checkbox" class="custom-control-input" id="publish" checked disabled>
+									<label class="custom-control-label" for="publish">Publikasi</label>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-12 mb-3">
+									<label class="opacity-5 fs-7 mb-1" for="order-1-detail-F1">Tanggal Publikasi Undangan</label>
+									<div class="d-flex">
+										<div class="position-relative w-100">
+											<input type="text" name="order-1-detail-F1" id="order-1-detail-F1" class="form-control datepicker-range" readonly required>
+										</div>
+										<span class="align-self-center mx-1">s.d.</span>
+										<div class="position-relative w-100">
+											<input type="text" name="order-1-detail-F1-end" id="order-1-detail-F1-end" class="form-control" required disabled>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<div class="row">
+							<div class="col d-sm-flex align-items-sm-center pb-3 my-2 pt-sm-1">
+								<div class="custom-control custom-checkbox fs-7">
+									<input type="checkbox" class="custom-control-input" id="orderCheck" required>
+									<label class="custom-control-label cursor-pointer" for="orderCheck">Saya menyetujui <a class="text-primary" target="_blank" href="/syarat-ketentuan">Syarat & Ketentuan</a> Maumantenan</label>
+								</div>
+							</div>
+							<div class="col-sm-auto">
+								<button type="submit" class="btn btn-success btn-block rounded-2" disabled="true">
+									Pesan Sekarang
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<div class="payment text-center my-3">
+		<img loading="lazy" class="obj-fit-cover align-bottom my-2 mx-1 mx-sm-2" width="85" height="25" src="assets/img/payment-bni.svg" alt="BNI">
+		<img loading="lazy" class="obj-fit-cover align-bottom my-2 mx-1 mx-sm-2" width="100" height="25" src="assets/img/payment-bri.svg" alt="BRI">
+		<img loading="lazy" class="obj-fit-cover align-bottom my-2 mx-1 mx-sm-2" width="105" height="33" src="assets/img/payment-mandiri.svg" alt="Mandiri">
+		<img loading="lazy" class="obj-fit-cover align-bottom my-2 mx-1 mx-sm-2" width="70" height="23" src="assets/img/payment-ovo.svg" alt="Ovo">
+	</div>
+	<div class="fs-7 text-center pb-2 my-3">
+		<span class="opacity-5">&copy; 2020-2021 </span>
+		<a class="text-decoration-none font-weight-bold" href="/">Maumantenan</a>
+		<span class="d-none d-md-inline-block opacity-5"> - </span>
+		<span class="d-block d-md-inline-block opacity-5">Hari Bahagiaku, Kelak Bercerita</span>
+	</div>
+</footer>
+
+<slot>
+	<!-- Main -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.id.min.js" integrity="sha512-zHDWtKP91CHnvBDpPpfLo9UsuMa02/WgXDYcnFp5DFs8lQvhCe2tx56h2l7SqKs/+yQCx4W++hZ/ABg8t3KH/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js" integrity="sha512-ux1VHIyaPxawuad8d1wr1i9l4mTwukRq5B3s8G3nEmdENnKF5wKfOV6MEUH0k/rNT4mFr/yL+ozoDiwhUQekTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="assets/js/main.js"></script>
+
+	<!-- Analytics -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var script = document.querySelector("slot")
+				gtag1 = document.createElement("script")
+				gtag1.type = "text/javascript"
+				gtag1.src = "https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"
+				gtag2 = document.createElement("script")
+				gtag2.type = "text/javascript"
+				gtag2.innerHTML = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')"
+			setTimeout(function() {
+				script.appendChild(gtag1)
+				script.appendChild(gtag2)
+			},5000)
+		});
+	</script>
+
+	<!-- Order -->
+	<script>
+		const phone = '6287838610808'
+			id = '#order-1'
+			account = id + '-account-'
+
+		// Theme list
+			const themeList = [
+				{
+					'name': 'Enggal',
+					'price': 'Rp 100.000',
+				},
+				{
+					'name': 'Dalem',
+					'price': 'Rp 100.000',
+				},
+				{
+					'name': 'Panggih',
+					'price': 'Rp 100.000',
+				},
+			]
+
+		// Get theme name from url
+			let url = window.location.href
+				theme = url.split('?')
+			if ( url.indexOf('?') > -1 ) {
+				let themeName = theme[1]
+					themeprice = themeList.filter(function(e) { return e.name === themeName })
+					themeprice = themeprice[0].price
+				$(account + '3').val(themeName).change()
+				$(account + '4').attr('value',themeprice)
+			}
+
+		// Theme selection
+			$(account + '3').change(function() {
+				let themeName = $(this).find('option:selected').attr('value')
+					themeprice = themeList.filter(function(e) { return e.name === themeName })
+					themeprice = themeprice[0].price
+				$(account + '4').attr('value',themeprice)
+			})
+
+		// Event
+			let event = document.querySelectorAll('.event')
+			for (let i = 0; i < event.length; i++) {
+				let title = '#' + event[i].querySelector('.event-title').id
+					detail = event[i].querySelector('.event-detail')
+					input = detail.querySelectorAll('.form-control')
+
+				detail.style.display = 'none'
+				$(input).attr('disabled',true)
+				$(title).change(function() {
+					let parent = $(this).closest('.event')
+						detail = parent.find('.event-detail')
+						input = detail.find('.form-control')
+					if (this.checked) {
+						detail.slideDown()
+						input.attr('disabled',false)
+					} else {
+						detail.slideUp()
+						setTimeout(function() {
+							input.attr('disabled',true)
+						},500)
+					}
+				})
+			}
+
+		// Agreement
+			$('#orderCheck').click(function() {
+				let checkbox = $(this)
+					button = checkbox.closest('.row').find('button')
+				button.prop('disabled', !button.prop('disabled'))
+			})
+
+		// Date
+			const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
+				  monthInterval = 3
+
+			$(id + '-detail-F1').on('change',function() {
+				let input = $(this)
+					current = input.val()
+				if (current) {
+					setTimeout(function() {
+						let set = new Date(current)
+						input.val([set.getDate(), monthNames[set.getMonth()], set.getFullYear()].join(' '))
+					},10)
+					let set = new Date(current)
+					set.setMonth(set.getMonth() + Number(monthInterval))
+					set.setDate(set.getDate() - Number(1))
+					$(id + '-detail-F1-end').val([set.getDate(), monthNames[set.getMonth()], set.getFullYear()].join(' '))
+				}
+			})
+
+		// Template
+			function orderNow() {
+				let labelA1 = 'Nama Lengkap : '
+					labelA2 = 'Panggilan : '
+					labelA3 = 'Orang Tua : '
+					labelA4 = 'Alamat : '
+
+					labelB1 = 'Tanggal : '
+					labelB2 = 'Waktu : '
+					labelB3 = 'Lokasi : '
+					labelB4 = 'Google Maps : '
+
+					labelF1 = 'Tanggal publikasi : '
+
+					section1 = id + '-account-'
+					section2 = id + '-detail-'
+
+					O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
+					O2 = 'Pemesan : *' + $(section1 + '1').val() + '* (' + $(section1 + '2').val() + ')%0A'
+					O3 = 'Tema : ' + $(section1 + '3 option:selected').val() + '%0A'
+					O4 = 'Harga : ' + $(section1 + '4').val() + '%0A%0A'
+					O5 = 'Berikut adalah rincian undangannya :' + '%0A'
+					detail0 = O1 + O2 + O3 + O4 + O5
+
+					A0 = '*Mempelai Wanita*' + '%0A'
+					A1 = labelA1 + $(section2 + 'A1').val() + '%0A'
+					A2 = labelA2 + $(section2 + 'A2').val() + '%0A'
+					A3 = labelA3 + $(section2 + 'A3').val() + ' - ' + $(section2 + 'A4').val() + '%0A'
+					A4 = labelA4 + $(section2 + 'A5').val() + '%0A'
+					A5 = $(section2 + 'A6-1').val() + ' : ' + $(section2 + 'A6').val() + '%0A'
+					detail1 = A0 + A1 + A2 + A3 + A4 + A5
+
+					B0 = '*Mempelai Pria*' + '%0A'
+					B1 = labelA1 + $(section2 + 'B1').val() + '%0A'
+					B2 = labelA2 + $(section2 + 'B2').val() + '%0A'
+					B3 = labelA3 + $(section2 + 'B3').val() + ' - ' + $(section2 + 'B4').val() + '%0A'
+					B4 = labelA4 + $(section2 + 'B5').val() + '%0A'
+					B5 = $(section2 + 'B6-1').val() + ' : ' + $(section2 + 'B6').val() + '%0A'
+					detail2 = B0 + B1 + B2 + B3 + B4 + B5
+
+					C1 = '*' + $(section2 + 'C1').val() + '*' + '%0A'
+					C2 = labelB1 + $(section2 + 'C2').val() + '%0A'
+					C3 = labelB2 + $(section2 + 'C3').val() + ' s.d. ' + $(section2 + 'C3-end').val() + ' ' + $(section2 + 'C3-1').val() + '%0A'
+					C4 = labelB3 + $(section2 + 'C4').val() + '%0A'
+					C5 = labelB4 + $(section2 + 'C5').val() + '%0A'
+					detail3 = C1 + C2 + C3 + C4 + C5
+
+					D1 = '*' + $(section2 + 'D1').val() + '*' + '%0A'
+					D2 = labelB1 + $(section2 + 'D2').val() + '%0A'
+					D3 = labelB2 + $(section2 + 'D3').val() + ' s.d. ' + $(section2 + 'D3-end').val() + ' ' + $(section2 + 'D3-1').val() + '%0A'
+					D4 = labelB3 + $(section2 + 'D4').val() + '%0A'
+					D5 = labelB4 + $(section2 + 'D5').val() + '%0A'
+					detail4 = D1 + D2 + D3 + D4 + D5
+
+					E1 = '*' + $(section2 + 'E1').val() + '*' + '%0A'
+					E2 = labelB1 + $(section2 + 'E2').val() + '%0A'
+					E3 = labelB2 + $(section2 + 'E3').val() + ' s.d. ' + $(section2 + 'E3-end').val() + ' ' + $(section2 + 'E3-1').val() + '%0A'
+					E4 = labelB3 + $(section2 + 'E4').val() + '%0A'
+					E5 = labelB4 + $(section2 + 'E5').val() + '%0A'
+					detail5 = E1 + E2 + E3 + E4 + E5
+
+					F1 = labelF1 + $(section2 + 'F1').val() + ' s.d. ' + $(section2 + 'F1-end').val() + '%0A'
+					detail6 = F1
+
+					detail7 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan.%0A%0ATerima kasih.'
+			}
+
+		// Submit
+			$(id).submit(function(e) {
+				e.preventDefault()
+				orderNow()
+				let ev = '#event-'
+					cs = ':checked'
+					ce = ':not(:checked)'
+					ds = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A'
+					de = detail6 + '%0A' + detail7
+					wa = 'https://wa.me/' + phone + '?text='
+				if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(ce) ) {
+					let content = ds + detail3 + '%0A' + de
+						content = content.split(' ').join('%20')
+					window.open(wa + content,'_blank')
+				} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
+					let content = ds + detail4 + '%0A' + de
+						content = content.split(' ').join('%20')
+					window.open(wa + content,'_blank')
+				} else if ( $(ev + '1').is(ce) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
+					let content = ds + detail5 + '%0A' + de
+						content = content.split(' ').join('%20')
+					window.open(wa + content,'_blank')
+				} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
+					let content = ds + detail3 + '%0A' + detail4 + '%0A' + de
+						content = content.split(' ').join('%20')
+					window.open(wa + content,'_blank')
+				} else if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
+					let content = ds + detail3 + '%0A' + detail5 + '%0A' + de
+						content = content.split(' ').join('%20')
+					window.open(wa + content,'_blank')
+				} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
+					let content = ds + detail4 + '%0A' + detail5 + '%0A' + de
+						content = content.split(' ').join('%20')
+					window.open(wa + content,'_blank')
+				} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
+					let content = ds + detail3 + '%0A' + detail4 + '%0A' + detail5 + '%0A' + de
+						content = content.split(' ').join('%20')
+					window.open(wa + content,'_blank')
+				} else {
+					let content = ds + de
+						content = content.split(' ').join('%20')
+					window.open(wa + content,'_blank')
+				}
+			})
+	</script>
+</slot>
+
+</body>
+</html>
