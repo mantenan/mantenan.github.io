@@ -108,7 +108,7 @@
 							</div>
 							<div class="col-sm-6 pl-sm-1 mb-3">
 								<label class="opacity-5 fs-7 mb-1" for="order-account-2" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Email Pemesan<span class="text-danger px-1">*</span></label>
-								<input type="text" name="order-account-2" id="order-account-2" class="form-control">
+								<input type="text" name="order-account-2" id="order-account-2" class="form-control" required>
 							</div>
 							<div class="col-sm-6 pr-sm-1 mb-3">
 								<label class="opacity-5 fs-7 mb-1" for="order-account-4" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Tema yang Dipilih<span class="text-danger px-1">*</span></label>
@@ -389,12 +389,53 @@
 								</div>
 							</div>
 							<div class="col-sm-auto">
-								<button type="submit" class="btn btn-success btn-block rounded-2" disabled="true">
+								<button type="submit" class="btn btn-success btn-block rounded-2 d-md-none" disabled="true">
+									Pesan Sekarang
+								</button>
+								<button type="button" class="btn btn-success btn-block rounded-2 d-none d-md-block" disabled="true" data-toggle="modal" data-target="#orderDecoded">
 									Pesan Sekarang
 								</button>
 							</div>
 						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="orderDecoded">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content border-0 rounded-3 shadow">
+					<div class="modal-body">
+						<button type="button" class="btn btn-clear py-1 px-2 modal-close" data-dismiss="modal" aria-label="Close">
+							<div class="d-flex align-items-center">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25" fill="currentColor" class="opacity-7">
+									<path d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+								</svg>
+								<small class="opacity-7 fs-7 ml-1 mb-0">
+									Kembali
+								</small>
+							</div>
+						</button>
+						<div class="p-3">
+							<form spellcheck="false" autocomplete="off" target="_blank" method="post" action="https://formspree.io/f/xaypgygb">
+								<div class="form-group">
+									<label class="opacity-5 fs-7 mb-1" for="orderDecoded-detail">Rincian Pesanan</label>
+									<textarea class="form-control border-0 p-0" rows="5" name="Rincian Pesanan" id="orderDecoded-detail" required readonly></textarea>
+								</div>
+								<div class="d-md-flex align-items-center justify-content-between">
+									<div class="mb-3 mb-md-0">
+										<label class="sr-only" for="captcha">Verifikasi</label>
+										<div id="captcha" class="g-recaptcha" data-sitekey="6Ld4AfkZAAAAAPPYF4Str24HZOzl4jbe2jQbf9I9" data-callback="verified"></div>
+									</div>
+									<div>
+										<button type="submit" class="btn btn-success btn-block" disabled>Pesan Sekarang</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -441,6 +482,24 @@
 			},5000)
 		});
 	</script>
+
+	<!-- reCAPTCHA -->
+	<div id="recaptcha">
+		<script defer>
+			function verified() {
+				document.querySelector('#orderDecoded [type="submit"]').disabled = false
+			}
+			function loading() {
+				var script = document.getElementById('recaptcha')
+				recaptcha = document.createElement('script')
+				recaptcha.src = 'https://www.google.com/recaptcha/api.js'
+				script.appendChild(recaptcha)
+			}
+			$('#orderDecoded').on('shown.bs.modal', function() {
+				loading()
+			})
+		</script>
+	</div>
 
 	<!-- Order -->
 	<script>
@@ -723,6 +782,102 @@
 						let content = ds + de
 							content = content.split(' ').join('%20')
 						window.open(wa + content,'_blank')
+					}
+				}
+
+				if ( $('#publish').closest('section[style="display: none;"]').length > 0 ) {
+					orderImg()
+				} else {
+					orderWeb()
+				}
+			})
+
+			$('[data-target="#orderDecoded"]').click(function() {
+				orderNow()
+				
+				function orderWeb() {
+					let ev = '#event-'
+						cs = ':checked'
+						ce = ':not(:checked)'
+						ds = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A'
+						de = detail6 + '%0A' + detail7
+						textarea = document.querySelector('#orderDecoded-detail')
+
+					if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(ce) ) {
+						let content = ds + detail3 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
+						let content = ds + detail4 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(ce) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
+						let content = ds + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
+						let content = ds + detail3 + '%0A' + detail4 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
+						let content = ds + detail3 + '%0A' + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
+						let content = ds + detail4 + '%0A' + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
+						let content = ds + detail3 + '%0A' + detail4 + '%0A' + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else {
+						let content = ds + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					}
+				}
+
+				function orderImg() {
+					let ev = '#event-'
+						cs = ':checked'
+						ce = ':not(:checked)'
+						ds = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A'
+						de = detail7
+						textarea = document.querySelector('#orderDecoded-detail')
+
+					if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(ce) ) {
+						let content = ds + detail3 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
+						let content = ds + detail4 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(ce) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
+						let content = ds + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(ce) ) {
+						let content = ds + detail3 + '%0A' + detail4 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(cs) ) {
+						let content = ds + detail3 + '%0A' + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(ce) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
+						let content = ds + detail4 + '%0A' + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else if ( $(ev + '1').is(cs) && $(ev + '2').is(cs) && $(ev + '3').is(cs) ) {
+						let content = ds + detail3 + '%0A' + detail4 + '%0A' + detail5 + '%0A' + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
+					} else {
+						let content = ds + de
+							content = content.split(' ').join('%20')
+						textarea.innerHTML = decodeURI(content).replace(/\*/g,'').replace('%26','&')
 					}
 				}
 
