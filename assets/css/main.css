@@ -1218,3 +1218,22 @@
 			box-shadow: 0 0 0 0 rgba(255,82,82,0);
 		}
 	}
+
+	#orderDecoded textarea {
+		resize: none;
+		height: calc(100vh - 268px);
+	}
+	#orderDecoded textarea[readonly] {
+		background-color: transparent;
+	}
+	.g-recaptcha {
+		min-height: 78px;
+	}
+	@media (min-width: 768px) {
+		#orderDecoded .modal-lg {
+			max-width: 800px;
+		}
+		#orderDecoded textarea {
+			height: calc(100vh - 273px);
+		}
+	}
