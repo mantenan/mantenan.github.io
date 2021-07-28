@@ -706,7 +706,7 @@
 	}
 
 /* Modal */
-	.modal:nth-of-type(odd),
+	/*.modal:nth-of-type(odd),
 	.modal:nth-of-type(odd) + .modal {
 		z-index: 1052 !important;
 	}
@@ -715,7 +715,7 @@
 	}
 	.modal-backdrop.show + .modal-backdrop.show {
 		opacity: 0 !important;
-	}
+	}*/
 	.modal-lg,
 	.modal-xl {
 		max-width: 100%;
