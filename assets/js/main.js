@@ -118,7 +118,24 @@
 		// 		}
 		// 	}]
 		// })
-		$('#website .swipe, #image .swipe').slick({
+		$('#website .swipe').slick({
+			dots: false,
+			arrows: false,
+			autoplay: false,
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			responsive: [{
+				breakpoint: 768,
+				settings: {
+					dots: true,
+					centerMode: true,
+					centerPadding: '50px',
+					slidesToShow: 1
+				}
+			}]
+		})
+		$('#image .swipe').slick({
 			dots: false,
 			arrows: false,
 			autoplay: false,
