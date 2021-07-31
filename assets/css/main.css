@@ -706,7 +706,7 @@
 	}
 
 /* Modal */
-	/*.modal:nth-of-type(odd),
+	.modal:nth-of-type(odd),
 	.modal:nth-of-type(odd) + .modal {
 		z-index: 1052 !important;
 	}
@@ -715,7 +715,7 @@
 	}
 	.modal-backdrop.show + .modal-backdrop.show {
 		opacity: 0 !important;
-	}*/
+	}
 	.modal-lg,
 	.modal-xl {
 		max-width: 100%;
@@ -911,7 +911,7 @@
 	body {
 		background-image: url('../img/background.png');
 		background-repeat: no-repeat;
-		background-position: 75% -350%;
+		background-position: center -160px;
 	}
 	body.plain {
 		padding: 0;
@@ -919,13 +919,10 @@
 	}
 	@media (min-width: 768px) {
 		body {
-			background-position: right -200%;
+			background-position: right top;
 		}
 	}
 	@media (min-width: 992px) {
-		body {
-			background-position: right top;
-		}
 		.navbar:not(.scroll) .navbar-brand {
 			opacity: 0;
 		}
