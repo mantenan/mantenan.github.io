@@ -632,22 +632,19 @@
 								</div>
 							</div>
 						</div> -->
-						<form spellcheck="false" id="kirimUcapan">
+						<form spellcheck="false" class="w-50 text-left mx-auto" id="kirimUcapan">
 							<div class="form-group">
-								<label>Nama</label>
-								<input type="text" class="form-control" name="Nama"/>
+								<label for="name">Nama</label>
+								<input id="name" name="name" type="text" class="form-control">
 							</div>
 							<div class="form-group">
-								<label>Ucapan</label>
-								<input type="text" class="form-control" name="Ucapan"/>
-							</div>
-							<div class="form-group">
-								<label>Tanggal</label>
-								<input type="text" class="form-control" name="Tanggal"/>
+								<label for="comment">Ucapan</label>
+								<textarea id="comment" name="comment" cols="40" class="form-control"></textarea>
 							</div>
 							<div class="form-group">
 								<button type="submit" class="btn btn-primary">Kirim</button>
 							</div>
+							<p id="result"></p>
 						</form>
 						<table class="table" id="dataUcapan">
 							<thead>
@@ -838,26 +835,61 @@
 </slot>
 
 <script type="text/javascript">
-	$(document).ready(function() {
-		var formUcapan = $('#kirimUcapan')
-			urlUcapan = 'https://script.google.com/macros/s/AKfycbzdgeVJKfrzJb22PtWr-PGN0rPPQ9YuRRRboL5NeCNMIphOiWla_LB8qCcM42Q7ns8s/exec'
-
-		formUcapan.on('submit',function(e) {
-			e.preventDefault()
-			$.ajax({
-				url: urlUcapan,
-				method: 'POST',
-				dataType: 'json',
-				data: formUcapan.serialize()
-			})
-			.fail(function(){
-				console.log('failed')
-			})
-			.success(function(){
-				console.log('added successfully!')
-			})
-		})
-	})
+	$(document).ready(function( $ ) {
+		// variable to hold request
+		var request;
+		// bind to the submit event of our form
+		$("#kirimUcapan").submit(function(event){
+			// abort any pending request
+			if (request) {
+				request.abort();
+			}
+			// setup some local variables
+			var $form = $(this);
+			// let's select and cache all the fields
+			var $inputs = $form.find("input, select, button, textarea");
+			// serialize the data in the form
+			var serializedData = $form.serialize();
+		
+			// let's disable the inputs for the duration of the ajax request
+			// Note: we disable elements AFTER the form data has been serialized.
+			// Disabled form elements will not be serialized.
+			$inputs.prop("disabled", true);
+			$('#result').text('Sending data...');
+		
+			// fire off the request to /form.php
+			request = $.ajax({
+				url: "https://script.google.com/macros/s/AKfycbzdgeVJKfrzJb22PtWr-PGN0rPPQ9YuRRRboL5NeCNMIphOiWla_LB8qCcM42Q7ns8s/exec",
+				type: "post",
+				data: serializedData
+			});
+		
+			// callback handler that will be called on success
+			request.done(function (response, textStatus, jqXHR){
+				// log a message to the console
+				$('#result').html('Hooray, it worked!');
+			});
+		
+			// callback handler that will be called on failure
+			request.fail(function (jqXHR, textStatus, errorThrown){
+				// log the error to the console
+				console.error(
+					"The following error occured: "+
+					textStatus, errorThrown
+				);
+			});
+		
+			// callback handler that will be called regardless
+			// if the request failed or succeeded
+			request.always(function () {
+				// reenable the inputs
+				$inputs.prop("disabled", false);
+			});
+		
+			// prevent default posting of form
+			event.preventDefault();
+		});
+	});
 </script>
 
 <script type="text/javascript">
