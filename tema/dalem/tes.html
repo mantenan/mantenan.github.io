@@ -838,20 +838,26 @@
 </slot>
 
 <script type="text/javascript">
-	var formUcapan = $('#kirimUcapan')
-		urlUcapan = 'https://script.google.com/macros/s/AKfycbzdgeVJKfrzJb22PtWr-PGN0rPPQ9YuRRRboL5NeCNMIphOiWla_LB8qCcM42Q7ns8s/exec'
+	$(document).ready(function() {
+		var formUcapan = $('#kirimUcapan')
+			urlUcapan = 'https://script.google.com/macros/s/AKfycbzdgeVJKfrzJb22PtWr-PGN0rPPQ9YuRRRboL5NeCNMIphOiWla_LB8qCcM42Q7ns8s/exec'
 
-	formUcapan.find('[type="submit"]').on('click', function(e) {
-		e.preventDefault();
-		var jqxhr = $.ajax({
-			url: urlUcapan,
-			method: 'GET',
-			dataType: 'json',
-			data: formUcapan.serializeObject()
-		}).success(
-			alert('yes')
-		);
-	});
+		formUcapan.on('submit',function(e) {
+			e.preventDefault()
+			$.ajax({
+				url: urlUcapan,
+				method: 'POST',
+				dataType: 'json',
+				data: formUcapan.serialize()
+			})
+			.fail(function(){
+				console.log('failed')
+			})
+			.success(function(){
+				console.log('added successfully!')
+			})
+		})
+	})
 </script>
 
 <script type="text/javascript">
