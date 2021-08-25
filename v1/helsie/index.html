@@ -65,14 +65,6 @@
 	<link rel="preload" as="image" href="assets/img/img-default-landscape.svg">
 	<link rel="preload" as="image" href="assets/img/img-default-portrait.svg">
 	<link rel="preload" as="image" href="assets/img/img-default-square.svg">
-	<link rel="preload" as="image" href="upload/slider-1.webp">
-	<link rel="preload" as="image" href="upload/slider-2.webp">
-	<link rel="preload" as="image" href="upload/slider-3.webp">
-	<link rel="preload" as="image" href="upload/slider-4.webp">
-	<link rel="preload" as="image" href="upload/slider-1-md.webp">
-	<link rel="preload" as="image" href="upload/slider-2-md.webp">
-	<link rel="preload" as="image" href="upload/slider-3-md.webp">
-	<link rel="preload" as="image" href="upload/slider-4-md.webp">
 </head>
 
 <body>
@@ -220,14 +212,19 @@
 				<div class="col-md-8 col-lg-9 order-md-2">
 					<article data-title="slider">
 						<div id="carousel" class="carousel slide mx-n4 ml-md-0 mr-md-n4 mr-xl-n5" data-ride="carousel" data-interval="5000" style="height:43vh">
+							<script>
+								function loadSrc(source) {
+									let stateCheck = setInterval(() => {
+										if (document.readyState === 'complete') {
+											clearInterval(stateCheck)
+											source.src = source.getAttribute('data-src')
+										}
+									}, 1000)
+								}
+							</script>
 							<div class="carousel-inner">
 								<div class="carousel-item">
-									<picture>
-										<source media="(min-width: 768px)" srcset="upload/slider-1.webp">
-										<source media="(max-width: 767px)" srcset="upload/slider-1-md.webp">
-										<source media="(max-width: 575px)" srcset="upload/slider-1-sm.webp">
-										<img class="d-block w-100 h-auto" loading="lazy" width="1280" height="720" src="upload/slider-1.webp" alt="Care">
-									</picture>
+									<img class="d-block w-100 h-auto" loading="lazy" width="1280" height="720" src="assets/img/img-default-landscape.svg" onload="loadSrc(this)" data-src="upload/slider-1.webp" alt="Care">
 									<div class="carousel-caption d-none d-lg-block mb-3">
 										<h4>Care</h4>
 										<p>Lorem ipsum et dolor</p>
@@ -235,35 +232,20 @@
 									</div>
 								</div>
 								<div class="carousel-item">
-									<picture>
-										<source media="(min-width: 768px)" srcset="upload/slider-2.webp">
-										<source media="(max-width: 767px)" srcset="upload/slider-2-md.webp">
-										<source media="(max-width: 575px)" srcset="upload/slider-2-sm.webp">
-										<img class="d-block w-100 h-auto" loading="lazy" width="1280" height="720" src="upload/slider-2.webp" alt="Monterey">
-									</picture>
+									<img class="d-block w-100 h-auto" loading="lazy" width="1280" height="720" src="assets/img/img-default-landscape.svg" onload="loadSrc(this)" data-src="upload/slider-2.webp" alt="Monterey">
 									<div class="carousel-caption d-none d-lg-block mb-3">
 										<h4>Monterey</h4>
 										<p>Lorem ipsum et dolor</p>
 									</div>
 								</div>
 								<div class="carousel-item">
-									<picture>
-										<source media="(min-width: 768px)" srcset="upload/slider-3.webp">
-										<source media="(max-width: 767px)" srcset="upload/slider-3-md.webp">
-										<source media="(max-width: 575px)" srcset="upload/slider-3-sm.webp">
-										<img class="d-block w-100 h-auto" loading="lazy" width="1280" height="720" src="upload/slider-3.webp" alt="Big Sur">
-									</picture>
+									<img class="d-block w-100 h-auto" loading="lazy" width="1280" height="720" src="assets/img/img-default-landscape.svg" onload="loadSrc(this)" data-src="upload/slider-3.webp" alt="BigSur">
 									<div class="carousel-caption d-none d-lg-block mb-3">
 										<h4>Big Sur</h4>
 									</div>
 								</div>
 								<div class="carousel-item">
-									<picture>
-										<source media="(min-width: 768px)" srcset="upload/slider-4.webp">
-										<source media="(max-width: 767px)" srcset="upload/slider-4-md.webp">
-										<source media="(max-width: 575px)" srcset="upload/slider-4-sm.webp">
-										<img class="d-block w-100 h-auto" loading="lazy" width="1280" height="720" src="upload/slider-4.webp" alt="iPad">
-									</picture>
+									<img class="d-block w-100 h-auto" loading="lazy" width="1280" height="720" src="assets/img/img-default-landscape.svg" onload="loadSrc(this)" data-src="upload/slider-4.webp" alt="iPad">
 									<div class="carousel-caption d-none d-lg-block mb-3">
 										<h4>iPad</h4>
 									</div>
@@ -696,6 +678,58 @@
 
 	<section class="my-5">
 		<div class="container">
+			<article data-title="poll">
+				<div class="row no-gutters pb-3">
+					<div class="col-md-6 col-lg-7 mr-md-n3">
+						<div class="h-100 d-flex align-items-center justify-content-center px-4 px-md-0 mb-n3 mb-md-0">
+							<img class="img-fluid rounded-2" loading="lazy" width="1280" height="720" src="https://images.unsplash.com/photo-1519494080410-f9aa76cb4283?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&h=720&q=80" alt="Polling"/>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-5">
+						<div class="h-100 d-flex align-items-center justify-content-center mr-md-n3">
+							<div class="card bg-adaptive-1 p-2 rounded-2 border-0 shadow w-100">
+								<div class="card-body">
+									<h2 class="fs-4 mb-4">
+										Jajak Pendapat
+									</h2>
+									<div class="alert alert-success alert-dismissible pr-5 fade show" role="alert">
+										Berhasil dikirim! Silakan lihat hasil jajak pendapat <a class="text-success" href="poll-detail.html"><u>disini</u></a>
+										<button type="button" class="close d-flex p-2 m-1" data-dismiss="alert" aria-label="Close">
+											<i class="bi bi-x fs-5"></i>
+										</button>
+									</div>
+									<h3 class="fs-6 lh-3">
+										Bagaimana kualitas layanan kami?
+									</h3>
+									<form spellcheck="false">
+										<div class="form-group my-3 pb-1">
+											<div class="btn-radio">
+												<input name="poll" class="form-control" type="radio" id="radio-1" value="Sangat Bagus"/>
+												<label for="radio-1" class="rounded-2">Sangat Bagus</label>
+											</div>
+											<div class="btn-radio">
+												<input name="poll" class="form-control" type="radio" id="radio-2" value="Biasa Aja"/>
+												<label for="radio-2" class="rounded-2">Biasa Saja</label>
+											</div>
+											<div class="btn-radio">
+												<input name="poll" class="form-control" type="radio" id="radio-3" value="Kurang Bagus"/>
+												<label for="radio-3" class="rounded-2">Kurang Bagus</label>
+											</div>
+										</div>
+										<!-- <button type="reset" class="btn btn-outline-danger btn-block px-4 mb-3">Reset</button> -->
+										<button type="submit" class="btn btn-outline-success btn-block px-4">Kirim</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section class="my-5">
+		<div class="container">
 			<article data-title="banner">
 				<div class="row">
 					<div class="col-md-6 mb-3 pb-3 grid-item mx-auto">
@@ -726,123 +760,129 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
-					<div class="py-3">
-						<a class="d-inline-block mt-2 mb-3" href="index.html">
-							<img class="obj-fit-contain" loading="lazy" width="100" height="100" src="assets/img/logo-helsie.png" alt="Helsie"/>
-						</a>
-						<h3>Helsie</h3>
-						<div class="opacity-6">Minim sit nulla quis deserunt reprehenderit nostrud sint consectetur qui deserunt. Eiusmod do fugiat non nostrud ullamco ea cillum ut sit nostrud est ut ullamco officia velit laborum enim.</div>
-						<ul class="list-group list-group-flush opacity-6 my-2">
-							<li class="list-group-item bg-transparent d-flex border-0 py-1 px-0">
-								<i class="bi-geo-alt"></i>
-								<span class="ml-2">Jl. Perintis Kemerdekaan 33 Yogyakarta</span>
-							</li>
-							<li class="list-group-item bg-transparent d-flex border-0 py-1 px-0">
-								<i class="bi-telephone"></i>
-								<span class="ml-2">+62 812 2804 9446</span>
-							</li>
-							<li class="list-group-item bg-transparent d-flex border-0 py-1 px-0">
-								<i class="bi-envelope"></i>
-								<span class="ml-2">info@wunik.id</span>
-							</li>
-						</ul>
-						<div class="ml-n3 mt-n2">
-							<a class="text-decoration-none text-white d-inline-block ml-3 mt-3" rel="noopener" target="_blank" href="#">
-								<svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor">
-									<path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
-								</svg>
-								<span class="sr-only">Facebook</span>
+					<article data-title="about">
+						<div class="py-3">
+							<a class="d-inline-block mt-2 mb-3" href="index.html">
+								<img class="obj-fit-contain" loading="lazy" width="100" height="100" src="assets/img/logo-helsie.png" alt="Helsie"/>
 							</a>
-							<a class="text-decoration-none text-white d-inline-block ml-3 mt-3" rel="noopener" target="_blank" href="#">
-								<svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor">
-									<path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
-								</svg>
-								<span class="sr-only">Instagram</span>
-							</a>
-							<a class="text-decoration-none text-white d-inline-block ml-3 mt-3" rel="noopener" target="_blank" href="#">
-								<svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor">
-									<path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
-								</svg>
-								<span class="sr-only">Youtube</span>
-							</a>
+							<h3>Helsie</h3>
+							<div class="opacity-6">Minim sit nulla quis deserunt reprehenderit nostrud sint consectetur qui deserunt. Eiusmod do fugiat non nostrud ullamco ea cillum ut sit nostrud est ut ullamco officia velit laborum enim.</div>
+							<ul class="list-group list-group-flush opacity-6 my-2">
+								<li class="list-group-item bg-transparent d-flex border-0 py-1 px-0">
+									<i class="bi-geo-alt"></i>
+									<span class="ml-2">Jl. Perintis Kemerdekaan 33 Yogyakarta</span>
+								</li>
+								<li class="list-group-item bg-transparent d-flex border-0 py-1 px-0">
+									<i class="bi-telephone"></i>
+									<span class="ml-2">+62 812 2804 9446</span>
+								</li>
+								<li class="list-group-item bg-transparent d-flex border-0 py-1 px-0">
+									<i class="bi-envelope"></i>
+									<span class="ml-2">info@wunik.id</span>
+								</li>
+							</ul>
+							<div class="ml-n3 mt-n2">
+								<a class="text-decoration-none text-white d-inline-block ml-3 mt-3" rel="noopener" target="_blank" href="#">
+									<svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor">
+										<path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+									</svg>
+									<span class="sr-only">Facebook</span>
+								</a>
+								<a class="text-decoration-none text-white d-inline-block ml-3 mt-3" rel="noopener" target="_blank" href="#">
+									<svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor">
+										<path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+									</svg>
+									<span class="sr-only">Instagram</span>
+								</a>
+								<a class="text-decoration-none text-white d-inline-block ml-3 mt-3" rel="noopener" target="_blank" href="#">
+									<svg viewBox="0 0 24 24" width="25" height="25" fill="currentColor">
+										<path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
+									</svg>
+									<span class="sr-only">Youtube</span>
+								</a>
+							</div>
 						</div>
-					</div>
+					</article>
 				</div>
 				<div class="col-lg-8">
-					<div class="pt-3">
-						<div class="row">
-							<div class="col-md mb-3 mb-md-0">
-								<h4 class="fs-6 mb-3">Tentang Kami</h4>
-								<ul class="list-group list-group-flush opacity-6">
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Profil</a>
-									</li>
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">FAQ</a>
-									</li>
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Syarat dan Ketentuan</a>
-									</li>
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Hubungi</a>
-									</li>
-								</ul>
-							</div>
-							<div class="col-md mb-3 mb-md-0">
-								<h4 class="fs-6 mb-3">Layanan Kesehatan</h4>
-								<ul class="list-group list-group-flush opacity-6">
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Periksa Dokter</a>
-									</li>
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Jadwal Praktek</a>
-									</li>
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Poli Anak dan Ibu</a>
-									</li>
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Poli Gigi</a>
-									</li>
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Radiologi</a>
-									</li>
-								</ul>
-							</div>
-							<div class="col-md mb-3 mb-md-0">
-								<h4 class="fs-6 mb-3">Kerjasama</h4>
-								<ul class="list-group list-group-flush opacity-6">
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Apotek</a>
-									</li>
-									<li class="list-group-item bg-transparent border-0 p-0 mb-3">
-										<a class="text-decoration-none text-white" href="#">Rumah Sakit</a>
-									</li>
-								</ul>
+					<article data-title="menu-bottom">
+						<div class="pt-3">
+							<div class="row">
+								<div class="col-md mb-3 mb-md-0">
+									<h4 class="fs-6 mb-3">Tentang Kami</h4>
+									<ul class="list-group list-group-flush opacity-6">
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Profil</a>
+										</li>
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">FAQ</a>
+										</li>
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Syarat dan Ketentuan</a>
+										</li>
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Hubungi</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md mb-3 mb-md-0">
+									<h4 class="fs-6 mb-3">Layanan Kesehatan</h4>
+									<ul class="list-group list-group-flush opacity-6">
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Periksa Dokter</a>
+										</li>
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Jadwal Praktek</a>
+										</li>
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Poli Anak dan Ibu</a>
+										</li>
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Poli Gigi</a>
+										</li>
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Radiologi</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md mb-3 mb-md-0">
+									<h4 class="fs-6 mb-3">Kerjasama</h4>
+									<ul class="list-group list-group-flush opacity-6">
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Apotek</a>
+										</li>
+										<li class="list-group-item bg-transparent border-0 p-0 mb-3">
+											<a class="text-decoration-none text-white" href="#">Rumah Sakit</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
+					</article>
 					<hr class="bg-white opacity-2">
-					<div class="pt-2">
-						<div class="newsletter">
-							<h4 class="sr-only">Langganan Surat</h4>
-							<p>Silakan berlangganan surat kami yang terbit secara berkala tiap minggu</p>
-							<div class="alert alert-success alert-dismissible pr-5 fade show" role="alert">
-								Email Anda berhasil didaftarkan
-								<button type="button" class="close d-flex p-2 m-1" data-dismiss="alert" aria-label="Close">
-									<i class="bi bi-x fs-5"></i>
-								</button>
-							</div>
-							<div class="p-2 rounded-2 bg-darken">
-								<form class="form-inline" spellcheck="false" method="post" action="">
-									<div class="d-flex w-100">
-										<label class="sr-only" for="input-email-newsletter">Email</label>
-										<input type="email" name="email-newsletter" class="form-control" id="input-email-newsletter" placeholder="Ketikkan email Anda">
-										<button type="submit" class="btn btn-primary px-3">Daftar</button>
-									</div>
-								</form>
+					<article data-title="newsletter">
+						<div class="pt-2">
+							<div class="newsletter">
+								<h4 class="sr-only">Langganan Surat</h4>
+								<p>Silakan berlangganan surat kami yang terbit secara berkala tiap minggu</p>
+								<div class="alert alert-success alert-dismissible pr-5 fade show" role="alert">
+									Email Anda berhasil didaftarkan
+									<button type="button" class="close d-flex p-2 m-1" data-dismiss="alert" aria-label="Close">
+										<i class="bi bi-x fs-5"></i>
+									</button>
+								</div>
+								<div class="p-2 rounded-2 bg-darken">
+									<form class="form-inline" spellcheck="false" method="post" action="">
+										<div class="d-flex w-100">
+											<label class="sr-only" for="input-email-newsletter">Email</label>
+											<input type="email" name="email-newsletter" class="form-control" id="input-email-newsletter" placeholder="Ketikkan email Anda">
+											<button type="submit" class="btn btn-primary px-3">Daftar</button>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
-					</div>
+					</article>
 				</div>
 			</div>
 		</div>
@@ -852,35 +892,37 @@
 			<div class="d-md-flex align-items-center justify-content-between text-center py-3">
 				<div class="opacity-5 order-md-2">
 					<div class="d-block d-md-inline-block mr-md-3">
-						<span class="cursor-pointer fs-7" data-toggle="tooltip" data-html="true" title="
-							<div class='p-1'>
-								<div class='d-flex justify-content-between p-1'>
-									<span class='mr-3'>Online</span>
-									<span>1</span>
-								</div>
-								<div class='d-flex justify-content-between p-1'>
-									<span class='mr-3'>Hari ini </span>
-									<span>7</span>
-								</div>
-								<div class='d-flex justify-content-between p-1'>
-									<span class='mr-3'>Seminggu terakhir</span>
-									<span>196</span>
-								</div>
-								<div class='d-flex justify-content-between p-1'>
-									<span class='mr-3'>Sebulan terakhir</span>
-									<span>890</span>
-								</div>
-								<div class='d-flex justify-content-between p-1'>
-									<span class='mr-3'>Setahun terakhir</span>
-									<span>12.8K</span>
-								</div>
-								<div class='d-flex justify-content-between p-1'>
-									<span class='mr-3'>Total</span>
-									<span>12.8K</span>
-								</div>
-							</div>">
-							7 Pengunjung Hari ini
-						</span>
+						<article data-title="statistic">
+							<span class="cursor-pointer fs-7" data-toggle="tooltip" data-html="true" title="
+								<div class='p-1'>
+									<div class='d-flex justify-content-between p-1'>
+										<span class='mr-3'>Online</span>
+										<span>1</span>
+									</div>
+									<div class='d-flex justify-content-between p-1'>
+										<span class='mr-3'>Hari ini </span>
+										<span>7</span>
+									</div>
+									<div class='d-flex justify-content-between p-1'>
+										<span class='mr-3'>Seminggu terakhir</span>
+										<span>196</span>
+									</div>
+									<div class='d-flex justify-content-between p-1'>
+										<span class='mr-3'>Sebulan terakhir</span>
+										<span>890</span>
+									</div>
+									<div class='d-flex justify-content-between p-1'>
+										<span class='mr-3'>Setahun terakhir</span>
+										<span>12.8K</span>
+									</div>
+									<div class='d-flex justify-content-between p-1'>
+										<span class='mr-3'>Total</span>
+										<span>12.8K</span>
+									</div>
+								</div>">
+								7 Pengunjung Hari ini
+							</span>
+						</article>
 					</div>
 					<a class="text-decoration-none d-inline-block my-2 my-md-0" rel="noopener" target="_blank" href="https://wunik.id">
 						<img class="obj-fit-contain filter-white" loading="lazy" width="97" height="17" src="https://wunik.id/themes/rootsite/img/logo-wunik.svg" alt="Wunik">
@@ -898,7 +940,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous"></script>
 	<script src="assets/js/darkmode.min.js"></script>
-	<script src="assets/js/main.min.js"></script>
+	<script src="assets/js/main.js"></script>
 	<script>$('noscript').replaceWith(function() { return this.textContent || this.innerText })</script>
 </slot>
 
