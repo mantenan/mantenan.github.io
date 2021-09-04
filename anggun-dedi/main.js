@@ -156,11 +156,11 @@
 
 // Congrats
 	if ( $('#ucapan').length > 0 ) {
-		const monthsShort = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
+		var monthsShort = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
 
 		function arrayToCard(data) {
 			$(data).each(function (i,list) {
-				const monthsShorts = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
+				// const monthsShorts = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
 				let tanggal = list[0]
 					splitTanggal = tanggal.split('/')
 					tanggal = Number(splitTanggal[0]) + ' ' + monthsShorts[Number(splitTanggal[1])-1] + ' ' + splitTanggal[2]
