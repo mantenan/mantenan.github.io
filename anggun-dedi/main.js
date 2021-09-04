@@ -160,9 +160,10 @@
 
 		function arrayToCard(data) {
 			$(data).each(function (i,list) {
+				const monthsShorts = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
 				let tanggal = list[0]
 					splitTanggal = tanggal.split('/')
-					tanggal = Number(splitTanggal[0]) + ' ' + monthsShort[Number(splitTanggal[1])-1] + ' ' + splitTanggal[2]
+					tanggal = Number(splitTanggal[0]) + ' ' + monthsShorts[Number(splitTanggal[1])-1] + ' ' + splitTanggal[2]
 					nama = list[1]
 					ucapan = list[2]
 				$(`<div class="card mx-3 border-0 bg-overlay shadow d-none">
