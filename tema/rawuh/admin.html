@@ -18,7 +18,7 @@
 	<meta property="og:image" content="../../assets/img/ogp.jpg">
 	<meta property="og:locale" content="id_ID">
 	<meta property="og:site_name" content="Maumantenan">
-	<meta property="og:url" content="https://maumantenan.com/tema/rawuh/admin">
+	<meta property="og:url" content="https://maumantenan.com/tema/rawuh/">
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Admin Panel - Maumantenan">
@@ -26,7 +26,7 @@
 	<meta name="twitter:image" content="../../assets/img/ogp.jpg">
 	<meta name="twitter:site" content="Maumantenan">
 	<!-- Canonical -->
-	<link rel="canonical" href="https://maumantenan.com/tema/rawuh/admin">
+	<link rel="canonical" href="https://maumantenan.com/tema/rawuh/">
 	<!-- Favicon -->
 	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="../../assets/img/favicon.ico">
 	<!-- Android -->
@@ -73,6 +73,7 @@
 
 <body>
 
+<script>if(localStorage.getItem('login cookie')==null)window.location.href='/admin'</script>
 <script>if(window.matchMedia('(prefers-color-scheme: dark)').matches)document.body.classList.add('dark')</script>
 
 <header>
@@ -119,6 +120,9 @@
 				<a id="pills-8-tab" data-toggle="pill" href="#pills-8" aria-controls="pills-8" role="tab" aria-selected="false" class="nav-link">
 					Pengaturan
 				</a>
+				<span class="nav-link text-warning cursor-pointer" onclick="cookieLogout()">
+					Keluar
+				</span>
 			</div>
 		</div>
 	</nav>
@@ -263,6 +267,15 @@
 					</div>
 				</div>
 			</div>
+			<div class="row mt-4 mb-4 mb-md-0 d-md-none">
+				<div class="col-md mt-2">
+					<div class="card rounded border-0 bg-adaptive-1 shadow mb-3 cursor-pointer" onclick="cookieLogout()">
+						<div class="card-body">
+							<div class="h5 mb-0 text-warning">Keluar</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div id="pills-1" aria-labelledby="pills-1-tab" role="tabpanel" class="tab-pane fade">
 			<div class="navbar fixed-top bg-white bg-adaptive-3 shadow d-md-none tab-back">
@@ -319,11 +332,16 @@
 					<div class="position-relative mb-3">
 						<input type="text" class="form-control h-auto rounded p-3 pr-5" name="search" placeholder="Cari nama / alamat / sesi">
 						<div class="position-absolute top right m-3 opacity-5">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<circle cx="11" cy="11" r="8"/>
 								<line x1="21" y1="21" x2="16.65" y2="16.65"/>
 							</svg>
 						</div>
+						<button type="reset" class="btn btn-clear text-danger position-absolute top right px-1 my-2 mr-5" style="display:none">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+								<path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+							</svg>
+						</button>
 					</div>
 				</form>
 				<div class="alert alert-danger mt-4" role="alert" style="display:none">
@@ -400,11 +418,16 @@
 					<div class="position-relative mb-3">
 						<input type="text" class="form-control h-auto rounded p-3 pr-5" name="search" placeholder="Cari nama / alamat / sesi">
 						<div class="position-absolute top right m-3 opacity-5">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<circle cx="11" cy="11" r="8"/>
 								<line x1="21" y1="21" x2="16.65" y2="16.65"/>
 							</svg>
 						</div>
+						<button type="reset" class="btn btn-clear text-danger position-absolute top right px-1 my-2 mr-5" style="display:none">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+								<path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/>
+							</svg>
+						</button>
 					</div>
 				</form>
 				<div class="alert alert-danger mt-4" role="alert" style="display:none">
@@ -769,7 +792,8 @@
 							<label class="opacity-5" for="formLogin-1-1">Nama Pengguna</label>
 							<input type="text" class="form-control" id="formLogin-1-1" required name="Nama Pengguna Wanita">
 						</div>
-						<div class="col-md mb-2">
+						<div class="col-md mb-2 position-relative toggle-password">
+							<span class="toggle-password-trigger hide mt-3 mr-3"></span>
 							<label class="opacity-5" for="formLogin-1-2">Kata Sandi</label>
 							<input type="password" class="form-control" id="formLogin-1-2" required name="Kata Sandi Wanita">
 						</div>
@@ -779,7 +803,8 @@
 							<label class="opacity-5" for="formLogin-2-1">Nama Pengguna</label>
 							<input type="text" class="form-control" id="formLogin-2-1" required name="Nama Pengguna Pria">
 						</div>
-						<div class="col-md mb-2">
+						<div class="col-md mb-2 position-relative toggle-password">
+							<span class="toggle-password-trigger hide mt-3 mr-3"></span>
 							<label class="opacity-5" for="formLogin-2-2">Kata Sandi</label>
 							<input type="password" class="form-control" id="formLogin-2-2" required name="Kata Sandi Pria">
 						</div>
