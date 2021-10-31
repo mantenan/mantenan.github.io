@@ -146,7 +146,19 @@
 		<div id="pills-0" aria-labelledby="pills-0-tab" role="tabpanel" class="tab-pane fade show active">
 			<div class="mt-2 mt-md-3 mb-3">
 				<div class="d-none d-md-block">
-					<h2 class="h3 lh-1 mb-0">Beranda</h2>
+					<div class="d-flex align-items-center justify-content-between">
+						<h2 class="h3 lh-1 mb-0">Beranda</h2>
+						<button type="button" class="btn btn-clear bg-purple text-white shadow" onclick="viewInvitation()">
+							<div class="d-flex align-items-center justify-content-between">
+								<span class="mr-2">Lihat Undangan</span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+									<polyline points="15 3 21 3 21 9"/>
+									<line x1="10" y1="14" x2="21" y2="3"/>
+								</svg>
+							</div>
+						</button>
+					</div>
 				</div>
 				<div class="d-block d-md-none text-center pt-2">
 					<img class="d-block mx-auto mb-3" loading="lazy" width="75" height="75" src="../../assets/img/maumantenan-1.svg" alt="Maumantenan">
@@ -193,7 +205,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row mt-4">
+			<div class="row my-4 my-lg-2">
 				<div class="col-lg mt-2">
 					<div class="card rounded border-0 bg-primary text-white shadow mb-3 cursor-pointer" onclick="$('#pills-3-tab').click()">
 						<div class="card-body">
@@ -249,7 +261,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="row mt-4 mb-4 mb-md-0 d-md-none">
+
+			<div class="row d-md-none">
 				<div class="col-md mt-2">
 					<div class="card rounded border-0 bg-adaptive-1 shadow mb-3 cursor-pointer" onclick="$('#pills-6-tab').click()">
 						<div class="card-body">
@@ -258,7 +271,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row mt-4 mb-4 mb-md-0 d-md-none">
+			<div class="row d-md-none">
 				<div class="col-md mt-2">
 					<div class="card rounded border-0 bg-adaptive-1 shadow mb-3 cursor-pointer" onclick="$('#pills-7-tab').click()">
 						<div class="card-body">
@@ -267,7 +280,34 @@
 					</div>
 				</div>
 			</div>
-			<div class="row mt-4 mb-4 mb-md-0 d-md-none">
+			<div class="row d-md-none">
+				<div class="col-md mt-2">
+					<div class="card rounded border-0 bg-adaptive-1 shadow mb-3 cursor-pointer" onclick="$('#pills-8-tab').click()">
+						<div class="card-body">
+							<div class="h5 mb-0">Pengaturan</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row my-4 d-md-none">
+				<div class="col-md mt-2">
+					<div class="card rounded border-0 bg-purple text-white shadow mb-3 cursor-pointer" onclick="viewInvitation()">
+						<div class="card-body">
+							<div class="d-flex align-items-center justify-content-between">
+								<div class="h5 mb-0">Lihat Undangan</div>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+									<polyline points="15 3 21 3 21 9"/>
+									<line x1="10" y1="14" x2="21" y2="3"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row my-4 d-md-none">
 				<div class="col-md mt-2">
 					<div class="card rounded border-0 bg-adaptive-1 shadow mb-3 cursor-pointer" onclick="cookieLogout()">
 						<div class="card-body">
