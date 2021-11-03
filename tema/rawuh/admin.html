@@ -63,7 +63,7 @@
 	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" integrity="sha512-vZpXDvc3snY9J1W8GrnxqDr/+vP1nSTfk8apH1r0wQvOab6fkPhaeqAMlydW68MECAjRR05tu4SOJcwjZgPg5A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js" integrity="sha512-ux1VHIyaPxawuad8d1wr1i9l4mTwukRq5B3s8G3nEmdENnKF5wKfOV6MEUH0k/rNT4mFr/yL+ozoDiwhUQekTg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="style" href="assets/css/admin.min.css">
-	<link rel="preload" as="script" href="assets/js/admin.min.js">
+	<link rel="preload" as="script" href="assets/js/admin.js">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -73,10 +73,9 @@
 
 <body>
 
-<script>if(localStorage.getItem('login cookie')==null)window.location.href='/tema/rawuh/login'</script>
-<script>if(window.matchMedia("(prefers-color-scheme: dark)").matches){let e="#252b31";document.head.querySelector('[name="apple-mobile-web-app-status-bar"').content=e,document.head.querySelector('[name="msapplication-TileColor"').content=e,document.head.querySelector('[name="theme-color"').content=e,document.body.classList.add("dark")}</script>
-
 <header>
+	<script>if(localStorage.getItem('login cookie')==null)window.location.href='/tema/rawuh/login'</script>
+	<script>if(window.matchMedia("(prefers-color-scheme: dark)").matches){let e="#252b31";document.head.querySelector('[name="apple-mobile-web-app-status-bar"').content=e,document.head.querySelector('[name="msapplication-TileColor"').content=e,document.head.querySelector('[name="theme-color"').content=e,document.body.classList.add("dark")}</script>
 	<nav class="navbar navbar-expand-md navbar-dark p-3 p-md-0 d-md-block">
 		<a class="navbar-brand p-0 mb-md-3 ml-2 ml-md-n2 mt-md-2" href="#">
 			<div class="d-none d-md-block">
@@ -167,6 +166,7 @@
 					</svg>
 				</div>
 			</div>
+
 			<div class="row">
 				<div class="col-lg mt-2">
 					<div class="card rounded border-0 bg-warning text-dark shadow mb-3 cursor-pointer" onclick="$('#pills-1-tab').click()">
@@ -330,13 +330,13 @@
 				<div class="d-flex align-items-center justify-content-between">
 					<div class="d-flex align-items-center">
 						<h2 class="h3 lh-1 mb-0">Tamu Gina</h2>
-						<button type="button" class="btn btn-outline-primary btn-sm d-none d-md-inline-block lh-1 ml-3" aria-expanded="false" data-toggle="collapse" data-target="#addTamuWanita" onclick="$(this).blur()">
+						<button type="button" class="btn btn-outline-primary btn-sm d-none d-md-inline-block lh-1 ml-3" aria-expanded="false" data-toggle="collapse" data-target="#addTamuWanita" onclick="$(this).blur();generateID('#formTamuWanita-4')">
 							Tambah
 						</button>
 					</div>
 					<div class="opacity-5"><span class="totalTamuWanita">0</span> Tamu</div>
 				</div>
-				<button type="button" class="btn btn-outline-primary btn-block d-block d-md-none mt-4" aria-expanded="false" data-toggle="collapse" data-target="#addTamuWanita" onclick="$(this).blur()">
+				<button type="button" class="btn btn-outline-primary btn-block d-block d-md-none mt-4" aria-expanded="false" data-toggle="collapse" data-target="#addTamuWanita" onclick="$(this).blur();generateID('#formTamuWanita-4')">
 					Tambah
 				</button>
 			</div>
@@ -359,7 +359,50 @@
 								<option value="2">Sesi 2</option>
 								<option value="3">Sesi 3</option>
 								<option value="4">Sesi 4</option>
+								<option value="5">Sesi 5</option>
 							</select>
+						</div>
+						<div class="col-md mb-3 sr-only">
+							<label class="opacity-5" for="formTamuWanita-4">ID</label>
+							<input type="text" class="form-control" id="formTamuWanita-4" name="ID">
+						</div>
+						<div class="col-md mb-3 sr-only">
+							<label class="opacity-5" for="formTamuWanita-5">Status</label>
+							<input type="text" class="form-control" id="formTamuWanita-5" name="Status">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-success btn-block py-2 px-3 mt-2 mb-4">
+						Simpan
+					</button>
+				</form>
+				<form class="sr-only" spellcheck="false" autocomplete="off" name="formHapusTamuWanita">
+					<div class="row">
+						<div class="col-md mb-3">
+							<label class="opacity-5" for="formHapusTamuWanita-1">Nama</label>
+							<input type="text" class="form-control" id="formHapusTamuWanita-1" required name="Nama">
+						</div>
+						<div class="col-md mb-3 px-md-0">
+							<label class="opacity-5" for="formHapusTamuWanita-2">Alamat</label>
+							<input type="text" class="form-control" id="formHapusTamuWanita-2" name="Alamat">
+						</div>
+						<div class="col-md mb-3">
+							<label class="opacity-5" for="formHapusTamuWanita-3">Sesi</label>
+							<select class="form-control custom-select" id="formHapusTamuWanita-3" required name="Sesi">
+								<option value="0" selected>Tanpa Sesi</option>
+								<option value="1">Sesi 1</option>
+								<option value="2">Sesi 2</option>
+								<option value="3">Sesi 3</option>
+								<option value="4">Sesi 4</option>
+								<option value="5">Sesi 5</option>
+							</select>
+						</div>
+						<div class="col-md mb-3">
+							<label class="opacity-5" for="formHapusTamuWanita-4">ID</label>
+							<input type="text" class="form-control" id="formHapusTamuWanita-4" name="ID">
+						</div>
+						<div class="col-md mb-3">
+							<label class="opacity-5" for="formHapusTamuWanita-5">Status</label>
+							<input type="text" class="form-control" id="formHapusTamuWanita-5" name="Status">
 						</div>
 					</div>
 					<button type="submit" class="btn btn-success btn-block py-2 px-3 mt-2 mb-4">
@@ -416,13 +459,13 @@
 				<div class="d-flex align-items-center justify-content-between">
 					<div class="d-flex align-items-center">
 						<h2 class="h3 lh-1 mb-0">Tamu Budi</h2>
-						<button type="button" class="btn btn-outline-primary btn-sm d-none d-md-inline-block lh-1 ml-3" aria-expanded="false" data-toggle="collapse" data-target="#addTamuPria" onclick="$(this).blur()">
+						<button type="button" class="btn btn-outline-primary btn-sm d-none d-md-inline-block lh-1 ml-3" aria-expanded="false" data-toggle="collapse" data-target="#addTamuPria" onclick="$(this).blur();generateID('#formTamuPria-4')">
 							Tambah
 						</button>
 					</div>
 					<div class="opacity-5"><span class="totalTamuPria">0</span> Tamu</div>
 				</div>
-				<button type="button" class="btn btn-outline-primary btn-block d-block d-md-none mt-4" aria-expanded="false" data-toggle="collapse" data-target="#addTamuPria" onclick="$(this).blur()">
+				<button type="button" class="btn btn-outline-primary btn-block d-block d-md-none mt-4" aria-expanded="false" data-toggle="collapse" data-target="#addTamuPria" onclick="$(this).blur();generateID('#formTamuPria-4')">
 					Tambah
 				</button>
 			</div>
@@ -445,7 +488,50 @@
 								<option value="2">Sesi 2</option>
 								<option value="3">Sesi 3</option>
 								<option value="4">Sesi 4</option>
+								<option value="5">Sesi 5</option>
 							</select>
+						</div>
+						<div class="col-md mb-3 sr-only">
+							<label class="opacity-5" for="formTamuPria-4">ID</label>
+							<input type="text" class="form-control" id="formTamuPria-4" name="ID">
+						</div>
+						<div class="col-md mb-3 sr-only">
+							<label class="opacity-5" for="formTamuPria-5">Status</label>
+							<input type="text" class="form-control" id="formTamuPria-5" name="Status">
+						</div>
+					</div>
+					<button type="submit" class="btn btn-success btn-block py-2 px-3 mt-2 mb-4">
+						Simpan
+					</button>
+				</form>
+				<form class="sr-only" spellcheck="false" autocomplete="off" name="formHapusTamuPria">
+					<div class="row">
+						<div class="col-md mb-3">
+							<label class="opacity-5" for="formHapusTamuPria-1">Nama</label>
+							<input type="text" class="form-control" id="formHapusTamuPria-1" required name="Nama">
+						</div>
+						<div class="col-md mb-3 px-md-0">
+							<label class="opacity-5" for="formHapusTamuPria-2">Alamat</label>
+							<input type="text" class="form-control" id="formHapusTamuPria-2" name="Alamat">
+						</div>
+						<div class="col-md mb-3">
+							<label class="opacity-5" for="formHapusTamuPria-3">Sesi</label>
+							<select class="form-control custom-select" id="formHapusTamuPria-3" required name="Sesi">
+								<option value="0" selected>Tanpa Sesi</option>
+								<option value="1">Sesi 1</option>
+								<option value="2">Sesi 2</option>
+								<option value="3">Sesi 3</option>
+								<option value="4">Sesi 4</option>
+								<option value="5">Sesi 5</option>
+							</select>
+						</div>
+						<div class="col-md mb-3">
+							<label class="opacity-5" for="formHapusTamuPria-4">ID</label>
+							<input type="text" class="form-control" id="formHapusTamuPria-4" name="ID">
+						</div>
+						<div class="col-md mb-3">
+							<label class="opacity-5" for="formHapusTamuPria-5">Status</label>
+							<input type="text" class="form-control" id="formHapusTamuPria-5" name="Status">
 						</div>
 					</div>
 					<button type="submit" class="btn btn-success btn-block py-2 px-3 mt-2 mb-4">
@@ -858,6 +944,33 @@
 	</div>
 </main>
 
+<aside>
+	<div class="modal fade modal-bottom" tabindex="-1" role="dialog" aria-hidden="true" id="dbRemove">
+		<div class="modal-dialog modal-dialog-centered p-md-3 m-0 my-md-0 mx-md-auto" role="document">
+			<div class="modal-content border-0 rounded-0 bg-transparent">
+				<div class="modal-body p-0">
+					<div class="bg-white rounded p-4 p-md-3">
+						<div class="mb-3 mb-md-0">
+							<p class="modal-title text-dark text-center pt-3 pb-3 pb-md-0">
+								Kamu yakin akan menghapusnya?
+							</p>
+							<div class="d-md-flex align-items-center justify-content-center">
+								<div class="my-3 mx-md-2">
+									<button type="button" class="btn btn-danger btn-block py-2 px-md-4" onclick="dbRemove(this)">Hapus</button>
+								</div>
+								<div class="my-3 mx-md-2">
+									<button type="button" class="btn btn-clear btn-block py-2 px-md-4 border" data-dismiss="modal">Batal</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="position-fixed right bottom mx-3" id="alert"></div>
+</aside>
+
 <slot>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -865,7 +978,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.id.min.js" integrity="sha512-zHDWtKP91CHnvBDpPpfLo9UsuMa02/WgXDYcnFp5DFs8lQvhCe2tx56h2l7SqKs/+yQCx4W++hZ/ABg8t3KH/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js" integrity="sha512-ux1VHIyaPxawuad8d1wr1i9l4mTwukRq5B3s8G3nEmdENnKF5wKfOV6MEUH0k/rNT4mFr/yL+ozoDiwhUQekTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="assets/js/admin.min.js"></script>
+	<script src="assets/js/admin.js"></script>
 
 	<!-- Analytics -->
 	<script>
