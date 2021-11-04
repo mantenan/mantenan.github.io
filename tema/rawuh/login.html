@@ -57,16 +57,51 @@
 	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="preload" as="style" href="assets/css/admin.min.css?v=1">
-	<link rel="preload" as="script" href="assets/js/login.min.js?v=1">
+	<link rel="preload" as="style" href="assets/css/admin.min.css">
+	<link rel="preload" as="script" href="assets/js/login.min.js">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="assets/css/admin.min.css?v=1">
+	<link rel="stylesheet" href="assets/css/admin.min.css">
 </head>
 
 <body style="background-image:none">
 
-<script>if(window.matchMedia("(prefers-color-scheme: dark)").matches){let e="#252b31";document.head.querySelector('[name="apple-mobile-web-app-status-bar"').content=e,document.head.querySelector('[name="msapplication-TileColor"').content=e,document.head.querySelector('[name="theme-color"').content=e,document.body.classList.add("dark")}</script>
+<aside>
+	<script>if(window.matchMedia("(prefers-color-scheme: dark)").matches){let e="#252b31";document.head.querySelector('[name="apple-mobile-web-app-status-bar"').content=e,document.head.querySelector('[name="msapplication-TileColor"').content=e,document.head.querySelector('[name="theme-color"').content=e,document.body.classList.add("dark")}</script>
+	<style>
+		body {
+			background-image: url(https://maumantenan.com/tema/sekar/assets/img/slide-1.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 100vh;
+		}
+		body:after {
+			content: '';
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			width: 100vw;
+			height: 100vh;
+			z-index: -1;
+			background-color: rgba(255,255,255,.9);
+		}
+		body > section {
+			height: 90vh;
+		}
+		.toggle-password-trigger {
+			top: 2px;
+		}
+		body.dark:after {
+			background-color: rgba(0,0,0,.85);
+		}
+		.dark center, .dark small {
+			color: var(--white);
+		}
+	</style>
+</aside>
 
 <section class="d-flex align-items-center justify-content-center" style="display:none!important">
 	<div class="px-2">
@@ -94,6 +129,9 @@
 				</div>
 				<button type="submit" class="btn btn-primary btn-block py-2 mt-4">Masuk</button>
 			</form>
+			<div class="text-center my-4">
+				Tidak bisa login? Silakan <a class="text-decoration-none" rel="noopener" target="_blank" href="https://wa.me/6287838610808">hubungi kami</a>.
+			</div>
 			<div class="text-center mt-4 pt-2">
 				<a class="text-decoration-none text-dark text-left d-inline-block" href="https://maumantenan.com">
 					<div class="d-flex align-items-center mx-auto">
@@ -109,45 +147,11 @@
 	</div>
 </section>
 
-<style>
-	body {
-		background-image: url(https://maumantenan.com/tema/sekar/assets/img/slide-1.jpg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 100vh;
-	}
-	body:after {
-		content: '';
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		width: 100vw;
-		height: 100vh;
-		z-index: -1;
-		background-color: rgba(255,255,255,.9);
-	}
-	body > section {
-		height: 90vh;
-	}
-	.toggle-password-trigger {
-		top: 2px;
-	}
-	body.dark:after {
-		background-color: rgba(0,0,0,.85);
-	}
-	.dark center, .dark small {
-		color: var(--white);
-	}
-</style>
-
 <slot>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="assets/js/login.min.js?v=1"></script>
+	<script src="assets/js/login.min.js"></script>
 
 	<!-- Analytics -->
 	<script>
