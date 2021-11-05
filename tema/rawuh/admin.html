@@ -62,13 +62,13 @@
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.id.min.js" integrity="sha512-zHDWtKP91CHnvBDpPpfLo9UsuMa02/WgXDYcnFp5DFs8lQvhCe2tx56h2l7SqKs/+yQCx4W++hZ/ABg8t3KH/Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" integrity="sha512-vZpXDvc3snY9J1W8GrnxqDr/+vP1nSTfk8apH1r0wQvOab6fkPhaeqAMlydW68MECAjRR05tu4SOJcwjZgPg5A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js" integrity="sha512-ux1VHIyaPxawuad8d1wr1i9l4mTwukRq5B3s8G3nEmdENnKF5wKfOV6MEUH0k/rNT4mFr/yL+ozoDiwhUQekTg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="preload" as="style" href="assets/css/admin.min.css?v=4">
-	<link rel="preload" as="script" href="assets/js/admin.min.js?v=6">
+	<link rel="preload" as="style" href="assets/css/admin.min.css">
+	<link rel="preload" as="script" href="assets/js/admin.min.js?v=7">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" integrity="sha512-vZpXDvc3snY9J1W8GrnxqDr/+vP1nSTfk8apH1r0wQvOab6fkPhaeqAMlydW68MECAjRR05tu4SOJcwjZgPg5A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="assets/css/admin.min.css?v=4">
+	<link rel="stylesheet" href="assets/css/admin.min.css">
 </head>
 
 <body>
@@ -815,127 +815,180 @@
 					</div>
 				</div>
 				<form class="pb-3 d-none" spellcheck="false" autocomplete="off" name="formUndangan">
-					<div class="row mb-n2">
-						<div class="col-md mb-2">
-							<div class="mb-3 pb-3">
-								<label class="opacity-5" for="formUndangan-1-1">Akad Nikah</label>
-								<input type="text" class="form-control shadow datepicker" id="formUndangan-1-1" required readonly name="Tanggal Akad Nikah">
-								<div class="sr-only">
-									<label class="opacity-5" for="formUndangan-1-2">Akad Nikah</label>
-									<input type="text" class="form-control shadow" id="formUndangan-1-2" required name="Jam Akad Nikah">
-								</div>
-								<div class="d-flex mt-3 get-timepicker">
-									<select class="form-control shadow custom-select w-fit-content ml-2 order-2 get-timepicker-3">
-										<option value="WIB">WIB</option>
-										<option value="WITA">WITA</option>
-										<option value="WIT">WIT</option>
-									</select>
-									<div class="position-relative">
-										<input type="text" class="form-control shadow timepicker get-timepicker-1" readonly required>
-									</div>
-									<span class="align-self-center mx-2">s.d.</span>
-									<div class="position-relative">
-										<input type="text" class="form-control shadow timepicker get-timepicker-2" readonly required>
-									</div>
-								</div>
+					<div class="row">
+						<div class="col-lg mb-3 pb-3">
+							<label class="opacity-5" for="formUndangan-1-1">Akad Nikah</label>
+							<input type="text" class="form-control shadow datepicker" id="formUndangan-1-1" required readonly name="Tanggal Akad">
+							<div class="sr-only">
+								<label class="opacity-5" for="formUndangan-1-2">Akad Nikah</label>
+								<input type="text" class="form-control shadow" id="formUndangan-1-2" required name="Jam Akad">
 							</div>
-							<div class="mb-3 pb-3">
-								<label class="opacity-5" for="formUndangan-2-1">Resepsi Pernikahan</label>
-								<input type="text" class="form-control shadow datepicker" id="formUndangan-2-1" required readonly name="Tanggal Resepsi Pernikahan">
-								<div class="sr-only">
-									<label class="opacity-5" for="formUndangan-2-2">Resepsi Pernikahan</label>
-									<input type="text" class="form-control shadow" id="formUndangan-2-2" required name="Jam Resepsi Pernikahan">
+							<div class="d-flex mt-3 get-timepicker">
+								<select class="form-control shadow custom-select w-fit-content ml-2 order-2 get-timepicker-3">
+									<option value="WIB">WIB</option>
+									<option value="WITA">WITA</option>
+									<option value="WIT">WIT</option>
+								</select>
+								<div class="position-relative w-100">
+									<input type="text" class="form-control shadow timepicker get-timepicker-1" readonly required>
 								</div>
-								<div class="d-flex mt-3 get-timepicker">
-									<select class="form-control shadow custom-select w-fit-content ml-2 order-2 get-timepicker-3">
-										<option value="WIB">WIB</option>
-										<option value="WITA">WITA</option>
-										<option value="WIT">WIT</option>
-									</select>
-									<div class="position-relative">
-										<input type="text" class="form-control shadow timepicker get-timepicker-1" readonly required>
-									</div>
-									<span class="align-self-center mx-2">s.d.</span>
-									<div class="position-relative">
-										<input type="text" class="form-control shadow timepicker get-timepicker-2" readonly required>
-									</div>
-								</div>
-							</div>
-							<div class="mb-3 pb-3">
-								<label class="opacity-5" for="formUndangan-3-1">Ngunduh Mantu</label>
-								<input type="text" class="form-control shadow datepicker" id="formUndangan-3-1" required readonly name="Tanggal Ngunduh Mantu">
-								<div class="sr-only">
-									<label class="opacity-5" for="formUndangan-3-2">Ngunduh Mantu</label>
-									<input type="text" class="form-control shadow" id="formUndangan-3-2" required name="Jam Ngunduh Mantu">
-								</div>
-								<div class="d-flex mt-3 get-timepicker">
-									<select class="form-control shadow custom-select w-fit-content ml-2 order-2 get-timepicker-3">
-										<option value="WIB">WIB</option>
-										<option value="WITA">WITA</option>
-										<option value="WIT">WIT</option>
-									</select>
-									<div class="position-relative">
-										<input type="text" class="form-control shadow timepicker get-timepicker-1" readonly required>
-									</div>
-									<span class="align-self-center mx-2">s.d.</span>
-									<div class="position-relative">
-										<input type="text" class="form-control shadow timepicker get-timepicker-2" readonly required>
-									</div>
+								<span class="align-self-center mx-2">s.d.</span>
+								<div class="position-relative w-100">
+									<input type="text" class="form-control shadow timepicker get-timepicker-2" readonly required>
 								</div>
 							</div>
 						</div>
-						<div class="col-md mb-2">
-							<label class="opacity-5" for="formUndangan-4-1">Sesi Tamu Undangan</label>
-							<label class="sr-only" for="formUndangan-4-2">Sesi Tamu Undangan</label>
-							<label class="sr-only" for="formUndangan-4-3">Sesi Tamu Undangan</label>
-							<label class="sr-only" for="formUndangan-4-4">Sesi Tamu Undangan</label>
-							<label class="sr-only" for="formUndangan-4-5">Sesi Tamu Undangan</label>
-							<table class="table table-borderless mt-n2">
+					</div>
+					<div class="row mb-n2">
+						<div class="col-lg mb-3">
+							<label class="opacity-5" for="formUndangan-2-1">Resepsi Pernikahan</label>
+							<input type="text" class="form-control shadow datepicker" id="formUndangan-2-1" required readonly name="Tanggal Acara 1">
+							<div class="sr-only">
+								<label class="opacity-5" for="formUndangan-2-2">Resepsi Pernikahan</label>
+								<input type="text" class="form-control shadow" id="formUndangan-2-2" required name="Jam Acara 1">
+							</div>
+							<div class="d-flex mt-3 get-timepicker">
+								<select class="form-control shadow custom-select w-fit-content ml-2 order-2 get-timepicker-3">
+									<option value="WIB">WIB</option>
+									<option value="WITA">WITA</option>
+									<option value="WIT">WIT</option>
+								</select>
+								<div class="position-relative w-100">
+									<input type="text" class="form-control shadow timepicker get-timepicker-1" readonly required>
+								</div>
+								<span class="align-self-center mx-2">s.d.</span>
+								<div class="position-relative w-100">
+									<input type="text" class="form-control shadow timepicker get-timepicker-2" readonly required>
+								</div>
+							</div>
+							<table class="table table-borderless mt-2 pt-1">
 								<tbody>
 									<tr>
 										<td class="px-0 py-2 valign-middle" width="60">
 											<span class="text-adaptive opacity-5">Sesi 1</span>
+											<label class="sr-only" for="formUndangan-2-s1">Sesi 1</label>
 										</td>
 										<td class="px-0 py-2">
 											<div class="position-relative">
-												<input type="text" class="form-control shadow timepicker" id="formUndangan-4-1" readonly required name="Sesi 1">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-2-s1" readonly required name="Acara 1 Sesi 1">
 											</div>
 										</td>
 									</tr>
 									<tr>
 										<td class="px-0 py-2 valign-middle" width="60">
 											<span class="text-adaptive opacity-5">Sesi 2</span>
+											<label class="sr-only" for="formUndangan-2-s2">Sesi 2</label>
 										</td>
 										<td class="px-0 py-2">
 											<div class="position-relative">
-												<input type="text" class="form-control shadow timepicker" id="formUndangan-4-2" readonly required name="Sesi 2">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-2-s2" readonly required name="Acara 1 Sesi 2">
 										</td>
 									</tr>
 									<tr>
 										<td class="px-0 py-2 valign-middle" width="60">
 											<span class="text-adaptive opacity-5">Sesi 3</span>
+											<label class="sr-only" for="formUndangan-2-s3">Sesi 3</label>
 										</td>
 										<td class="px-0 py-2">
 											<div class="position-relative">
-												<input type="text" class="form-control shadow timepicker" id="formUndangan-4-3" readonly required name="Sesi 3">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-2-s3" readonly required name="Acara 1 Sesi 3">
 										</td>
 									</tr>
 									<tr>
 										<td class="px-0 py-2 valign-middle" width="60">
 											<span class="text-adaptive opacity-5">Sesi 4</span>
+											<label class="sr-only" for="formUndangan-2-s4">Sesi 4</label>
 										</td>
 										<td class="px-0 py-2">
 											<div class="position-relative">
-												<input type="text" class="form-control shadow timepicker" id="formUndangan-4-4" readonly required name="Sesi 4">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-2-s4" readonly required name="Acara 1 Sesi 4">
 										</td>
 									</tr>
 									<tr>
 										<td class="px-0 py-2 valign-middle" width="60">
 											<span class="text-adaptive opacity-5">Sesi 5</span>
+											<label class="sr-only" for="formUndangan-2-s5">Sesi 5</label>
 										</td>
 										<td class="px-0 py-2">
 											<div class="position-relative">
-												<input type="text" class="form-control shadow timepicker" id="formUndangan-4-5" readonly required name="Sesi 5">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-2-s5" readonly required name="Acara 1 Sesi 5">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-lg mb-3">
+							<label class="opacity-5" for="formUndangan-3-1">Ngunduh Mantu</label>
+							<input type="text" class="form-control shadow datepicker" id="formUndangan-3-1" required readonly name="Tanggal Acara 2">
+							<div class="sr-only">
+								<label class="opacity-5" for="formUndangan-3-2">Ngunduh Mantu</label>
+								<input type="text" class="form-control shadow" id="formUndangan-3-2" required name="Jam Acara 2">
+							</div>
+							<div class="d-flex mt-3 get-timepicker">
+								<select class="form-control shadow custom-select w-fit-content ml-2 order-2 get-timepicker-3">
+									<option value="WIB">WIB</option>
+									<option value="WITA">WITA</option>
+									<option value="WIT">WIT</option>
+								</select>
+								<div class="position-relative w-100">
+									<input type="text" class="form-control shadow timepicker get-timepicker-1" readonly required>
+								</div>
+								<span class="align-self-center mx-2">s.d.</span>
+								<div class="position-relative w-100">
+									<input type="text" class="form-control shadow timepicker get-timepicker-2" readonly required>
+								</div>
+							</div>
+							<table class="table table-borderless mt-2 pt-1">
+								<tbody>
+									<tr>
+										<td class="px-0 py-2 valign-middle" width="60">
+											<span class="text-adaptive opacity-5">Sesi 1</span>
+											<label class="sr-only" for="formUndangan-3-s1">Sesi 1</label>
+										</td>
+										<td class="px-0 py-2">
+											<div class="position-relative">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-3-s1" readonly required name="Acara 1 Sesi 1">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="px-0 py-2 valign-middle" width="60">
+											<span class="text-adaptive opacity-5">Sesi 2</span>
+											<label class="sr-only" for="formUndangan-3-s2">Sesi 2</label>
+										</td>
+										<td class="px-0 py-2">
+											<div class="position-relative">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-3-s2" readonly required name="Acara 1 Sesi 2">
+										</td>
+									</tr>
+									<tr>
+										<td class="px-0 py-2 valign-middle" width="60">
+											<span class="text-adaptive opacity-5">Sesi 3</span>
+											<label class="sr-only" for="formUndangan-3-s3">Sesi 3</label>
+										</td>
+										<td class="px-0 py-2">
+											<div class="position-relative">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-3-s3" readonly required name="Acara 1 Sesi 3">
+										</td>
+									</tr>
+									<tr>
+										<td class="px-0 py-2 valign-middle" width="60">
+											<span class="text-adaptive opacity-5">Sesi 4</span>
+											<label class="sr-only" for="formUndangan-3-s4">Sesi 4</label>
+										</td>
+										<td class="px-0 py-2">
+											<div class="position-relative">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-3-s4" readonly required name="Acara 1 Sesi 4">
+										</td>
+									</tr>
+									<tr>
+										<td class="px-0 py-2 valign-middle" width="60">
+											<span class="text-adaptive opacity-5">Sesi 5</span>
+											<label class="sr-only" for="formUndangan-3-s5">Sesi 5</label>
+										</td>
+										<td class="px-0 py-2">
+											<div class="position-relative">
+												<input type="text" class="form-control shadow timepicker" id="formUndangan-3-s5" readonly required name="Acara 1 Sesi 5">
 										</td>
 									</tr>
 								</tbody>
@@ -1032,7 +1085,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.id.min.js" integrity="sha512-zHDWtKP91CHnvBDpPpfLo9UsuMa02/WgXDYcnFp5DFs8lQvhCe2tx56h2l7SqKs/+yQCx4W++hZ/ABg8t3KH/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js" integrity="sha512-ux1VHIyaPxawuad8d1wr1i9l4mTwukRq5B3s8G3nEmdENnKF5wKfOV6MEUH0k/rNT4mFr/yL+ozoDiwhUQekTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="assets/js/admin.min.js?v=6"></script>
+	<script src="assets/js/admin.min.js?v=7"></script>
 
 	<!-- Analytics -->
 	<script>
