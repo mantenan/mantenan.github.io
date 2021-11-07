@@ -62,13 +62,13 @@
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.id.min.js" integrity="sha512-zHDWtKP91CHnvBDpPpfLo9UsuMa02/WgXDYcnFp5DFs8lQvhCe2tx56h2l7SqKs/+yQCx4W++hZ/ABg8t3KH/Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" integrity="sha512-vZpXDvc3snY9J1W8GrnxqDr/+vP1nSTfk8apH1r0wQvOab6fkPhaeqAMlydW68MECAjRR05tu4SOJcwjZgPg5A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js" integrity="sha512-ux1VHIyaPxawuad8d1wr1i9l4mTwukRq5B3s8G3nEmdENnKF5wKfOV6MEUH0k/rNT4mFr/yL+ozoDiwhUQekTg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="preload" as="style" href="assets/css/admin.min.css?v=1.1">
-	<link rel="preload" as="script" href="assets/js/admin.min.js?v=1.2">
+	<link rel="preload" as="style" href="assets/css/admin.min.css">
+	<link rel="preload" as="script" href="assets/js/backend.min.js">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" integrity="sha512-vZpXDvc3snY9J1W8GrnxqDr/+vP1nSTfk8apH1r0wQvOab6fkPhaeqAMlydW68MECAjRR05tu4SOJcwjZgPg5A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="assets/css/admin.min.css?v=1.1">
+	<link rel="stylesheet" href="assets/css/admin.min.css">
 </head>
 
 <body>
@@ -1217,8 +1217,32 @@
 						<span class="sr-only">Loading...</span>
 					</div>
 				</div>
-				<form class="pb-3 d-none" spellcheck="false" autocomplete="off" name="formLogin">
+				<form class="d-none" spellcheck="false" autocomplete="off" name="formLoginEditable">
 					<div class="row mb-3">
+						<div class="col-md mb-2">
+							<label class="opacity-5" for="formLoginEditable-1-1">Nama Pengguna</label>
+							<input type="text" class="form-control shadow" id="formLoginEditable-1-1" required name="Nama Pengguna Wanita">
+						</div>
+						<div class="col-md mb-2 position-relative toggle-password">
+							<span class="toggle-password-trigger hide mt-3 mr-3"></span>
+							<label class="opacity-5" for="formLoginEditable-1-2">Kata Sandi</label>
+							<input type="password" class="form-control shadow" id="formLoginEditable-1-2" required name="Kata Sandi Wanita">
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-md mb-2">
+							<label class="opacity-5" for="formLoginEditable-2-1">Nama Pengguna</label>
+							<input type="text" class="form-control shadow" id="formLoginEditable-2-1" required name="Nama Pengguna Pria">
+						</div>
+						<div class="col-md mb-2 position-relative toggle-password">
+							<span class="toggle-password-trigger hide mt-3 mr-3"></span>
+							<label class="opacity-5" for="formLoginEditable-2-2">Kata Sandi</label>
+							<input type="password" class="form-control shadow" id="formLoginEditable-2-2" required name="Kata Sandi Pria">
+						</div>
+					</div>
+				</form>
+				<form class="pb-3 d-none" spellcheck="false" autocomplete="off" name="formLogin">
+					<div class="row mb-3 sr-only">
 						<div class="col-md mb-2">
 							<label class="opacity-5" for="formLogin-1-1">Nama Pengguna</label>
 							<input type="text" class="form-control shadow" id="formLogin-1-1" required name="Nama Pengguna Wanita">
@@ -1229,7 +1253,7 @@
 							<input type="password" class="form-control shadow" id="formLogin-1-2" required name="Kata Sandi Wanita">
 						</div>
 					</div>
-					<div class="row mb-3">
+					<div class="row mb-3 sr-only">
 						<div class="col-md mb-2">
 							<label class="opacity-5" for="formLogin-2-1">Nama Pengguna</label>
 							<input type="text" class="form-control shadow" id="formLogin-2-1" required name="Nama Pengguna Pria">
@@ -1283,7 +1307,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.id.min.js" integrity="sha512-zHDWtKP91CHnvBDpPpfLo9UsuMa02/WgXDYcnFp5DFs8lQvhCe2tx56h2l7SqKs/+yQCx4W++hZ/ABg8t3KH/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js" integrity="sha512-ux1VHIyaPxawuad8d1wr1i9l4mTwukRq5B3s8G3nEmdENnKF5wKfOV6MEUH0k/rNT4mFr/yL+ozoDiwhUQekTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="assets/js/admin.min.js?v=1.2"></script>
+	<script src="assets/js/backend.min.js"></script>
 
 	<!-- Analytics -->
 	<script>
