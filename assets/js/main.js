@@ -254,7 +254,6 @@
 			picker.next().find('a').click(function(e) {
 				let selected = e.target.innerHTML
 				picker.val(selected)
-				getTimepicker(picker)
 				timepicker.next().remove()
 			})
 		})
