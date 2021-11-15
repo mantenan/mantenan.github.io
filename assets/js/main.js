@@ -235,26 +235,35 @@
 
 // Timepicker
 	let timepicker = $('.timepicker')
+		pickerSource = '.ui-timepicker-standard'
+		pickerParent = '.d-flex'
+		pickerPopup = pickerParent + ' ' + pickerSource
+
 	if ( timepicker.length > 0 ) {
 		timepicker.timepicker({
 			timeFormat: 'HH:mm',
 			startHour: 6,
 			interval: 30
 		})
+
 		timepicker.focus(function() {
 			let picker = $(this)
 				parent = $(this).closest('div')
-			$('.ui-timepicker-standard').clone().appendTo(parent)
+			$(pickerPopup).remove()
+			$('body > ' + pickerSource).clone().appendTo(parent)
 			picker.next().find('a').click(function(e) {
 				let selected = e.target.innerHTML
 				picker.val(selected)
+				getTimepicker(picker)
 				timepicker.next().remove()
 			})
-		//}).blur(function() {
-		//	let picker = $(this)
-		//	setTimeout(function() {
-		//		picker.next().remove()
-		//	},200)
+		})
+
+		$(document).click(function(e) {
+			let target = $(e.target)
+			if ( !target.closest(pickerParent).length ) {
+				$(pickerPopup).remove()
+			}
 		})
 	}
 
