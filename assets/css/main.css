@@ -520,6 +520,9 @@
 	.lh-1 {
 		line-height: 1;
 	}
+	.lh-2 {
+		line-height: 1.2;
+	}
 
 	.ls-1 {
 		letter-spacing: 1px;
