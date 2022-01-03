@@ -461,6 +461,9 @@
 							<div class="carousel-item">
 								<div class="carousel-image" style="background-image:url(assets/img/slide-3.jpg)"></div>
 							</div>
+							<div class="carousel-item">
+								<div class="carousel-image" style="background-image:url(assets/img/slide-4.jpg)"></div>
+							</div>
 						</div>
 					</div>
 					<div class="position-absolute bottom left index-1 w-100 gradient-bg-bottom"></div>
@@ -516,7 +519,7 @@
 							<small>Tunggu kabar bahagia dari kami ya...</small>
 						</div>
 						<div class="position-relative mt-3 pt-1">
-							<img class="object-fit-cover rounded-circle" loading="lazy" width="150" height="150" src="assets/img/slide-2.jpg">
+							<img class="object-fit-cover rounded-circle" loading="lazy" width="150" height="150" src="assets/img/slide-4.jpg">
 							<div class="display-title text-center text-theme-1-hover py-2 mt-3">
 								<span class="fs-1 font-title text-theme-2-base lh-1 d-block w-100">
 									<span class="nick-person-1 text-lowercase"></span>
@@ -542,7 +545,7 @@
 			</div>
 		</div>
 		<div class="position-fixed top left index-n1 w-100 h-100 img-backdrop">
-			<img class="w-100 h-100 object-fit-cover" loading="lazy" width="1280" height="720" src="assets/img/slide-2.jpg">
+			<img class="w-100 h-100 object-fit-cover" loading="lazy" width="1280" height="720" src="assets/img/slide-3.jpg">
 		</div>
 	</div>
 	<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false" id="thanks">
@@ -554,7 +557,7 @@
 							Terima kasih atas doa restu dan kehadirannya pada acara pernikahan kami
 						</div>
 						<div class="position-relative mt-3 pt-1">
-							<img class="object-fit-cover rounded-circle" loading="lazy" width="150" height="150" src="assets/img/slide-2.jpg">
+							<img class="object-fit-cover rounded-circle" loading="lazy" width="150" height="150" src="assets/img/slide-4.jpg">
 							<div class="display-title text-center text-theme-1-hover py-2 mt-3">
 								<span class="fs-1 font-title text-theme-2-base lh-1 d-block w-100">
 									<span class="nick-person-1 text-lowercase"></span>
@@ -580,7 +583,7 @@
 			</div>
 		</div>
 		<div class="position-fixed top left index-n1 w-100 h-100 img-backdrop">
-			<img class="w-100 h-100 object-fit-cover" loading="lazy" width="1280" height="720" src="assets/img/slide-2.jpg">
+			<img class="w-100 h-100 object-fit-cover" loading="lazy" width="1280" height="720" src="assets/img/slide-3.jpg">
 		</div>
 	</div>
 	<div class="modal fade bg-theme-1-base overflow-hidden" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false" id="open">
@@ -814,6 +817,27 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js" integrity="sha512-+Cdr05lT+aP+PTW4988XKLMjoAf0o5P2nRDIHooD/NItysfsyCPPhZhK/C6s7ZpaVoMRtsvRNJLtYOTDANC5UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js" integrity="sha512-JGPwqm5Xp7v4gS86gleX0fDmJRX/abPSkIpAJ0vp4ZTC9uJ6MZdbGRX66yJ9rNZDe30EL8wRtDW42xCnnt9JXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="assets/js/main.min.js?v=2"></script>
+	
+	<style>
+		#welcome center img,
+		#thanks center img {
+			object-position: center 15%;
+		}
+		@media (max-width: 767px) {
+			#foto .carousel-inner .carousel-item:nth-child(3) div {
+				background-position-x: 58%;
+			}
+		}
+		@media (min-width: 768px) {
+			#foto .carousel-inner .carousel-item:nth-child(1) div {
+				background-position-y: 40%;
+			}
+			#foto .carousel-inner .carousel-item:nth-child(2) div,
+			#foto .carousel-inner .carousel-item:nth-child(4) div {
+				background-position-y: 25%;
+			}
+		}
+	</style>
 
 	<!-- Analytics -->
 	<script>
