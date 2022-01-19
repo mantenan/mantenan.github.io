@@ -61,8 +61,9 @@
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.plugin.min.js" integrity="sha512-MPI2h+3IVJR8ElOGFV02uH6W1augIqS9y/YgTZH7xNb7QwLVPjFL0eRxbDpE6ZAk/hQbHm6zWXMh/oMR4/3sDA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js" integrity="sha512-+Cdr05lT+aP+PTW4988XKLMjoAf0o5P2nRDIHooD/NItysfsyCPPhZhK/C6s7ZpaVoMRtsvRNJLtYOTDANC5UA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js" integrity="sha512-JGPwqm5Xp7v4gS86gleX0fDmJRX/abPSkIpAJ0vp4ZTC9uJ6MZdbGRX66yJ9rNZDe30EL8wRtDW42xCnnt9JXA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="style" href="assets/css/main.min.css?v=1">
-	<link rel="preload" as="script" href="assets/js/main.min.js">
+	<link rel="preload" as="script" href="assets/js/main.min.js?v=1">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -368,6 +369,60 @@
 			</div>
 		</div>
 	</section>
+	
+	<section id="ucapan">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="my-4 text-center aos-ucapan" data-aos="fade-up">
+						<h2 class="font-theme color-theme">Ucapan</h2>
+						<div class="row mt-3">
+							<div class="col-12 col-md-8 col-lg-6 mx-auto" data-aos="fade-up" data-aos-anchor=".aos-ucapan" data-aos-delay="300">
+								Berikan ucapan kepada mempelai untuk hari bahagianya
+							</div>
+						</div>
+						<div class="d-block d-md-inline-block px-0 px-md-1 pt-3" data-aos="zoom-in" data-aos-anchor=".aos-ucapan" data-aos-delay="600">
+							<button class="btn btn-outline-primary btn-block px-3" type="button" data-toggle="collapse" data-target="#beriUcapan" aria-controls="beriUcapan" aria-expanded="false">
+								Berikan Ucapan
+							</button>
+						</div>
+						<div class="collapse form-gsheet" id="beriUcapan">
+							<div class="card mt-2">
+								<div class="card-body">
+									<div class="position-absolute left right top bottom d-flex align-items-center justify-content-center m-1 loading">
+										<div class="loader"></div>
+									</div>
+									<form spellcheck="false" autocomplete="off" class="text-left" name="beriUcapan">
+										<div class="form-group">
+											<label class="opacity-5" for="beriUcapan-1">Nama Pengirim</label>
+											<input type="text" class="form-control" id="beriUcapan-1" required name="Nama">
+										</div>
+										<div class="form-group">
+											<label class="opacity-5" for="beriUcapan-2">Pesan Ucapan</label>
+											<textarea rows="3" class="form-control" id="beriUcapan-2" required name="Ucapan"></textarea>
+										</div>
+										<button type="submit" class="btn btn-success btn-block px-3">
+											Kirim Ucapan
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid overflow-auto mb-4 pb-3 px-0">
+			<div class="d-flex align-items-center w-fit-content mx-auto px-3 pb-3" data-aos="fade-up" data-aos-anchor=".aos-ucapan" data-aos-delay="900">
+				<div class="d-flex w-fit-content" id="dataUcapan"></div>
+				<div class="bg-theme-1 text-white p-2 rounded-circle cursor-pointer show-more d-none">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+						<path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<section id="kisah">
 		<div class="container">
@@ -650,7 +705,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.plugin.min.js" integrity="sha512-MPI2h+3IVJR8ElOGFV02uH6W1augIqS9y/YgTZH7xNb7QwLVPjFL0eRxbDpE6ZAk/hQbHm6zWXMh/oMR4/3sDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js" integrity="sha512-+Cdr05lT+aP+PTW4988XKLMjoAf0o5P2nRDIHooD/NItysfsyCPPhZhK/C6s7ZpaVoMRtsvRNJLtYOTDANC5UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js" integrity="sha512-JGPwqm5Xp7v4gS86gleX0fDmJRX/abPSkIpAJ0vp4ZTC9uJ6MZdbGRX66yJ9rNZDe30EL8wRtDW42xCnnt9JXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="assets/js/main.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="assets/js/main.min.js?v=1"></script>
 
 	<!-- Analytics -->
 	<script>
