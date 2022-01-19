@@ -707,6 +707,20 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js" integrity="sha512-JGPwqm5Xp7v4gS86gleX0fDmJRX/abPSkIpAJ0vp4ZTC9uJ6MZdbGRX66yJ9rNZDe30EL8wRtDW42xCnnt9JXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="assets/js/main.min.js?v=1"></script>
+	
+	<!-- Custom -->
+	<script>
+		if ( window.location.href.indexOf('#') > -1 ) {
+			$('<style>[data-aos-anchor=".aos-bingkisan"][data-aos-delay="600"]{display:none!important}</style>').appendTo($('slot'))
+			$('.guest-address,.guest-name').each(function() {
+				let selector = $(this)
+					text = selector.text()
+				if ( text.indexOf('#') > -1 ) {
+					selector.text(text.slice(0,-1))
+				}
+			})
+		}
+	</script>
 
 	<!-- Analytics -->
 	<script>
