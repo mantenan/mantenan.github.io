@@ -59,7 +59,7 @@
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js" integrity="sha512-+Cdr05lT+aP+PTW4988XKLMjoAf0o5P2nRDIHooD/NItysfsyCPPhZhK/C6s7ZpaVoMRtsvRNJLtYOTDANC5UA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js" integrity="sha512-JGPwqm5Xp7v4gS86gleX0fDmJRX/abPSkIpAJ0vp4ZTC9uJ6MZdbGRX66yJ9rNZDe30EL8wRtDW42xCnnt9JXA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="style" href="assets/css/main.min.css">
-	<link rel="preload" as="script" href="assets/js/main.min.js?v=1">
+	<link rel="preload" as="script" href="assets/js/main.min.js">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="assets/css/main.min.css">
@@ -414,12 +414,50 @@
 						</div>
 						<div class="d-none d-md-block pb-2">
 							<div class="d-block d-md-inline-block px-0 px-md-1 pt-3">
+								<button class="btn btn-outline-secondary btn-block rounded-pill shadow px-4 py-2" type="button" data-toggle="collapse" data-target="#bingkisan-1" aria-controls="bingkisan-1" aria-expanded="false" onclick="$('#bingkisan-2').collapse('hide');$('html, body').animate({scrollTop: $(window).scrollTop() + 200});">
+									Kirim untuk <b class="nick-person-1"></b>
+								</button>
+							</div>
+							<div class="d-block d-md-inline-block px-0 px-md-1 pt-3">
 								<button class="btn btn-outline-secondary btn-block rounded-pill shadow px-4 py-2" type="button" data-toggle="collapse" data-target="#bingkisan-2" aria-controls="bingkisan-2" aria-expanded="false" onclick="$('#bingkisan-1').collapse('hide');$('html, body').animate({scrollTop: $(window).scrollTop() + 200});">
 									Kirim untuk <b class="nick-person-2"></b>
 								</button>
 							</div>
 						</div>
 						<div>
+							<div class="d-block d-md-none px-0 px-md-1 pt-3">
+								<button class="btn btn-outline-secondary btn-block rounded-pill shadow px-3 py-2" type="button" data-toggle="collapse" data-target="#bingkisan-1" aria-controls="bingkisan-1" aria-expanded="false" onclick="$('#bingkisan-2').collapse('hide');$('html, body').animate({scrollTop: $(window).scrollTop() + 200});">
+									Kirim untuk <b class="nick-person-1"></b>
+								</button>
+							</div>
+							<div class="collapse" id="bingkisan-1">
+								<div class="card border-0 shadow rounded-3 pb-2 mt-2">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-12 col-md mx-auto">
+												<img class="mt-2" loading="lazy" width="125" height="33.25" src="../assets/img/payment-mandiri.svg">
+												<p class="mt-2 mb-0 font-weight-bold fs-4 gift1-person-1" id="bingkisan-1-amplop"></p>
+												<p class="mb-0">Kode Bank <b>008</b></p>
+												<p class="mb-3">a.n. <span class="name-person-1"></span></p>
+												<button class="btn btn-secondary btn-block rounded-pill px-3 py-2" type="button" onclick="copyToClipboard('#bingkisan-1-amplop','btn-secondary')">
+													<div class="btn-caption d-flex align-items-center justify-content-center">
+														<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="mr-1">
+															<path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/>
+														</svg>
+														Salin Rekening
+													</div>
+													<div class="btn-caption d-none align-items-center justify-content-center">
+														<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="mr-1">
+															<path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/>
+														</svg>
+														Berhasil Disalin
+													</div>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div class="d-block d-md-none px-0 px-md-1 pt-3">
 								<button class="btn btn-outline-secondary btn-block rounded-pill shadow px-3 py-2" type="button" data-toggle="collapse" data-target="#bingkisan-2" aria-controls="bingkisan-2" aria-expanded="false" onclick="$('#bingkisan-1').collapse('hide');$('html, body').animate({scrollTop: $(window).scrollTop() + 200});">
 									Kirim untuk <b class="nick-person-2"></b>
@@ -836,7 +874,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.plugin.min.js" integrity="sha512-MPI2h+3IVJR8ElOGFV02uH6W1augIqS9y/YgTZH7xNb7QwLVPjFL0eRxbDpE6ZAk/hQbHm6zWXMh/oMR4/3sDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js" integrity="sha512-+Cdr05lT+aP+PTW4988XKLMjoAf0o5P2nRDIHooD/NItysfsyCPPhZhK/C6s7ZpaVoMRtsvRNJLtYOTDANC5UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js" integrity="sha512-JGPwqm5Xp7v4gS86gleX0fDmJRX/abPSkIpAJ0vp4ZTC9uJ6MZdbGRX66yJ9rNZDe30EL8wRtDW42xCnnt9JXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="assets/js/main.min.js?v=1"></script>
+	<script src="assets/js/main.min.js"></script>
 
 	<!-- Analytics -->
 	<script>
