@@ -126,7 +126,8 @@
 				<img class="obj-2" src="tema1/object-6.png">
 				<img class="obj-3" src="tema1/object-6.png">
 			</div>
-			<div class="position-relative py-5" style="z-index: 1;">
+			<div class="position-relative" style="z-index: 1;">
+				<br><br>
 				<h2 class="text-white text-center mb-4">Yuk Ucapin Lebaran</h2>
 				<form spellcheck="false" autocomplete="off" class="text-left p-4 shadow" name="beriUcapan">
 					<div class="status">
@@ -197,6 +198,7 @@
 				<div id="copied" class="alert alert-success shadow py-3 mt-4" role="alert" style="display: none;">
 					Berhasil disalin!
 				</div>
+				<br><br>
 			</div>
 		</div>
 	</section>
@@ -204,6 +206,19 @@
 	<section id="data">
 		<div id="dataUcapan"></div>
 	</section>
+
+	<script>
+		let audio = document.createElement('audio')
+			audio.src = 'audio.mp3'
+			audio.volume = 1
+			audio.autoPlay = false
+			audio.preLoad = true
+			audio.controls = true
+			audio.loop = true
+		document.body.addEventListener('click', () => {
+			if ( audio.paused ) audio.play()
+		})
+	</script>
 </main>
 
 <slot>
