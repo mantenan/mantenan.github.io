@@ -25,7 +25,8 @@ body {
 	opacity: 0;
 
 }
-[data-theme="2"] .obj-top .obj-1 {
+[data-theme="2"] .obj-top .obj-1,
+[data-theme="2"] .brand {
 	position: relative;
 	opacity: 1;
 }
