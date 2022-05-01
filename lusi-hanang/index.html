@@ -15,7 +15,7 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Lusi & Hanang">
 	<meta property="og:description" content="Mohon doa restu untuk pernikahan kami agar menjadi keluarga yang sakinah mawaddah warohmah 🙏🏻">
-	<meta property="og:image" content="assets/img/ogp.jpeg">
+	<meta property="og:image" content="assets/img/ogp.jpg">
 	<meta property="og:locale" content="id_ID">
 	<meta property="og:site_name" content="Maumantenan">
 	<meta property="og:url" content="https://maumantenan.com/lusi-hanang/">
@@ -23,7 +23,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Lusi & Hanang">
 	<meta name="twitter:description" content="Mohon doa restu untuk pernikahan kami agar menjadi keluarga yang sakinah mawaddah warohmah 🙏🏻">
-	<meta name="twitter:image" content="assets/img/ogp.jpeg">
+	<meta name="twitter:image" content="assets/img/ogp.jpg">
 	<meta name="twitter:site" content="Maumantenan">
 	<!-- Canonical -->
 	<link rel="canonical" href="https://maumantenan.com/lusi-hanang/">
@@ -329,11 +329,11 @@
 									Kirim untuk <b class="nick-person-1"></b>
 								</button>
 							</div>
-							<!-- <div class="d-block d-md-inline-block px-0 px-md-1 pt-3" data-aos="zoom-in" data-aos-anchor=".aos-bingkisan" data-aos-delay="900">
+							<div class="d-block d-md-inline-block px-0 px-md-1 pt-3" data-aos="zoom-in" data-aos-anchor=".aos-bingkisan" data-aos-delay="900">
 								<button class="btn btn-outline-primary btn-block px-3" type="button" data-toggle="collapse" data-target="#bingkisan-2" aria-controls="bingkisan-2" aria-expanded="false" onclick="$('#bingkisan-1').collapse('hide')">
-									Kirim untuk <b>Budi</b>
+									Konfirmasi <b>Pengiriman</b>
 								</button>
-							</div> -->
+							</div>
 						</div>
 						<div>
 							<div class="d-block d-md-none px-0 px-md-1 pt-3" data-aos="zoom-in" data-aos-anchor=".aos-bingkisan" data-aos-delay="600">
@@ -389,56 +389,90 @@
 									</div>
 								</div>
 							</div>
-							<!-- <div class="d-block d-md-none px-0 px-md-1 pt-3" data-aos="zoom-in" data-aos-anchor=".aos-bingkisan" data-aos-delay="900">
+							<div class="d-block d-md-none px-0 px-md-1 pt-3" data-aos="zoom-in" data-aos-anchor=".aos-bingkisan" data-aos-delay="900">
 								<button class="btn btn-outline-primary btn-block px-3" type="button" data-toggle="collapse" data-target="#bingkisan-2" aria-controls="bingkisan-2" aria-expanded="false" onclick="$('#bingkisan-1').collapse('hide')">
-									Kirim untuk <b>Budi</b>
+									Konfirmasi <b>Pengiriman</b>
 								</button>
 							</div>
 							<div class="collapse" id="bingkisan-2">
 								<div class="card mt-2">
 									<div class="card-body">
-										<div class="row">
-											<div class="col-12 col-md mx-auto">
-												<p class="font-theme fs-2 mt-n3 mb-2">Angpau</p>
-												<img loading="lazy" width="125" height="33.25" src="../assets/img/payment-mandiri.svg">
-												<p class="mt-2 mb-3" id="bingkisan-2-angpau">137 00 1631 7XXX</p>
-												<button class="btn btn-primary btn-block lh-1 py-2" type="button" onclick="copyToClipboard('#bingkisan-2-angpau')">
-													<div class="btn-caption d-flex align-items-center justify-content-center">
-														<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="mr-1">
-															<path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/>
-														</svg>
-														Salin Rekening
-													</div>
-													<div class="btn-caption d-none align-items-center justify-content-center">
-														<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="mr-1">
-															<path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/>
-														</svg>
-														Berhasil Disalin
-													</div>
-												</button>
+										<form spellcheck="false" autocomplete="off" class="text-left" name="beriBingkisan">
+											<div class="position-absolute left right top bottom d-flex align-items-center justify-content-center text-center m-1 status">
+												<div class="loading spinner-border color-theme" role="status">
+													<span class="sr-only">Loading...</span>
+												</div>
+												<div class="success d-none" role="status">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="70" height="70">
+														<path fill="var(--success)" opacity=".7" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
+														<path fill="var(--white)" d="M10.5795 15.5801C10.3795 15.5801 10.1895 15.5001 10.0495 15.3601L7.21945 12.5301C6.92945 12.2401 6.92945 11.7601 7.21945 11.4701C7.50945 11.1801 7.98945 11.1801 8.27945 11.4701L10.5795 13.7701L15.7195 8.6301C16.0095 8.3401 16.4895 8.3401 16.7795 8.6301C17.0695 8.9201 17.0695 9.4001 16.7795 9.6901L11.1095 15.3601C10.9695 15.5001 10.7795 15.5801 10.5795 15.5801Z"/>
+													</svg>
+													<div class="mt-1">Berhasil terkirim!</div>
+												</div>
+												<div class="failed d-none" role="status">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="70" height="70">
+														<path fill="var(--danger)" opacity=".7" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
+														<path fill="var(--white)" d="M13.0594 12.0001L15.3594 9.70011C15.6494 9.41011 15.6494 8.93011 15.3594 8.64011C15.0694 8.35011 14.5894 8.35011 14.2994 8.64011L11.9994 10.9401L9.69937 8.64011C9.40937 8.35011 8.92937 8.35011 8.63938 8.64011C8.34938 8.93011 8.34938 9.41011 8.63938 9.70011L10.9394 12.0001L8.63938 14.3001C8.34938 14.5901 8.34938 15.0701 8.63938 15.3601C8.78938 15.5101 8.97937 15.5801 9.16937 15.5801C9.35937 15.5801 9.54937 15.5101 9.69937 15.3601L11.9994 13.0601L14.2994 15.3601C14.4494 15.5101 14.6394 15.5801 14.8294 15.5801C15.0194 15.5801 15.2094 15.5101 15.3594 15.3601C15.6494 15.0701 15.6494 14.5901 15.3594 14.3001L13.0594 12.0001Z"/>
+													</svg>
+													<div class="mt-1">Gagal terkirim!</div>
+												</div>
 											</div>
-											<div class="col-12 col-md mx-auto mt-5 mt-md-0">
-												<p class="font-theme fs-2 mt-n3 mb-2">Kado</p>
-												<p id="bingkisan-2-alamat"><b>Budi Heriyanto</b><br>Perum Nusantara Indah No. 46 Kramas Tembalang Semarang</p>
-												<button class="btn btn-primary btn-block lh-1 py-2" type="button" onclick="copyToClipboard('#bingkisan-2-alamat')">
-													<div class="btn-caption d-flex align-items-center justify-content-center">
-														<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="mr-1">
-															<path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/>
-														</svg>
-														Salin Alamat
-													</div>
-													<div class="btn-caption d-none align-items-center justify-content-center">
-														<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" class="mr-1">
-															<path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/>
-														</svg>
-														Berhasil Disalin
-													</div>
-												</button>
+											<div class="form-group sr-only">
+												<label class="opacity-5" for="beriBingkisan-1">Diundang</label>
+												<input type="text" class="form-control" id="beriBingkisan-1" required name="Diundang" readonly>
 											</div>
-										</div>
+											<div class="form-group sr-only">
+												<label class="opacity-5" for="beriBingkisan-2">Nama Tamu</label>
+												<input type="text" class="form-control" id="beriBingkisan-2" required name="Nama" readonly>
+											</div>
+											<div class="form-group sr-only">
+												<label class="opacity-5" for="beriBingkisan-3">Alamat Tamu</label>
+												<input type="text" class="form-control" id="beriBingkisan-3" required name="Alamat" readonly>
+											</div>
+											<div class="form-group sr-only">
+												<label class="opacity-5" for="beriBingkisan-4">Dikirimkan Melalui</label>
+												<input type="text" class="form-control" id="beriBingkisan-4" required name="Melalui" readonly value="Lusi - Amplop">
+											</div>
+											<div class="form-group sr-only">
+												<label class="opacity-5" for="beriBingkisan-4a">Bingkisan Untuk</label>
+												<select class="form-control custom-select" id="beriBingkisan-4a" required>
+													<option value="" selected disabled>Silakan Pilih</option>
+													<option value="Lusi">Lusi</option>
+													<option value="Hanang">Hanang</option>
+												</select>
+											</div>
+											<div class="form-group sr-only">
+												<label class="opacity-5" for="beriBingkisan-4b">Berupa</label>
+												<select class="form-control custom-select" id="beriBingkisan-4b" required>
+													<option value="" selected disabled>Silakan Pilih</option>
+													<option value="Amplop">Amplop</option>
+													<option value="Kado">Kado</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<label class="opacity-5" for="beriBingkisan-5">Pengirim</label>
+												<input type="text" class="form-control" id="beriBingkisan-5" required name="Pengirim">
+											</div>
+											<div class="form-group">
+												<label class="opacity-5" for="beriBingkisan-6">Nominal</label>
+												<div class="input-group">
+													<div class="input-group-prepend">
+														<span class="input-group-text">Rp</span>
+													</div>
+													<input type="number" pattern="\d*" class="form-control" id="beriBingkisan-6" name="Nominal">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="opacity-5" for="beriBingkisan-7">Tanggal</label>
+												<input type="date" class="form-control" id="beriBingkisan-7" required name="Pada">
+											</div>
+											<button type="submit" class="btn btn-success btn-block rounded-2 py-2 px-3 mt-4">
+												Konfirmasi Sekarang
+											</button>
+										</form>
 									</div>
 								</div>
-							</div> -->
+							</div>
 						</div>
 					</div>
 				</div>
@@ -528,6 +562,12 @@
 					</div>
 					<div class="carousel-item">
 						<div class="carousel-image" style="background-image:url(assets/img/slide-3.jpg)"></div>
+					</div>
+					<div class="carousel-item">
+						<div class="carousel-image" style="background-image:url(assets/img/slide-4.jpg)"></div>
+					</div>
+					<div class="carousel-item">
+						<div class="carousel-image" style="background-image:url(assets/img/slide-5.jpg)"></div>
 					</div>
 				</div>
 			</div>
@@ -632,7 +672,7 @@
 						<div class="carousel slide carousel-fade" data-ride="carousel" data-pause="false" data-interval="5000">
 							<div class="carousel-inner mb-1">
 								<div class="carousel-item active">
-									<div class="carousel-image mb-1" style="background-image:url(assets/img/slide-1.jpg)"></div>
+									<div class="carousel-image mb-1" style="background-image:url(assets/img/slide-4.jpg)"></div>
 								</div>
 							</div>
 						</div>
@@ -691,7 +731,7 @@
 			</div>
 		</div>
 		<div class="position-fixed top left index-n1 w-100 h-100 img-backdrop">
-			<img class="w-100 h-100 object-fit-cover" loading="lazy" width="1280" height="720" src="assets/img/slide-3.jpg">
+			<img class="w-100 h-100 object-fit-cover" loading="lazy" width="1280" height="720" src="assets/img/slide-2.jpg">
 		</div>
 	</div>
 	<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false" id="thanks">
@@ -725,7 +765,7 @@
 			</div>
 		</div>
 		<div class="position-fixed top left index-n1 w-100 h-100 img-backdrop">
-			<img class="w-100 h-100 object-fit-cover" loading="lazy" width="1280" height="720" src="assets/img/slide-1.jpg">
+			<img class="w-100 h-100 object-fit-cover" loading="lazy" width="1280" height="720" src="assets/img/slide-5.jpg">
 		</div>
 	</div>
 </aside>
