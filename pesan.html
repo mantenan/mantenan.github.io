@@ -119,6 +119,7 @@
 									<option value="Dalem">Dalem</option>
 									<option value="Panggih">Panggih</option>
 									<option value="Sekar">Sekar</option>
+									<option value="Rawuh">Rawuh</option>
 									<option value="Anteng">Anteng</option>
 									<option value="Agem">Agem</option>
 									<option value="Amba">Amba</option>
@@ -363,22 +364,142 @@
 						<section>
 							<div class="py-2 px-3 mb-3 rounded-2 fs-7 bg-theme-1 text-white title-checkbox">
 								<div class="custom-control custom-checkbox d-flex align-items-center">
+									<input type="checkbox" class="custom-control-input" id="addons" checked disabled>
+									<label class="custom-control-label" for="addons">Fitur Undangan</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 mb-2">
+									<label class="opacity-5 fs-7 mb-1" for="order-detail-F0">Undangan dengan Foto</label>
+									<input type="text" name="order-detail-F0" id="order-detail-F0" class="form-control sr-only">
+								</div>
+								<div class="col-12 mb-3">
+									<div class="d-inline-block custom-control custom-radio lh-2 mr-4">
+										<input type="radio" class="custom-control-input" name="order-detail-F0" id="order-detail-F0-1" checked>
+										<label class="custom-control-label cursor-pointer" for="order-detail-F0-1">Ya</label>
+									</div>
+									<div class="d-inline-block custom-control custom-radio lh-2 mr-4">
+										<input type="radio" class="custom-control-input" name="order-detail-F0" id="order-detail-F0-2">
+										<label class="custom-control-label cursor-pointer" for="order-detail-F0-2">Tidak</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12 mb-2 pr-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-detail-F1">Fitur Tema</label>
+									<input type="text" name="order-detail-F1" id="order-detail-F1" class="form-control sr-only" required>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F1-1" checked>
+										<label class="custom-control-label cursor-pointer" for="order-detail-F1-1">Hitung Mundur</label>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F1-2" checked>
+										<label class="custom-control-label cursor-pointer" for="order-detail-F1-2">Google Maps dan QR Code</label>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F1-3" checked>
+										<label class="custom-control-label cursor-pointer" for="order-detail-F1-3">Galeri Foto</label>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F1-4">
+										<label class="custom-control-label cursor-pointer" for="order-detail-F1-4">Live Streaming</label>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F1-5">
+										<label class="custom-control-label cursor-pointer" for="order-detail-F1-5">Perjalanan Cinta</label>
+									</div>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-12 mb-2 pr-sm-1">
+									<label class="opacity-5 fs-7 mb-1" for="order-detail-F2">Fitur Premium</label>
+									<input type="text" name="order-detail-F2" id="order-detail-F2" class="form-control sr-only" required>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F2-1">
+										<label class="custom-control-label cursor-pointer" for="order-detail-F2-1">Ucapan via WA</label>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F2-2">
+										<label class="custom-control-label cursor-pointer" for="order-detail-F2-2">Ucapan di Undangan</label>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F2-3">
+										<label class="custom-control-label cursor-pointer" for="order-detail-F2-3">Bingkisan</label>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F2-4">
+										<label class="custom-control-label cursor-pointer" for="order-detail-F2-4">Kehadiran Tamu</label>
+									</div>
+								</div>
+								<div class="col-sm-6 col-lg-4 mb-3 pr-sm-1">
+									<div class="custom-control custom-checkbox lh-2">
+										<input type="checkbox" class="custom-control-input" id="order-detail-F2-5">
+										<label class="custom-control-label cursor-pointer" for="order-detail-F2-5">Video Teaser</label>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="py-2 px-3 mb-3 rounded-2 fs-7 bg-theme-1 text-white title-checkbox">
+								<div class="custom-control custom-checkbox d-flex align-items-center">
 									<input type="checkbox" class="custom-control-input" id="publish" checked disabled>
 									<label class="custom-control-label" for="publish">Publikasi</label>
 								</div>
 							</div>
 							<div class="row mb-3">
 								<div class="col-12 mb-3">
-									<label class="opacity-5 fs-7 mb-1" for="order-detail-F1" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Tanggal Publikasi Undangan<span class="text-danger px-1">*</span></label>
+									<label class="opacity-5 fs-7 mb-1" for="order-detail-G1" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Tanggal Publikasi Undangan<span class="text-danger px-1">*</span></label>
 									<div class="d-flex">
 										<div class="position-relative w-100">
-											<input type="text" name="order-detail-F1" id="order-detail-F1" class="form-control datepicker-range" readonly required>
+											<input type="text" name="order-detail-G1" id="order-detail-G1" class="form-control datepicker-range" readonly required>
 										</div>
 										<span class="align-self-center mx-1">s.d.</span>
 										<div class="position-relative w-100">
-											<input type="text" name="order-detail-F1-end" id="order-detail-F1-end" class="form-control" required disabled>
+											<input type="text" name="order-detail-G1-end" id="order-detail-G1-end" class="form-control" required disabled>
 										</div>
 									</div>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="py-2 px-3 mb-3 rounded-2 fs-7 bg-theme-1 text-white title-checkbox">
+								<div class="custom-control custom-checkbox d-flex align-items-center">
+									<input type="checkbox" class="custom-control-input" id="total" checked disabled>
+									<label class="custom-control-label" for="total">Total</label>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-md pr-md-1 mb-3">
+									<label class="opacity-5 fs-7 mb-1" for="order-detail-Z1">Tema</label>
+									<input type="text" name="order-detail-Z1" id="order-detail-Z1" class="form-control" required disabled value="Rp 0">
+								</div>
+								<div class="col-md px-md-1 mb-3">
+									<label class="opacity-5 fs-7 mb-1" for="order-detail-Z2">Fitur Premium</label>
+									<input type="text" name="order-detail-Z2" id="order-detail-Z2" class="form-control" required disabled value="Rp 0">
+								</div>
+								<div class="col-md pl-md-1 mb-3">
+									<label class="opacity-5 fs-7 mb-1" for="order-detail-Z">Total Tagihan</label>
+									<input type="text" name="order-detail-Z" id="order-detail-Z" class="form-control" required disabled value="Rp 0">
 								</div>
 							</div>
 						</section>
@@ -506,10 +627,10 @@
 	<!-- Order -->
 	<script>
 		const phone = '6287838610808'
-			id = '#order'
-			account = id + '-account-'
+			account = '#order-account-'
+			order = '#order-detail-'
 
-		// Theme list
+		// Price
 			const themeList = [
 				{
 					'name': 'Enggal',
@@ -525,6 +646,10 @@
 				},
 				{
 					'name': 'Sekar',
+					'price': 'Rp 250.000',
+				},
+				{
+					'name': 'Rawuh',
 					'price': 'Rp 350.000',
 				},
 				{
@@ -541,43 +666,71 @@
 				},
 			]
 
+			const featureList = [
+				{
+					'name': 'Ucapan via WA',
+					'price': 'Rp 10.000',
+				},
+				{
+					'name': 'Ucapan di Undangan',
+					'price': 'Rp 30.000',
+				},
+				{
+					'name': 'Bingkisan',
+					'price': 'Rp 15.000',
+				},
+				{
+					'name': 'Kehadiran Tamu',
+					'price': 'Rp 20.000',
+				},
+				{
+					'name': 'Video Teaser',
+					'price': 'Rp 10.000',
+				},
+			]
+
 		// Get theme name from url
 			let url = window.location.href
 				theme = url.split('?')
 			if ( url.indexOf('?') > -1 ) {
 				let themeName = theme[1]
-					themeprice = themeList.filter(function(e) { return e.name === themeName })
-					themeprice = themeprice[0].price
+					themePrice = themeList.filter(function(e) { return e.name === themeName })
+					themePrice = themePrice[0].price
 				$(account + '3').val(themeName).change()
-				$(account + '4').attr('value',themeprice)
+				$(account + '4').attr('value',themePrice)
 
-				// Hide publish date
-				let parent = $('#publish').closest('section')
-					input = parent.find('.datepicker-range')
+				// Hide section if static theme chosen
+				let section = $('#publish,#addons,#total').closest('section')
+					datepicker = section.find('.datepicker-range')
 				if ( themeName === 'Anteng' || themeName === 'Agem' || themeName === 'Amba' ) {
-					input.attr('disabled',true)
-					parent.slideUp()
+					section.slideUp()
+					checkbox.attr('disabled',true)
+					datepicker.attr('disabled',true)
 				}
 			}
 
 		// Theme selection
 			$(account + '3').change(function() {
 				let themeName = $(this).find('option:selected').attr('value')
-					themeprice = themeList.filter(function(e) { return e.name === themeName })
-					themeprice = themeprice[0].price
-				$(account + '4').attr('value',themeprice)
+					themePrice = themeList.filter(function(e) { return e.name === themeName })
+					themePrice = themePrice[0].price
+				$(account + '4').attr('value',themePrice)
 
-				// Hide publish date
-				let parent = $('#publish').closest('section')
-					input = parent.find('.datepicker-range')
+				// Hide section if static theme chosen
+				let section = $('#publish,#addons,#total').closest('section')
+					checkbox = section.find('[type="checkbox"]')
+					datepicker = section.find('.datepicker-range')
 				if ( themeName === 'Anteng' || themeName === 'Agem' || themeName === 'Amba' ) {
-					parent.slideUp()
+					section.slideUp()
 					setTimeout(function() {
-						input.attr('disabled',true)
+						checkbox.attr('disabled',true)
+						datepicker.attr('disabled',true)
+						$(order + 'Z').val($(account + '4').val())
 					},500)
 				} else {
-					parent.slideDown()
-					input.attr('disabled',false)
+					section.slideDown()
+					checkbox.attr('disabled',false)
+					datepicker.attr('disabled',false)
 				}
 			})
 
@@ -606,6 +759,69 @@
 				})
 			}
 
+		// Feature
+			function fiturInit(selector) {
+				let element = $(selector).closest('.row').find('[type="checkbox"]:checked')
+				if ( element.length > 0 ) {
+					element.each(function() {
+						let val = ', ' + $(this).next().text()
+						$(selector).val($(selector).val() + val)
+					})
+					$(selector).val($(selector).val().substring(2))
+				} else {
+					$(selector).val('-')
+				}
+			}
+			fiturInit(order + 'F1')
+			fiturInit(order + 'F2')
+
+			function fiturChange(selector) {
+				$(selector).closest('.row').find('[type="checkbox"]').on('input',function() {
+					$(selector).val('')
+					fiturInit(selector)
+				})
+			}
+			fiturChange(order + 'F1')
+			fiturChange(order + 'F2')
+
+			function fiturWithPhoto(selector,discount) {
+				let element = '[name="' + selector.substring(1) + '"]'
+					themeBase = $(account + '4').val()
+					themeBasePrice = $(order + 'Z1')
+					themeBaseCalc = parseInt(themeBasePrice.val().substring(3)) - discount
+
+				if ( $(element + ':checked').next().html() == 'Tidak' ) {
+					if ( themeBase ) themeBasePrice.val('Rp ' + themeBaseCalc + '.000')
+				}
+
+				$(element).change(function() {
+					let galeri = $(order + 'F1-3')
+
+					if ( $(element + ':checked').next().html() == 'Ya' ) {
+						$(selector).val('')
+						galeri.closest('.col-sm-6').removeClass('d-none')
+						galeri.attr('disabled',false)
+						galeri.click()
+						if ( themeBase ) {
+							themeBasePrice.val(themeBase)
+						} else {
+							themeBasePrice.val('Rp 0')
+						}
+					} else {
+						$(selector).val('Undangan tanpa foto' + '%0A%0A')
+						galeri.closest('.col-sm-6').addClass('d-none')
+						galeri.click()
+						galeri.attr('disabled',true)
+						themeBasePrice.val('Rp ' + themeBaseCalc + '.000')
+					}
+
+					totalPrice()
+				})
+
+				$(selector).val('')
+			}
+			fiturWithPhoto(order + 'F0',10)
+
 		// Agreement
 			$('#orderCheck').click(function() {
 				let checkbox = $(this)
@@ -613,11 +829,55 @@
 				button.prop('disabled', !button.prop('disabled'))
 			})
 
+		// Total
+			let total1 = account + '3'
+				total2 = '[id*="' + order.substring(1) + 'F2-"]'
+
+			$(total1).change(function() {
+				$(order + 'Z1').val($(account + '4').val())
+				fiturWithPhoto(order + 'F0',10)
+			})
+
+			$(total2).change(function() {
+				let featureName = $(this).next().text()
+					featurePrice = featureList.filter(function(e) { return e.name === featureName })
+					featurePrice = featurePrice[0].price
+					feature = $(order + 'Z2')
+					featureExisting = parseInt(feature.val().substring(3))
+					featureAddon = parseInt(featurePrice.substring(3))
+				if ( $(this).is(':checked') ) {
+					let featureCalc = featureExisting + featureAddon
+					feature.val('Rp ' + featureCalc + '.000')
+				} else {
+					let featureCalc = featureExisting - featureAddon
+					if ( featureCalc !== 0 ) {
+						feature.val('Rp ' + featureCalc + '.000')
+					} else {
+						feature.val('Rp 0')
+					}
+				}
+			})
+
+			function totalPrice() {
+				let price1 = parseInt($(order + 'Z1').val().substring(3))
+					price2 = parseInt($(order + 'Z2').val().substring(3))
+					priceCalc = price1 + price2
+					total = $(order + 'Z')
+				if ( priceCalc !== 0 ) {
+					total.val('Rp ' + priceCalc + '.000')
+				} else {
+					total.val('Rp 0')
+				}
+			}
+			$(total1 + ',' + total2).change(function() {
+				totalPrice()
+			})
+
 		// Date
 			const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
 				  monthInterval = 3
 
-			$(id + '-detail-F1').on('change',function() {
+			$(order + 'G1').on('change',function() {
 				let input = $(this)
 					current = input.val()
 				if (current) {
@@ -628,7 +888,7 @@
 					let set = new Date(current)
 					set.setMonth(set.getMonth() + Number(monthInterval))
 					set.setDate(set.getDate() - Number(1))
-					$(id + '-detail-F1-end').val([set.getDate(), monthNames[set.getMonth()], set.getFullYear()].join(' '))
+					$(order + 'G1-end').val([set.getDate(), monthNames[set.getMonth()], set.getFullYear()].join(' '))
 				}
 			})
 
@@ -644,15 +904,15 @@
 					labelB3 = 'Lokasi : '
 					labelB4 = 'Google Maps : '
 
-					labelF1 = 'Tanggal publikasi : '
+					labelG1 = 'Tanggal publikasi : '
 
-					section1 = id + '-account-'
-					section2 = id + '-detail-'
+					section1 = account
+					section2 = order
 
 					O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
 					O2 = 'Pemesan : *' + $(section1 + '1').val() + '* (' + $(section1 + '2').val() + ')%0A'
 					O3 = 'Tema : ' + $(section1 + '3 option:selected').val() + '%0A'
-					O4 = 'Harga : ' + $(section1 + '4').val() + '%0A%0A'
+					O4 = 'Harga : ' + $(section2 + 'Z').val() + '%0A%0A'
 					O5 = 'Berikut adalah rincian undangannya :' + '%0A'
 					detail0 = O1 + O2 + O3 + O4 + O5
 
@@ -693,14 +953,19 @@
 					E5 = labelB4 + $(section2 + 'E5').val() + '%0A'
 					detail5 = E1 + E2 + E3 + E4 + E5
 
-					F1 = labelF1 + $(section2 + 'F1').val() + ' s.d. ' + $(section2 + 'F1-end').val() + '%0A'
-					detail6 = F1
+					F0 = $(section2 + 'F0').val()
+					F1 = '*Fitur Tema*' + '%0A' + $(section2 + 'F1').val() + '%0A%0A'
+					F2 = '*Fitur Premium*' + '%0A' + $(section2 + 'F2').val() + '%0A'
+					detail6 = F0 + F1 + F2
 
-					detail7 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan.%0A%0ATerima kasih.'
+					G1 = labelG1 + $(section2 + 'G1').val() + ' s.d. ' + $(section2 + 'G1-end').val() + '%0A'
+					detail7 = G1
+
+					detail8 = 'Saya sudah membaca dan setuju terhadap Syarat %26 Ketentuan dari Maumantenan.%0A%0ATerima kasih.'
 			}
 
 		// Submit
-			$(id).submit(function(e) {
+			$('#order').submit(function(e) {
 				e.preventDefault()
 
 				orderNow()
@@ -710,7 +975,7 @@
 						cs = ':checked'
 						ce = ':not(:checked)'
 						ds = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A'
-						de = detail6 + '%0A' + detail7
+						de = detail6 + '%0A' + detail7 + '%0A' + detail8
 						wa = 'https://wa.me/' + phone + '?text='
 
 					if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(ce) ) {
@@ -753,7 +1018,7 @@
 						cs = ':checked'
 						ce = ':not(:checked)'
 						ds = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A'
-						de = detail7
+						de = detail8
 						wa = 'https://wa.me/' + phone + '?text='
 
 					if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(ce) ) {
@@ -806,7 +1071,7 @@
 						cs = ':checked'
 						ce = ':not(:checked)'
 						ds = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A'
-						de = detail6 + '%0A' + detail7
+						de = detail6 + '%0A' + detail7 + '%0A' + detail8
 						textarea = document.querySelector('#orderDecoded-detail')
 
 					if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(ce) ) {
@@ -849,7 +1114,7 @@
 						cs = ':checked'
 						ce = ':not(:checked)'
 						ds = detail0 + '%0A' + detail1 + '%0A' + detail2 + '%0A'
-						de = detail7
+						de = detail8
 						textarea = document.querySelector('#orderDecoded-detail')
 
 					if ( $(ev + '1').is(cs) && $(ev + '2').is(ce) && $(ev + '3').is(ce) ) {
