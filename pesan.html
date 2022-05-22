@@ -698,6 +698,8 @@
 					themePrice = themePrice[0].price
 				$(account + '3').val(themeName).change()
 				$(account + '4').attr('value',themePrice)
+				totalPrice1()
+				totalPrice()
 
 				// Hide section if static theme chosen
 				let section = $('#publish,#addons,#total').closest('section')
@@ -833,12 +835,11 @@
 			let total1 = account + '3'
 				total2 = '[id*="' + order.substring(1) + 'F2-"]'
 
-			$(total1).change(function() {
+			function totalPrice1() {
 				$(order + 'Z1').val($(account + '4').val())
 				fiturWithPhoto(order + 'F0',10)
-			})
-
-			$(total2).change(function() {
+			}
+			function totalPrice2() {
 				let featureName = $(this).next().text()
 					featurePrice = featureList.filter(function(e) { return e.name === featureName })
 					featurePrice = featurePrice[0].price
@@ -856,8 +857,7 @@
 						feature.val('Rp 0')
 					}
 				}
-			})
-
+			}
 			function totalPrice() {
 				let price1 = parseInt($(order + 'Z1').val().substring(3))
 					price2 = parseInt($(order + 'Z2').val().substring(3))
@@ -869,6 +869,13 @@
 					total.val('Rp 0')
 				}
 			}
+
+			$(total1).change(function() {
+				totalPrice1()
+			})
+			$(total2).change(function() {
+				totalPrice2()
+			})
 			$(total1 + ',' + total2).change(function() {
 				totalPrice()
 			})
