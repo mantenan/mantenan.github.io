@@ -703,6 +703,7 @@
 
 				// Hide section if static theme chosen
 				let section = $('#publish,#addons,#total').closest('section')
+					checkbox = section.find('[type="checkbox"]')
 					datepicker = section.find('.datepicker-range')
 				if ( themeName === 'Anteng' || themeName === 'Agem' || themeName === 'Amba' ) {
 					section.slideUp()
