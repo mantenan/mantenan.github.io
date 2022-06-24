@@ -103,17 +103,23 @@
 						</h6>
 
 						<div class="row">
-							<div class="col-sm-6 pr-sm-1 mb-3">
+							<div class="col-sm pr-sm-1 mb-3">
 								<label class="opacity-5 fs-7 mb-1" for="order-account-1" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nama Pemesan<span class="text-danger px-1">*</span></label>
 								<input type="text" name="order-account-1" id="order-account-1" class="form-control" required>
 							</div>
-							<div class="col-sm-6 pl-sm-1 mb-3">
+							<div class="col-sm pl-sm-1 mb-3">
 								<label class="opacity-5 fs-7 mb-1" for="order-account-2" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Email Pemesan<span class="text-danger px-1">*</span></label>
 								<input type="text" name="order-account-2" id="order-account-2" class="form-control" required>
 							</div>
+							<div class="col-sm pl-sm-2 mb-3 ml-n3 d-none d-md-block">
+								<label class="opacity-5 fs-7 mb-1" for="order-account-3" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Nomor WhatsApp<span class="text-danger px-1">*</span></label>
+								<input type="text" name="order-account-3" id="order-account-3" class="form-control" required>
+							</div>
+						</div>
+						<div class="row">
 							<div class="col-sm-6 pr-sm-1 mb-3">
 								<label class="opacity-5 fs-7 mb-1" for="order-account-4" data-toggle="tooltip" data-placement="right" title="Wajib Diisi">Tema yang Dipilih<span class="text-danger px-1">*</span></label>
-								<select class="form-control custom-select" name="order-account-3" id="order-account-3" required>
+								<select class="form-control custom-select" name="order-account-4" id="order-account-4" required>
 									<option value="" selected disabled>Pilih tema</option>
 									<option value="Enggal">Enggal</option>
 									<option value="Dalem">Dalem</option>
@@ -127,7 +133,7 @@
 							</div>
 							<div class="col-sm-6 pl-sm-1 mb-3">
 								<label class="opacity-5 fs-7 mb-1" for="order-account-5">Harga</label>
-								<input type="text" name="order-account-4" id="order-account-4" class="form-control" disabled>
+								<input type="text" name="order-account-5" id="order-account-5" class="form-control" disabled>
 							</div>
 						</div>
 
@@ -696,8 +702,8 @@
 				let themeName = theme[1]
 					themePrice = themeList.filter(function(e) { return e.name === themeName })
 					themePrice = themePrice[0].price
-				$(account + '3').val(themeName).change()
-				$(account + '4').attr('value',themePrice)
+				$(account + '4').val(themeName).change()
+				$(account + '5').attr('value',themePrice)
 				totalPrice1()
 				totalPrice()
 
@@ -713,11 +719,11 @@
 			}
 
 		// Theme selection
-			$(account + '3').change(function() {
+			$(account + '4').change(function() {
 				let themeName = $(this).find('option:selected').attr('value')
 					themePrice = themeList.filter(function(e) { return e.name === themeName })
 					themePrice = themePrice[0].price
-				$(account + '4').attr('value',themePrice)
+				$(account + '5').attr('value',themePrice)
 
 				// Hide section if static theme chosen
 				let section = $('#publish,#addons,#total').closest('section')
@@ -728,7 +734,7 @@
 					setTimeout(function() {
 						checkbox.attr('disabled',true)
 						datepicker.attr('disabled',true)
-						$(order + 'Z').val($(account + '4').val())
+						$(order + 'Z').val($(account + '5').val())
 					},500)
 				} else {
 					section.slideDown()
@@ -736,6 +742,17 @@
 					datepicker.attr('disabled',false)
 				}
 			})
+
+		// Whatsapp
+			function disableWA() {
+				if ( document.body.clientWidth < 768 ) {
+					$(account + '3').attr('disabled','disabled').val('')
+				} else {
+					$(account + '3').removeAttr('disabled')
+				}
+			}
+			disableWA()
+			$(window).resize(disableWA)
 
 		// Event
 			let event = document.querySelectorAll('.event')
@@ -789,7 +806,7 @@
 
 			function fiturWithPhoto(selector,discount) {
 				let element = '[name="' + selector.substring(1) + '"]'
-					themeBase = $(account + '4').val()
+					themeBase = $(account + '5').val()
 					themeBasePrice = $(order + 'Z1')
 					themeBaseCalc = parseInt(themeBasePrice.val().substring(3)) - discount
 
@@ -833,11 +850,11 @@
 			})
 
 		// Total
-			let total1 = account + '3'
+			let total1 = account + '4'
 				total2 = '[id*="' + order.substring(1) + 'F2-"]'
 
 			function totalPrice1() {
-				$(order + 'Z1').val($(account + '4').val())
+				$(order + 'Z1').val($(account + '5').val())
 				fiturWithPhoto(order + 'F0',10)
 			}
 			$(total1).change(function() {
@@ -915,9 +932,17 @@
 					section1 = account
 					section2 = order
 
-					O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
-					O2 = 'Pemesan : *' + $(section1 + '1').val() + '* (' + $(section1 + '2').val() + ')%0A'
-					O3 = 'Tema : ' + $(section1 + '3 option:selected').val() + '%0A'
+				if ( $(section1 + '2').val() && $(section1 + '3').val() ) {
+					var cp = ' &middot; ' + $(section1 + '3').val()
+				} else if ( !$(section1 + '2').val() && $(section1 + '3').val() ) {
+					var cp = $(section1 + '3').val()
+				} else {
+					var cp = ''
+				}
+
+				let O1 = '%5B' + 'ORDER' + '%5D' + '%0A%0A'
+					O2 = 'Pemesan : *' + $(section1 + '1').val() + '* (' + $(section1 + '2').val() + cp + ')%0A'
+					O3 = 'Tema : ' + $(section1 + '4 option:selected').val() + '%0A'
 					O4 = 'Harga : ' + $(section2 + 'Z').val() + '%0A%0A'
 					O5 = 'Berikut adalah rincian undangannya :' + '%0A'
 					detail0 = O1 + O2 + O3 + O4 + O5
