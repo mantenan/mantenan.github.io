@@ -52,11 +52,65 @@
 	<meta name="msapplication-TileColor" content="#fff">
 	<meta name="theme-color" content="#fff">
 	<!-- Preload -->
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="style" href="assets/css/main.css">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<style>
+		body {
+			padding-top: 0;
+			background: none;
+		}
+
+		body, .btn, .form-control {
+			font-size: 1rem;
+		}
+		.btn {
+			padding: .5rem 1rem;
+			width: 100%;
+		}
+		.form-control {
+			height: auto;
+			padding: .75rem;
+		}
+
+		.form-check {
+			padding-left: 0;
+		}
+		.form-check-input {
+			display: none;
+		}
+		.form-check-label {
+			padding: 1rem;
+		}
+		.form-check:not(.col) .form-check-label {
+			width: 100%;
+			border-radius: .3rem;
+		}
+		.form-check-input:checked + .form-check-label {
+			color: var(--white);
+			background: var(--success);
+		}
+		.form-check.col .form-check-label {
+			width: 100%;
+			font-size: calc(3rem + 3vw);
+			border-radius: 1rem;
+		}
+		@media (min-width: 768px) {
+			.form-check.col .form-check-label {
+				font-size: calc(5rem + 3vw);
+			}
+		}
+
+		textarea {
+			resize: none;
+			min-height: 146px;
+			overflow: hidden;
+		}
+	</style>
 </head>
 
 <body>
@@ -64,14 +118,14 @@
 <main>
 	<h1 class="sr-only">Survei Pelanggan Maumantenan</h1>
 
-	<section class="my-5 px-2">
+	<section class="my-5 py-3 px-2">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
 					<center>
-						<img class="d-block mx-auto mb-3" loading="lazy" width="75" height="75" src="assets/img/maumantenan-1.svg" alt="Maumantenan">
+						<img class="d-block mx-auto" loading="lazy" width="75" height="75" src="assets/img/maumantenan-1.svg" alt="Maumantenan">
 					</center>
-					<h2 class="h2 text-black text-center font-theme-1 mb-4">Survei Pelanggan</h2>
+					<h2 class="h2 text-black text-center font-theme-1 my-4">Survei Pelanggan</h2>
 					<ul class="nav nav-pills d-none" role="tablist">
 						<li class="nav-item">
 							<a class="nav-link active" id="pills-0-tab" data-toggle="pill" href="#pills-0" role="tab" aria-controls="pills-0" aria-selected="true">0</a>
@@ -106,9 +160,10 @@
 							</div>
 						</div>
 						<div class="tab-pane fade" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
-							<p class="fs-5 text-black font-weight-bold mb-4">
-								Menurut kamu pelayanan (respon admin, respon chat, penjelasan penggunaan) kami bagaimana?
-							</p>
+							<div class="mb-3">
+								<h3 class="fs-4 text-black font-weight-bold mb-1">Maumantenan ngasih pelayanan yang gimana?</h3>
+								<div class="small">Respon chat, penjelasan produk, tutorial penggunaan</div>
+							</div>
 							<div class="form-group row no-gutters justify-content-center">
 								<div class="form-check col">
 									<input class="form-check-input" type="radio" name="survei-1" id="survei-1-a" value="Buruk">
@@ -119,7 +174,7 @@
 								<div class="form-check col">
 									<input class="form-check-input" type="radio" name="survei-1" id="survei-1-b" value="Biasa">
 									<label class="form-check-label" for="survei-1-b">
-										🙄
+										😐
 									</label>
 								</div>
 								<div class="form-check col">
@@ -131,7 +186,7 @@
 							</div>
 							<div class="row mt-4">
 								<div class="col-3">
-									<button type="button" class="btn btn-clear px-0 text-left" onclick="back(this)">Kembali</button>
+									<button type="button" class="btn btn-clear px-0 text-left opacity-5" onclick="back(this)">Kembali</button>
 								</div>
 								<div class="col-3"></div>
 								<div class="col">
@@ -140,9 +195,9 @@
 							</div>
 						</div>
 						<div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
-							<p class="fs-5 text-black font-weight-bold mb-4">
-								Menurut kamu penilaian terhadap produk kami, apakah sesuai dengan kamu?
-							</p>
+							<div class="mb-3">
+								<h3 class="fs-4 text-black font-weight-bold mb-1">Produk Maumantenan sesuai denganmu kah?</h3>
+							</div>
 							<div class="form-group row no-gutters justify-content-center">
 								<div class="form-check col">
 									<input class="form-check-input" type="radio" name="survei-2" id="survei-2-a" value="Buruk">
@@ -153,7 +208,7 @@
 								<div class="form-check col">
 									<input class="form-check-input" type="radio" name="survei-2" id="survei-2-b" value="Biasa">
 									<label class="form-check-label" for="survei-2-b">
-										🙄
+										😐
 									</label>
 								</div>
 								<div class="form-check col">
@@ -165,7 +220,7 @@
 							</div>
 							<div class="row mt-4">
 								<div class="col-3">
-									<button type="button" class="btn btn-clear px-0 text-left" onclick="back(this)">Kembali</button>
+									<button type="button" class="btn btn-clear px-0 text-left opacity-5" onclick="back(this)">Kembali</button>
 								</div>
 								<div class="col-3"></div>
 								<div class="col">
@@ -174,24 +229,24 @@
 							</div>
 						</div>
 						<div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
-							<p class="fs-5 text-black font-weight-bold mb-4">
-								Jika temen kamu ada yang menanyakan, apakah kamu bersedia merekomendasikan maumantenan ke teman kamu?
-							</p>
+							<div class="mb-3">
+								<h3 class="fs-4 text-black font-weight-bold mb-1">Kalau ada yang tanya, kamu bakal rekomendasiin Maumantenan?</h3>
+							</div>
 							<div class="form-group row no-gutters justify-content-center">
 								<div class="form-check col">
-									<input class="form-check-input" type="radio" name="survei-3" id="survei-3-a" value="Buruk">
+									<input class="form-check-input" type="radio" name="survei-3" id="survei-3-a" value="Tidak">
 									<label class="form-check-label" for="survei-3-a">
 										😭
 									</label>
 								</div>
 								<div class="form-check col">
-									<input class="form-check-input" type="radio" name="survei-3" id="survei-3-b" value="Biasa">
+									<input class="form-check-input" type="radio" name="survei-3" id="survei-3-b" value="Mungkin">
 									<label class="form-check-label" for="survei-3-b">
-										🙄
+										😐
 									</label>
 								</div>
 								<div class="form-check col">
-									<input class="form-check-input" type="radio" name="survei-3" id="survei-3-c" value="Baik">
+									<input class="form-check-input" type="radio" name="survei-3" id="survei-3-c" value="Ya">
 									<label class="form-check-label" for="survei-3-c">
 										👍
 									</label>
@@ -199,7 +254,7 @@
 							</div>
 							<div class="row mt-4">
 								<div class="col-3">
-									<button type="button" class="btn btn-clear px-0 text-left" onclick="back(this)">Kembali</button>
+									<button type="button" class="btn btn-clear px-0 text-left opacity-5" onclick="back(this)">Kembali</button>
 								</div>
 								<div class="col-3"></div>
 								<div class="col">
@@ -208,9 +263,9 @@
 							</div>
 						</div>
 						<div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
-							<p class="fs-5 text-black font-weight-bold mb-4">
-								Tau informasi maumantenan darimana?
-							</p>
+							<div class="mb-3">
+								<h3 class="fs-4 text-black font-weight-bold mb-1">Kamu tahu Maumantenan dari mana?</h3>
+							</div>
 							<div class="form-group">
 								<div class="form-check">
 									<input class="form-check-input" type="radio" name="survei-4" id="survei-4-a" value="Teman / Saudara">
@@ -243,7 +298,7 @@
 							</div>
 							<div class="row mt-4">
 								<div class="col-3">
-									<button type="button" class="btn btn-clear px-0 text-left" onclick="back(this)">Kembali</button>
+									<button type="button" class="btn btn-clear px-0 text-left opacity-5" onclick="back(this)">Kembali</button>
 								</div>
 								<div class="col-3"></div>
 								<div class="col">
@@ -252,16 +307,16 @@
 							</div>
 						</div>
 						<div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab">
-							<p class="fs-5 text-black font-weight-bold mb-4">
-								kritik dan saran
-							</p>
+							<div class="mb-3">
+								<h3 class="fs-4 text-black font-weight-bold mb-1">Kasih Maumantenan saran atau kritik dong...</h3>
+							</div>
 							<div class="form-group">
 								<label for="survei-5" class="sr-only">Survei 5</label>
 								<textarea class="form-control" id="survei-5"></textarea>
 							</div>
 							<div class="row mt-4">
 								<div class="col-3">
-									<button type="button" class="btn btn-clear px-0 text-left" onclick="back(this)">Kembali</button>
+									<button type="button" class="btn btn-clear px-0 text-left opacity-5" onclick="back(this)">Kembali</button>
 								</div>
 								<div class="col-3"></div>
 								<div class="col">
@@ -277,9 +332,8 @@
 							</div>
 						</div>
 						<div class="tab-pane fade" id="pills-end" role="tabpanel" aria-labelledby="pills-end-tab">
-							<p class="fs-5 text-black font-weight-bold mb-4">
-								terima kasih
-							</p>
+							<p class="fs-4 mb-1">Terima kasih sudah memberikan Maumantenan kesempatan untuk menjadi lebih baik lagi kedepannya</p>
+							<p class="h1">😁</p>
 						</div>
 					</form>
 					<form spellcheck="false" name="formPelanggan" class="d-none">
@@ -311,201 +365,6 @@
 							<button type="submit" class="btn btn-success">Kirim</button>
 						</div>
 					</form>
-					<style>
-						body {
-							padding-top: 0;
-							background: none;
-						}
-
-						body, .btn, .form-control {
-							font-size: 1rem;
-						}
-						.btn {
-							padding: .5rem 1rem;
-							width: 100%;
-						}
-						.form-control {
-							height: auto;
-							padding: .75rem;
-						}
-
-						.form-check {
-							padding-left: 0;
-						}
-						.form-check-input {
-							display: none;
-						}
-						.form-check-label {
-							padding: 1rem;
-						}
-						.form-check:not(.col) .form-check-label {
-							width: 100%;
-							border-radius: .3rem;
-						}
-						.form-check-input:checked + .form-check-label {
-							color: var(--white);
-							background: var(--success);
-						}
-						.form-check.col .form-check-label {
-							width: 100%;
-							font-size: calc(3rem + 3vw);
-							border-radius: 1rem;
-						}
-						@media (min-width: 768px) {
-							.form-check.col .form-check-label {
-								font-size: calc(5rem + 3vw);
-							}
-						}
-
-						textarea {
-							resize: none;
-							min-height: 146px;
-							overflow: hidden;
-						}
-					</style>
-					<script>
-						function autoResizeHeight(selector) {
-							document.querySelectorAll(selector).forEach(item => {
-								item.oninput = () => {
-									item.style.height = 'auto'
-									item.style.height = (item.scrollHeight) + 'px'
-								}
-								window.onresize = () => {
-									item.style.height = 'auto'
-									item.style.height = (item.scrollHeight) + 'px'
-								}
-							})
-						}
-						autoResizeHeight('textarea')
-
-						function start(selector) {
-							let parent = selector.closest('.tab-pane')
-								id = parent.getAttribute('id')
-								split = id.split('-')
-								target = split[0] + '-' + (Number(split[1]) + 1)
-								input = parent.querySelectorAll('[id^="survei-"]')
-							input.forEach(source => {
-								let name = source.id.split('-')
-								document.querySelectorAll('#' + id).forEach(element => {
-									let item = element.querySelector('#survei-' + name[1])
-									if ( item.value ) {
-										document.querySelector('#survey-' + name[1]).value = item.value
-									}
-								})
-							})
-							if ( document.querySelector('#survey-name').value ) {
-								document.querySelector('#' + target + '-tab').click()
-							}
-						}
-
-						function back(selector) {
-							let parent = selector.closest('.tab-pane')
-								id = parent.getAttribute('id')
-								split = id.split('-')
-								target = split[0] + '-' + (Number(split[1]) - 1)
-							document.querySelector('#' + target + '-tab').click()
-						}
-
-						function checked(selector) {
-							let parent = selector.closest('.tab-pane')
-								id = parent.getAttribute('id')
-								split = id.split('-')
-								target = split[0] + '-' + (Number(split[1]) + 1)
-								radio = document.querySelectorAll('[name="survei-' + split[1] + '"]')
-								notif = '#alert'
-							radio.forEach(item => {
-								if ( item.checked ) {
-									if ( item.value !== 'Lainnya' ) {
-										document.querySelector('#survey-' + split[1]).value = item.value
-										document.querySelector('#' + target + '-tab').click()
-									} else {
-										document.querySelectorAll('.form-control[id^="' + item.id + '"]:not([disabled])').forEach(element => {
-											if ( element.value ) {
-												document.querySelector('#survey-' + split[1]).value = item.value + ' - ' + element.value
-												document.querySelector('#' + target + '-tab').click()
-											}
-										})
-									}
-								}
-								item.onchange = () => {
-									let alert = document.querySelector(notif)
-									if ( alert ) {
-										alert.parentNode.removeChild(alert)
-									}
-								}
-							})
-							if ( document.querySelector('#survey-' + split[1]).value === '' ) {
-								if ( document.querySelectorAll(notif).length < 1 ) {
-									alert(notif.substring(1),parent.querySelector('.form-group'))
-								}
-							}
-						}
-
-						function other(attr,selector,value) {
-							let container = document.querySelector('[data-value="' + value + '"]')
-							document.querySelectorAll('[' + attr + '="' + selector + '"]').forEach(item => {
-								item.onchange = (e) => {
-									if ( e.target.value == value ) {
-										container.classList.remove('d-none')
-										container.querySelector('input').removeAttribute('disabled')
-									} else {
-										container.classList.add('d-none')
-										container.querySelector('input').setAttribute('disabled','disabled')
-									}
-								}
-							})
-						}
-						other('name','survei-4','Lainnya')
-
-						function send(selector) {
-							let parent = selector.closest('.tab-pane')
-								id = parent.getAttribute('id')
-								split = id.split('-')
-								target = split[0] + '-' + (Number(split[1]) + 1)
-								input = document.querySelector('#survei-' + split[1])
-							selector.querySelector('svg').style.display = 'inline-block'
-							if ( input.value ) document.querySelector('#survey-' + split[1]).value = input.value
-							setTimeout(() => formSubmitPelanggan.click(),500)
-						}
-
-						function alert(selector,target) {
-							let article = document.createElement('article')
-								article.id = selector
-								article.innerHTML = `<div class="text-danger mt-3">
-									<svg xmlns="http://www.w3.org/2000/svg" class="d-inline-block mt-n1" fill="none" viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" stroke-width="2">
-										<path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-									</svg>
-									<span>
-										Silakan pilih salah satu
-									</span>
-								</div>`
-							target.appendChild(article)
-						}
-
-						function formPelanggan() {
-							// let gsPelanggan = 'https://script.google.com/macros/s/AKfycbyfF-MktEUuHBfk9BYZGpdGfBnzftFLSRQdIT4Is26OmSInPX8KrUodqt5jsLjylw4A/exec'
-							let urlPelanggan = atob('aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5ZkYtTWt0RVV1SEJmazlCWVpHcGRHZkJuemZ0RkxTUlFkSVQ0SXMyNk9tU0luUFg4S3JVb2RxdDVqc0xqeWx3NEEvZXhlYw==')
-								formPelanggan = document.forms['formPelanggan']
-								formSubmitPelanggan = formPelanggan.querySelector('[type="submit"]')
-
-							formPelanggan.addEventListener('submit', e => {
-								e.preventDefault()
-								fetch(urlPelanggan, {
-									method: 'post',
-									body: new FormData(formPelanggan)
-								}).then(response => {
-									// console.log('Success!', response)
-									document.querySelector('#pills-end-tab').click()
-									setTimeout(() => document.querySelector('#pills-5 button svg').style.display = 'none',500)
-									formPelanggan.reset()
-								}).catch(error => {
-									// console.error('Error!', error.message)
-									document.querySelector('#pills-5 button svg').style.display = 'none'
-								})
-							})
-						}
-						formPelanggan()
-					</script>
 				</div>
 			</div>
 		</div>
@@ -513,6 +372,10 @@
 </main>
 
 <slot>
+	<!-- Main -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	<!-- Analytics -->
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
@@ -528,6 +391,149 @@
 				script.appendChild(gtag2)
 			},5000)
 		});
+	</script>
+
+	<script>
+		function autoResizeHeight(selector) {
+			document.querySelectorAll(selector).forEach(item => {
+				item.oninput = () => {
+					item.style.height = 'auto'
+					item.style.height = (item.scrollHeight) + 'px'
+				}
+				window.onresize = () => {
+					item.style.height = 'auto'
+					item.style.height = (item.scrollHeight) + 'px'
+				}
+			})
+		}
+		autoResizeHeight('textarea')
+
+		function start(selector) {
+			let parent = selector.closest('.tab-pane')
+				id = parent.getAttribute('id')
+				split = id.split('-')
+				target = split[0] + '-' + (Number(split[1]) + 1)
+				input = parent.querySelectorAll('[id^="survei-"]')
+			input.forEach(source => {
+				let name = source.id.split('-')
+				document.querySelectorAll('#' + id).forEach(element => {
+					let item = element.querySelector('#survei-' + name[1])
+					if ( item.value ) {
+						document.querySelector('#survey-' + name[1]).value = item.value
+					}
+				})
+			})
+			if ( document.querySelector('#survey-name').value ) {
+				document.querySelector('#' + target + '-tab').click()
+			}
+		}
+
+		function back(selector) {
+			let parent = selector.closest('.tab-pane')
+				id = parent.getAttribute('id')
+				split = id.split('-')
+				target = split[0] + '-' + (Number(split[1]) - 1)
+			document.querySelector('#' + target + '-tab').click()
+			other('name','survei-4','Lainnya')
+		}
+
+		function checked(selector) {
+			let parent = selector.closest('.tab-pane')
+				id = parent.getAttribute('id')
+				split = id.split('-')
+				target = split[0] + '-' + (Number(split[1]) + 1)
+				radio = document.querySelectorAll('[name="survei-' + split[1] + '"]')
+				notif = '#alert'
+			radio.forEach(item => {
+				if ( item.checked ) {
+					if ( item.value !== 'Lainnya' ) {
+						document.querySelector('#survey-' + split[1]).value = item.value
+						document.querySelector('#' + target + '-tab').click()
+					} else {
+						document.querySelectorAll('.form-control[id^="' + item.id + '"]:not([disabled])').forEach(element => {
+							if ( element.value ) {
+								document.querySelector('#survey-' + split[1]).value = item.value + ' - ' + element.value
+								document.querySelector('#' + target + '-tab').click()
+							}
+						})
+					}
+				}
+				item.onchange = () => {
+					let alert = document.querySelector(notif)
+					if ( alert ) alert.parentNode.removeChild(alert)
+				}
+			})
+			if ( document.querySelector('#survey-' + split[1]).value === '' ) {
+				if ( document.querySelectorAll(notif).length < 1 ) {
+					alert(notif.substring(1),parent.querySelector('.form-group'))
+				}
+			}
+		}
+
+		function other(attr,selector,value) {
+			let container = document.querySelector('[data-value="' + value + '"]')
+			document.querySelectorAll('[' + attr + '="' + selector + '"]').forEach(item => {
+				item.onchange = (e) => {
+					if ( e.target.value == value ) {
+						container.classList.remove('d-none')
+						container.querySelector('input').removeAttribute('disabled')
+					} else {
+						container.classList.add('d-none')
+						container.querySelector('input').setAttribute('disabled','disabled')
+					}
+				}
+			})
+		}
+		other('name','survei-4','Lainnya')
+
+		function send(selector) {
+			let parent = selector.closest('.tab-pane')
+				id = parent.getAttribute('id')
+				split = id.split('-')
+				target = split[0] + '-' + (Number(split[1]) + 1)
+				input = document.querySelector('#survei-' + split[1])
+			selector.querySelector('svg').style.display = 'inline-block'
+			if ( input.value ) document.querySelector('#survey-' + split[1]).value = input.value
+			setTimeout(() => formSubmitPelanggan.click(),500)
+		}
+
+		function alert(selector,target) {
+			let article = document.createElement('article')
+				article.id = selector
+				article.innerHTML = `<div class="text-danger mt-3">
+					<svg xmlns="http://www.w3.org/2000/svg" class="d-inline-block mt-n1" fill="none" viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" stroke-width="2">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+					</svg>
+					<span>
+						Silakan pilih salah satu
+					</span>
+				</div>`
+			target.appendChild(article)
+		}
+
+		function formPelanggan() {
+			// let gsPelanggan = 'https://script.google.com/macros/s/AKfycbyfF-MktEUuHBfk9BYZGpdGfBnzftFLSRQdIT4Is26OmSInPX8KrUodqt5jsLjylw4A/exec'
+			let urlPelanggan = atob('aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5ZkYtTWt0RVV1SEJmazlCWVpHcGRHZkJuemZ0RkxTUlFkSVQ0SXMyNk9tU0luUFg4S3JVb2RxdDVqc0xqeWx3NEEvZXhlYw==')
+				formPelanggan = document.forms['formPelanggan']
+				formSubmitPelanggan = formPelanggan.querySelector('[type="submit"]')
+
+			formPelanggan.addEventListener('submit', e => {
+				e.preventDefault()
+				fetch(urlPelanggan, {
+					method: 'post',
+					body: new FormData(formPelanggan)
+				}).then(response => {
+					// console.log('Success!', response)
+					document.querySelector('#pills-end-tab').click()
+					setTimeout(() => document.querySelector('#pills-5 button svg').style.display = 'none',500)
+					formPelanggan.reset()
+				}).catch(error => {
+					// console.error('Error!', error.message)
+					document.querySelector('#pills-5 button svg').style.display = 'none'
+				})
+			})
+		}
+		formPelanggan()
 	</script>
 </slot>
 
