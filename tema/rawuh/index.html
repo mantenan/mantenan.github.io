@@ -63,6 +63,23 @@
 	<!-- Main -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="assets/css/main.min.css">
+	<script>
+		let ua = navigator.userAgent.toLowerCase()
+			standalone = window.navigator.standalone
+			safari = /safari/.test(ua)
+			ios = /iphone|ipod|ipad/.test(ua)
+		if ( ios ) {
+			if ( !standalone && safari ) { // Browser
+				document.head.appendChild('<style>#open div>img:nth-child(2){animation:none!important}</style>')
+			} else if ( standalone && !safari ) { // Standalone
+				document.head.appendChild('<style>#open div>img:nth-child(2){animation:none!important}</style>')
+			} else if ( !standalone && !safari ) { // Webview
+				document.head.appendChild('<style>#open div>img:nth-child(2){animation:none!important}</style>')
+			}
+		// } else {
+			// not iOS
+		}
+	</script>
 	<!-- <script>
 		let thisURL = window.location.href
 			thisEvent1 = '?MSFUYW11OjAjMA=='
