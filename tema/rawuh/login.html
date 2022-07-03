@@ -153,6 +153,45 @@
 </section>
 
 <slot>
+	<script>
+		let thisurl = window.location.href
+			thisls = localStorage.getItem('maumantenan demo')
+			username = document.querySelector('#username')
+			password = document.querySelector('#password')
+			user0 = 'Admin'
+			user1 = 'Gina'
+			user2 = 'Budi'
+			pass = 'admin'
+		if ( thisurl.indexOf('?') > -1 ) {
+			let siteurl = thisurl.split('?')
+			if ( siteurl[1] === '0' ) {
+				username.value = user0
+				password.value = pass
+			} else if ( siteurl[1] === '1' ) {
+				username.value = user1
+				password.value = pass
+			} else if ( siteurl[1] === '2' ) {
+				username.value = user2
+				password.value = pass
+			}
+		}
+		if ( thisls.value ) {
+			if ( thisls === '0' ) {
+				username.value = user0
+				password.value = pass
+				localStorage.removeItem('maumantenan demo')
+			} else if ( thisls === '1' ) {
+				username.value = user1
+				password.value = pass
+				localStorage.removeItem('maumantenan demo')
+			} else if ( thisls === '2' ) {
+				username.value = user2
+				password.value = pass
+				localStorage.removeItem('maumantenan demo')
+			}
+		}
+	</script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
