@@ -142,8 +142,8 @@
 		// })
 		$('#website .swipe').slick({
 			dots: false,
-			arrows: false,
-			autoplay: false,
+			arrows: true,
+			autoplay: true,
 			infinite: true,
 			slidesToShow: 4,
 			slidesToScroll: 1,
