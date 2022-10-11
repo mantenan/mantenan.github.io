@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<!-- Title -->
+	<meta charset="UTF-8">
+	<title>Login - Maumantenan</title>
+	<meta name="title" content="Login - Maumantenan">
+	<meta name="description" content="Kelola undangan melalui admin panel">
+	<meta name="keywords" content="undangan, pernikahan, online, website, digital, manten, mantenan, maumantenan, menikah, wedding, invitation">
+	<meta name="google" content="notranslate">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="robots" content="noindex, nofollow">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Login - Maumantenan">
+	<meta property="og:description" content="Kelola undangan melalui admin panel">
+	<meta property="og:image" content="assets/img/ogp.jpg">
+	<meta property="og:locale" content="id_ID">
+	<meta property="og:site_name" content="Maumantenan">
+	<meta property="og:url" content="https://maumantenan.com/dian-dhiyo/login">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Login - Maumantenan">
+	<meta name="twitter:description" content="Kelola undangan melalui admin panel">
+	<meta name="twitter:image" content="assets/img/ogp.jpg">
+	<meta name="twitter:site" content="Maumantenan">
+	<!-- Canonical -->
+	<link rel="canonical" href="https://maumantenan.com/dian-dhiyo/login">
+	<!-- Favicon -->
+	<link rel="shortcut icon" sizes="16x16 32x32 48x48" href="../assets/img/favicon.ico">
+	<!-- Android -->
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/icon/16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/icon/32x32.png">
+	<!-- iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="Maumantenan">
+	<link rel="apple-touch-icon" href="../assets/icon/72x72.png">
+	<link rel="apple-touch-icon" href="../assets/icon/96x96.png">
+	<link rel="apple-touch-icon" href="../assets/icon/128x128.png">
+	<link rel="apple-touch-icon" href="../assets/icon/144x144.png">
+	<link rel="apple-touch-icon" href="../assets/icon/152x152.png">
+	<link rel="apple-touch-icon" href="../assets/icon/192x192.png">
+	<link rel="apple-touch-icon" href="../assets/icon/384x384.png">
+	<link rel="apple-touch-icon" href="../assets/icon/512x512.png">
+	<!-- Windows -->
+	<meta name="msapplication-TileImage" content="../assets/icon/512x512.png">
+	<!-- System Theme -->
+	<meta name="color-scheme" content="dark light">
+	<!-- Status Bar -->
+	<meta name="apple-mobile-web-app-status-bar" content="#fff">
+	<meta name="msapplication-TileColor" content="#fff">
+	<meta name="theme-color" content="#fff">
+	<!-- Preload -->
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="preload" as="style" href="assets/css/admin.min.css">
+	<link rel="preload" as="script" href="assets/js/frontend.min.js">
+	<!-- Main -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="assets/css/admin.min.css">
+</head>
+
+<body style="background-image:none">
+
+<aside>
+	<script>if(window.matchMedia("(prefers-color-scheme: dark)").matches){let e="#252b31";document.head.querySelector('[name="apple-mobile-web-app-status-bar"]').content=e,document.head.querySelector('[name="msapplication-TileColor"]').content=e,document.head.querySelector('[name="theme-color"]').content=e,document.body.classList.add("dark")}</script>
+	<style>
+		body {
+			background-image: url(assets/img/background.jpg);
+			background-position: center 25%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 100vh;
+			-webkit-user-select: none;
+			   -moz-user-select: none;
+				-ms-user-select: none;
+				 -o-user-select: none;
+					user-select: none;
+		}
+		body:after {
+			content: '';
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			width: 100vw;
+			height: 100vh;
+			z-index: -1;
+			background-color: rgba(255,255,255,.9);
+		}
+		body > section {
+			height: 90vh;
+		}
+		.toggle-password-trigger {
+			top: 2px;
+		}
+		body.dark:after {
+			background-color: rgba(0,0,0,.85);
+		}
+		.dark center, .dark small {
+			color: var(--white);
+		}
+	</style>
+</aside>
+
+<section class="d-flex align-items-center justify-content-center" style="display:none!important">
+	<div class="px-2">
+		<div class="container">
+			<center class="my-4">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" fill="currentColor" width="300" class="img-fluid mb-n3">
+					<path d="M69.682,10.426c0.064,-0.184 0.135,-0.355 0.215,-0.513c1.305,-3.101 2.28,-5.07 2.924,-5.906c0.492,-0.719 0.881,-1.217 1.166,-1.494c0.266,-0.23 0.502,-0.346 0.709,-0.346l0.053,0c0.344,0.039 0.516,0.205 0.516,0.498c-0,0.778 -0.594,2.178 -1.782,4.202c-0.394,0.644 -1.031,1.509 -1.91,2.595c-0.867,1.051 -1.301,1.645 -1.301,1.782c-0.074,0.21 -0.136,0.622 -0.187,1.235c-0.023,0.028 -0.044,0.051 -0.064,0.071l0.011,0c0.047,0 0.065,-0.023 0.053,-0.07l0,-0.001c0.134,-0.163 0.31,-0.461 0.527,-0.896c0.403,-0.48 0.811,-0.72 1.225,-0.72c0.539,-0 0.99,0.484 1.353,1.453c0.247,0.558 0.495,0.89 0.745,0.996c0.082,0.039 0.171,0.059 0.269,0.059l0.141,-0c0.367,-0 0.783,-0.233 1.248,-0.698c0.076,-0.104 0.148,-0.209 0.216,-0.315c0.046,-0.161 0.103,-0.337 0.17,-0.528c0.477,-0.981 0.723,-1.471 0.739,-1.471c-0,-0.024 0.086,-0.039 0.258,-0.047l0.041,-0c0.246,0.051 0.369,0.178 0.369,0.381l-0,0.164c-0.154,0.464 -0.302,0.798 -0.444,1.001c-0.108,0.233 -0.234,0.469 -0.379,0.709c-0.077,0.225 -0.115,0.436 -0.115,0.634c0,0.168 0.131,0.252 0.393,0.252c0.719,-0 1.724,-0.582 3.017,-1.747c0.039,-0.097 0.161,-0.201 0.364,-0.31c0.202,-0.192 0.415,-0.409 0.639,-0.654c0.062,-0.166 0.13,-0.341 0.204,-0.524c0.086,-0.066 0.182,-0.115 0.288,-0.146c0.152,-0 0.263,0.086 0.334,0.258c-0,0.023 -0.009,0.071 -0.025,0.146c0.071,0.061 0.107,0.149 0.107,0.264l-0,0.047c-0,0.096 -0.107,0.264 -0.322,0.505c-0.067,0.241 -0.148,0.526 -0.244,0.855c-0.026,0.305 -0.044,0.475 -0.056,0.509c0,0.297 0.086,0.482 0.258,0.556c0.043,0 0.073,0.006 0.088,0.018c0.242,-0.051 0.645,-0.518 1.207,-1.4c0.211,-0.391 0.41,-0.586 0.598,-0.586l0.058,-0c0.231,0.031 0.346,0.15 0.346,0.357l0,0.035c-0.14,0.805 -0.211,1.363 -0.211,1.676l0,0.398c0,0.073 0.007,0.129 0.02,0.169c-0.027,0.023 -0.045,0.035 -0.055,0.036l0.07,0c-0.006,-0.01 -0.011,-0.022 -0.015,-0.036c0.103,-0.088 0.331,-0.34 0.683,-0.755c1.2,-1.414 2.094,-2.296 2.684,-2.648c0.013,-0.002 0.025,-0.004 0.037,-0.006c0.054,-0.04 0.11,-0.079 0.168,-0.117c0.34,-0.117 0.627,-0.176 0.861,-0.176c0.629,0 1.041,0.233 1.237,0.697c0.07,0.176 0.105,0.352 0.105,0.528c0,0.219 -0.031,0.459 -0.094,0.72c0,0.047 0.037,0.071 0.112,0.071l0.351,-0c1.223,-0 2.571,-0.563 4.043,-1.688c0.199,-0.125 0.367,-0.187 0.504,-0.187l0.082,-0c0.153,0.078 0.229,0.191 0.229,0.34c-0.02,0.195 -0.362,0.507 -1.026,0.937c-1.343,0.891 -2.773,1.336 -4.289,1.336c-0.105,-0.016 -0.187,-0.023 -0.246,-0.023c-0.078,-0 -0.211,0.144 -0.398,0.433c-0.5,0.602 -1.055,0.903 -1.664,0.903l-0.211,-0c-0.532,-0 -0.899,-0.303 -1.102,-0.909c-0.019,-0.113 -0.029,-0.234 -0.029,-0.363l-0,-0.117c-0,-0.072 0.003,-0.143 0.008,-0.213c-0.157,0.173 -0.318,0.358 -0.483,0.553c-0.992,1.129 -1.488,1.824 -1.488,2.086c-0,0.398 0.039,1.084 0.117,2.056c0,0.696 -0.127,1.817 -0.381,3.364c-0.246,0.894 -0.515,1.613 -0.808,2.156c-0.325,0.508 -0.682,0.861 -1.073,1.06c-0.3,0.153 -0.564,0.229 -0.791,0.229l-0.14,-0c-0.692,-0 -1.037,-0.504 -1.037,-1.512c0.014,-0.276 0.034,-0.491 0.061,-0.645c0.022,-0.003 0.032,-0.052 0.032,-0.146c-0.011,0.04 -0.022,0.089 -0.032,0.146c-0.001,0.001 -0.002,0.001 -0.003,0.001c0.063,-0.711 0.461,-1.883 1.196,-3.516c0.589,-1.164 1.238,-2.295 1.945,-3.393l0.058,-0.281c-0.031,-0.734 -0.046,-1.199 -0.046,-1.394c-0,-0.024 0.007,-0.104 0.023,-0.241c0,-0.047 0.002,-0.077 0.005,-0.089c0.004,-0.002 0.006,-0.004 0.007,-0.004c-0.003,-0.003 -0.005,-0.001 -0.007,0.004c-0.041,0.033 -0.262,0.237 -0.661,0.611c-0.246,0.144 -0.502,0.217 -0.768,0.217c-0.453,-0 -0.752,-0.324 -0.896,-0.973l-0,-0.299c-0,-0.105 0.01,-0.226 0.031,-0.36c-1.433,1.31 -2.641,1.966 -3.623,1.966c-0.59,-0 -0.949,-0.217 -1.077,-0.649c-0.439,0.331 -0.944,0.496 -1.513,0.496c-0.832,0 -1.455,-0.576 -1.869,-1.728c-0.262,-0.488 -0.434,-0.733 -0.516,-0.733c-0.027,-0.015 -0.045,-0.023 -0.052,-0.023l-0.024,-0c-0.371,-0 -0.801,0.668 -1.289,2.004l-0.217,1.183c-0.097,0.086 -0.205,0.149 -0.322,0.188c-0.309,-0 -0.482,-0.285 -0.521,-0.855c-0.047,-0.293 -0.079,-0.579 -0.094,-0.856c-0,-0.517 0.025,-0.991 0.076,-1.423c-0.281,0.243 -0.62,0.51 -1.02,0.802c-1.246,0.559 -2.209,0.838 -2.888,0.838c-0.074,-0 -0.283,0.015 -0.627,0.047c-0.313,-0 -0.819,-0.121 -1.518,-0.364c-0.177,-0.09 -0.415,-0.294 -0.713,-0.611c-0.004,-0.015 -0.014,-0.026 -0.031,-0.033c0.011,0.011 0.021,0.022 0.031,0.033c0.012,0.041 -0.024,0.11 -0.107,0.207c-0.543,0.746 -1.281,1.235 -2.215,1.465c-0.223,0.098 -0.488,0.139 -0.797,0.123c-1.113,0.023 -1.863,-0.512 -2.25,-1.605c-0.019,-0.079 -0.029,-0.155 -0.029,-0.229l-0,-0.258c0.016,-0.707 0.404,-1.451 1.166,-2.232c0.5,-0.414 1.189,-0.672 2.068,-0.774l0.598,0.03c0.164,0.042 0.376,0.099 0.637,0.169c0.005,0.058 0.007,0.091 0.007,0.1c-0.066,0.344 0.09,0.354 0.469,0.03c-0.173,-0.048 -0.332,-0.091 -0.476,-0.13c-0.004,-0.041 -0.009,-0.096 -0.016,-0.163c0.027,-1.161 0.273,-2.346 0.738,-3.557l0.733,-1.529c0.273,-0.547 0.566,-0.946 0.879,-1.196c0.14,-0.039 0.25,-0.058 0.328,-0.058c0.472,-0 0.709,0.242 0.709,0.726c0.015,0 0.023,0.067 0.023,0.199c-0.055,0.709 -0.104,1.237 -0.147,1.585c-0.011,0.011 -0.017,0.055 -0.017,0.132c0.006,-0.04 0.011,-0.084 0.017,-0.132c0.002,-0.002 0.004,-0.002 0.007,-0.002c-0,0.777 -0.457,2.486 -1.372,5.126c-0.351,0.676 -0.527,1.071 -0.527,1.184l0,0.041c0.25,0.656 0.865,0.992 1.846,1.008l0.211,-0c1.547,-0 2.976,-0.66 4.289,-1.981c0.102,-0.183 0.202,-0.319 0.3,-0.407Zm13.124,8.472c-0.007,0.014 -0.017,0.021 -0.03,0.021c0.094,-0.691 0.141,-1.193 0.141,-1.506c-0,-0.824 -0.014,-1.236 -0.041,-1.236c-0.02,0 -0.125,0.178 -0.316,0.533c-0.731,1.188 -1.338,2.424 -1.823,3.709c-0.304,0.836 -0.457,1.575 -0.457,2.215c0.043,0.547 0.143,0.821 0.299,0.821l0.117,-0c0.837,-0 1.49,-1.14 1.961,-3.42c0.017,-0.017 0.026,-0.059 0.026,-0.125c-0.009,0.042 -0.017,0.084 -0.026,0.125c-0.006,0.006 -0.013,0.009 -0.021,0.009l0.17,-1.146c0.012,-0.022 0.017,-0.06 0.017,-0.113l-0.017,0.113Zm-32.009,-5.929c-0.697,0.69 -1.385,1.2 -2.064,1.53c-0.679,0.331 -1.374,0.496 -2.085,0.496c-0.646,-0 -1.171,-0.171 -1.573,-0.512c-0.403,-0.341 -0.605,-0.78 -0.605,-1.318c0,-0.377 0.115,-0.758 0.343,-1.143c0.229,-0.385 0.576,-0.777 1.04,-1.176c0.189,-0.167 0.447,-0.377 0.773,-0.631c0.508,-0.392 0.762,-0.665 0.762,-0.817c0,-0.022 -0.127,-0.263 -0.381,-0.724c-0.254,-0.461 -0.381,-0.917 -0.381,-1.367c0,-1.074 0.51,-2.023 1.53,-2.847c1.02,-0.824 2.234,-1.236 3.642,-1.236c0.625,0 1.12,0.109 1.487,0.327c0.366,0.218 0.549,0.501 0.549,0.849c0,0.349 -0.502,0.917 -1.508,1.704c-1.005,0.788 -1.805,1.545 -2.401,2.27l-0.62,-0.424c0.559,-0.82 1.283,-1.577 2.172,-2.271c0.889,-0.693 1.334,-1.101 1.334,-1.224c-0,-0.138 -0.094,-0.255 -0.283,-0.349c-0.189,-0.094 -0.432,-0.141 -0.73,-0.141c-1.016,-0 -1.98,0.357 -2.891,1.072c-0.911,0.715 -1.366,1.494 -1.366,2.336c-0,0.392 0.134,0.824 0.403,1.295c0.268,0.472 0.403,0.777 0.403,0.915c-0,0.225 -0.316,0.603 -0.948,1.133l-0.228,0.185c-1.133,0.943 -1.699,1.655 -1.699,2.134c-0,0.312 0.131,0.571 0.392,0.778c0.261,0.207 0.592,0.311 0.991,0.311c0.53,-0 1.098,-0.16 1.704,-0.479c0.606,-0.32 1.218,-0.784 1.835,-1.394l-0.959,-1.666l0.654,-0.468l0.914,1.535c0.204,-0.218 0.407,-0.448 0.61,-0.691c0.203,-0.244 0.414,-0.51 0.632,-0.801l0.784,0c-0.24,0.407 -0.492,0.791 -0.757,1.154c-0.265,0.363 -0.546,0.715 -0.844,1.057c0.24,0.377 0.501,0.774 0.784,1.192c0.283,0.417 0.584,0.851 0.904,1.301l-1.002,0c-0.073,-0.109 -0.261,-0.381 -0.566,-0.817c-0.305,-0.435 -0.555,-0.794 -0.751,-1.078Zm-40.841,-3.519c-0.004,-0.041 -0.009,-0.096 -0.016,-0.163c0.028,-1.161 0.274,-2.346 0.739,-3.557l0.732,-1.529c0.274,-0.547 0.567,-0.946 0.879,-1.196c0.141,-0.039 0.25,-0.058 0.328,-0.058c0.473,-0 0.709,0.242 0.709,0.726c0.016,0 0.024,0.067 0.024,0.199c-0.055,0.709 -0.104,1.237 -0.147,1.585c-0.012,0.011 -0.017,0.055 -0.017,0.132c0.005,-0.04 0.011,-0.084 0.017,-0.132c0.002,-0.002 0.004,-0.002 0.006,-0.002c-0,0.777 -0.457,2.486 -1.371,5.126c-0.352,0.676 -0.527,1.071 -0.527,1.184l-0,0.041c0.25,0.656 0.865,0.992 1.845,1.008l0.211,-0c1.547,-0 2.977,-0.66 4.289,-1.981c0.196,-0.351 0.383,-0.527 0.563,-0.527l0.023,0c0.027,0 0.053,0.003 0.078,0.009c0.018,-0.001 0.037,-0.002 0.057,-0.003l0.041,-0c0.246,0.051 0.369,0.178 0.369,0.381l0,0.164c-0.199,0.601 -0.389,0.984 -0.568,1.148c-0.246,0.442 -0.369,0.84 -0.369,1.196c-0,0.168 0.13,0.252 0.392,0.252c0.719,-0 1.725,-0.582 3.018,-1.747c0.039,-0.097 0.16,-0.201 0.363,-0.31c0.232,-0.22 0.478,-0.474 0.738,-0.763c0.165,-0.403 0.439,-0.807 0.821,-1.212c0.519,-0.492 1.123,-0.744 1.81,-0.756l0.317,0.012c0.461,0.004 0.783,0.207 0.966,0.61c0.047,0.105 0.151,0.546 0.311,1.324c0.293,0.683 0.809,1.025 1.547,1.025c0.707,0 1.488,-0.41 2.344,-1.23c0.081,-0.02 0.151,-0.034 0.212,-0.044c0.057,-0.029 0.115,-0.044 0.174,-0.044c0.16,0.066 0.262,0.152 0.305,0.258l-0,0.193c-0.124,0.356 -0.265,0.878 -0.424,1.567c-0.071,0.083 -0.121,0.137 -0.15,0.161l0.029,0c0.059,0 0.092,0.03 0.1,0.088l-0,-0.158c0.007,-0.031 0.014,-0.061 0.021,-0.091c0.156,-0.184 0.412,-0.511 0.77,-0.981c0.488,-0.582 1.004,-0.873 1.547,-0.873l0.093,-0c0.617,-0 1.032,0.363 1.242,1.09c0.368,1.211 0.641,1.836 0.821,1.875c0.219,0.211 0.515,0.316 0.89,0.316l0.024,0c0.738,0 1.467,-0.367 2.185,-1.101c0.692,-0.817 1.088,-1.457 1.19,-1.922c0.16,-0.297 0.332,-0.446 0.515,-0.446l0.135,0c0.164,0.098 0.246,0.217 0.246,0.358l0,0.041c-0.187,0.726 -0.685,1.551 -1.494,2.472c-0.629,0.618 -1.129,0.959 -1.5,1.026c-0.562,0.191 -1.012,0.287 -1.347,0.287c-0.981,-0 -1.645,-0.471 -1.993,-1.412c-0.343,-1.059 -0.547,-1.639 -0.609,-1.74c-0.074,-0.079 -0.154,-0.121 -0.24,-0.129l-0.112,-0c-0.347,-0 -0.709,0.248 -1.084,0.744c-0.226,0.258 -0.82,1.07 -1.781,2.437c-0.144,0.145 -0.267,0.217 -0.369,0.217l-0.047,0c-0.207,0 -0.336,-0.137 -0.387,-0.41c0.212,-0.919 0.423,-1.734 0.634,-2.448c-0.417,0.265 -0.908,0.47 -1.471,0.614c-0.172,0.016 -0.305,0.023 -0.399,0.023l-0.094,0c-1.047,0 -1.802,-0.474 -2.267,-1.423l-0.047,-0.029c0,-0.001 0,-0.001 -0,-0.001l0,0.001c0.006,0.01 -0.119,0.246 -0.375,0.708c-0.59,0.793 -1.233,1.19 -1.928,1.19l-0.023,-0c-0.532,-0 -0.936,-0.297 -1.213,-0.891l-0.001,-0.004c-0.127,0.116 -0.269,0.228 -0.427,0.338c-1.437,1.317 -2.648,1.975 -3.633,1.975c-0.754,-0 -1.131,-0.354 -1.131,-1.061c0,-0.246 0.069,-0.586 0.207,-1.021c-0.193,0.154 -0.407,0.317 -0.64,0.488c-1.246,0.559 -2.209,0.838 -2.889,0.838c-0.074,-0 -0.283,0.015 -0.627,0.047c-0.312,-0 -0.818,-0.121 -1.517,-0.364c-0.178,-0.09 -0.415,-0.294 -0.713,-0.611c-0.004,-0.015 -0.015,-0.026 -0.032,-0.033c0.011,0.011 0.021,0.022 0.032,0.033c0.011,0.041 -0.025,0.11 -0.108,0.207c-0.543,0.746 -1.281,1.235 -2.215,1.465c-0.222,0.098 -0.488,0.139 -0.796,0.123c-1.114,0.023 -1.864,-0.512 -2.25,-1.605c-0.02,-0.079 -0.03,-0.155 -0.03,-0.229l0,-0.258c0.016,-0.707 0.405,-1.451 1.166,-2.232c0.5,-0.414 1.19,-0.672 2.069,-0.774l0.597,0.03c0.164,0.042 0.376,0.099 0.637,0.169c0.005,0.058 0.008,0.091 0.008,0.1c-0.067,0.344 0.09,0.354 0.469,0.03c-0.174,-0.048 -0.333,-0.091 -0.477,-0.13Zm48.041,2.807c0,0.664 0.354,1.125 1.061,1.383c0.164,0.027 0.283,0.041 0.357,0.041c0.922,-0.059 1.752,-0.545 2.49,-1.459c0.121,-0.234 0.182,-0.387 0.182,-0.457c-0.137,-0.414 -0.254,-0.934 -0.352,-1.559c0,-0.003 -0.148,-0.023 -0.445,-0.058c-0.152,-0.106 -0.338,-0.158 -0.557,-0.158c-1.222,-0 -2.113,0.607 -2.671,1.822c-0.043,0.207 -0.065,0.355 -0.065,0.445Zm-51.725,0c0,0.664 0.354,1.125 1.061,1.383c0.164,0.027 0.283,0.041 0.357,0.041c0.922,-0.059 1.752,-0.545 2.491,-1.459c0.121,-0.234 0.181,-0.387 0.181,-0.457c-0.136,-0.414 -0.254,-0.934 -0.351,-1.559c-0,-0.003 -0.149,-0.023 -0.446,-0.058c-0.152,-0.106 -0.337,-0.158 -0.556,-0.158c-1.223,-0 -2.113,0.607 -2.672,1.822c-0.043,0.207 -0.065,0.355 -0.065,0.445Zm80.549,-0.777c0.002,-0.001 0.003,-0.001 0.004,-0.002l0.029,-0l-0.041,-0.023c0.003,0.008 0.006,0.016 0.008,0.025c-0.113,0.057 -0.284,0.384 -0.511,0.982c-0,0.012 -0.016,0.147 -0.047,0.405c-0,0.339 0.129,0.564 0.386,0.673c0.043,0.024 0.108,0.036 0.194,0.036c0.39,-0 0.783,-0.276 1.178,-0.827l0.011,-0.07c0,-0.012 -0.178,-0.105 -0.533,-0.281c-0.325,-0.203 -0.551,-0.509 -0.678,-0.918Zm-5.618,0.667c-0.011,0.036 -0.021,0.073 -0.032,0.11c-0,-0.097 0.012,-0.146 0.035,-0.146l-0.003,0.036Zm-58.248,-0.978c-0.012,0.064 -0.018,0.129 -0.018,0.192c-0,0.394 0.169,0.642 0.509,0.744l0.117,-0c0.555,-0 1.12,-0.596 1.694,-1.787c0.164,-0.399 0.246,-0.668 0.246,-0.809l-0,-0.14c-0,0.015 -0.121,0.017 -0.363,0.005c-0.821,-0.015 -1.463,0.393 -1.928,1.225c-0.016,0.023 -0.032,0.046 -0.046,0.07c0.003,0.022 0.005,0.046 0.005,0.071l-0,0.047c-0,0.079 -0.072,0.206 -0.216,0.382Zm64.667,0.209c0,0.188 0.162,0.371 0.486,0.551c0.118,0.067 0.204,0.1 0.258,0.1l0.024,-0c0.011,-0 0.048,-0.198 0.111,-0.592c-0,-0.348 -0.137,-0.522 -0.41,-0.522c-0.313,0.032 -0.469,0.186 -0.469,0.463Zm-23.36,-7.581c0.013,-0.009 0.024,-0.015 0.034,-0.018c-0.018,-0 -0.029,0.006 -0.034,0.018c-0.157,0.123 -0.507,0.79 -1.05,2.003c-0.337,0.857 -0.562,1.696 -0.674,2.517c-0.012,0.011 -0.017,0.055 -0.017,0.132c0.005,-0.044 0.011,-0.088 0.017,-0.132c0.002,-0.002 0.004,-0.003 0.006,-0.003c-0,0.144 -0.023,0.521 -0.07,1.131c0.082,0.855 0.127,1.283 0.134,1.283c0.032,-0 0.08,-0.104 0.147,-0.311c0.324,-0.621 0.789,-2.14 1.394,-4.558l0.118,-2.004c-0.008,-0.026 -0.01,-0.045 -0.005,-0.058Zm-51.724,0c0.012,-0.009 0.023,-0.015 0.033,-0.018c-0.017,-0 -0.028,0.006 -0.033,0.018c-0.157,0.123 -0.508,0.79 -1.051,2.003c-0.337,0.857 -0.562,1.696 -0.674,2.517c-0.011,0.011 -0.017,0.055 -0.017,0.132c0.005,-0.044 0.011,-0.088 0.017,-0.132c0.002,-0.002 0.004,-0.003 0.006,-0.003c0,0.144 -0.023,0.521 -0.07,1.131c0.082,0.855 0.127,1.283 0.135,1.283c0.031,-0 0.08,-0.104 0.146,-0.311c0.324,-0.621 0.789,-2.14 1.395,-4.558l0.117,-2.004c-0.008,-0.026 -0.009,-0.045 -0.004,-0.058Zm61.895,-0.708c-0.004,0.003 -0.01,0.004 -0.018,0.004c-0.039,0 -0.303,0.346 -0.791,1.037c-0.875,1.282 -1.312,2.008 -1.312,2.18c-0.517,1.086 -0.876,1.906 -1.078,2.458c-0.073,0.084 -0.122,0.126 -0.147,0.126c0.059,-0 0.092,0.029 0.1,0.088l-0,-0.082c0.014,-0.042 0.03,-0.086 0.047,-0.132c0.155,-0.178 0.418,-0.546 0.79,-1.105c0.672,-0.859 1.284,-1.875 1.834,-3.046c0.262,-0.555 0.454,-1.063 0.575,-1.524l-0,-0.004c0.004,-0.004 0.004,-0.01 -0,-0.019l-0,0.019Zm-54.502,4.457c0.199,0 0.318,0.139 0.357,0.416c0,0.313 -0.182,0.539 -0.545,0.68c-0.055,0.039 -0.181,0.068 -0.381,0.088c-0.343,-0.07 -0.515,-0.236 -0.515,-0.498c-0,-0.313 0.279,-0.531 0.838,-0.656c0.07,-0.02 0.152,-0.03 0.246,-0.03Zm58.597,0c0.2,0 0.319,0.139 0.358,0.416c-0,0.313 -0.182,0.539 -0.545,0.68c-0.055,0.039 -0.182,0.068 -0.381,0.088c-0.344,-0.07 -0.516,-0.236 -0.516,-0.498c0,-0.313 0.28,-0.531 0.838,-0.656c0.071,-0.02 0.153,-0.03 0.246,-0.03Z"/>
+				</svg>
+				<p class="h5 mt-4 mb-0 opacity-5">Admin Panel</p>
+			</center>
+			<div class="alert alert-danger" role="alert" style="max-width:300px;display:none;">
+				<span class="d-none username-false"><b>Nama pengguna</b> yang kamu masukkan salah!</span>
+				<span class="d-none password-false"><b>Kata sandi</b> yang kamu masukkan salah!</span>
+				<span class="d-none both-false"><b>Nama pengguna</b> dan <b>kata sandi</b> yang kamu masukkan salah!</span>
+			</div>
+			<form class="mt-4 mb-5" spellcheck="false" autocomplete="off" name="formLogin">
+				<div class="form-group">
+					<label class="sr-only" for="username">Nama Pengguna</label>
+					<input class="form-control" type="text" id="username" placeholder="Nama Pengguna" required>
+				</div>
+				<div class="form-group position-relative toggle-password">
+					<span class="toggle-password-trigger hide"></span>
+					<label class="sr-only" for="password">Kata Sandi</label>
+					<input class="form-control" type="password" id="password" placeholder="Kata Sandi" required>
+				</div>
+				<button type="submit" class="btn btn-primary btn-block py-2 mt-4">Masuk</button>
+			</form>
+			<div class="text-center my-4">
+				Tidak bisa login? Silakan <a class="text-decoration-none" rel="noopener" target="_blank" href="https://wa.me/6287838610808">hubungi kami</a>.
+			</div>
+			<div class="text-center mt-4 pt-2">
+				<a class="text-decoration-none text-dark text-left d-inline-block" href="https://maumantenan.com/">
+					<div class="d-flex align-items-center mx-auto">
+						<img loading="lazy" width="45" height="45" src="../assets/img/maumantenan-1.svg" alt="Maumantenan">
+						<div class="mr-1 ml-2 mb-n1">
+							<img loading="lazy" width="155" height="14" src="../assets/img/maumantenan-2.svg" alt="Maumantenan">
+							<small class="d-block mt-1 opacity-5">Hari Bahagiaku, Kelak Bercerita</small>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<slot>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js" integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="assets/js/frontend.min.js"></script>
+
+	<!-- Analytics -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var script = document.querySelector("slot")
+				gtag1 = document.createElement("script")
+				gtag1.type = "text/javascript"
+				gtag1.src = "https://www.googletagmanager.com/gtag/js?id=UA-178530227-1"
+				gtag2 = document.createElement("script")
+				gtag2.type = "text/javascript"
+				gtag2.innerHTML = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config','UA-178530227-1')"
+			setTimeout(function() {
+				script.appendChild(gtag1)
+				script.appendChild(gtag2)
+			},5000)
+		});
+	</script>
+</slot>
+
+</body>
+</html>
