@@ -66,6 +66,15 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="assets/css/main.min.css">
+	<script>
+		let selesai = setInterval(() => {
+			if ( document.querySelector('.time-event-2').innerHTML !== '' ) {
+				let ts2a = document.querySelector('.time-event-2').innerHTML.split('s.d.')
+				document.querySelector('.time-event-2').innerHTML = ts2a[0] + 's.d. Selesai'
+				clearInterval(selesai)
+			}
+		},100)
+	</script>
 	<!-- <script>
 		let thisURL = window.location.href
 			thisEvent1 = '?MSFUYW11OjAjMA=='
