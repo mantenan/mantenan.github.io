@@ -993,6 +993,12 @@
 				transition: all .25s ease;
 	}
 
+	@media (min-width: 1199px) {
+		#website .slick-slide:not(.slick-active) {
+			filter: initial;
+		}
+	}
+
 	#preview .swipe {
 		padding: 1.25rem;
 	}
