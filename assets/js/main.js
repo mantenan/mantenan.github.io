@@ -123,7 +123,7 @@
 			autoplay: false,
 			infinite: true,
 			centerMode: true,
-			// centerPadding: '50px',
+			centerPadding: '50px',
 			slidesToShow: 5,
 			slidesToScroll: 1,
 			responsive: [{
