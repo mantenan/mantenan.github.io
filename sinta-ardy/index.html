@@ -66,29 +66,42 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="assets/css/main.min.css?v=1">
-	<!-- <script>
+	<script>
 		let thisURL = window.location.href
-			thisEvent1 = '?MSFUYW11OjAjMA=='
-			thisEvent2 = '?MiFUYW11OjAjMA=='
+			// thisEvent1 = '?MSFUYW11OjAjMA=='
+			// thisEvent2 = '?MiFUYW11OjAjMA=='
+			specialInvite = '?MSFUYW11OjA='
 
-		if ( !(thisURL.indexOf('?') > -1) ) {
-			if ( new Date() < new Date(2022, 6-1, 20, 0, 0, 0) ) {
-				window.location.replace(thisURL + thisEvent1)
-			} else {
-				window.location.replace(thisURL + thisEvent2)
-			}
-		}
+		// if ( !(thisURL.indexOf('?') > -1) ) {
+		// 	if ( new Date() < new Date(2022, 6-1, 20, 0, 0, 0) ) {
+		// 		window.location.replace(thisURL + thisEvent1)
+		// 	} else {
+		// 		window.location.replace(thisURL + thisEvent2)
+		// 	}
+		// }
 
-		if ( thisURL.indexOf(thisEvent1) > -1 || thisURL.indexOf(thisEvent2) > -1 ) {
+		// if ( thisURL.indexOf(thisEvent1) > -1 || thisURL.indexOf(thisEvent2) > -1 ) {
+		if ( thisURL.indexOf(specialInvite) > -1 ) {
+			let cssMother = document.createElement('style')
+				cssMother.innerHTML = '#open .modal-body .card{background-color:transparent!important;box-shadow:none!important}'
+			document.querySelector('head').appendChild(cssMother)
+
 			document.addEventListener('DOMContentLoaded', () => {
 				$('#open .guest').hide()
-				$('#beriUcapan-2').each(function() {
+				$('#beriUcapan-2,#beriKehadiran-2,#beriKehadiran-3,#beriBingkisan-2,#beriBingkisan-3').each(function() {
 					$(this).val('')
-					$(this).closest('.form-group').show()
+					$(this).closest('.form-group').removeClass('sr-only').show()
 				})
+				let motherCheck = setInterval(() => {
+					let motherChange = $('.mother-person-1')
+					if ( motherChange.text() !== '' ) {
+						motherChange.text('Ifa Indriyani, S.Pd.')
+						clearInterval(motherCheck)
+					}
+				},100)
 			})
 		}
-	</script> -->
+	</script>
 </head>
 <body>
 
