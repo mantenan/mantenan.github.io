@@ -11,8 +11,24 @@
 	--theme-1: #3f3753;
 }
 
-[data-theme="1"] {
+#form[data-theme="1"] .obj-top .obj-1 {
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 90%;
+	max-width: 800px;
+}
+#form[data-theme="1"] .obj-top:before,
+#form[data-theme="1"] .obj-top:after {
+	display: none;
+}
+
+#data[data-theme="1"] {
 	font-family: 'Rowdies', cursive;
+}
+
+[data-theme="1"] {
 	color: var(--theme-1);
 	background: rgba(255,255,255,1);
 	background: url('pattern.png'), linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 70%);
