@@ -1,0 +1,80 @@
+/*
+ * Maumantenan
+ * https://maumantenan.com
+ * Digital Wedding Invitation
+ * Copyright (c) 2020-2022
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+	--color-1: #131f3a;
+}
+
+.brand {
+	filter: brightness(.5);
+}
+
+#form[data-theme="2"] .obj-top .obj-1 {
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 90%;
+	max-width: 800px;
+}
+#form[data-theme="2"] .obj-top:before,
+#form[data-theme="2"] .obj-top:after {
+	display: none;
+}
+
+#data [data-theme="2"] {
+	font-family: 'Montserrat', sans-serif;
+}
+
+[data-theme="2"] {
+	color: var(--color-1);
+	background-color: #f4e4a5;
+	min-height: 100vh;
+}
+[data-theme="2"] .obj-top img:not(.obj-1),
+[data-theme="2"] .obj-btm img {
+	display: none;
+}
+
+[data-theme="2"] .obj-top {
+	position: relative;
+	text-align: center;
+	padding-top: 1rem;
+}
+[data-theme="2"] .obj-top .obj-1 {
+	width: 100%;
+	max-width: 800px;
+	height: auto;
+	margin-top: 3rem;
+}
+
+[data-theme="2"] .content {
+	text-align: center;
+	padding: 3rem 0 !important;
+}
+[data-theme="2"] .content .title {
+	display: none;
+}
+[data-theme="2"] .content .author {
+	opacity: .5;
+	font-weight: bold;
+}
+[data-theme="2"] .content textarea {
+	text-align: center;
+	font-size: 23px;
+	resize: none;
+}
+@media (max-width: 767px) {
+	[data-theme="2"] .content textarea {
+		font-size: 17px;
+	}
+	[data-theme="2"] .content .author {
+		font-size: 12px;
+	}
+}
