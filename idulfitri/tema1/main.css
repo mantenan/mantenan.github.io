@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
 
 :root {
-	--theme-1: #3f3753;
+	--color-1: #3f3753;
 }
 
 #form[data-theme="1"] .obj-top .obj-1 {
@@ -29,7 +29,7 @@
 }
 
 [data-theme="1"] {
-	color: var(--theme-1);
+	color: var(--color-1);
 	background: rgba(255,255,255,1);
 	background: url('pattern.png'), linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 70%);
 	min-height: 100vh;
