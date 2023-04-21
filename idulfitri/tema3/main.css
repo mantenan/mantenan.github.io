@@ -1,0 +1,113 @@
+/*
+ * Maumantenan
+ * https://maumantenan.com
+ * Digital Wedding Invitation
+ * Copyright (c) 2020-2023
+ */
+
+body {
+	overflow-x: hidden;
+}
+
+[data-theme="3"] {
+	min-height: 100vh;
+}
+[data-theme="3"] .container {
+	padding: 0;
+}
+[data-theme="3"] img {
+	position: absolute;
+	z-index: -9999;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	max-height: 100%;
+	opacity: 0;
+
+}
+[data-theme="3"] .obj-top .obj-1,
+[data-theme="3"] .brand {
+	position: relative;
+	opacity: 1;
+}
+[data-theme="3"] .obj-top .obj-3,
+[data-theme="3"] .obj-top .obj-5,
+[data-theme="3"] .obj-top .obj-7 {
+	position: absolute;
+	opacity: 1;
+}
+[data-theme="3"] .obj-1 {
+	height: auto;
+	max-width: 100%;
+	margin-top: 5vh;
+	padding: 0 3rem;
+}
+[data-theme="3"] .obj-3 {
+	left: 10vw;
+}
+[data-theme="3"] .obj-5 {
+	left: initial;
+	right: 10vw;
+}
+[data-theme="3"] .obj-7 {
+	left: initial;
+	right: 25vw;
+}
+
+[data-theme="3"] .obj-mid {
+	position: relative;
+	z-index: 1;
+	margin-top: -5vw;
+}
+[data-theme="3"] .content {
+	text-align: center;
+	margin-bottom: 2rem;
+	filter: drop-shadow(0 10px 13px rgb(0 0 0 / .05)) drop-shadow(0 5px 5px rgb(0 0 0 / .1));
+}
+[data-theme="3"] .content .title {
+	font-family: 'Lobster Two', cursive;
+	font-size: calc(1.5rem + 1.5vw);
+	color: #d4a534;
+	max-width: 20ch;
+	margin: auto;
+}
+[data-theme="3"] .content .author {
+	font-weight: bold;
+}
+[data-theme="3"] .content textarea {
+	text-align: center;
+	padding: .25rem;
+	resize: none;
+}
+
+@media (max-width: 767px) {
+	[data-theme="3"] .container {
+		max-width: initial;
+	}
+	[data-theme="3"] .obj-1 {
+		height: 75vh;
+		margin-top: -5vh;
+		object-fit: cover;
+		object-position: top;
+		padding: 0;
+	}
+	[data-theme="3"] .obj-3,
+	[data-theme="3"] .obj-5 {
+		max-width: 120px;
+	}
+	[data-theme="3"] .obj-7 {
+		max-width: 80px;
+	}
+	[data-theme="3"] .obj-3 {
+		left: -55px;
+	}
+	[data-theme="3"] .obj-5 {
+		right: -45px;
+	}
+	[data-theme="3"] .obj-7 {
+		right: 60px;
+	}
+	[data-theme="3"] .obj-mid {
+		margin-top: -12vh;
+	}
+}

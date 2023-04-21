@@ -1,0 +1,80 @@
+/*
+ * Maumantenan
+ * https://maumantenan.com
+ * Digital Wedding Invitation
+ * Copyright (c) 2020-2022
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+:root {
+	--theme-1: #3f3753;
+}
+
+[data-theme="1"] {
+	font-family: 'Rowdies', cursive;
+	color: var(--theme-1);
+	background: rgba(255,255,255,1);
+	background: url('pattern.png'), linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(255,255,255,1) 70%);
+	min-height: 100vh;
+}
+[data-theme="1"] .obj-top img:not(.obj-1),
+[data-theme="1"] .obj-btm img {
+	display: none;
+}
+
+[data-theme="1"] .obj-top {
+	position: relative;
+	text-align: center;
+	padding-top: 3rem;
+}
+[data-theme="1"] .obj-top .obj-1 {
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+	margin-top: 3rem;
+}
+[data-theme="1"] .obj-top:before {
+	content: 'Selamat Merayakan';
+	top: 3.5rem;
+}
+[data-theme="1"] .obj-top:after {
+	content: '1444 Hijriyah';
+	bottom: .75rem;
+}
+[data-theme="1"] .obj-top:before,
+[data-theme="1"] .obj-top:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+@media (max-width: 767px) {
+	[data-theme="1"] .obj-top {
+		padding-top: 2.5rem;
+		font-size: 12px;
+	}
+	[data-theme="1"] .obj-top:before {
+		top: 3rem;
+	}
+	[data-theme="1"] .obj-top:after {
+		bottom: .25rem;
+	}
+}
+
+[data-theme="1"] .content {
+	text-align: center;
+	padding: 3rem 0 !important;
+}
+[data-theme="1"] .content .title {
+	display: none;
+}
+[data-theme="1"] .content .author {
+	opacity: .5;
+}
+[data-theme="1"] .content textarea {
+	text-align: center;
+	font-size: calc(1rem + 1vw);
+	resize: none;
+}
