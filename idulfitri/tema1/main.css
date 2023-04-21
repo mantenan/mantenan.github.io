@@ -24,7 +24,7 @@
 	display: none;
 }
 
-#data[data-theme="1"] {
+#data [data-theme="1"] {
 	font-family: 'Rowdies', cursive;
 }
 
