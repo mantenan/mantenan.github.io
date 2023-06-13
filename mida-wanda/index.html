@@ -67,9 +67,20 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="assets/css/main.min.css">
 	<style type="text/css">
-		#cover .cover {
+		/*#cover .cover {
 			object-fit: cover !important;
 			height: 75vh !important;
+		}*/
+		#foto .carousel-inner .carousel-item:first-child .carousel-image {
+			background-position: center 35%;
+		}
+		#foto .carousel-inner .carousel-item:last-child .carousel-image {
+			background-position: center 30%;
+		}
+		@media (max-width: 767px) {
+			#open>img {
+				object-position: 54% center;
+			}
 		}
 	</style>
 	<!-- <script>
@@ -143,26 +154,26 @@
 
 	<section class="text-center mb-5 pb-4 mb-lg-0 pb-lg-0">
 		<article class="position-relative" id="cover">
-			<div class="position-absolute bottom left right pb-6">
-				<div class="display-title text-center text-theme-2-base py-2 mt-3 acara-2">
+			<div class="position-absolute bottom left right pb-6 d-none">
+				<div class="display-title text-center text-white py-2 mt-3 acara-2">
 					<span class="fs-1 font-title lh-1 d-block w-100">
 						<span class="nick-person-1 text-lowercase"></span>
-						<small class="text-dark opacity-5 mx-1">&</small>
+						<small class="text-white opacity-5 mx-1">&</small>
 						<span class="nick-person-2 text-lowercase"></span>
 					</span>
-					<div class="date-event text-dark opacity-5"></div>
+					<div class="date-event text-white opacity-5"></div>
 				</div>
-				<div class="display-title text-center text-theme-2-base py-2 mt-3 acara-3">
+				<div class="display-title text-center text-white py-2 mt-3 acara-3">
 					<span class="fs-1 font-title lh-1 d-block w-100">
 						<span class="nick-person-2 text-lowercase"></span>
-						<small class="text-dark opacity-5 mx-1">&</small>
+						<small class="text-white opacity-5 mx-1">&</small>
 						<span class="nick-person-1 text-lowercase"></span>
 					</span>
-					<div class="date-event text-dark opacity-5"></div>
+					<div class="date-event text-white opacity-5"></div>
 				</div>
 			</div>
-			<img class="w-100 h-auto cover" loading="lazy" width="1920" height="1080" src="assets/img/main-1.jpg" alt="Photo">
-			<!-- <img class="w-100 h-auto position-absolute left bottom mb-n1" loading="lazy" width="500" height="65" src="https://maumantenan.com/tema/dalem/assets/img/decoration.svg" alt="Image"> -->
+			<img class="w-100 h-auto cover" loading="lazy" width="1920" height="1080" src="assets/img/main-3.jpg" alt="Photo">
+			<img class="w-100 h-auto position-absolute left bottom mb-n1" loading="lazy" width="500" height="65" src="https://maumantenan.com/tema/dalem/assets/img/decoration.svg" alt="Image">
 		</article>
 
 		<article class="py-5" id="kutipan">
@@ -220,7 +231,7 @@
 						<p class="place-event-1"></p>
 					</div>
 				</div>
-				<img class="w-100 h-100 position-absolute left top object-fit-cover" loading="lazy" width="500" height="300" src="https://maumantenan.com/tema/dalem/assets/img/main-2.jpg">
+				<img class="w-100 h-100 position-absolute left top object-fit-cover" loading="lazy" width="500" height="300" src="assets/img/main-2.jpg">
 			</div>
 		</article>
 
@@ -382,6 +393,28 @@
 				</div>
 				<div class="row mt-2">
 					<div class="col-auto mx-auto" id="dataSiaran"></div>
+				</div>
+			</div>
+		</article>
+
+		<article class="pt-5 pb-3" id="filterig">
+			<div class="container">
+				<h2 class="font-title fs-1 text-theme-2-base">
+					Filter Instagram
+				</h2>
+				<div class="row">
+					<div class="col-12 col-md-10 col-lg-8 mx-auto">
+						<div>
+							<video class="img-fluid rounded-3 mt-2" style="width: 250px;" muted loop autoplay>
+								<source src="assets/video/demo.mp4" type="video/mp4">
+							</video>
+						</div>
+						<!-- <div class="d-block d-md-inline-block px-0 px-md-1 pt-3 btn-min-width">
+							<a class="btn btn-outline-secondary btn-block rounded-pill shadow px-4 py-2" rel="noopener" target="_blank" href="https://www.instagram.com/ar/359927559666185">
+								Gunakan <b>Filter</b>
+							</a>
+						</div> -->
+					</div>
 				</div>
 			</div>
 		</article>
@@ -643,7 +676,7 @@
 			</div>
 		</article> -->
 
-		<!-- <hr class="border-0 my-3 py-4">
+		<hr class="border-0 my-3 py-4">
 
 		<article class="position-relative" id="foto">
 			<div class="position-absolute top left index-2 w-100">
@@ -661,9 +694,6 @@
 					<div class="carousel-item">
 						<div class="carousel-image" style="background-image:url(assets/img/slide-2.jpg)"></div>
 					</div>
-					<div class="carousel-item">
-						<div class="carousel-image" style="background-image:url(assets/img/slide-3.jpg)"></div>
-					</div>
 				</div>
 			</div>
 			<div class="position-absolute bottom left index-1 w-100">
@@ -673,7 +703,7 @@
 					<path d="M1280 51.76c-201 12.49-242.43 53.4-513.58 53.4-320 0-320-57-640-57-48.85.01-90.21 1.35-126.42 3.6V140h1280z"/>
 				</svg>
 			</div>
-		</article> -->
+		</article>
 
 		<article class="pt-5" id="penutup">
 			<div class="container">
@@ -856,22 +886,22 @@
 		<div class="modal-dialog modal-dialog-centered align-items-end" role="document">
 			<div class="modal-content rounded-3 bg-transparent m-3 m-md-0 border-0">
 				<div class="modal-body p-0">
-					<div class="mb-4">
-						<div class="display-title text-center text-theme-2-base py-2 mt-3 acara-2">
+					<div class="mb-5 mb-md-0 pb-8">
+						<div class="display-title text-center text-white py-2 mt-3 acara-2">
 							<span class="fs-1 font-title lh-1 d-block w-100">
 								<span class="nick-person-1 text-lowercase"></span>
-								<small class="text-dark opacity-5 mx-1">&</small>
+								<small class="text-white opacity-5 mx-1">&</small>
 								<span class="nick-person-2 text-lowercase"></span>
 							</span>
-							<div class="date-event text-dark opacity-5"></div>
+							<div class="date-event text-white opacity-5"></div>
 						</div>
-						<div class="display-title text-center text-theme-2-base py-2 mt-3 acara-3">
+						<div class="display-title text-center text-white py-2 mt-3 acara-3">
 							<span class="fs-1 font-title lh-1 d-block w-100">
 								<span class="nick-person-2 text-lowercase"></span>
-								<small class="text-dark opacity-5 mx-1">&</small>
+								<small class="text-white opacity-5 mx-1">&</small>
 								<span class="nick-person-1 text-lowercase"></span>
 							</span>
-							<div class="date-event text-dark opacity-5"></div>
+							<div class="date-event text-white opacity-5"></div>
 						</div>
 					</div>
 					<div class="card shadow border-0 rounded-3 h-100">
@@ -1061,6 +1091,7 @@
 									<option value="3">3 Orang</option>
 									<option value="4">4 Orang</option>
 									<option value="5">5 Orang</option>
+									<option value="0">Tidak Hadir</option>
 								</select>
 							</div>
 							<div class="d-md-flex mt-4">
