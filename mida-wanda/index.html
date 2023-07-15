@@ -82,7 +82,7 @@
 				object-position: 54% center;
 			}
 		}
-		body[data-from="0"] #open .modal-body .card {
+		body.no-guest #open .modal-body .card {
 			background: transparent;
 			box-shadow: none !important;
 		}
@@ -102,6 +102,7 @@
 
 		if ( thisURL.indexOf(thisEvent1) > -1 || thisURL.indexOf(thisEvent2) > -1 ) {
 			document.addEventListener('DOMContentLoaded', () => {
+				document.body.classList.add('no-guest')
 				$('#open .guest').hide()
 				$('#beriKehadiran-2').each(function() {
 					$(this).val('')
