@@ -61,7 +61,7 @@
 	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="preload" as="style" href="assets/css/main.min.css">
-	<link rel="preload" as="script" href="assets/js/main.min.js">
+	<link rel="preload" as="script" href="assets/js/main.min.js?v=1">
 	<!-- Main -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -155,7 +155,8 @@
 					<div class="date-event opacity-5"></div>
 				</div>
 			</div>
-			<img class="w-100 h-auto cover" loading="lazy" width="1920" height="1080" src="assets/img/main-1.jpg" alt="Photo">
+			<img class="w-100 h-auto cover d-none d-md-block" loading="lazy" width="1920" height="1080" src="assets/img/main-1.jpg?v=1" alt="Photo">
+			<img class="w-100 h-auto cover d-md-none" loading="lazy" width="1920" height="1080" src="assets/img/slide-4.jpeg" alt="Photo">
 			<img class="w-100 h-auto position-absolute left bottom mb-n1" loading="lazy" width="500" height="65" src="assets/img/decoration.svg" alt="Image">
 		</article>
 
@@ -180,7 +181,7 @@
 						<div class="col-lg mt-5 mb-2 mt-lg-0 mb-lg-0">
 							<h2 class="font-title fs-1 name-person-1 mb-0"></h2>
 							<p class="mb-0">Putri Bapak <span class="father-person-1"></span> & Ibu <span class="mother-person-1"></span></p>
-							<small class="d-block opacity-5 lh-3 place-person-1"></small>
+							<small class="d-block opacity-5 lh-3 place-person-1 sr-only"></small>
 						</div>
 						<div class="col-lg-1 my-3 my-lg-0">
 							<p class="font-title fs-1 lh-1 mt-lg-1 opacity-5">&amp;</p>
@@ -188,14 +189,14 @@
 						<div class="col-lg mt-2 mb-5 mt-lg-0 mb-lg-0">
 							<h2 class="font-title fs-1 name-person-2 mb-0"></h2>
 							<p class="mb-0">Putra Bapak <span class="father-person-2"></span> & Ibu <span class="mother-person-2"></span></p>
-							<small class="d-block opacity-5 lh-3 place-person-2"></small>
+							<small class="d-block opacity-5 lh-3 place-person-2 sr-only"></small>
 						</div>
 					</div>
 					<div class="row no-gutters my-lg-5 pt-lg-2 acara-3">
 						<div class="col-lg mt-5 mb-2 mt-lg-0 mb-lg-0">
 							<h2 class="font-title fs-1 name-person-2 mb-0"></h2>
 							<p class="mb-0">Putra Bapak <span class="father-person-2"></span> & Ibu <span class="mother-person-2"></span></p>
-							<small class="d-block opacity-5 lh-3 place-person-2"></small>
+							<small class="d-block opacity-5 lh-3 place-person-2 sr-only"></small>
 						</div>
 						<div class="col-lg-1 my-3 my-lg-0">
 							<p class="font-title fs-1 lh-1 mt-lg-1 opacity-5">&amp;</p>
@@ -203,7 +204,7 @@
 						<div class="col-lg mt-2 mb-5 mt-lg-0 mb-lg-0">
 							<h2 class="font-title fs-1 name-person-1 mb-0"></h2>
 							<p class="mb-0">Putri Bapak <span class="father-person-1"></span> & Ibu <span class="mother-person-1"></span></p>
-							<small class="d-block opacity-5 lh-3 place-person-1"></small>
+							<small class="d-block opacity-5 lh-3 place-person-1 sr-only"></small>
 						</div>
 					</div>
 					<p>untuk mengikuti sunnah Rasul-Mu membentuk keluarga yang Sakinah Mawaddah Warohmah</p>
@@ -575,10 +576,10 @@
 			</div>
 		</article> -->
 
-		<!-- <article class="pt-7" id="video">
-			<div class="container">
-				<div class="embed-responsive embed-responsive-16by9 position-relative bg-dark d-flex rounded-3 shadow teaser" onclick="playTeaser(this,'assets/video/footage2.mp4')">
-					<div class="embed-responsive-item d-flex align-items-center justify-content-center cursor-pointer" style="background-image:url('assets/img/thumbnail.jpg');background-size:cover;">
+		<article class="pt-7" id="video">
+			<div class="container mt-4">
+				<div class="embed-responsive embed-responsive-16by9 position-relative bg-dark d-flex rounded-3 shadow teaser" onclick="playTeaser(this,'assets/video/fatma-ari.mp4')">
+					<div class="embed-responsive-item d-flex align-items-center justify-content-center cursor-pointer" style="background-image:url('assets/img/slide-6.jpeg');background-size:cover;">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="70" height="70" fill="var(--white)">
 							<path opacity=".25" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
 							<path d="M9.09961 12V10.52C9.09961 8.60999 10.4496 7.83999 12.0996 8.78999L13.3796 9.52999L14.6596 10.27C16.3096 11.22 16.3096 12.78 14.6596 13.73L13.3796 14.47L12.0996 15.21C10.4496 16.16 9.09961 15.38 9.09961 13.48V12Z"/>
@@ -586,7 +587,7 @@
 					</div>
 				</div>
 			</div>
-		</article> -->
+		</article>
 
 		<!-- <article class="pt-7" id="kisah">
 			<div class="container">
@@ -771,7 +772,7 @@
 							<small>Tunggu kabar bahagia dari kami ya...</small>
 						</div>
 						<div class="position-relative mt-3 pt-1">
-							<img class="object-fit-cover rounded-circle" loading="lazy" width="150" height="150" src="assets/img/main-1.jpg" alt="Photo">
+							<img class="object-fit-cover rounded-circle" loading="lazy" width="150" height="150" src="assets/img/main-1.jpg?v=1" alt="Photo">
 							<div class="display-title text-center text-theme-1-hover py-2 mt-3 acara-2">
 								<span class="fs-1 font-title text-theme-2-base lh-1 d-block w-100">
 									<span class="nick-person-1 text-lowercase"></span>
@@ -816,7 +817,7 @@
 							Terima kasih atas doa restu dan kehadirannya pada acara pernikahan kami
 						</div>
 						<div class="position-relative mt-3 pt-1">
-							<img class="object-fit-cover rounded-circle" loading="lazy" width="150" height="150" src="assets/img/main-1.jpg" alt="Photo">
+							<img class="object-fit-cover rounded-circle" loading="lazy" width="150" height="150" src="assets/img/main-1.jpg?v=1" alt="Photo">
 							<div class="display-title text-center text-white py-2 mt-3 acara-2">
 								<span class="fs-1 font-title text-theme-2-base lh-1 d-block w-100">
 									<span class="nick-person-1 text-lowercase"></span>
@@ -1176,7 +1177,24 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown.min.js" integrity="sha512-+Cdr05lT+aP+PTW4988XKLMjoAf0o5P2nRDIHooD/NItysfsyCPPhZhK/C6s7ZpaVoMRtsvRNJLtYOTDANC5UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.1.0/js/jquery.countdown-id.min.js" integrity="sha512-JGPwqm5Xp7v4gS86gleX0fDmJRX/abPSkIpAJ0vp4ZTC9uJ6MZdbGRX66yJ9rNZDe30EL8wRtDW42xCnnt9JXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="assets/js/main.min.js"></script>
+	<script src="assets/js/main.min.js?v=1"></script>
+	<style>
+		.embed-responsive-16by9 {
+			max-width: 350px;
+			margin: 0 auto;
+		}
+		.embed-responsive-16by9:before {
+			padding-top: 150%;
+		}
+	</style>
+	<script>
+		document.querySelector('#open button').addEventListener('click', () => {
+			let s = document.querySelector('.time-event-1')
+				a = s.innerText
+				l = a.split(' s.d.')[0]
+			s.innerText = l + ' s.d. Selesai'
+		})
+	</script>
 
 	<!-- Analytics -->
 	<script>
