@@ -523,7 +523,7 @@
 				<div class="d-none d-md-block pb-2">
 					<div class="d-block d-md-inline-block px-0 px-md-1 pt-3">
 						<button class="btn btn-outline-secondary btn-block rounded-pill shadow px-4 py-2 btn-min-width" type="button" data-toggle="collapse" data-target="#bingkisan-1" aria-controls="bingkisan-1" aria-expanded="false" onclick="$('#bingkisan-2').collapse('hide')">
-							Kirim untuk <b class="nick-person-1"></b>
+							Kirim untuk Pengantin
 						</button>
 					</div>
 					<!-- <div class="d-block d-md-inline-block px-0 px-md-1 pt-3">
@@ -535,7 +535,7 @@
 				<div>
 					<div class="d-block d-md-none px-0 px-md-1 pt-3">
 						<button class="btn btn-outline-secondary btn-block rounded-pill shadow px-3 py-2" type="button" data-toggle="collapse" data-target="#bingkisan-1" aria-controls="bingkisan-1" aria-expanded="false" onclick="$('#bingkisan-2').collapse('hide')">
-							Kirim untuk <b class="nick-person-1"></b>
+							Kirim untuk Pengantin
 						</button>
 					</div>
 					<div class="collapse" id="bingkisan-1">
@@ -1351,6 +1351,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="assets/js/main.min.js?v=1"></script>
+	<script>
+		setTimeout(() => {
+			if ($('#congrats [for="beriUcapan-5"] + div .form-control.sr-only').length > 1) {
+				$('#congrats [for="beriUcapan-5"]').closest('.form-group').addClass('sr-only')
+			}
+		},2000)
+	</script>
 
 	<!-- Analytics -->
 	<script>
